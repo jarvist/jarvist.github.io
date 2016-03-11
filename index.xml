@@ -6,8 +6,29 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 08 Dec 2015 14:16:34 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 11 Mar 2016 22:44:34 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello HUGO!</title>
+      <link>http://jarvist.github.io/post/2016-03-11-hello-hugo/</link>
+      <pubDate>Fri, 11 Mar 2016 22:44:34 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-03-11-hello-hugo/</guid>
+      <description>&lt;p&gt;This blog used to be on wordpress, at
+&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
+( There are a few comments by other people scattered amongst those posts, I&amp;rsquo;m
+not sure how to best transfer / archive these. )&lt;/p&gt;
+
+&lt;p&gt;Files were extracted to a plain text Markdown
+format, and are now published with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the
+&lt;code&gt;nofancy&lt;/code&gt; theme (slightly tweaked). I moved this blog from wordpress as I had
+grown irritated with the editing experience, and I hope that being able to edit
+and push from the command line would get me blogging more regularly.&lt;/p&gt;
+
+&lt;p&gt;Time will see.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Talks and Seminars at Bath University</title>
@@ -459,46 +480,6 @@ Beware that some of the books from the dawn of Quantum Theory are more there
 for historical interest than utility as a textbook.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&#34;&gt;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Snippet: Console diary - vimwiki (now with more git &amp; autohooks)</title>
-      <link>http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</link>
-      <pubDate>Wed, 25 Jun 2014 23:49:41 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve dallied with keeping a computer / online logbook. I&amp;rsquo;ve tried many products, even wrote my own (retrospectively crazy) set of scripts called &amp;lsquo;freck&amp;rsquo;*. But all of these methods were only ever used for a week or two before falling by the wayside. Just too much extra effort for (me) to follow through with. And therefore they all become walled-gardens with no way of getting the information out.&lt;/p&gt;
-
-&lt;p&gt;I keep paper notebooks for talks; I think it is essential to be able to sketch maths and diagrams, and I honestly think my brain is more engaged when I&amp;rsquo;m making notes by hand versus either typing or just listening (i.e. daydreaming). But they&amp;rsquo;re impossible to search through, and just a bit ridiculous to use when sitting in front of a computer.&lt;/p&gt;
-
-&lt;p&gt;The one I&amp;rsquo;ve returned to vaguely reliably is &amp;lsquo;vimwiki&amp;rsquo; (~10&amp;rsquo;000 words over 4 years). Probably because it lives in vim, and is thus only ever two keystrokes away. It runs in two modes, a &amp;lsquo;diary&amp;rsquo; linked to &amp;lsquo;\w\w&amp;rsquo; which drops you into a sensibly dated file for today, and a full blown personal wiki at &amp;lsquo;\ww&amp;rsquo;. All files are just&amp;hellip; files in ~/vimwiki.&lt;/p&gt;
-
-&lt;p&gt;Github: &lt;a href=&#34;https://github.com/vimwiki/vimwiki&#34;&gt;https://github.com/vimwiki/vimwiki&lt;/a&gt;
-Mailing list: &lt;a href=&#34;https://groups.google.com/forum/#!forum/vimwiki&#34;&gt;https://groups.google.com/forum/#!forum/vimwiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So now my ~/vimwiki is a BitBucket private repository, my work machine and laptop both feed from it. But the extra struggle of changing to the correct directory &amp;amp; then &amp;lsquo;git pull&amp;rsquo; or &amp;lsquo;git add / commit / push&amp;rsquo; was just a bit too much effort for me. So I was thinking of doing something primitive like put it in Dropbox, before coming across this blog entry:
-&lt;a href=&#34;http://www.stochasticgeometry.ie/2012/11/23/vimwiki/&#34;&gt;http://www.stochasticgeometry.ie/2012/11/23/vimwiki/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve no interest in encrypting my diary but the auto-hooks to commit to a DVCS are a fantastic idea.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the hooks, translated for git:
-&lt;code&gt;tail ~/.vim/ftplugin/vimwiki.vim
-augroup vimwiki
-au! BufRead /home/jarvist/vimwiki/index.wiki !git pull
-au! BufWritePost /home/jarvist/vimwiki/* !git add ;git commit -m &amp;quot;Auto commit + push.&amp;quot;;git push
-augroup END
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;[ * &amp;lsquo;Freck&amp;rsquo;, evidently a word read here: &lt;a href=&#34;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&#34;&gt;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This was a set of scripts I wrote essentially the day after I submitted my PhD thesis - having struggled with finding original data sources to things I only had as poorly named postscripts and PDFs, or even just hard annotated printouts from supervisor meetings.
-They worked both remotely on the HPC + locally. I recall that &amp;lsquo;freck&amp;rsquo; would take a figure as an argument, send a copy of this back to my workstation, demand a caption, and automatically add a figure to a &amp;lsquo;labbook&amp;rsquo; Latex file, with some commented out sections &amp;lsquo;%&amp;rsquo; informing future-me where exactly this data came from, auto date stamp, where it was generated etc. Different projects were set by an environmental variable, which were then sub-directories in the local ~/freck/ directory with Latex files &amp;amp; figures. I think the idea was that I would have a vim session running locally, and would reload the text, now with a generated figure.&lt;/p&gt;
-
-&lt;p&gt;Writing it&amp;rsquo;s description, it still sounds like a good idea! I&amp;rsquo;d probably now do it with more markdown (at least at the raw &amp;lsquo;freck&amp;rsquo; end), and a DVCS.&lt;/p&gt;
-
-&lt;p&gt;Only surviving remnant: &lt;a href=&#34;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&#34;&gt;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&lt;/a&gt;
-Though who knows, maybe I&amp;rsquo;ll make it a Friday afternoon project to refind the code &amp;amp; update it for something more sane / general. ]&lt;/p&gt;
 </description>
     </item>
     

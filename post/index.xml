@@ -6,8 +6,29 @@
     <description>Recent content in Posts on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 08 Dec 2015 14:16:34 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 11 Mar 2016 22:44:34 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello HUGO!</title>
+      <link>http://jarvist.github.io/post/2016-03-11-hello-hugo/</link>
+      <pubDate>Fri, 11 Mar 2016 22:44:34 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-03-11-hello-hugo/</guid>
+      <description>&lt;p&gt;This blog used to be on wordpress, at
+&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
+( There are a few comments by other people scattered amongst those posts, I&amp;rsquo;m
+not sure how to best transfer / archive these. )&lt;/p&gt;
+
+&lt;p&gt;Files were extracted to a plain text Markdown
+format, and are now published with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the
+&lt;code&gt;nofancy&lt;/code&gt; theme (slightly tweaked). I moved this blog from wordpress as I had
+grown irritated with the editing experience, and I hope that being able to edit
+and push from the command line would get me blogging more regularly.&lt;/p&gt;
+
+&lt;p&gt;Time will see.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Talks and Seminars at Bath University</title>
@@ -397,35 +418,6 @@ They worked both remotely on the HPC + locally. I recall that &amp;lsquo;freck&a
 
 &lt;p&gt;Only surviving remnant: &lt;a href=&#34;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&#34;&gt;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&lt;/a&gt;
 Though who knows, maybe I&amp;rsquo;ll make it a Friday afternoon project to refind the code &amp;amp; update it for something more sane / general. ]&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Making Talk Slides in 2014</title>
-      <link>http://jarvist.github.io/post/making-talk-slides-in-2014/</link>
-      <pubDate>Fri, 20 Jun 2014 18:43:15 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/making-talk-slides-in-2014/</guid>
-      <description>&lt;p&gt;These days I almost exclusively make my talks in Google Drive / Present. It just works, I can work on my talk from anywhere (my laptop is Linux, my work machine is Mac OS) the modern interface is really quite nice (at least in Chrome). Most importantly for me it has very sensible auto-hints for placing items (a feint alignment lines pop up when you are centre / left / right aligned with other elements on the page).&lt;/p&gt;
-
-&lt;p&gt;I download the Talk as PDF for actually putting on my laptop / USB stick. This used to sometimes cause really irritating behaviour with lines reflowing compared to what you saw on screen (sometimes disappearing a word / reference off the page or under another element) but it seems to be ~pixel perfect recently.&lt;/p&gt;
-
-&lt;p&gt;I use the codecogs Latex renderer for bits of maths and physics (18pt / 300 / white background with Latin Modern), simply copy and pasting the gif into the slide &amp;amp; then copy + pasting the Latex into the Google Drive &amp;lsquo;speaker notes&amp;rsquo; at the bottom of the screen, for future reference / adaptation for another talk or paper.
-&lt;a href=&#34;http://www.codecogs.com/latex/eqneditor.php&#34;&gt;http://www.codecogs.com/latex/eqneditor.php&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I often find myself dragging and dropping .pngs directly from a directory of post-processing codes to make up a talk. All my Python codes which plot to Matplotlib now automatically save figures they generate as PDFs and PNGs, with a name that ensures they don&amp;rsquo;t overwrite each other &amp;amp; you can cross reference to commit versions in the future. This I have found so incredibly useful, barely remembered runs of old codes and datasets are sitting there with &amp;lsquo;talk ready&amp;rsquo; images.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;import datetime
-now=datetime.datetime.now().strftime(&amp;quot;%Y-%m-%d-%H%M&amp;quot;) #String of standardised year-leading time
-fig.savefig(&amp;quot;%s-LongSnakeMoan.pdf&amp;quot;%now) #Save figures as both PDF and easy viewing PNG (perfect for talks)
-fig.savefig(&amp;quot;%s-LongSnakeMoan.png&amp;quot;%now)
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Previously I made talks with OpenOffice / LibreOffice (Horrible, buggy experience) and Latex/Beamer (too slow to include figures, horrific / absent control about where to place elements. Leave it for the mathematicians!)&lt;/p&gt;
-
-&lt;p&gt;My only two issues with Google Present are no videos (if not online - it will link to YouTube), and no Futura font (I use Open Sans in its stead).&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s a few quirks in the user interface, most particularly if you&amp;rsquo;re making a derivative talk, you must use &amp;lsquo;Insert / Import slides&amp;hellip;&amp;rsquo; rather than trying to copy+paste a load of slides from a different browser window - this makes it unhappy! (I guess because it&amp;rsquo;s bringing them to the local clipboard and then trying to push them back up to Google?)&lt;/p&gt;
 </description>
     </item>
     
