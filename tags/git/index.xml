@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/git/</link>
+    <link>http://jarvist.github.io/tags/git/</link>
     <description>Recent content in Git on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Mon, 06 Jan 2014 22:08:37 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>New year&#39;s resolution - DVCS everywhere</title>
-      <link>http://localhost:1313/post/new-years-resolution-dvcs-everywhere/</link>
+      <link>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</link>
       <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/new-years-resolution-dvcs-everywhere/</guid>
+      <guid>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</guid>
       <description>&lt;p&gt;My one new year&amp;rsquo;s resolution is to use DVCS everywhere.&lt;/p&gt;
 
 &lt;p&gt;With free BitBucket Academic accounts (&lt;strong&gt;unlimited private&lt;/strong&gt; / public repos), &lt;a href=&#34;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&#34;&gt;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&lt;/a&gt;, there&amp;rsquo;s no reason not to use it for every paper, internal document, code snippet or website. From a Linux / OS X console there is very little friction in automatically using &amp;ldquo;git add + commit, push &amp;amp; pull&amp;rdquo;. It&amp;rsquo;s also a very nice + fluid way to share finalised data &amp;amp; code between HPC facilities, colleagues, collaborators &amp;amp; workstations.&lt;/p&gt;

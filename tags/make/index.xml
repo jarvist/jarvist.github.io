@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Make on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/make/</link>
+    <link>http://jarvist.github.io/tags/make/</link>
     <description>Recent content in Make on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Thu, 12 Dec 2013 22:25:23 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/make/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/make/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Make for Data Processing</title>
-      <link>http://localhost:1313/post/make-for-data-processing/</link>
+      <link>http://jarvist.github.io/post/make-for-data-processing/</link>
       <pubDate>Thu, 12 Dec 2013 22:25:23 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/make-for-data-processing/</guid>
+      <guid>http://jarvist.github.io/post/make-for-data-processing/</guid>
       <description>&lt;p&gt;I must admit that I have a lot of &amp;lsquo;historical&amp;rsquo; (as in, before the last hour&amp;hellip;) directories with processing scripts named usefully &amp;lsquo;process_processed_data.sh&amp;rsquo; and such. If I remember, I often pipe a &amp;lsquo;history&amp;rsquo; into a hist.sh file before I close the terminal + forget what I&amp;rsquo;ve done and how to process the data.&lt;/p&gt;
 
 &lt;p&gt;So I definitely should and could do better, so why not use Make? It handles dependencies &amp;amp; gobbles files effectively, but I just can&amp;rsquo;t help but feel there should be a more elegant solution than writing clunky Make files by hand.&lt;/p&gt;

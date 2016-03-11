@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Monte Carlo on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/monte-carlo/</link>
+    <link>http://jarvist.github.io/tags/monte-carlo/</link>
     <description>Recent content in Monte Carlo on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Fri, 21 Feb 2014 12:07:54 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/monte-carlo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/monte-carlo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hybrid perovskites (MAPI and friends)</title>
-      <link>http://localhost:1313/post/hybrid-perovskites-mapi-and-friends/</link>
+      <link>http://jarvist.github.io/post/hybrid-perovskites-mapi-and-friends/</link>
       <pubDate>Fri, 21 Feb 2014 12:07:54 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hybrid-perovskites-mapi-and-friends/</guid>
+      <guid>http://jarvist.github.io/post/hybrid-perovskites-mapi-and-friends/</guid>
       <description>&lt;p&gt;Our fairly prospective paper is out to review with Nano Letters at the moment, the preprint has just gone live on the arXiv. There&amp;rsquo;s a massive range of calculations presented in quite a short paper - from GSGW (MvS), periodic plane wave DFT (FB) &amp;amp; CCSD quantum chemical calculations (JMF) to classical electrostatic calculations (JMF). We make suggestions as the to the likely effect of these results on device operation, and route for degradation in the presence of water via the Grotthuss mechanism (CH) (and the suggestion that an aprotic cation should alleviate this).&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Atomistic origins of high-performance in hybrid halide perovskite solar cells&amp;rdquo; - &lt;a href=&#34;http://arxiv.org/abs/1402.4980&#34;&gt;http://arxiv.org/abs/1402.4980&lt;/a&gt;&lt;/p&gt;
@@ -33,10 +33,10 @@
     
     <item>
       <title>Slithering Snakes; Amphisbaena and Gorgophone (2005...2008)</title>
-      <link>http://localhost:1313/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</link>
+      <link>http://jarvist.github.io/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</link>
       <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</guid>
+      <guid>http://jarvist.github.io/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/attrac_annealed_short_hop1.png&#34;&gt;&lt;img src=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/attrac_annealed_short_hop1.png?w=490&#34; alt=&#34;Image&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I finally got around to (minimally) cleaning up my code from the &lt;a href=&#34;http://dx.doi.org/10.1021/nl0608386&#34;&gt;2006 Nanoletters paper&lt;/a&gt; and put it up on github (&lt;a href=&#34;https://github.com/jarvist/Amphisbaena&#34;&gt;https://github.com/jarvist/Amphisbaena&lt;/a&gt;). This simulates coarse-grain on-lattice morphology generation of polymers via a slithering snakes / reptation model [amphisbaena], and then also enables you to carry out mobility simulations via Time of Flight (ToF), drift velocity or diffusion [gorgophone].&lt;/p&gt;

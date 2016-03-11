@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sharelatex on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/sharelatex/</link>
+    <link>http://jarvist.github.io/tags/sharelatex/</link>
     <description>Recent content in Sharelatex on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Fri, 21 Feb 2014 12:57:54 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sharelatex/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/sharelatex/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sharelatex now opensource</title>
-      <link>http://localhost:1313/post/sharelatex-now-opensource/</link>
+      <link>http://jarvist.github.io/post/sharelatex-now-opensource/</link>
       <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/sharelatex-now-opensource/</guid>
+      <guid>http://jarvist.github.io/post/sharelatex-now-opensource/</guid>
       <description>&lt;p&gt;Sharelatex is now opensource: &lt;a href=&#34;https://www.sharelatex.com/blog/2014/02/21/sharelatex-is-now-open-source.html&#34;&gt;https://www.sharelatex.com/blog/2014/02/21/sharelatex-is-now-open-source.html&lt;/a&gt;; discussion on HN: &lt;a href=&#34;https://news.ycombinator.com/item?id=7276263&#34;&gt;https://news.ycombinator.com/item?id=7276263&lt;/a&gt;. They also now offer a &amp;lsquo;personal&amp;rsquo; account which allows for unlimited projects + one collaborator.&lt;/p&gt;
 
 &lt;p&gt;The other big player in this area of collaborative online Latex document editing is &lt;a href=&#34;https://www.writelatex.com/&#34;&gt;https://www.writelatex.com/&lt;/a&gt;. I&amp;rsquo;ve generally found their web app to be a little bit heavier on the computer (particularly my poor old Thinkpad X60s), but more polished. You can directly open a Writelatex document from templates at &lt;a href=&#34;http://www.latextemplates.com/&#34;&gt;http://www.latextemplates.com/&lt;/a&gt; . Writelatex haven&amp;rsquo;t recently started the &amp;lsquo;Overleaf&amp;rsquo; initiative, which seems to be an attempt to leapfrog traditional academic publishers, and do the whole write-&amp;gt;review-&amp;gt;publish within their system. Currently this seems to mean being able to publish directly to figshare, or submit to F1000.&lt;/p&gt;

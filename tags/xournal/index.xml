@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xournal on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/xournal/</link>
+    <link>http://jarvist.github.io/tags/xournal/</link>
     <description>Recent content in Xournal on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Thu, 20 Jun 2013 20:32:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/xournal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/xournal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>PDF annotations in Linux with Xournal</title>
-      <link>http://localhost:1313/post/pdf-annotations-in-linux-with-xournal/</link>
+      <link>http://jarvist.github.io/post/pdf-annotations-in-linux-with-xournal/</link>
       <pubDate>Thu, 20 Jun 2013 20:32:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/pdf-annotations-in-linux-with-xournal/</guid>
+      <guid>http://jarvist.github.io/post/pdf-annotations-in-linux-with-xournal/</guid>
       <description>&lt;p&gt;Finally (2013!), annotating PDFs has become a native &amp;amp; easy thing to do in Linux. &lt;/p&gt;
 
 &lt;p&gt;I installed Xournal with &amp;lsquo;apt-get install xournal&amp;rsquo; and got stuck straight in. You can save the file as a (tiny) native .xou file format, and also export back to PDF (views fine in evince). No more finding a Windows machine to use Adobe Pro!&lt;/p&gt;

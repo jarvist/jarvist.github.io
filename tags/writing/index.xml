@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writing on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/writing/</link>
+    <link>http://jarvist.github.io/tags/writing/</link>
     <description>Recent content in Writing on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Sun, 01 Mar 2015 22:44:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/writing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Writing scientific papers</title>
-      <link>http://localhost:1313/post/writing-scientific-papers/</link>
+      <link>http://jarvist.github.io/post/writing-scientific-papers/</link>
       <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/writing-scientific-papers/</guid>
+      <guid>http://jarvist.github.io/post/writing-scientific-papers/</guid>
       <description>&lt;p&gt;I am probably the last person you would want to consult on tips to write a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the best, much work lies on the cutting room floor - skeletons of half assembled papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m very interested in improving, and certainly enjoy reading a well written paper.&lt;/p&gt;
 
 &lt;p&gt;It is an unfortunate fact that the average quality of scientific writing is decreasing. Some of this can be explained by the laudable continuing expansion of science across class boundaries, and across the world (a greater number of authors writing in English as an additional language). Yet I think the majority reason is the pressure to publish so much, we write so many more papers, and there&amp;rsquo;s enormous pressure to oversell.&lt;/p&gt;
@@ -41,10 +41,10 @@
     
     <item>
       <title>How to write a great research paper, Simon Peyton Jones</title>
-      <link>http://localhost:1313/post/how-to-write-a-great-research-paper-simon-peyton-jones/</link>
+      <link>http://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</link>
       <pubDate>Wed, 01 Jan 2014 20:43:41 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/how-to-write-a-great-research-paper-simon-peyton-jones/</guid>
+      <guid>http://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</guid>
       <description>&lt;p&gt;Food for thought on how to structure research (Comp Sci in this case). Fundamental premise is too turn the process on it&amp;rsquo;s head, write the paper, and then go do the work. Do watch the YouTube; he&amp;rsquo;s a great lecturer!&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Most days you think &amp;lsquo;I am a worm&amp;rsquo;. This is the natural state of the researcher.&amp;rdquo;&lt;/p&gt;

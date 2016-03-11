@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mavericks on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/mavericks/</link>
+    <link>http://jarvist.github.io/tags/mavericks/</link>
     <description>Recent content in Mavericks on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Mon, 18 Nov 2013 11:28:20 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mavericks/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/mavericks/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mavericks and Failed ARP causing network drops - solved</title>
-      <link>http://localhost:1313/post/mavericks-and-failed-arp-causing-network-drops-solved/</link>
+      <link>http://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</link>
       <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/mavericks-and-failed-arp-causing-network-drops-solved/</guid>
+      <guid>http://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://discussions.apple.com/thread/5483424?tstart=0&#34;&gt;Mavericks and Failed ARP causing network drops - solved&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Since I started at Bath on an OS X Mavericks machine, my SSH sessions were pausing for 4-6s every minute or so (randomly). Playing with Ping, I saw that correct packet routing was simply failing (averaging 7% packet loss for ping).&lt;/p&gt;

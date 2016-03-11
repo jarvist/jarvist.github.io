@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openbabel on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/openbabel/</link>
+    <link>http://jarvist.github.io/tags/openbabel/</link>
     <description>Recent content in Openbabel on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Tue, 23 Jul 2013 14:48:13 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/openbabel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/openbabel/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Simple oligomer conformer calculation </title>
-      <link>http://localhost:1313/post/simple-oligomer-conformer-calculation/</link>
+      <link>http://jarvist.github.io/post/simple-oligomer-conformer-calculation/</link>
       <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/simple-oligomer-conformer-calculation/</guid>
+      <guid>http://jarvist.github.io/post/simple-oligomer-conformer-calculation/</guid>
       <description>&lt;p&gt;I was moaning to a PhD student in the group about the perennial issue of checking representative torsional conformers of oligomers. In this case it was the question about whether you&amp;rsquo;d see a large variation in oscillator strength (of a TDDFT calculation) if you change the conformation (we don&amp;rsquo;t see a big variation in the energies of excited states, unless you break conjugation). This is a genuine issue as the potential energy barrier for these torsional variations are thermally accessible, and typically presents at least two local minima (head-tail and head-head), if not 4 minima (where the flat alignments are sterically hindered), so real polymers will be sampling at least some of these structures. As well as making comparison to experiment difficult without sampling the phase space, if you naively compare chemistries in whatever random configuration your optimised structure landed in, you may start to think there are systematic variations due to chemistry, which are actually just an artefact of your structural sampling.&lt;/p&gt;
 
 &lt;p&gt;Serendipitously I stumbled across &lt;a href=&#34;http://baoilleach.blogspot.co.uk&#34;&gt;Noel O&amp;rsquo;Boyle&amp;rsquo;s&lt;/a&gt; &lt;a href=&#34;http://www.jcheminf.com/content/3/1/8&#34;&gt;confab program that evening&lt;/a&gt;, and thought it sounded perfect! I build the &lt;a href=&#34;http://baoilleach.blogspot.co.uk/2011/03/confab-systematic-conformation.html&#34;&gt;(older) standalone version&lt;/a&gt;, though it is now apparently integrated into the &lt;a href=&#34;http://baoilleach.blogspot.co.uk/2013/07/using-open-babel-to-package-chemistry.html&#34;&gt;development version of OpenBabel&lt;/a&gt;.&lt;/p&gt;

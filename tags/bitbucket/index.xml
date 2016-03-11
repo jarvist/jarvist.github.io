@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bitbucket on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/bitbucket/</link>
+    <link>http://jarvist.github.io/tags/bitbucket/</link>
     <description>Recent content in Bitbucket on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Sun, 01 Mar 2015 22:44:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Writing scientific papers</title>
-      <link>http://localhost:1313/post/writing-scientific-papers/</link>
+      <link>http://jarvist.github.io/post/writing-scientific-papers/</link>
       <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/writing-scientific-papers/</guid>
+      <guid>http://jarvist.github.io/post/writing-scientific-papers/</guid>
       <description>&lt;p&gt;I am probably the last person you would want to consult on tips to write a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the best, much work lies on the cutting room floor - skeletons of half assembled papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m very interested in improving, and certainly enjoy reading a well written paper.&lt;/p&gt;
 
 &lt;p&gt;It is an unfortunate fact that the average quality of scientific writing is decreasing. Some of this can be explained by the laudable continuing expansion of science across class boundaries, and across the world (a greater number of authors writing in English as an additional language). Yet I think the majority reason is the pressure to publish so much, we write so many more papers, and there&amp;rsquo;s enormous pressure to oversell.&lt;/p&gt;
@@ -41,10 +41,10 @@
     
     <item>
       <title>New year&#39;s resolution - DVCS everywhere</title>
-      <link>http://localhost:1313/post/new-years-resolution-dvcs-everywhere/</link>
+      <link>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</link>
       <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/new-years-resolution-dvcs-everywhere/</guid>
+      <guid>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</guid>
       <description>&lt;p&gt;My one new year&amp;rsquo;s resolution is to use DVCS everywhere.&lt;/p&gt;
 
 &lt;p&gt;With free BitBucket Academic accounts (&lt;strong&gt;unlimited private&lt;/strong&gt; / public repos), &lt;a href=&#34;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&#34;&gt;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&lt;/a&gt;, there&amp;rsquo;s no reason not to use it for every paper, internal document, code snippet or website. From a Linux / OS X console there is very little friction in automatically using &amp;ldquo;git add + commit, push &amp;amp; pull&amp;rdquo;. It&amp;rsquo;s also a very nice + fluid way to share finalised data &amp;amp; code between HPC facilities, colleagues, collaborators &amp;amp; workstations.&lt;/p&gt;

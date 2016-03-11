@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Snippet on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/snippet/</link>
+    <link>http://jarvist.github.io/tags/snippet/</link>
     <description>Recent content in Snippet on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Mon, 13 Jan 2014 13:35:46 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/snippet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/snippet/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Gaussian: add &#39;Density=Current&#39; for post-HF</title>
-      <link>http://localhost:1313/post/gaussian-add-densitycurrent-for-post-hf/</link>
+      <link>http://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</link>
       <pubDate>Mon, 13 Jan 2014 13:35:46 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/gaussian-add-densitycurrent-for-post-hf/</guid>
+      <guid>http://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</guid>
       <description>&lt;p&gt;Do your electrostatics / population analysis from some expensive post-HartreeFock calculation look suspiciously similar to the HF result? You probably forgot to add &amp;lsquo;Density=Current&amp;rsquo; to your input stack.&lt;/p&gt;
 
 &lt;p&gt;I don&amp;rsquo;t understand why this isn&amp;rsquo;t the default, as when you are doing (hybrid)DFT calculations, the SCF density is being varied, thus the pop / electrostatics output change with functional.&lt;/p&gt;
@@ -23,10 +23,10 @@
     
     <item>
       <title>Pymol Ray Tracing without wasting time</title>
-      <link>http://localhost:1313/post/pymol-ray-tracing-without-wasting-time/</link>
+      <link>http://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</link>
       <pubDate>Tue, 18 Jun 2013 11:51:38 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/pymol-ray-tracing-without-wasting-time/</guid>
+      <guid>http://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</guid>
       <description>&lt;p&gt;I often use the nice built in &amp;lsquo;ray&amp;rsquo; raytracer in Pymol. These ray traces can take minutes to hours, and during that time I of course want to use my computer! Unfortunately, the Pymol window freezes during the ray trace, so when I switch virtual desktops it sometimes looks as if there&amp;rsquo;s a frozen terminal or similar there, which I click on, sometimes inadvertently, sometimes because I am a fool. This click gets queued up to Pymol and promptly delivered as the ray trace finishes - making the window redraw with the built in opengl, wasting all the time ray tracing, arg!&lt;/p&gt;
 
 &lt;p&gt;After doing this today during a 30 minute ray trace, I sat and thought for a few seconds and did the sensible thing:&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Julia on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/julia/</link>
+    <link>http://jarvist.github.io/tags/julia/</link>
     <description>Recent content in Julia on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Mon, 14 Jul 2014 12:36:09 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/julia/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/julia/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Links from Julia Land</title>
-      <link>http://localhost:1313/post/links-from-julia-land/</link>
+      <link>http://jarvist.github.io/post/links-from-julia-land/</link>
       <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/links-from-julia-land/</guid>
+      <guid>http://jarvist.github.io/post/links-from-julia-land/</guid>
       <description>&lt;p&gt;Julia 0.3 Release Candidate 1 has quietly appeared on the &lt;a href=&#34;http://julialang.org/downloads/&#34;&gt;nightly builds page&lt;/a&gt;; release notes in the &lt;a href=&#34;https://github.com/JuliaLang/julia/blob/master/NEWS.md&#34;&gt;very active GitHub repository&lt;/a&gt; - improvements to the REPL (tab conversion of &amp;lsquo;latex maths&amp;rsquo; to unicode), and a lot of interesting linear algebra improvements.&lt;/p&gt;
 
 &lt;p&gt;The inaugural JuliaCon has been held, and the presentation slidedecks are already online: &lt;a href=&#34;https://github.com/JuliaCon/presentations&#34;&gt;https://github.com/JuliaCon/presentations&lt;/a&gt;; videos are coming but the upload date has been pushed back as they are edited and transcribed.&lt;/p&gt;

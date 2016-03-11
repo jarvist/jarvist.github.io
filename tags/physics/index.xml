@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Physics on Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/tags/physics/</link>
+    <link>http://jarvist.github.io/tags/physics/</link>
     <description>Recent content in Physics on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Tue, 01 Jul 2014 12:36:09 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/tags/physics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Free Physics on the Internet</title>
-      <link>http://localhost:1313/post/free-physics-on-the-internet/</link>
+      <link>http://jarvist.github.io/post/free-physics-on-the-internet/</link>
       <pubDate>Tue, 01 Jul 2014 12:36:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/free-physics-on-the-internet/</guid>
+      <guid>http://jarvist.github.io/post/free-physics-on-the-internet/</guid>
       <description>
 
 &lt;p&gt;This is a collection of bookmarks I&amp;rsquo;ve collected over the years of useful

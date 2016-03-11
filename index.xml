@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jarvist Moore Frost: Academic blog</title>
-    <link>http://localhost:1313/</link>
+    <link>http://jarvist.github.io/</link>
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
     <lastBuildDate>Tue, 08 Dec 2015 14:16:34 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Talks and Seminars at Bath University</title>
-      <link>http://localhost:1313/post/2015-12-08-talks-and-seminars-at-bath-university/</link>
+      <link>http://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</link>
       <pubDate>Tue, 08 Dec 2015 14:16:34 +0100</pubDate>
       
-      <guid>http://localhost:1313/post/2015-12-08-talks-and-seminars-at-bath-university/</guid>
+      <guid>http://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</guid>
       <description>&lt;p&gt;There are a number of groups at Bath University doing work of interest to
 Condensed Matter Theorists. This is just a quick set of &amp;lsquo;hot links&amp;rsquo; to the
 individual seminar sites + pages. It is not intended to be exhaustive or
@@ -32,10 +32,10 @@ complete, but I try and see what&amp;rsquo;s on at all of these events for every
     
     <item>
       <title>Embarrassing embarrassingly parallel</title>
-      <link>http://localhost:1313/post/embarrassing-embarrassingly-parallelism/</link>
+      <link>http://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</link>
       <pubDate>Fri, 22 May 2015 21:03:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/embarrassing-embarrassingly-parallelism/</guid>
+      <guid>http://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</guid>
       <description>&lt;p&gt;I gave up OPENMP&amp;rsquo;ing my Monte Carlo code about a year ago. I was trying to do it at the level of MC moves, and there are massive issues here in that the different threads are trying to sample and update the same simulation space - leading to segfaults as the variables crash into one another.&lt;/p&gt;
 
 &lt;p&gt;One method I&amp;rsquo;ve seen used in the literature is domain decomposition - where each thread runs MC on a segment of the simulation volume. This is quite a headache to set up, and then you have issues about simultaneous updates, and the inability to exchange particles / states across the boundaries. All scary issues.&lt;/p&gt;
@@ -55,10 +55,10 @@ The change in energy variable &amp;lsquo;dE&amp;rsquo; is a natural reduction ve
     
     <item>
       <title>Organising computational job workflow, as you go: freck</title>
-      <link>http://localhost:1313/post/organising-computational-job-workflow-as-you-go-freck/</link>
+      <link>http://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</link>
       <pubDate>Sun, 26 Apr 2015 16:15:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/organising-computational-job-workflow-as-you-go-freck/</guid>
+      <guid>http://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</guid>
       <description>&lt;p&gt;The workflow in computational materials modelling is often highly complex, and bespoke to the particular calculations you are doing. The flow is highly derivative (results of later jobs depend on work on prior jobs), but can also be quite chaotic and multiply branching. Unsurprisingly, your files easily end up very messy, with significant confusion about what steps were required to get to the present working setup.&lt;/p&gt;
 
 &lt;p&gt;Version control is an absolute godsend, being able to flow down the list settings changes is extremely useful, and then being able to simply open the Git archive on GitHub as a way of archiving your research data is fantastic. However, this still leaves problems to be solved - the main one is actually constructing the folder structure sensibly. (A lesser issue is that intermediate and binary files in electronic structure calculations can be enormous (&amp;gt;multi gigabyte) and so far too large for git.)&lt;/p&gt;
@@ -82,16 +82,16 @@ But it&amp;rsquo;s flexible enough that you can also just use this to separate y
     
     <item>
       <title>Jarvist Moore Frost</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://jarvist.github.io/about/</link>
       <pubDate>Mon, 13 Apr 2015 14:16:34 +0100</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://jarvist.github.io/about/</guid>
       <description>
 
 &lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://localhost:1313/images/JarvistMooreFrost_Dec2010_FP4_CanonA1_Mirror_Square_256px.jpg&#34; /&gt;
+        &lt;img src=&#34;http://jarvist.github.io/images/JarvistMooreFrost_Dec2010_FP4_CanonA1_Mirror_Square_256px.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -184,10 +184,10 @@ at &lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wo
     
     <item>
       <title>Writing scientific papers</title>
-      <link>http://localhost:1313/post/writing-scientific-papers/</link>
+      <link>http://jarvist.github.io/post/writing-scientific-papers/</link>
       <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/writing-scientific-papers/</guid>
+      <guid>http://jarvist.github.io/post/writing-scientific-papers/</guid>
       <description>&lt;p&gt;I am probably the last person you would want to consult on tips to write a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the best, much work lies on the cutting room floor - skeletons of half assembled papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m very interested in improving, and certainly enjoy reading a well written paper.&lt;/p&gt;
 
 &lt;p&gt;It is an unfortunate fact that the average quality of scientific writing is decreasing. Some of this can be explained by the laudable continuing expansion of science across class boundaries, and across the world (a greater number of authors writing in English as an additional language). Yet I think the majority reason is the pressure to publish so much, we write so many more papers, and there&amp;rsquo;s enormous pressure to oversell.&lt;/p&gt;
@@ -214,10 +214,10 @@ at &lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wo
     
     <item>
       <title>Hex Grids</title>
-      <link>http://localhost:1313/post/hex-grids/</link>
+      <link>http://jarvist.github.io/post/hex-grids/</link>
       <pubDate>Sun, 25 Jan 2015 23:06:52 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hex-grids/</guid>
+      <guid>http://jarvist.github.io/post/hex-grids/</guid>
       <description>&lt;p&gt;Solid state materials pack together in a myriad of ways. The crystal structures are typically referred to with the name of the archetype compound. This ranges from fairly common English words such as &amp;lsquo;diamond&amp;rsquo; and &amp;lsquo;rock-salt&amp;rsquo; to, &amp;lsquo;zinc-blend&amp;rsquo; &amp;lsquo;wurtzite&amp;rsquo; and, of course, &amp;lsquo;perovskite&amp;rsquo;.&lt;/p&gt;
 
 &lt;p&gt;The atomic packing within these structures is fully described by their space-group, of which there are 230 to choose from. These space groups take the crystallographic (periodic structure) compatible point groups, and combine them with different possible lattice vectors.&lt;/p&gt;
@@ -242,10 +242,10 @@ at &lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wo
     
     <item>
       <title>Snippet: SSH at Bath Uni</title>
-      <link>http://localhost:1313/post/snippet-ssh-at-bath-uni/</link>
+      <link>http://jarvist.github.io/post/snippet-ssh-at-bath-uni/</link>
       <pubDate>Fri, 09 Jan 2015 14:36:35 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/snippet-ssh-at-bath-uni/</guid>
+      <guid>http://jarvist.github.io/post/snippet-ssh-at-bath-uni/</guid>
       <description>&lt;p&gt;I polished some slides I gave at our group meeting last summer, on using &amp;lsquo;ssh&amp;rsquo; proficiently at Bath university. I thought they may be of use to other&amp;rsquo;s, so published them online.&lt;/p&gt;
 
 &lt;p&gt;They mainly cover the setting up of a ssh-config (the examples are probably useful for most people that use HPC facilities), and tunneling via the LCPU facility (fairly Bath specific, though other academic institutes might offer a similar unix machine in a DMZ to bounce through).&lt;/p&gt;
@@ -258,10 +258,10 @@ at &lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wo
     
     <item>
       <title>Snippet: New Julia paper from the developers</title>
-      <link>http://localhost:1313/post/snippet-new-julia-paper-from-the-developers/</link>
+      <link>http://jarvist.github.io/post/snippet-new-julia-paper-from-the-developers/</link>
       <pubDate>Sat, 08 Nov 2014 13:32:50 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/snippet-new-julia-paper-from-the-developers/</guid>
+      <guid>http://jarvist.github.io/post/snippet-new-julia-paper-from-the-developers/</guid>
       <description>&lt;p&gt;Looks to be a great reference, with plenty of code snippets getting bits of numerical methods working, finishing on the random-matrix semicircle theory, with @parallel speedup! Wish this was around when I was figuring out my little toy model&amp;hellip; &lt;a href=&#34;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&#34;&gt;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://arxiv.org/abs/1411.1607&#34;&gt;http://arxiv.org/abs/1411.1607&lt;/a&gt;&lt;/p&gt;
@@ -273,10 +273,10 @@ at &lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wo
     
     <item>
       <title>How I made a poster; 2014</title>
-      <link>http://localhost:1313/post/how-i-made-a-poster-2014/</link>
+      <link>http://jarvist.github.io/post/how-i-made-a-poster-2014/</link>
       <pubDate>Thu, 16 Oct 2014 04:09:51 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/how-i-made-a-poster-2014/</guid>
+      <guid>http://jarvist.github.io/post/how-i-made-a-poster-2014/</guid>
       <description>&lt;p&gt;I made a scientific poster last week, for the first time in five years.&lt;/p&gt;
 
 &lt;p&gt;I drew it in Inkscape, a free opensource vector drawing package. I&amp;rsquo;m have quite a lot of experience using Inkscape in drawing cave surveys, but I believe it&amp;rsquo;s both relatively easy to use, and has some extremely useful tools for constructing posters (most notably the alignment &amp;amp; distribution tool). The one gotcha is that you have to explicitly ask for it to spell check your text fields! It&amp;rsquo;s native fileformat is SVG based, and it is very happy to import PDFs (i.e. figures / graphs - from gnuplot I use the colour postscript terminal, then &amp;lsquo;ps2pdf&amp;rsquo; on the command line).&lt;/p&gt;
@@ -301,10 +301,10 @@ This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweig
     
     <item>
       <title>Maximum coverage for loops; bit reversing integars</title>
-      <link>http://localhost:1313/post/maximum-coverage-for-loops-bit-reversing-integars/</link>
+      <link>http://jarvist.github.io/post/maximum-coverage-for-loops-bit-reversing-integars/</link>
       <pubDate>Thu, 18 Sep 2014 18:44:51 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/maximum-coverage-for-loops-bit-reversing-integars/</guid>
+      <guid>http://jarvist.github.io/post/maximum-coverage-for-loops-bit-reversing-integars/</guid>
       <description>&lt;p&gt;So I was live-plotting some results from a simulation code (written in C), which was producing results for an input parameter (in this case Temperature), over a range generated by a for loop. Pretty standard computational physics. It was clearly suboptimal watching the new dataset arrive in small, fine, increments from zero upwards; the obvious thing was to change the discretisation of the for loop &amp;amp; make it more coarse. Yet, surely there is some way to get better coverage of the dataset, like a &amp;lsquo;streaming&amp;rsquo; JPEG or GIF arriving with increasing discretisations of the blockiness?&lt;/p&gt;
 
 &lt;p&gt;What about some mathematical function that would jump around the space with good coverage? A pseudo-random number generator with a fixed period? Some mathematical function that would map an ascending series of integers into spatial coverage? Modulus arithmetic on some prime or co-prome addition?&lt;/p&gt;
@@ -319,10 +319,10 @@ This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweig
     
     <item>
       <title>Snippet: Tiddlywiki for Scholars</title>
-      <link>http://localhost:1313/post/snippet-tiddlywiki-for-scholars/</link>
+      <link>http://jarvist.github.io/post/snippet-tiddlywiki-for-scholars/</link>
       <pubDate>Fri, 05 Sep 2014 12:35:32 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/snippet-tiddlywiki-for-scholars/</guid>
+      <guid>http://jarvist.github.io/post/snippet-tiddlywiki-for-scholars/</guid>
       <description>&lt;p&gt;This looks like it might be extremely useful for a personal knowledge base / article discussion. It&amp;rsquo;s setup more for humanities work currently (books, biographies and authors), than science (some way to import a DOI to build a paper-discussion place would be fantastic). A collaborative journal club / papercore / paper summary might also work wonderfully within here.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://tw5.scholars.tiddlyspot.com/&#34;&gt;http://tw5.scholars.tiddlyspot.com/&lt;/a&gt;&lt;/p&gt;
@@ -331,20 +331,20 @@ This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweig
     
     <item>
       <title>Snippet: Mendeley Desktop (Mac OS) failed update</title>
-      <link>http://localhost:1313/post/snippet-mendeley-desktop-mac-os-failed-update/</link>
+      <link>http://jarvist.github.io/post/snippet-mendeley-desktop-mac-os-failed-update/</link>
       <pubDate>Wed, 23 Jul 2014 14:51:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/snippet-mendeley-desktop-mac-os-failed-update/</guid>
+      <guid>http://jarvist.github.io/post/snippet-mendeley-desktop-mac-os-failed-update/</guid>
       <description>&lt;p&gt;Mendeley Desktop on my Mac at work had silently stopped working - clicking the button in Launchpad did nothing. Navigating to the directory on the shell, cd &amp;ldquo;/Applications/Mendeley\ Desktop.app/Contents/MacOS/&amp;rdquo; it appeared a prior update had broken halfway through, leaving a null file for &amp;lsquo;Mendeley Desktop&amp;rsquo;. Whoops. However there was a &amp;lsquo;Mendeley Desktop.bak&amp;rsquo;. Running this from the shell, Mendeley Desktop appeared, and then offered to update itself, this time completing successfully.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Links from Julia Land</title>
-      <link>http://localhost:1313/post/links-from-julia-land/</link>
+      <link>http://jarvist.github.io/post/links-from-julia-land/</link>
       <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/links-from-julia-land/</guid>
+      <guid>http://jarvist.github.io/post/links-from-julia-land/</guid>
       <description>&lt;p&gt;Julia 0.3 Release Candidate 1 has quietly appeared on the &lt;a href=&#34;http://julialang.org/downloads/&#34;&gt;nightly builds page&lt;/a&gt;; release notes in the &lt;a href=&#34;https://github.com/JuliaLang/julia/blob/master/NEWS.md&#34;&gt;very active GitHub repository&lt;/a&gt; - improvements to the REPL (tab conversion of &amp;lsquo;latex maths&amp;rsquo; to unicode), and a lot of interesting linear algebra improvements.&lt;/p&gt;
 
 &lt;p&gt;The inaugural JuliaCon has been held, and the presentation slidedecks are already online: &lt;a href=&#34;https://github.com/JuliaCon/presentations&#34;&gt;https://github.com/JuliaCon/presentations&lt;/a&gt;; videos are coming but the upload date has been pushed back as they are edited and transcribed.&lt;/p&gt;
@@ -359,10 +359,10 @@ This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweig
     
     <item>
       <title>Free Physics on the Internet</title>
-      <link>http://localhost:1313/post/free-physics-on-the-internet/</link>
+      <link>http://jarvist.github.io/post/free-physics-on-the-internet/</link>
       <pubDate>Tue, 01 Jul 2014 12:36:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/free-physics-on-the-internet/</guid>
+      <guid>http://jarvist.github.io/post/free-physics-on-the-internet/</guid>
       <description>
 
 &lt;p&gt;This is a collection of bookmarks I&amp;rsquo;ve collected over the years of useful
@@ -464,10 +464,10 @@ for historical interest than utility as a textbook.&lt;/p&gt;
     
     <item>
       <title>Snippet: Console diary - vimwiki (now with more git &amp; autohooks)</title>
-      <link>http://localhost:1313/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</link>
+      <link>http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</link>
       <pubDate>Wed, 25 Jun 2014 23:49:41 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</guid>
+      <guid>http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve dallied with keeping a computer / online logbook. I&amp;rsquo;ve tried many products, even wrote my own (retrospectively crazy) set of scripts called &amp;lsquo;freck&amp;rsquo;*. But all of these methods were only ever used for a week or two before falling by the wayside. Just too much extra effort for (me) to follow through with. And therefore they all become walled-gardens with no way of getting the information out.&lt;/p&gt;
 
 &lt;p&gt;I keep paper notebooks for talks; I think it is essential to be able to sketch maths and diagrams, and I honestly think my brain is more engaged when I&amp;rsquo;m making notes by hand versus either typing or just listening (i.e. daydreaming). But they&amp;rsquo;re impossible to search through, and just a bit ridiculous to use when sitting in front of a computer.&lt;/p&gt;
