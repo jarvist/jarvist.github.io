@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ehrenfest on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/ehrenfest/</link>
+    <description>Recent content in Ehrenfest on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Wed, 18 Jun 2014 15:14:27 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ehrenfest/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Comp Chem Highlights: Coherence penalty functional: A simple method for adding decoherence in Ehrenfest dynamics</title>
+      <link>http://localhost:1313/post/comp-chem-highlights-coherence-penalty-functional-a-simple-method-for-adding-decoherence-in-ehrenfest-dynamics/</link>
+      <pubDate>Wed, 18 Jun 2014 15:14:27 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/comp-chem-highlights-coherence-penalty-functional-a-simple-method-for-adding-decoherence-in-ehrenfest-dynamics/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.compchemhighlights.org/2014/06/coherence-penalty-functional-simple.html&#34;&gt;Comp Chem Highlights: Coherence penalty functional: A simple method for adding decoherence in Ehrenfest dynamics&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Really interesting paper on the CCH.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

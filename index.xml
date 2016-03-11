@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Tue, 08 Dec 2015 14:16:34 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Talks and Seminars at Bath University</title>
+      <link>http://localhost:1313/post/2015-12-08-talks-and-seminars-at-bath-university/</link>
+      <pubDate>Tue, 08 Dec 2015 14:16:34 +0100</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-12-08-talks-and-seminars-at-bath-university/</guid>
+      <description>&lt;p&gt;There are a number of groups at Bath University doing work of interest to
+Condensed Matter Theorists. This is just a quick set of &amp;lsquo;hot links&amp;rsquo; to the
+individual seminar sites + pages. It is not intended to be exhaustive or
+complete, but I try and see what&amp;rsquo;s on at all of these events for every week.&lt;/p&gt;
+
+&lt;p&gt;Physics: Theory group seminars: &lt;a href=&#34;http://people.bath.ac.uk/rj248/theory_seminars.html&#34;&gt;http://people.bath.ac.uk/rj248/theory_seminars.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maths: General colloquium, Landscapes in Mathematical Sciences: &lt;a href=&#34;http://people.bath.ac.uk/masgks/Landscapes/&#34;&gt;http://people.bath.ac.uk/masgks/Landscapes/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Maths: Numerical Analysis group seminars: &lt;a href=&#34;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&#34;&gt;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Physics: Nanoseminars: &lt;a href=&#34;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&#34;&gt;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Embarrassing embarrassingly parallel</title>
+      <link>http://localhost:1313/post/embarrassing-embarrassingly-parallelism/</link>
+      <pubDate>Fri, 22 May 2015 21:03:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/embarrassing-embarrassingly-parallelism/</guid>
+      <description>&lt;p&gt;I gave up OPENMP&amp;rsquo;ing my Monte Carlo code about a year ago. I was trying to do it at the level of MC moves, and there are massive issues here in that the different threads are trying to sample and update the same simulation space - leading to segfaults as the variables crash into one another.&lt;/p&gt;
+
+&lt;p&gt;One method I&amp;rsquo;ve seen used in the literature is domain decomposition - where each thread runs MC on a segment of the simulation volume. This is quite a headache to set up, and then you have issues about simultaneous updates, and the inability to exchange particles / states across the boundaries. All scary issues.&lt;/p&gt;
+
+&lt;p&gt;So I gave up. I am not a computer scientist. I could not understand even the terms of reference; Lambda calculus reductions and all that jazz. In Simon Peyton Jones&amp;rsquo; terms, &amp;ldquo;I am a worm.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I revisited it this evening, with the intention of seeing whether I could separate the thread of the random number generator at least. However, it instantaneously struct me what I should do. Each MC-move attempt calls &amp;lsquo;site-energy&amp;rsquo; with the test move which has a set of for loops evaluating over nearby space (i.e. with a cutoff) to get a total energy change for the test move.
+The change in energy variable &amp;lsquo;dE&amp;rsquo; is a natural reduction vector, none of this modifies the simulation volume, and in a production run where you are integrating out a large volume of space for accurate energies - the majority of computer time is spend in these for loops.&lt;/p&gt;
+
+&lt;p&gt;One: &lt;code&gt;#pragma omp parallel for reduction(+:dE)&lt;/code&gt; before the start of the for-loop nest; and a recompile with &lt;code&gt;-fopenmp&lt;/code&gt;, and it now maxes out the 4 hyperthreaded cores on my laptop.&lt;/p&gt;
+
+&lt;p&gt;Scaling will be more limited on bigger machines, and increase in speed will only be seen where this energy summation, rather than the single-core modifications to the simulation volume and random number generator, dominate the CPU required.&lt;/p&gt;
+
+&lt;p&gt;But still. Embarrassing embarrassingly parallel, because I could have and should have seen this a year ago!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Organising computational job workflow, as you go: freck</title>
+      <link>http://localhost:1313/post/organising-computational-job-workflow-as-you-go-freck/</link>
+      <pubDate>Sun, 26 Apr 2015 16:15:52 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/organising-computational-job-workflow-as-you-go-freck/</guid>
+      <description>&lt;p&gt;The workflow in computational materials modelling is often highly complex, and bespoke to the particular calculations you are doing. The flow is highly derivative (results of later jobs depend on work on prior jobs), but can also be quite chaotic and multiply branching. Unsurprisingly, your files easily end up very messy, with significant confusion about what steps were required to get to the present working setup.&lt;/p&gt;
+
+&lt;p&gt;Version control is an absolute godsend, being able to flow down the list settings changes is extremely useful, and then being able to simply open the Git archive on GitHub as a way of archiving your research data is fantastic. However, this still leaves problems to be solved - the main one is actually constructing the folder structure sensibly. (A lesser issue is that intermediate and binary files in electronic structure calculations can be enormous (&amp;gt;multi gigabyte) and so far too large for git.)&lt;/p&gt;
+
+&lt;p&gt;To aid this I&amp;rsquo;ve written a very lightweight shell script called &amp;lsquo;freck&amp;rsquo; (to move swiftly or nimbly, an obsolete English word). Each time this is run in a working directory, it generates a folder named 0001-, 0002- etc. with a user-requested file name, and then moves all the present working files into that directory. It also saves a &amp;lsquo;breadcrumb&amp;rsquo; file with information about when and where you are writing this. I would like it to also add information extracted from your present history (i.e. all the commands you have used to work on the data), but the problem is that the shell script runs within its own shell, and it&amp;rsquo;s not obvious how to easily or portably access this.
+(history &amp;gt; history.log ; is very quick to run though)&lt;/p&gt;
+
+&lt;p&gt;The suggestion would be that you then typically run a &amp;lsquo;git add&amp;rsquo; on the small input / output files, and commit these to a repository with a sensible commit history.
+Then copy the necessary files to continue your job into the PWD, and continue work.
+But it&amp;rsquo;s flexible enough that you can also just use this to separate your work when running on a cluster.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;m not the only one who&amp;rsquo;s ended up with a folder structure that ends up looking hellishly like this:-
+~/PROJECT_FOO/geom_opt/geom_opt_restart/geom_opt_restart_higher_convergence/moar_kpoints/cation_geom/cation_geom_restart/frequency_calc/ etc.&lt;/p&gt;
+
+&lt;p&gt;Instead you end up with something much more sensible, time ordered and single-depthh: &lt;a href=&#34;https://github.com/jarvist/CDFT-C2H4&#34;&gt;https://github.com/jarvist/CDFT-C2H4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Anyhow, check it out here + I&amp;rsquo;m always interested in all + any feedback!
+&lt;a href=&#34;https://github.com/jarvist/freck&#34;&gt;https://github.com/jarvist/freck&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Jarvist Moore Frost</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 13 Apr 2015 14:16:34 +0100</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://localhost:1313/images/JarvistMooreFrost_Dec2010_FP4_CanonA1_Mirror_Square_256px.jpg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Dr Jarvist Moore Frost&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Electronic Mail:&lt;/strong&gt; J.M.Frost@bath.ac.uk&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Postal Address:&lt;/strong&gt;
+Dr Jarvist Moore Frost,
+Dept of Chemistry,
+University of Bath,
+Bath,
+BA2 7AY,
+United Kingdom&lt;/p&gt;
+
+&lt;h3 id=&#34;research-statement:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Research Statement&lt;/h3&gt;
+
+&lt;p&gt;Over 122 PetaWatts of solar power reach the Earth&amp;rsquo;s surface. This figure is
+vastly greater than the 15 TeraWatts (while still a crazy big number, that&amp;rsquo;s
+only 0.015 PetaWatts) which is humanity&amp;rsquo;s total power requirement.&lt;/p&gt;
+
+&lt;p&gt;So long term, I think it is inevitable that all of our power will come from
+solar. All the energy in fossil fuels is essentially ancient sunlight, captured
+by inefficient photosynthesis and geological happenstance.&lt;/p&gt;
+
+&lt;p&gt;Solar cells (formally called photovoltaics, as they generate electrical voltage
+from photons of light) are a beautifully simple engine that silently run on
+sunlight and thermodynamics to produce electrical power. There are no parts to
+wear out, no bearings to service, no oil to change. The only problem is that
+the solar resource is not very concentrated — bright sunlight is about
+a kilowatt per metre squared. So you have to build big panels to produce
+a meaningful amount of energy.&lt;/p&gt;
+
+&lt;p&gt;Our present best technology for making photovoltaics is based on Silicon. This
+is an abundant material (sand is mainly Silicon Dioxide), but forming pure
+Silicon requires a lot of energy, and making Silicon solar panels requires
+vacuum processing and some pretty nasty chemicals which keeps the cost
+relatively high.&lt;/p&gt;
+
+&lt;p&gt;My research is in trying to understand and design new materials for solar
+cells. By using computational chemistry and materials science techniques we try
+to understand how novel solar cells work (in particular, what limits their
+efficiency or longevity), and how we can make them better. These new solar
+cells are typically more complex than Silicon cells – relying on a subtle
+interplay of multiple elements in a particular crystal structure or fiendishly
+complex molecules dreamt up by an organic chemist.&lt;/p&gt;
+
+&lt;p&gt;I work with computational physics techniques. The equations which govern the
+behaviour of our everyday materials are simple to write down, but impossible to
+solve exactly for any but the most trivial of examples. Instead we rely on
+computational algorithms to numerically solve approximate models for the real
+system. Even very limited and flawed solutions of small systems can require
+absolutely stunning amounts of computer time. Validating (against reality)
+these models and understanding the limits of the techniques available, is what
+I spend the majority of my time doing.&lt;/p&gt;
+
+&lt;p&gt;At Bath I am in the Chemistry Department, funded under the EPSRC Programme
+Grant Energy Materials: Computational Solutions,
+working in the Walsh Material Design group. So far the majority of my
+computer time has been provided by EPSRC on the new Cray XC30 supercomputer
+ARCHER.&lt;/p&gt;
+
+&lt;p&gt;You may find my academic papers on &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
+Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;this-blog-other-presence:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;This blog &amp;amp; other presence&lt;/h3&gt;
+
+&lt;p&gt;This is my academic (mainly!) blog. It used to be on wordpress, at
+&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;. Files were extracted to a plain text Markdown
+format, and are now published with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the &lt;code&gt;nofancy&lt;/code&gt; theme (slightly
+tweaked). I moved this blog from wordpress as I had grown irritated with the
+editing experience, and I hope that being able to edit and push from the
+command line would get me blogging more regularly.&lt;/p&gt;
+
+&lt;p&gt;In January 2016 I started using a Google+ &amp;lsquo;Collection&amp;rsquo; to publish &lt;a href=&#34;https://plus.google.com/collection/wKpRZB&#34;&gt;reviews of
+Electronic Structure Theory books&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Outside academics, I have less and less time for riding bicycles, sailing,
+diving and exploratory caving. But the little I have written up, is accessible
+at &lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;| What Would Dirac Do [WWDD] ? |&amp;gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Writing scientific papers</title>
+      <link>http://localhost:1313/post/writing-scientific-papers/</link>
+      <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/writing-scientific-papers/</guid>
+      <description>&lt;p&gt;I am probably the last person you would want to consult on tips to write a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the best, much work lies on the cutting room floor - skeletons of half assembled papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m very interested in improving, and certainly enjoy reading a well written paper.&lt;/p&gt;
+
+&lt;p&gt;It is an unfortunate fact that the average quality of scientific writing is decreasing. Some of this can be explained by the laudable continuing expansion of science across class boundaries, and across the world (a greater number of authors writing in English as an additional language). Yet I think the majority reason is the pressure to publish so much, we write so many more papers, and there&amp;rsquo;s enormous pressure to oversell.&lt;/p&gt;
+
+&lt;p&gt;My parents were visiting this weekend. &amp;ldquo;How is work?&amp;rdquo; my mother asked. &amp;ldquo;I should be writing more.&amp;rdquo; - the scientist&amp;rsquo;s lament. &amp;ldquo;Oh, but don&amp;rsquo;t you only write a paper when you make a breakthrough?&amp;rdquo; To be honest I think we would have a better scientific corpus if this was still the case - carefully work on a hard problem for a few years until we gain some traction, then write it up for the benefit of anyone who could take it elsewhere.&lt;/p&gt;
+
+&lt;p&gt;(Along these lines, Ross McKenzie has a recent blog post &amp;lsquo;&lt;a href=&#34;http://condensedconcepts.blogspot.co.uk/2015/02/in-praise-of-modest-goals.html&#34;&gt;In praise of modest goals&lt;/a&gt;&amp;rsquo;.)&lt;/p&gt;
+
+&lt;p&gt;So the first thing to do is to overcome the cynicism! When I get particular disaffected and want to crawl under my duvet and drift off to sleep reading Feynman, I return to Simon Peyton Jones&amp;rsquo; talk on &lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;how to write a great research paper&lt;/a&gt; . His enthusiasm and motivation is infectious. I am a worm. A worm with a infectious mind virus, and that is good. (Much like his choice of font, do read: &lt;a href=&#34;http://www.mcsweeneys.net/articles/im-comic-sans-asshole&#34;&gt;http://www.mcsweeneys.net/articles/im-comic-sans-asshole&lt;/a&gt; )&lt;/p&gt;
+
+&lt;p&gt;Sabine Hossenfelder wrote a recent blog post on &lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;How to write your first scientific paper&lt;/a&gt;, this covers the construction and sectioning of a physics paper.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve personally found the Penguin Writer&amp;rsquo;s Manual very useful for the nitty gritty of &amp;lsquo;that&amp;rsquo; vs &amp;lsquo;which&amp;rsquo;. I&amp;rsquo;ve also read Strunk and White (The elements of style), though I&amp;rsquo;m not sure how much I took from it. The &lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;economist style guide&lt;/a&gt; (available online) is also very useful as a reference.&lt;/p&gt;
+
+&lt;p&gt;I much prefer to write with Latex. Sometimes I first go via Markdown (a lightweight markup language that looks a lot like how you would naturally format a text email), so I don&amp;rsquo;t need to bother with thinking about the Latex commands when forming a text, and then convert to Latex (with pandoc) for inclusions of figures &amp;amp; all the revisions that incur thereafter. The whole project I put within a &amp;lsquo;git&amp;rsquo; repository and so have version control, effectively offsite backup (to Github / Bitbucket). To get the diffs to work well with the files, it&amp;rsquo;s easiest to add a newline after the end of every sentence (I usually hard-break my lines at 80 chars as I write in Vim).&lt;/p&gt;
+
+&lt;p&gt;I have contributed to papers in Microsoft Word (usually originating with collaborators). It works OK, and the track changes / comment tool can be really useful, though a distressing number of collaborators seem to send you back a &amp;lsquo;clean&amp;rsquo; document with the tracking dropped. Whether that&amp;rsquo;s due to ignorance of the tools, compatibility with different versions of Word, or an attempt to bury any information about which of your changes they reverted, I do not know. Certainly it makes me respect them less academically and professionally.&lt;/p&gt;
+
+&lt;p&gt;I typically plot data in GNUPLOT or XMGRACE, sometimes also in Python&amp;rsquo;s Matplotlib (though this is much less deterministic - the output depends on the specific version you have installed, and it can be extremely frustrating to reproduce a tweaked diagram). I&amp;rsquo;ve found some useful websites on tips + tricks for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve consolidated all my useful bookmarks on the above, and put them in a shared Google Chrome bookmark folder : &lt;a href=&#34;https://www.google.com/stars/yhmqn5hv65adw/profile/folio/ssf_7f2647dd238f3fb7?hl=en-GB&#34;&gt;Writing scientific papers&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hex Grids</title>
+      <link>http://localhost:1313/post/hex-grids/</link>
+      <pubDate>Sun, 25 Jan 2015 23:06:52 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/hex-grids/</guid>
+      <description>&lt;p&gt;Solid state materials pack together in a myriad of ways. The crystal structures are typically referred to with the name of the archetype compound. This ranges from fairly common English words such as &amp;lsquo;diamond&amp;rsquo; and &amp;lsquo;rock-salt&amp;rsquo; to, &amp;lsquo;zinc-blend&amp;rsquo; &amp;lsquo;wurtzite&amp;rsquo; and, of course, &amp;lsquo;perovskite&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;The atomic packing within these structures is fully described by their space-group, of which there are 230 to choose from. These space groups take the crystallographic (periodic structure) compatible point groups, and combine them with different possible lattice vectors.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://img.chem.ucl.ac.uk/sgp/large/sgp.htm&#34;&gt;http://img.chem.ucl.ac.uk/sgp/large/sgp.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some structures are fiendishly complicated, others are effectively cubic grids (perhaps with lattice vectors which are neither orthogonal nor equal in length). Even very complicated structures often have a sub lattice which packs cubically, or with hexagonal close packing.&lt;/p&gt;
+
+&lt;p&gt;One of the perhaps surprising things is that hexagonal packing and cubic packing are extremely similar to one other - in particular cubic (BCC and FCC) and hexagonal close packing both have a coordination number of 12. Each sphere (atom) has 12 nearest neighbours.&lt;/p&gt;
+
+&lt;p&gt;This is very useful, when you are building a computer model for a large structure. You can store the data about site occupancy in a simple array[][][], and calculate various necessary metrics (in particular real space distance vectors) via simple (i.e. free, in terms of computer time) arithmetic.&lt;/p&gt;
+
+&lt;p&gt;I came across an article on hexagonal grids today; much of it was startling familiar, but in that way that it was giving you a framework and lexicon for understanding for what you&amp;rsquo;d hacked together with a partial glimpse of true understanding.&lt;/p&gt;
+
+&lt;p&gt;(It&amp;rsquo;s written from the perspective of a games developer, but it&amp;rsquo;s directly applicable to scientific computation - just don&amp;rsquo;t tell the Research Councils how similar our austere science is to a game engine!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.redblobgames.com/grids/hexagons/&#34;&gt;http://www.redblobgames.com/grids/hexagons/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;via HN discussion &lt;a href=&#34;https://news.ycombinator.com/item?id=8941588&#34;&gt;https://news.ycombinator.com/item?id=8941588&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Snippet: SSH at Bath Uni</title>
+      <link>http://localhost:1313/post/snippet-ssh-at-bath-uni/</link>
+      <pubDate>Fri, 09 Jan 2015 14:36:35 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/snippet-ssh-at-bath-uni/</guid>
+      <description>&lt;p&gt;I polished some slides I gave at our group meeting last summer, on using &amp;lsquo;ssh&amp;rsquo; proficiently at Bath university. I thought they may be of use to other&amp;rsquo;s, so published them online.&lt;/p&gt;
+
+&lt;p&gt;They mainly cover the setting up of a ssh-config (the examples are probably useful for most people that use HPC facilities), and tunneling via the LCPU facility (fairly Bath specific, though other academic institutes might offer a similar unix machine in a DMZ to bounce through).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1OhQL_P5VT_467JhfcCVCFSmryZ0UoQkm_QzGTLNb7bU/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Google Present Slides&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/filthy-dotfiles/blob/master/ssh-config&#34;&gt;https://github.com/jarvist/filthy-dotfiles/blob/master/ssh-config&lt;/a&gt; - my ssh-config, with Bath (&amp;amp; jarvist!) specific settings.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Snippet: New Julia paper from the developers</title>
+      <link>http://localhost:1313/post/snippet-new-julia-paper-from-the-developers/</link>
+      <pubDate>Sat, 08 Nov 2014 13:32:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/snippet-new-julia-paper-from-the-developers/</guid>
+      <description>&lt;p&gt;Looks to be a great reference, with plenty of code snippets getting bits of numerical methods working, finishing on the random-matrix semicircle theory, with @parallel speedup! Wish this was around when I was figuring out my little toy model&amp;hellip; &lt;a href=&#34;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&#34;&gt;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://arxiv.org/abs/1411.1607&#34;&gt;http://arxiv.org/abs/1411.1607&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;via the ever useful, if distracting, Hacker News:
+&lt;a href=&#34;https://news.ycombinator.com/item?id=8576411&#34;&gt;https://news.ycombinator.com/item?id=8576411&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How I made a poster; 2014</title>
+      <link>http://localhost:1313/post/how-i-made-a-poster-2014/</link>
+      <pubDate>Thu, 16 Oct 2014 04:09:51 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/how-i-made-a-poster-2014/</guid>
+      <description>&lt;p&gt;I made a scientific poster last week, for the first time in five years.&lt;/p&gt;
+
+&lt;p&gt;I drew it in Inkscape, a free opensource vector drawing package. I&amp;rsquo;m have quite a lot of experience using Inkscape in drawing cave surveys, but I believe it&amp;rsquo;s both relatively easy to use, and has some extremely useful tools for constructing posters (most notably the alignment &amp;amp; distribution tool). The one gotcha is that you have to explicitly ask for it to spell check your text fields! It&amp;rsquo;s native fileformat is SVG based, and it is very happy to import PDFs (i.e. figures / graphs - from gnuplot I use the colour postscript terminal, then &amp;lsquo;ps2pdf&amp;rsquo; on the command line).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/PerovskiteKinematics/raw/master/2014-10_JMF_Korea_Poster.pdf&#34;&gt;&lt;img src=&#34;https://jarvistmoorefrost.files.wordpress.com/2014/10/poster.jpg&#34; alt=&#34;Crystal Kinematics Poster&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Like most scientists, I am no designer. So I&amp;rsquo;m mainly winging it, and can&amp;rsquo;t rely on whether things look right or not! I found a colour scheme that was close to some of my figures from Adobe&amp;rsquo;s Color CC [1], and then put those five colours in a swatch just outside the page on the Inkscape. I put all the main text in a medium weight Futura clone, because I like it.&lt;/p&gt;
+
+&lt;p&gt;These days I make my talk slides in Google Present, viewing a certain slide and then selecting &amp;ldquo;Download as SVG&amp;rdquo;, opened in Inkscape as a fairly well-behaved vector images with embedded bitmaps, to then have the slide template objects deleted &amp;amp; used within the poster.&lt;/p&gt;
+
+&lt;p&gt;I also made a tie-in website, linked from a QR code (generated with a free web service) on the poster, as a place to collate links to the YouTube videos and a reprint of the poster itself.
+This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweight and modern responsive web framework. You put the Flatdoc HTML file (template.html) as index.html on the &amp;lsquo;gh-pages&amp;rsquo; branch of your GitHub repo, having edited the HTML to set the USER/REPO/Title correctly. It then pulls down the README.md from your &amp;lsquo;master&amp;rsquo; branch of the repo, and live renders any changes on the browser. Assuming you are used to GitHub &amp;amp; have (fairly minimal) HTML/CSS abilities this is a really quick way to put together something that looks pretty acceptable. [3]&lt;/p&gt;
+
+&lt;p&gt;Overall I was quite pleased with how easy it is to put together something that looks acceptable. If you are interested - have a look at the Inkscape SVG &amp;amp; the structure of the github REPO. [4]&lt;/p&gt;
+
+&lt;p&gt;[1] &lt;a href=&#34;https://color.adobe.com/explore/&#34;&gt;https://color.adobe.com/explore/&lt;/a&gt;
+[2] &lt;a href=&#34;http://ricostacruz.com/flatdoc/&#34;&gt;http://ricostacruz.com/flatdoc/&lt;/a&gt;
+[3] &lt;a href=&#34;http://jarvist.github.io/PerovskiteKinematics/&#34;&gt;http://jarvist.github.io/PerovskiteKinematics/&lt;/a&gt;
+[4] &lt;a href=&#34;https://github.com/jarvist/PerovskiteKinematics&#34;&gt;https://github.com/jarvist/PerovskiteKinematics&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Maximum coverage for loops; bit reversing integars</title>
+      <link>http://localhost:1313/post/maximum-coverage-for-loops-bit-reversing-integars/</link>
+      <pubDate>Thu, 18 Sep 2014 18:44:51 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/maximum-coverage-for-loops-bit-reversing-integars/</guid>
+      <description>&lt;p&gt;So I was live-plotting some results from a simulation code (written in C), which was producing results for an input parameter (in this case Temperature), over a range generated by a for loop. Pretty standard computational physics. It was clearly suboptimal watching the new dataset arrive in small, fine, increments from zero upwards; the obvious thing was to change the discretisation of the for loop &amp;amp; make it more coarse. Yet, surely there is some way to get better coverage of the dataset, like a &amp;lsquo;streaming&amp;rsquo; JPEG or GIF arriving with increasing discretisations of the blockiness?&lt;/p&gt;
+
+&lt;p&gt;What about some mathematical function that would jump around the space with good coverage? A pseudo-random number generator with a fixed period? Some mathematical function that would map an ascending series of integers into spatial coverage? Modulus arithmetic on some prime or co-prome addition?&lt;/p&gt;
+
+&lt;p&gt;How about reversing the binary digits in an incrementing integer? So instead of going 0,1,2,3&amp;hellip;254,255; you would bounce around the number line: 0,128,64,192,32,160 &amp;hellip; 127,255. So it&amp;rsquo;s sort of doing a binary split of the unoccupied locations on the number line at each step. You get maximum coverage, with increasing levels of fidelity, ending up with a complete (but missorted) dataset.&lt;/p&gt;
+
+&lt;p&gt;So with a Bit Twiddling hack found via Stackoverflow (&lt;a href=&#34;http://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64BitsDiv&#34;&gt;http://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64BitsDiv&lt;/a&gt;), the totally crazy bit-shifting code (for a byte, so covering 256 values) looks like: &lt;a href=&#34;https://gist.github.com/jarvist/368622717a5d3bcadfc0&#34;&gt;https://gist.github.com/jarvist/368622717a5d3bcadfc0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s pretty low level (in Python or similar, you could reorder a list, and iterate over that instead), but the result is nice! It&amp;rsquo;s almost so useful that perhaps one should write it into a mini function or macro&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Tiddlywiki for Scholars</title>
+      <link>http://localhost:1313/post/snippet-tiddlywiki-for-scholars/</link>
+      <pubDate>Fri, 05 Sep 2014 12:35:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/snippet-tiddlywiki-for-scholars/</guid>
+      <description>&lt;p&gt;This looks like it might be extremely useful for a personal knowledge base / article discussion. It&amp;rsquo;s setup more for humanities work currently (books, biographies and authors), than science (some way to import a DOI to build a paper-discussion place would be fantastic). A collaborative journal club / papercore / paper summary might also work wonderfully within here.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tw5.scholars.tiddlyspot.com/&#34;&gt;http://tw5.scholars.tiddlyspot.com/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Mendeley Desktop (Mac OS) failed update</title>
+      <link>http://localhost:1313/post/snippet-mendeley-desktop-mac-os-failed-update/</link>
+      <pubDate>Wed, 23 Jul 2014 14:51:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/snippet-mendeley-desktop-mac-os-failed-update/</guid>
+      <description>&lt;p&gt;Mendeley Desktop on my Mac at work had silently stopped working - clicking the button in Launchpad did nothing. Navigating to the directory on the shell, cd &amp;ldquo;/Applications/Mendeley\ Desktop.app/Contents/MacOS/&amp;rdquo; it appeared a prior update had broken halfway through, leaving a null file for &amp;lsquo;Mendeley Desktop&amp;rsquo;. Whoops. However there was a &amp;lsquo;Mendeley Desktop.bak&amp;rsquo;. Running this from the shell, Mendeley Desktop appeared, and then offered to update itself, this time completing successfully.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Links from Julia Land</title>
+      <link>http://localhost:1313/post/links-from-julia-land/</link>
+      <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/links-from-julia-land/</guid>
+      <description>&lt;p&gt;Julia 0.3 Release Candidate 1 has quietly appeared on the &lt;a href=&#34;http://julialang.org/downloads/&#34;&gt;nightly builds page&lt;/a&gt;; release notes in the &lt;a href=&#34;https://github.com/JuliaLang/julia/blob/master/NEWS.md&#34;&gt;very active GitHub repository&lt;/a&gt; - improvements to the REPL (tab conversion of &amp;lsquo;latex maths&amp;rsquo; to unicode), and a lot of interesting linear algebra improvements.&lt;/p&gt;
+
+&lt;p&gt;The inaugural JuliaCon has been held, and the presentation slidedecks are already online: &lt;a href=&#34;https://github.com/JuliaCon/presentations&#34;&gt;https://github.com/JuliaCon/presentations&lt;/a&gt;; videos are coming but the upload date has been pushed back as they are edited and transcribed.&lt;/p&gt;
+
+&lt;p&gt;On the Julia users email list, there was a link published to a very interesting essay on the history of programming languages: &lt;a href=&#34;https://groups.google.com/forum/?fromgroups=#!topic/julia-users/T6f9hCkDW6g&#34;&gt;https://groups.google.com/forum/?fromgroups=#!topic/julia-users/T6f9hCkDW6g&lt;/a&gt;. It ends on a very pro-Julia note!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve personally just been using Julia &amp;lsquo;for real&amp;rsquo; in preparing some data for a publication (rather than just using iJulia as a glorified unicode-capable calculator for physical identities). Here I used Julia to calculate the partition function on the fly (by Monte Carlo integration) for an arbitrary torsional potential in a polymer, then form a tight binding Hamiltonian &amp;amp; evaluate the density of states extremely quickly with the Sturm sequence method. If I hadn&amp;rsquo;t discovered Julia, I would have been trying to do this with Python, and though totally feasible I&amp;rsquo;m not sure I would have got here. You are perpetually operating at the absolute limit of your cognitive capacity in scientific theory (and for me, I&amp;rsquo;m pretty limited); the more powerful the tools you have the more you can achieve, and Julia does indeed seem a very well geared &amp;lsquo;bicycle for the mind&amp;rsquo; in scientific computing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&#34;&gt;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Free Physics on the Internet</title>
+      <link>http://localhost:1313/post/free-physics-on-the-internet/</link>
+      <pubDate>Tue, 01 Jul 2014 12:36:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/free-physics-on-the-internet/</guid>
+      <description>
+
+&lt;p&gt;This is a collection of bookmarks I&amp;rsquo;ve collected over the years of useful
+online physics notes; hopefully this will be of some use to others.
+My bias is as a computational physicist doing electronic structure theory for
+materials modelling, so all within the remit of condensed matter theory (no
+high energy physics, for instance, and nothing that would count as
+&amp;lsquo;theoretical&amp;rsquo; research for the last forty years at least).
+Expect little outside pedestrian quantum mechanics and statistical physics, and
+the one fundamental force you can actually interact with.&lt;/p&gt;
+
+&lt;p&gt;Partially inspired by Gerard &amp;rsquo;t Hooft&amp;rsquo;s far more complete summary
+&lt;a href=&#34;http://www.staff.science.uu.nl/~Gadda001/goodtheorist/index.html&#34;&gt;http://www.staff.science.uu.nl/~Gadda001/goodtheorist/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;lecture-notes:415b107632de82fd60457d6653a32eb1&#34;&gt;Lecture Notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Richard Feynman&lt;/strong&gt; (Caltech) The Feynman lectures on physics are now available
+to read freely online.
+&lt;a href=&#34;http://www.feynmanlectures.caltech.edu/&#34;&gt;http://www.feynmanlectures.caltech.edu/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lev Landau&lt;/strong&gt; (Moscow) The original theoretical minimum; Landau&amp;rsquo;s fantastic
+series translated into English are available freely on the Internet archive.
+&lt;a href=&#34;https://archive.org/details/Mechanics_541&#34;&gt;https://archive.org/details/Mechanics_541&lt;/a&gt; - start with mechanics and search
+around!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;David Tong&lt;/strong&gt; (Cambridge) has written a highly recommended series of
+undergraduate (UG) notes.
+&lt;a href=&#34;http://www.damtp.cam.ac.uk/user/tong/teaching.html&#34;&gt;http://www.damtp.cam.ac.uk/user/tong/teaching.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Leonard Susskind&lt;/strong&gt; (Stanford) has a set of Youtube lectures as part of the
+Stanford Continuing Studies series. I like his very clear lecture style.
+The 2013 Stat Mech (&lt;a href=&#34;https://www.youtube.com/playlist?list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7&#34;&gt;https://www.youtube.com/playlist?list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7&lt;/a&gt;) and Advanced QM (&lt;a href=&#34;https://www.youtube.com/playlist?list=PLcC5RwLpGl6eyNvVfAixR18_nDmsX9rh-&#34;&gt;https://www.youtube.com/playlist?list=PLcC5RwLpGl6eyNvVfAixR18_nDmsX9rh-&lt;/a&gt;) courses I really enjoy.&lt;/p&gt;
+
+&lt;p&gt;The accesssible
+course also dovetails with the recently published books (written with Art
+Friedman).
+&lt;a href=&#34;http://theoreticalminimum.com/courses&#34;&gt;http://theoreticalminimum.com/courses&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Richard Fitzpatrick&lt;/strong&gt; (UT Austin) offers lecture notes, including some at the
+graduate level.
+&lt;a href=&#34;http://farside.ph.utexas.edu/teaching.html&#34;&gt;http://farside.ph.utexas.edu/teaching.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dan Styer&lt;/strong&gt; (Oberlin) maintains a good set of Quantum-Mechanics notes on the
+web including a primer of common misconceptions.
+&lt;a href=&#34;http://www.oberlin.edu/physics/dstyer/TeachQM/&#34;&gt;http://www.oberlin.edu/physics/dstyer/TeachQM/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Matthew Foulkes&lt;/strong&gt; (Imperial) has a pleasingly dense and direct postgrad
+course on electrons in solids - from UG Physics to DFT in 6 sections&lt;br /&gt;
+&lt;a href=&#34;http://www.cmth.ph.ic.ac.uk/people/m.foulkes/pdf/esolids.pdf&#34;&gt;http://www.cmth.ph.ic.ac.uk/people/m.foulkes/pdf/esolids.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;John Kitchin&lt;/strong&gt; (Carnegie Mellon) has a set of notes on periodic DFT
+calculations (with VASP) and a Python primer (with the Atomic Simulation
+Environment) in doing materials modelling calculations.
+&lt;a href=&#34;http://kitchingroup.cheme.cmu.edu/pycse/&#34;&gt;http://kitchingroup.cheme.cmu.edu/pycse/&lt;/a&gt;
+&lt;a href=&#34;http://kitchingroup.cheme.cmu.edu/dft-book/&#34;&gt;http://kitchingroup.cheme.cmu.edu/dft-book/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stefan Grimme&lt;/strong&gt; (Bonn) has a great intro-to-QuantumChemistry set of notes which
+bridges the gap between a QM course and the terms used in typical codes.
+&lt;a href=&#34;http://www.thch.uni-bonn.de/tc/teaching/qc2/downloads/&#34;&gt;http://www.thch.uni-bonn.de/tc/teaching/qc2/downloads/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sherrill Group&lt;/strong&gt; (Georgia Tech) have a set of notes and Youtube videos on
+quantum chemistry.
+&lt;a href=&#34;http://vergil.chemistry.gatech.edu/notes/index.html&#34;&gt;http://vergil.chemistry.gatech.edu/notes/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TDDFT School&lt;/strong&gt; TDDFT school research talks; rewrite the URL with a bit of
+a guess for other years!
+&lt;a href=&#34;http://www.tddft.org/TDDFT2014/school/&#34;&gt;http://www.tddft.org/TDDFT2014/school/&lt;/a&gt;
+&lt;a href=&#34;http://www.tddft.org/TDDFT2010/school/&#34;&gt;http://www.tddft.org/TDDFT2010/school/&lt;/a&gt;
+&lt;a href=&#34;http://www.tddft.org/TDDFT2008/lectures/&#34;&gt;http://www.tddft.org/TDDFT2008/lectures/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;journal-clubs:415b107632de82fd60457d6653a32eb1&#34;&gt;Journal Clubs&lt;/h2&gt;
+
+&lt;p&gt;Papercore is an interesting idea - produce a &amp;lsquo;super abstract&amp;rsquo; summary of
+a research paper. Quite a spin-glass focus for the papers in here, where
+I guess it is used as the internal journal club.
+&lt;a href=&#34;http://papercore.org/summaries&#34;&gt;http://papercore.org/summaries&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;books:415b107632de82fd60457d6653a32eb1&#34;&gt;Books&lt;/h2&gt;
+
+&lt;p&gt;In truth, all the best stuff is in the books; quality and presentation of the
+above notes is relatively hit and miss, and more polished and complete at the
+undergraduate level.&lt;/p&gt;
+
+&lt;p&gt;Physics is quite an esoteric pursuit, so unless you have access to a university
+you are unlikely to be able to find much beyond the Landau/Livshitz &amp;lsquo;Course in
+Theoretical Physics&amp;rsquo; and the Feynman lectures in your library.
+Most physics books are horrendously expensive.&lt;/p&gt;
+
+&lt;p&gt;However, the Dover Books reissues in physics are fantastic and cheap; like
+classic movies a few decades hindsight has allowed the editors to sort the
+wheat from the chaff.  The Futura / Bauhaus design for the latest covers is
+extremely aesthetically pleasing.
+Beware that some of the books from the dawn of Quantum Theory are more there
+for historical interest than utility as a textbook.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&#34;&gt;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Console diary - vimwiki (now with more git &amp; autohooks)</title>
+      <link>http://localhost:1313/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</link>
+      <pubDate>Wed, 25 Jun 2014 23:49:41 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve dallied with keeping a computer / online logbook. I&amp;rsquo;ve tried many products, even wrote my own (retrospectively crazy) set of scripts called &amp;lsquo;freck&amp;rsquo;*. But all of these methods were only ever used for a week or two before falling by the wayside. Just too much extra effort for (me) to follow through with. And therefore they all become walled-gardens with no way of getting the information out.&lt;/p&gt;
+
+&lt;p&gt;I keep paper notebooks for talks; I think it is essential to be able to sketch maths and diagrams, and I honestly think my brain is more engaged when I&amp;rsquo;m making notes by hand versus either typing or just listening (i.e. daydreaming). But they&amp;rsquo;re impossible to search through, and just a bit ridiculous to use when sitting in front of a computer.&lt;/p&gt;
+
+&lt;p&gt;The one I&amp;rsquo;ve returned to vaguely reliably is &amp;lsquo;vimwiki&amp;rsquo; (~10&amp;rsquo;000 words over 4 years). Probably because it lives in vim, and is thus only ever two keystrokes away. It runs in two modes, a &amp;lsquo;diary&amp;rsquo; linked to &amp;lsquo;\w\w&amp;rsquo; which drops you into a sensibly dated file for today, and a full blown personal wiki at &amp;lsquo;\ww&amp;rsquo;. All files are just&amp;hellip; files in ~/vimwiki.&lt;/p&gt;
+
+&lt;p&gt;Github: &lt;a href=&#34;https://github.com/vimwiki/vimwiki&#34;&gt;https://github.com/vimwiki/vimwiki&lt;/a&gt;
+Mailing list: &lt;a href=&#34;https://groups.google.com/forum/#!forum/vimwiki&#34;&gt;https://groups.google.com/forum/#!forum/vimwiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So now my ~/vimwiki is a BitBucket private repository, my work machine and laptop both feed from it. But the extra struggle of changing to the correct directory &amp;amp; then &amp;lsquo;git pull&amp;rsquo; or &amp;lsquo;git add / commit / push&amp;rsquo; was just a bit too much effort for me. So I was thinking of doing something primitive like put it in Dropbox, before coming across this blog entry:
+&lt;a href=&#34;http://www.stochasticgeometry.ie/2012/11/23/vimwiki/&#34;&gt;http://www.stochasticgeometry.ie/2012/11/23/vimwiki/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve no interest in encrypting my diary but the auto-hooks to commit to a DVCS are a fantastic idea.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the hooks, translated for git:
+&lt;code&gt;tail ~/.vim/ftplugin/vimwiki.vim
+augroup vimwiki
+au! BufRead /home/jarvist/vimwiki/index.wiki !git pull
+au! BufWritePost /home/jarvist/vimwiki/* !git add ;git commit -m &amp;quot;Auto commit + push.&amp;quot;;git push
+augroup END
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;[ * &amp;lsquo;Freck&amp;rsquo;, evidently a word read here: &lt;a href=&#34;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&#34;&gt;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This was a set of scripts I wrote essentially the day after I submitted my PhD thesis - having struggled with finding original data sources to things I only had as poorly named postscripts and PDFs, or even just hard annotated printouts from supervisor meetings.
+They worked both remotely on the HPC + locally. I recall that &amp;lsquo;freck&amp;rsquo; would take a figure as an argument, send a copy of this back to my workstation, demand a caption, and automatically add a figure to a &amp;lsquo;labbook&amp;rsquo; Latex file, with some commented out sections &amp;lsquo;%&amp;rsquo; informing future-me where exactly this data came from, auto date stamp, where it was generated etc. Different projects were set by an environmental variable, which were then sub-directories in the local ~/freck/ directory with Latex files &amp;amp; figures. I think the idea was that I would have a vim session running locally, and would reload the text, now with a generated figure.&lt;/p&gt;
+
+&lt;p&gt;Writing it&amp;rsquo;s description, it still sounds like a good idea! I&amp;rsquo;d probably now do it with more markdown (at least at the raw &amp;lsquo;freck&amp;rsquo; end), and a DVCS.&lt;/p&gt;
+
+&lt;p&gt;Only surviving remnant: &lt;a href=&#34;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&#34;&gt;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&lt;/a&gt;
+Though who knows, maybe I&amp;rsquo;ll make it a Friday afternoon project to refind the code &amp;amp; update it for something more sane / general. ]&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

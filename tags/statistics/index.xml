@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/statistics/</link>
+    <description>Recent content in Statistics on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Sun, 17 Nov 2013 13:00:13 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Advanced R Programming</title>
+      <link>http://localhost:1313/post/advanced-r-programming/</link>
+      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/advanced-r-programming/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://adv-r.had.co.nz/&#34;&gt;Advanced R Programming&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Advanced R Programming is being written in an open manner by Hadley Wickham (ggplot2). It&amp;rsquo;s nearing completion &amp;amp; printing, but the Wiki form of the content will remain online in perpetuity. R is a really difficult language to google answers to (it&amp;rsquo;s all short-hand functions &amp;amp; punctuation &amp;lt;- $ ^ which gets stripped or is not very searchable), and the documentation I&amp;rsquo;ve found so far has been  lacklustre. The little I&amp;rsquo;ve read of these notes seem absolutely fantastic.&lt;/p&gt;
+
+&lt;p&gt;via discussion on ever informative HN: &lt;a href=&#34;https://news.ycombinator.com/item?id=6748443&#34;&gt;https://news.ycombinator.com/item?id=6748443&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

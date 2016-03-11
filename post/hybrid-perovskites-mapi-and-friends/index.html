@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>Hybrid perovskites (MAPI and friends)</title>
+  <meta name="description" content="Hybrid perovskites (MAPI and friends)">
+  <meta name="author" content="Jarvist Moore Frost">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.css">
+  
+  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/highlight/styles/default.css">
+  
+  <script src="http://localhost:1313/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://localhost:1313/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item">
+                    <a href="http://localhost:1313/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://localhost:1313/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+                
+                <li class="pure-menu-item">
+                    <a href="http://localhost:1313/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2014-02-21</time>
+		            
+                    
+                    |
+                    
+                    
+                    tags:<a href="http://localhost:1313/tags/arxiv">arxiv</a> <a href="http://localhost:1313/tags/literature">literature</a> <a href="http://localhost:1313/tags/mapi">mapi</a> <a href="http://localhost:1313/tags/monte-carlo">monte-carlo</a> <a href="http://localhost:1313/tags/perovskite">perovskite</a> 
+                    
+
+                    
+
+                    
+                </p>
+                <h1>Hybrid perovskites (MAPI and friends)</h1>
+            </div>
+
+            <div class="post-content">
+                <p>Our fairly prospective paper is out to review with Nano Letters at the moment, the preprint has just gone live on the arXiv. There&rsquo;s a massive range of calculations presented in quite a short paper - from GSGW (MvS), periodic plane wave DFT (FB) &amp; CCSD quantum chemical calculations (JMF) to classical electrostatic calculations (JMF). We make suggestions as the to the likely effect of these results on device operation, and route for degradation in the presence of water via the Grotthuss mechanism (CH) (and the suggestion that an aprotic cation should alleviate this).</p>
+
+<p>&ldquo;Atomistic origins of high-performance in hybrid halide perovskite solar cells&rdquo; - <a href="http://arxiv.org/abs/1402.4980">http://arxiv.org/abs/1402.4980</a></p>
+
+<p>We are also pooling our group literature survey in a Mendeley group. If you are new to Hybrid Perovskites, this might be a good place to look for papers to read (and clickable links!). Some really quite interesting papers have been found stashed away in the SIs of papers. One issue we&rsquo;ve had in searching the older literature is what to call these perovskites. &lsquo;Hybrid perovskite&rsquo; is the modern moniker whereas &lsquo;ammonium chlorostannate&rsquo; is how Wyckoff refers to the tin analogue in the 20s, and searching by chemical formula usually confuses &amp; fails for old scanned papers.</p>
+
+<p><a href="https://www.mendeley.com/groups/4178551/hybrid-perovskite-solar-cells/">https://www.mendeley.com/groups/4178551/hybrid-perovskite-solar-cells/</a></p>
+
+<p>What next? Well - there&rsquo;s always more to try and understand! With have a hypothesised mechanism generating built-in fields which may explain the observed hysteresis in JV curve measuring, an on-lattice Monte Carlo code (written in C, and parameterised with enthalpies from DFT) that outputs pictures in a pleasingly 1970s palette. This is already generating qualitatively sensible temperature-dependent behaviour, now we need to figure out our prefactors (in typical physics way, everything is internally in units of kBT, dropping all the _ε_0 terms).</p>
+
+<p>Most of all I really think that this field is being held back by the lack of good basic characterisation data. Capacitances, dielectric constants, doping concentrations - all this basic stuff still needs to be done (or at least published!). I appreciate that the material isn&rsquo;t that stable, but I just don&rsquo;t understand why after several years there isn&rsquo;t more data out there (to be fair a lot of the interpretation really needs planar junctions - a recent development). I do wonder there&rsquo;s too much focus on chasing the Power-Conversion-Efficiency dragon, and too little focus on the bread and butter understanding of the material properties. Which is a pity, as they seem quite puzzling.</p>
+
+<p><img src="https://lh4.googleusercontent.com/TNk24pQxTqmKs-RR84ky35G4DRe_TQ8xIsd4KRLNOTOzNb_pBO1WoK6OXV_XYKlMnw_AbpMhBcA1niYXX8iXlLujFTasmcLAttDnuWtnr6Gl_TtP4b33SNGklysO" alt="" /></p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                </li>
+                
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://localhost:1313/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://localhost:1313/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openbabel on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/openbabel/</link>
+    <description>Recent content in Openbabel on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Tue, 23 Jul 2013 14:48:13 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/openbabel/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simple oligomer conformer calculation </title>
+      <link>http://localhost:1313/post/simple-oligomer-conformer-calculation/</link>
+      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/simple-oligomer-conformer-calculation/</guid>
+      <description>&lt;p&gt;I was moaning to a PhD student in the group about the perennial issue of checking representative torsional conformers of oligomers. In this case it was the question about whether you&amp;rsquo;d see a large variation in oscillator strength (of a TDDFT calculation) if you change the conformation (we don&amp;rsquo;t see a big variation in the energies of excited states, unless you break conjugation). This is a genuine issue as the potential energy barrier for these torsional variations are thermally accessible, and typically presents at least two local minima (head-tail and head-head), if not 4 minima (where the flat alignments are sterically hindered), so real polymers will be sampling at least some of these structures. As well as making comparison to experiment difficult without sampling the phase space, if you naively compare chemistries in whatever random configuration your optimised structure landed in, you may start to think there are systematic variations due to chemistry, which are actually just an artefact of your structural sampling.&lt;/p&gt;
+
+&lt;p&gt;Serendipitously I stumbled across &lt;a href=&#34;http://baoilleach.blogspot.co.uk&#34;&gt;Noel O&amp;rsquo;Boyle&amp;rsquo;s&lt;/a&gt; &lt;a href=&#34;http://www.jcheminf.com/content/3/1/8&#34;&gt;confab program that evening&lt;/a&gt;, and thought it sounded perfect! I build the &lt;a href=&#34;http://baoilleach.blogspot.co.uk/2011/03/confab-systematic-conformation.html&#34;&gt;(older) standalone version&lt;/a&gt;, though it is now apparently integrated into the &lt;a href=&#34;http://baoilleach.blogspot.co.uk/2013/07/using-open-babel-to-package-chemistry.html&#34;&gt;development version of OpenBabel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Confab is designed to look for small variations (rotating methyl units &amp;amp; etc.) in biological molecules, but if you up the RMSD tolerance for something to be considered identical (from 0.5 to 1.5 A), you get a good sample of torsional freedom in an oligomer. Starting with a 6-thiophene Head-Tail b3lyp/6-31g* optimised structure from a DFT calculation , you quickly generate a set of oligomers with increasingly broken head-tail alignment. Notably the low energy Head-Tail conformer is identified as the first one (i.e. using confab to generate the lowest energy structure, will probably fix any broken conjugation you have, and locate the most representative structure), and the high energy Head-Head as the last.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/limited_conformers.png&#34;&gt;&lt;img src=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/limited_conformers.png?w=650&#34; alt=&#34;Image&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;These structures are low energy within the MMFF94, but I believe it keeps all parameters other than the free torsions identified at their input structure values (i.e. you retain the optimised DFT bond lengths and angles). Therefore these would be a great starting point for further DFT geometry optimisations (the resulting conformers should only take a few steps of DFT to reach the low energy relaxed DFT structure).&lt;/p&gt;
+
+&lt;p&gt;However, I was interested in a qualitative answer as to whether these different conformers had different oscillator strengths, so took these geometries directly (via openbabel to split the sdf into many gaussian files, and a little script to put a sane header on each) to a Zindos calculation.&lt;/p&gt;
+
+&lt;p&gt;2.4417 eV 507.79 nm f=1.8101
+2.2925 eV 540.82 nm f=1.7151
+2.3277 eV 532.64 nm f=1.6967
+2.2759 eV 544.77 nm f=1.5296
+2.3493 eV 527.76 nm f=1.7850
+2.4445 eV 507.19 nm f=1.6643
+2.3586 eV 525.67 nm f=1.3219&lt;/p&gt;
+
+&lt;p&gt;So we have a mean transition energy of 2.4 +- 0.1 eV, with a mean oscillator strength of 1.6 +- 0.3 . Considerably more variance in oscillator strength (0.03 vs. 0.004!). Once we wait for the TD-DFT (b3lyp/6-31g* on the MMFF94 torsionally relaxed geoms), we have a mean transition of 2.6 +- 0.2 eV (variance 0.007), with mean oscillator strength 1.6 +- 0.3 (variance 0.03). Also note that the highest oscillator strength is for the &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; helix Head-Tail structure (the first, lowest energy structure), and the lowest oscillator strength is for the &amp;lsquo;bent banana&amp;rsquo; Head-Head fully misaligned.&lt;/p&gt;
+
+&lt;p&gt;This little study backs up a general feeling that oscillator strength is more fragile c.f. excitation energy for bent / suboptimal structures, and suggests that care is required to check different conformers.&lt;/p&gt;
+
+&lt;p&gt;All in all, confab seems like a very nice way to check through different oligomer conformers, with no real extra work required than providing a 3D optimised geometry. I wish there was some way to get access to the energies it&amp;rsquo;s calculated for these structures, I&amp;rsquo;m not sure whether confab outputs this however. From these data you could imagine calculating some kind of real-world abundance weighting using a Boltzmann distribution (though you&amp;rsquo;d need to carefully consider the degeneracy of the different micro states / conformers).&lt;/p&gt;
+
+&lt;p&gt;Files &amp;amp; shell scripts on figshare: &lt;a href=&#34;http://dx.doi.org/10.6084/m9.figshare.750677&#34;&gt;http://dx.doi.org/10.6084/m9.figshare.750677&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.jcheminf.com/content/3/1/8&#34;&gt;Confab - Systematic generation of diverse low-energy conformers&lt;/a&gt; NM O&amp;rsquo;Boyle, T Vandermeersch, CJ Flynn, AR Maguire, GR Hutchison. _Journal of Cheminformatics_ 2011, &lt;strong&gt;3:&lt;/strong&gt;8.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

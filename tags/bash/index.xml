@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/bash/</link>
+    <description>Recent content in Bash on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Wed, 20 Nov 2013 13:41:32 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Running with ARCHER</title>
+      <link>http://localhost:1313/post/running-with-archer/</link>
+      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/running-with-archer/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.archer.ac.uk/&#34;&gt;ARCHER&lt;/a&gt; is the new EPSRC/NERC High Performance Computing facility, the successor to &lt;a href=&#34;http://www.hector.ac.uk/&#34;&gt;HeCToR&lt;/a&gt;. We have early access to it during its testing phase (until 16th Dec). The transition has been extremely impressive, the new machine is stunningly powerful (#19 in the world on the Top500 Nov 2013 list, a Cray XC30 on just-fabbed Intel Ivy Bridge processors ) and everything seems to more or less just work. The login nodes are responsive, the file systems as well. &lt;/p&gt;
+
+&lt;p&gt;As I&amp;rsquo;ve been putting together scripts / utilities for running jobs on Archer (just VASP presently), I&amp;rsquo;ve been uploading them to a github repository, in case anyone else may find them useful. Here be dragons!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/archer-bin&#34;&gt;https://github.com/jarvist/archer-bin&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

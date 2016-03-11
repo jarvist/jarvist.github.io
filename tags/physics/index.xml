@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Physics on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/physics/</link>
+    <description>Recent content in Physics on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Tue, 01 Jul 2014 12:36:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Free Physics on the Internet</title>
+      <link>http://localhost:1313/post/free-physics-on-the-internet/</link>
+      <pubDate>Tue, 01 Jul 2014 12:36:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/free-physics-on-the-internet/</guid>
+      <description>
+
+&lt;p&gt;This is a collection of bookmarks I&amp;rsquo;ve collected over the years of useful
+online physics notes; hopefully this will be of some use to others.
+My bias is as a computational physicist doing electronic structure theory for
+materials modelling, so all within the remit of condensed matter theory (no
+high energy physics, for instance, and nothing that would count as
+&amp;lsquo;theoretical&amp;rsquo; research for the last forty years at least).
+Expect little outside pedestrian quantum mechanics and statistical physics, and
+the one fundamental force you can actually interact with.&lt;/p&gt;
+
+&lt;p&gt;Partially inspired by Gerard &amp;rsquo;t Hooft&amp;rsquo;s far more complete summary
+&lt;a href=&#34;http://www.staff.science.uu.nl/~Gadda001/goodtheorist/index.html&#34;&gt;http://www.staff.science.uu.nl/~Gadda001/goodtheorist/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;lecture-notes:415b107632de82fd60457d6653a32eb1&#34;&gt;Lecture Notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Richard Feynman&lt;/strong&gt; (Caltech) The Feynman lectures on physics are now available
+to read freely online.
+&lt;a href=&#34;http://www.feynmanlectures.caltech.edu/&#34;&gt;http://www.feynmanlectures.caltech.edu/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lev Landau&lt;/strong&gt; (Moscow) The original theoretical minimum; Landau&amp;rsquo;s fantastic
+series translated into English are available freely on the Internet archive.
+&lt;a href=&#34;https://archive.org/details/Mechanics_541&#34;&gt;https://archive.org/details/Mechanics_541&lt;/a&gt; - start with mechanics and search
+around!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;David Tong&lt;/strong&gt; (Cambridge) has written a highly recommended series of
+undergraduate (UG) notes.
+&lt;a href=&#34;http://www.damtp.cam.ac.uk/user/tong/teaching.html&#34;&gt;http://www.damtp.cam.ac.uk/user/tong/teaching.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Leonard Susskind&lt;/strong&gt; (Stanford) has a set of Youtube lectures as part of the
+Stanford Continuing Studies series. I like his very clear lecture style.
+The 2013 Stat Mech (&lt;a href=&#34;https://www.youtube.com/playlist?list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7&#34;&gt;https://www.youtube.com/playlist?list=PL_IkS0viawhr3HcKH607rXbVqy28W_gB7&lt;/a&gt;) and Advanced QM (&lt;a href=&#34;https://www.youtube.com/playlist?list=PLcC5RwLpGl6eyNvVfAixR18_nDmsX9rh-&#34;&gt;https://www.youtube.com/playlist?list=PLcC5RwLpGl6eyNvVfAixR18_nDmsX9rh-&lt;/a&gt;) courses I really enjoy.&lt;/p&gt;
+
+&lt;p&gt;The accesssible
+course also dovetails with the recently published books (written with Art
+Friedman).
+&lt;a href=&#34;http://theoreticalminimum.com/courses&#34;&gt;http://theoreticalminimum.com/courses&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Richard Fitzpatrick&lt;/strong&gt; (UT Austin) offers lecture notes, including some at the
+graduate level.
+&lt;a href=&#34;http://farside.ph.utexas.edu/teaching.html&#34;&gt;http://farside.ph.utexas.edu/teaching.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dan Styer&lt;/strong&gt; (Oberlin) maintains a good set of Quantum-Mechanics notes on the
+web including a primer of common misconceptions.
+&lt;a href=&#34;http://www.oberlin.edu/physics/dstyer/TeachQM/&#34;&gt;http://www.oberlin.edu/physics/dstyer/TeachQM/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Matthew Foulkes&lt;/strong&gt; (Imperial) has a pleasingly dense and direct postgrad
+course on electrons in solids - from UG Physics to DFT in 6 sections&lt;br /&gt;
+&lt;a href=&#34;http://www.cmth.ph.ic.ac.uk/people/m.foulkes/pdf/esolids.pdf&#34;&gt;http://www.cmth.ph.ic.ac.uk/people/m.foulkes/pdf/esolids.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;John Kitchin&lt;/strong&gt; (Carnegie Mellon) has a set of notes on periodic DFT
+calculations (with VASP) and a Python primer (with the Atomic Simulation
+Environment) in doing materials modelling calculations.
+&lt;a href=&#34;http://kitchingroup.cheme.cmu.edu/pycse/&#34;&gt;http://kitchingroup.cheme.cmu.edu/pycse/&lt;/a&gt;
+&lt;a href=&#34;http://kitchingroup.cheme.cmu.edu/dft-book/&#34;&gt;http://kitchingroup.cheme.cmu.edu/dft-book/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stefan Grimme&lt;/strong&gt; (Bonn) has a great intro-to-QuantumChemistry set of notes which
+bridges the gap between a QM course and the terms used in typical codes.
+&lt;a href=&#34;http://www.thch.uni-bonn.de/tc/teaching/qc2/downloads/&#34;&gt;http://www.thch.uni-bonn.de/tc/teaching/qc2/downloads/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sherrill Group&lt;/strong&gt; (Georgia Tech) have a set of notes and Youtube videos on
+quantum chemistry.
+&lt;a href=&#34;http://vergil.chemistry.gatech.edu/notes/index.html&#34;&gt;http://vergil.chemistry.gatech.edu/notes/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TDDFT School&lt;/strong&gt; TDDFT school research talks; rewrite the URL with a bit of
+a guess for other years!
+&lt;a href=&#34;http://www.tddft.org/TDDFT2014/school/&#34;&gt;http://www.tddft.org/TDDFT2014/school/&lt;/a&gt;
+&lt;a href=&#34;http://www.tddft.org/TDDFT2010/school/&#34;&gt;http://www.tddft.org/TDDFT2010/school/&lt;/a&gt;
+&lt;a href=&#34;http://www.tddft.org/TDDFT2008/lectures/&#34;&gt;http://www.tddft.org/TDDFT2008/lectures/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;journal-clubs:415b107632de82fd60457d6653a32eb1&#34;&gt;Journal Clubs&lt;/h2&gt;
+
+&lt;p&gt;Papercore is an interesting idea - produce a &amp;lsquo;super abstract&amp;rsquo; summary of
+a research paper. Quite a spin-glass focus for the papers in here, where
+I guess it is used as the internal journal club.
+&lt;a href=&#34;http://papercore.org/summaries&#34;&gt;http://papercore.org/summaries&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;books:415b107632de82fd60457d6653a32eb1&#34;&gt;Books&lt;/h2&gt;
+
+&lt;p&gt;In truth, all the best stuff is in the books; quality and presentation of the
+above notes is relatively hit and miss, and more polished and complete at the
+undergraduate level.&lt;/p&gt;
+
+&lt;p&gt;Physics is quite an esoteric pursuit, so unless you have access to a university
+you are unlikely to be able to find much beyond the Landau/Livshitz &amp;lsquo;Course in
+Theoretical Physics&amp;rsquo; and the Feynman lectures in your library.
+Most physics books are horrendously expensive.&lt;/p&gt;
+
+&lt;p&gt;However, the Dover Books reissues in physics are fantastic and cheap; like
+classic movies a few decades hindsight has allowed the editors to sort the
+wheat from the chaff.  The Futura / Bauhaus design for the latest covers is
+extremely aesthetically pleasing.
+Beware that some of the books from the dawn of Quantum Theory are more there
+for historical interest than utility as a textbook.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&#34;&gt;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

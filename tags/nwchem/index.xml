@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nwchem on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/nwchem/</link>
+    <description>Recent content in Nwchem on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Fri, 01 Feb 2013 19:45:53 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nwchem/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CDFT in NWCHEM</title>
+      <link>http://localhost:1313/post/cdft-in-nwchem/</link>
+      <pubDate>Fri, 01 Feb 2013 19:45:53 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/cdft-in-nwchem/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been struggling recently to get CDFT jobs to converge in NWCHEM. Rather than continue to play with ~100 heavy-atom structures (of relevance to organic electronic materials) I went to a very simple system of C2H4 / C2F4. This is sometimes studied as a very simple system showing charge transfer.&lt;/p&gt;
+
+&lt;p&gt;I had many issues getting this job to run successfully, before realising that I needed a suitably diffuse basis set for the constraints to be applicable! It still has issues at large separations, and I&amp;rsquo;m not even sure I&amp;rsquo;m pushing the charge around in the &amp;lsquo;correct&amp;rsquo; way, but these run files may be of use to others.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/4673243&#34;&gt;https://gist.github.com/4673243&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

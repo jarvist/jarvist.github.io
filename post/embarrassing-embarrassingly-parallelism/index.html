@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>Embarrassing embarrassingly parallel</title>
+  <meta name="description" content="Embarrassing embarrassingly parallel">
+  <meta name="author" content="Jarvist Moore Frost">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.css">
+  
+  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/highlight/styles/default.css">
+  
+  <script src="http://localhost:1313/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://localhost:1313/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item">
+                    <a href="http://localhost:1313/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://localhost:1313/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+                
+                <li class="pure-menu-item">
+                    <a href="http://localhost:1313/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2015-05-22</time>
+		            
+                    
+                    
+
+                    
+
+                    
+                </p>
+                <h1>Embarrassing embarrassingly parallel</h1>
+            </div>
+
+            <div class="post-content">
+                <p>I gave up OPENMP&rsquo;ing my Monte Carlo code about a year ago. I was trying to do it at the level of MC moves, and there are massive issues here in that the different threads are trying to sample and update the same simulation space - leading to segfaults as the variables crash into one another.</p>
+
+<p>One method I&rsquo;ve seen used in the literature is domain decomposition - where each thread runs MC on a segment of the simulation volume. This is quite a headache to set up, and then you have issues about simultaneous updates, and the inability to exchange particles / states across the boundaries. All scary issues.</p>
+
+<p>So I gave up. I am not a computer scientist. I could not understand even the terms of reference; Lambda calculus reductions and all that jazz. In Simon Peyton Jones&rsquo; terms, &ldquo;I am a worm.&rdquo;</p>
+
+<p>I revisited it this evening, with the intention of seeing whether I could separate the thread of the random number generator at least. However, it instantaneously struct me what I should do. Each MC-move attempt calls &lsquo;site-energy&rsquo; with the test move which has a set of for loops evaluating over nearby space (i.e. with a cutoff) to get a total energy change for the test move.
+The change in energy variable &lsquo;dE&rsquo; is a natural reduction vector, none of this modifies the simulation volume, and in a production run where you are integrating out a large volume of space for accurate energies - the majority of computer time is spend in these for loops.</p>
+
+<p>One: <code>#pragma omp parallel for reduction(+:dE)</code> before the start of the for-loop nest; and a recompile with <code>-fopenmp</code>, and it now maxes out the 4 hyperthreaded cores on my laptop.</p>
+
+<p>Scaling will be more limited on bigger machines, and increase in speed will only be seen where this energy summation, rather than the single-core modifications to the simulation volume and random number generator, dominate the CPU required.</p>
+
+<p>But still. Embarrassing embarrassingly parallel, because I could have and should have seen this a year ago!</p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                </li>
+                
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://localhost:1313/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://localhost:1313/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2015-12-08T14:16:34+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/2015-12-08-talks-and-seminars-at-bath-university/</loc>
+    <lastmod>2015-12-08T14:16:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/embarrassing-embarrassingly-parallelism/</loc>
+    <lastmod>2015-05-22T21:03:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/organising-computational-job-workflow-as-you-go-freck/</loc>
+    <lastmod>2015-04-26T16:15:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2015-04-13T14:16:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/writing-scientific-papers/</loc>
+    <lastmod>2015-03-01T22:44:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/hex-grids/</loc>
+    <lastmod>2015-01-25T23:06:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-ssh-at-bath-uni/</loc>
+    <lastmod>2015-01-09T14:36:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-new-julia-paper-from-the-developers/</loc>
+    <lastmod>2014-11-08T13:32:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/how-i-made-a-poster-2014/</loc>
+    <lastmod>2014-10-16T04:09:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/maximum-coverage-for-loops-bit-reversing-integars/</loc>
+    <lastmod>2014-09-18T18:44:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-tiddlywiki-for-scholars/</loc>
+    <lastmod>2014-09-05T12:35:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-mendeley-desktop-mac-os-failed-update/</loc>
+    <lastmod>2014-07-23T14:51:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/links-from-julia-land/</loc>
+    <lastmod>2014-07-14T12:36:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/free-physics-on-the-internet/</loc>
+    <lastmod>2014-07-01T12:36:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</loc>
+    <lastmod>2014-06-25T23:49:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/making-talk-slides-in-2014/</loc>
+    <lastmod>2014-06-20T18:43:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/comp-chem-highlights-coherence-penalty-functional-a-simple-method-for-adding-decoherence-in-ehrenfest-dynamics/</loc>
+    <lastmod>2014-06-18T15:14:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-essential-latex-packages-hacker-news-discussion/</loc>
+    <lastmod>2014-06-13T11:36:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-converting-latex-figures-to-eps/</loc>
+    <lastmod>2014-05-08T14:09:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-recompress-pdf-file-use-ghostscript/</loc>
+    <lastmod>2014-04-21T15:55:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/a-raid-on-the-inarticulate-with-shabby-equipment-always-deteriorating/</loc>
+    <lastmod>2014-04-19T19:25:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/the-worst-lies-are-the-lies-we-tell-ourselves/</loc>
+    <lastmod>2014-04-04T23:44:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/tumblr-animated-gifs-from-the-cutting-edge-of-science/</loc>
+    <lastmod>2014-04-03T23:31:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/thinkpad-x60s-to-x220-debian/</loc>
+    <lastmod>2014-04-03T23:05:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/snippet-pdflatex-makefile/</loc>
+    <lastmod>2014-03-25T10:54:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/kings-review-how-academia-and-publishing-are-destroying-scientific-innovation/</loc>
+    <lastmod>2014-03-03T18:56:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/coursera-course-organic-solar-cells/</loc>
+    <lastmod>2014-02-27T00:58:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pushing-the-boat-out-to-github/</loc>
+    <lastmod>2014-02-24T22:15:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/sharelatex-now-opensource/</loc>
+    <lastmod>2014-02-21T12:57:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/hybrid-perovskites-mapi-and-friends/</loc>
+    <lastmod>2014-02-21T12:07:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/latex-package-of-the-day-siunitx/</loc>
+    <lastmod>2014-01-15T12:58:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gaussian-add-densitycurrent-for-post-hf/</loc>
+    <lastmod>2014-01-13T13:35:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/new-years-resolution-dvcs-everywhere/</loc>
+    <lastmod>2014-01-06T22:08:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/how-to-write-a-great-research-paper-simon-peyton-jones/</loc>
+    <lastmod>2014-01-01T20:43:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/make-for-data-processing/</loc>
+    <lastmod>2013-12-12T22:25:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/running-with-archer/</loc>
+    <lastmod>2013-11-20T13:41:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/mavericks-and-failed-arp-causing-network-drops-solved/</loc>
+    <lastmod>2013-11-18T11:28:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/advanced-r-programming/</loc>
+    <lastmod>2013-11-17T13:00:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/the-penguin-who-came-in-from-the-cold/</loc>
+    <lastmod>2013-11-12T19:04:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/goodbye-london-hello-bath/</loc>
+    <lastmod>2013-11-12T19:03:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/online-quantum-mechanics-quantum-chemistry-resources/</loc>
+    <lastmod>2013-10-05T20:20:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/the-julia-programming-language/</loc>
+    <lastmod>2013-08-12T00:29:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/eom-cc-review/</loc>
+    <lastmod>2013-08-04T00:15:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/simple-oligomer-conformer-calculation/</loc>
+    <lastmod>2013-07-23T14:48:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gnuplotting-org/</loc>
+    <lastmod>2013-07-17T19:15:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/write-your-own-make-clean/</loc>
+    <lastmod>2013-07-08T10:56:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</loc>
+    <lastmod>2013-07-03T14:31:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/youtube-neurotrends-large-scale-automated-analysis-of-the-neuroimaging-literature-scipy-2013-presentation/</loc>
+    <lastmod>2013-07-03T13:34:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/google-reader-is-dead/</loc>
+    <lastmod>2013-07-03T13:16:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/collaborative-academic-book-with-github-latex/</loc>
+    <lastmod>2013-06-24T09:02:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pdf-annotations-in-linux-with-xournal/</loc>
+    <lastmod>2013-06-20T20:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/open-access-by-peter-suber/</loc>
+    <lastmod>2013-06-19T10:04:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pymol-ray-tracing-without-wasting-time/</loc>
+    <lastmod>2013-06-18T11:51:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/cdft-in-nwchem/</loc>
+    <lastmod>2013-02-01T19:45:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/gnuplot-ubuntu-backports/</loc>
+    <lastmod>2013-02-01T19:43:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/useful-program-of-the-day-pdbcat/</loc>
+    <lastmod>2013-01-11T13:34:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/vim-syntax-highlighting-for-nwchem-gaussian-pdb/</loc>
+    <lastmod>2012-05-28T10:03:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/bulk-hetero-jelly-bhj/</loc>
+    <lastmod>2012-03-08T01:20:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/donor-acceptor-character/</loc>
+    <lastmod>2012-01-30T11:29:00+00:00</lastmod>
+  </url>
+  
+</urlset>

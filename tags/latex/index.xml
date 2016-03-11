@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latex on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/latex/</link>
+    <description>Recent content in Latex on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Fri, 21 Feb 2014 12:57:54 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sharelatex now opensource</title>
+      <link>http://localhost:1313/post/sharelatex-now-opensource/</link>
+      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/sharelatex-now-opensource/</guid>
+      <description>&lt;p&gt;Sharelatex is now opensource: &lt;a href=&#34;https://www.sharelatex.com/blog/2014/02/21/sharelatex-is-now-open-source.html&#34;&gt;https://www.sharelatex.com/blog/2014/02/21/sharelatex-is-now-open-source.html&lt;/a&gt;; discussion on HN: &lt;a href=&#34;https://news.ycombinator.com/item?id=7276263&#34;&gt;https://news.ycombinator.com/item?id=7276263&lt;/a&gt;. They also now offer a &amp;lsquo;personal&amp;rsquo; account which allows for unlimited projects + one collaborator.&lt;/p&gt;
+
+&lt;p&gt;The other big player in this area of collaborative online Latex document editing is &lt;a href=&#34;https://www.writelatex.com/&#34;&gt;https://www.writelatex.com/&lt;/a&gt;. I&amp;rsquo;ve generally found their web app to be a little bit heavier on the computer (particularly my poor old Thinkpad X60s), but more polished. You can directly open a Writelatex document from templates at &lt;a href=&#34;http://www.latextemplates.com/&#34;&gt;http://www.latextemplates.com/&lt;/a&gt; . Writelatex haven&amp;rsquo;t recently started the &amp;lsquo;Overleaf&amp;rsquo; initiative, which seems to be an attempt to leapfrog traditional academic publishers, and do the whole write-&amp;gt;review-&amp;gt;publish within their system. Currently this seems to mean being able to publish directly to figshare, or submit to F1000.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve used both with collaborators, and though the potential is great - we&amp;rsquo;ve always ended up forking the document &amp;amp; developing with a standard Latex install towards submission. You&amp;rsquo;d imagine this would be most useful on a laptop when travelling so you don&amp;rsquo;t need a full blown Latex install (&amp;gt;1GB), but these web apps get irritating on small screens &amp;amp; slow mobile processors.&lt;/p&gt;
+
+&lt;p&gt;If you have the collective technical skills, a (free) shared BitBucket private repo is the way to go.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Latex package of the day: siunitx</title>
+      <link>http://localhost:1313/post/latex-package-of-the-day-siunitx/</link>
+      <pubDate>Wed, 15 Jan 2014 12:58:39 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/latex-package-of-the-day-siunitx/</guid>
+      <description>&lt;p&gt;My Latex package of the day is &amp;lsquo;siunitx&amp;rsquo;. No more worrying about flipping and and out of math mode, thinking how best to write an Angstrom or degrees celsius, or forcing units to be in upright fonts. I wish I had known about this years ago!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ctan.org/pkg/siunitx&#34;&gt;http://ctan.org/pkg/siunitx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;via a very specific google on how to set &amp;lsquo;um&amp;rsquo; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tex.stackexchange.com/questions/522/best-way-to-typeset-micrometers&#34;&gt;http://tex.stackexchange.com/questions/522/best-way-to-typeset-micrometers&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

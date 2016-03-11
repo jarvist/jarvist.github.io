@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snakes on Jarvist Moore Frost: Academic blog</title>
+    <link>http://localhost:1313/tags/snakes/</link>
+    <description>Recent content in Snakes on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Wed, 03 Jul 2013 14:31:37 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/snakes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Slithering Snakes; Amphisbaena and Gorgophone (2005...2008)</title>
+      <link>http://localhost:1313/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</link>
+      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/attrac_annealed_short_hop1.png&#34;&gt;&lt;img src=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/attrac_annealed_short_hop1.png?w=490&#34; alt=&#34;Image&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I finally got around to (minimally) cleaning up my code from the &lt;a href=&#34;http://dx.doi.org/10.1021/nl0608386&#34;&gt;2006 Nanoletters paper&lt;/a&gt; and put it up on github (&lt;a href=&#34;https://github.com/jarvist/Amphisbaena&#34;&gt;https://github.com/jarvist/Amphisbaena&lt;/a&gt;). This simulates coarse-grain on-lattice morphology generation of polymers via a slithering snakes / reptation model [amphisbaena], and then also enables you to carry out mobility simulations via Time of Flight (ToF), drift velocity or diffusion [gorgophone].&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s coded in C and is rather sneaky in some ways (have a look at the oroboros data structure!), and rather ugly in other ways (hand unrolled loops, switches rather than ifs, recompile to change experimental parameters, hard coded colour codes for the terminal) to get maximal performance.&lt;/p&gt;
+
+&lt;p&gt;May your snakes reptate in a manner truly divine.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/console.jpg&#34;&gt;&lt;img src=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/07/console.jpg?w=650&#34; alt=&#34;Image&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

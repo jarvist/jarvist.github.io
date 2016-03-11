@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>...a raid on the inarticulate, with shabby equipment always deteriorating</title>
+  <meta name="description" content="...a raid on the inarticulate, with shabby equipment always deteriorating">
+  <meta name="author" content="Jarvist Moore Frost">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.css">
+  
+  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+
+  
+  
+  <link rel="stylesheet" href="http://localhost:1313/highlight/styles/default.css">
+  
+  <script src="http://localhost:1313/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://localhost:1313/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item">
+                    <a href="http://localhost:1313/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://localhost:1313/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+                
+                <li class="pure-menu-item">
+                    <a href="http://localhost:1313/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2014-04-19</time>
+		            
+                    
+                    
+
+                    
+
+                    
+                </p>
+                <h1>...a raid on the inarticulate, with shabby equipment always deteriorating</h1>
+            </div>
+
+            <div class="post-content">
+                <p>In science we are often rediscovering the already known, this happens on a personal level almost every day. You feel dumb and insecure, surrounded by the condensed wisdom of lifetimes in science, textbooks of seemingly impenetrable theories whose every page requires hours of study to have the merest glimpse of the knowledge within.</p>
+
+<p>Recently I&rsquo;ve been trying to think about how to represent the alignment of a stick within a cube (the Methyl-Ammonium in MAPI perovskite, to interpret some Ab-initio Molecular Dynamics). Obviously there is some odd symmetries at play here, there are 8 corners to a cube, 6 faces and 12 edges. This must have a point group associated with it (and the cubic groups are O and Oh). But I couldn&rsquo;t make sense of the character tables, into how to turn this into an algorithm to recast an arbitrary vector onto its unique domain.</p>
+
+<p>So I just sat and thought, wrote scribbles and sat knowing, for certain, that this was something simple and well understood, yet not knowing how I could understand.</p>
+
+<p><a href="http://jarvistmoorefrost.files.wordpress.com/2014/04/img_20140419_190945_whiteboard.jpg"><img src="http://jarvistmoorefrost.files.wordpress.com/2014/04/img_20140419_190945_whiteboard.jpg?w=497" alt="IMG_20140419_190945_whiteboard" /></a></p>
+
+<p>After all this - thinking of symmetries, and how to collapse the basis vectors (by arithmetic and rotating my pen within an imaginary cube); and I&rsquo;d arrived back at a representation of the <a href="http://en.wikipedia.org/wiki/Octahedral_symmetry">Oh group</a>, gratifyingly the symmetry had the correct fold and even the <a href="http://en.wikipedia.org/wiki/File:Octahedral_reflection_domains.png">&lsquo;Reflection Domain&rsquo;</a> matched the beautiful Wikipedia render.</p>
+
+<p>Once I&rsquo;d hauled myself up to the merest hint of the beauty of 18th Century mathematics that is trivial group theory (or rather, just using the character tables), I had a method to attack a problem I was working on.</p>
+
+<p>If you want to reduce the <code>d=x,y,z</code> coordinates to their cubic symmetry, simply <code>sorted(abs(d))</code>. (The <code>abs</code> reflects in the basis vectors, to select 1/8th of the cube, and the <code>sorted()</code> gives you the three-planes of mirror symmetry to produce the correct representation of edges, faces and corners. I justified this that since orientation doesn&rsquo;t matter you must be able to change sign of the basis; and as the basis vectors are equivalent, you must be able to reorder them.)</p>
+
+<p>With no symmetry, the signal to noise is low, and what you see are a lot of artefacts from the starting configuration
+<a href="http://jarvistmoorefrost.files.wordpress.com/2014/04/nosymm_equilib.png"><img src="http://jarvistmoorefrost.files.wordpress.com/2014/04/nosymm_equilib.png?w=497" alt="No Symmetry" /></a></p>
+
+<p>But when you fold back the 48 equivalent areas to a single one, bonza - some actual data!
+<a href="http://jarvistmoorefrost.files.wordpress.com/2014/04/fullsymm_equilib.png"><img src="http://jarvistmoorefrost.files.wordpress.com/2014/04/fullsymm_equilib.png?w=497" alt="Full Symmetry" /></a></p>
+
+<p><a href="http://www.youtube.com/watch?v=8Wb0V-68Kao">http://www.youtube.com/watch?v=8Wb0V-68Kao</a></p>
+
+<p>Nb: &lsquo;Whiteboard&rsquo; process of poor camera phone shot of my notebook via <a href="https://gist.github.com/lelandbatey/8677901">https://gist.github.com/lelandbatey/8677901</a>, <code>convert &quot;$1&quot; -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 &quot;$2&quot;</code>.</p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                </li>
+                
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://localhost:1313/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://localhost:1313/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+
