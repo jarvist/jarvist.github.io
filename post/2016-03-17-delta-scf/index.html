@@ -99,7 +99,7 @@ Orbital (HOMO).</p>
 us the Fundamental Gap.
 In a periodic system, this fundamental gap is a good estimate for the optical
 Band Gap of the material.
-This is because the absorption of a photo generates very loosly (negligably)
+This is because the absorption of a photo generates very loosely (negligibly)
 bound electron and hole states (the exciton).
 In a molecular system, this difference between the Fundamental and Band Gap
 (the exciton binding energy), can easily be 1 eV.
@@ -127,7 +127,7 @@ But are the electron eigenvalues (i.e. HOMO / LUMO) actually what you want?</p>
 
 <p>A key thing to remember is that the Density Functional Approximation is
 guaranteed to give you one thing - total energy.
-The Kohn-Sham eigenvectors [2] are auxillary functions to enable the solving for
+The Kohn-Sham eigenvectors [2] are auxiliary functions to enable the solving for
 the total energy of the system, in particular by providing orbitals which can
 be used to evaluate the kinetic energy of the electrons.
 The debate about whether the Kohn-Sham eigenvalues have any greater meaning has
@@ -138,7 +138,7 @@ refers to the exact agreement in Hartree-Fock theory between the occupied
 orbitals and the ionisation energies (energetic cost to remove an electron).
 Depending on who you ask, this theory is correct for Hybrid Density Functional
 Theory for: all occupied and unoccupied orbitals, just the occupied orbitals,
-just the higest occupied orbital (HOMO).</p>
+just the highest occupied orbital (HOMO).</p>
 
 <p>Certainly in my testing with organic electron materials and hybrid density
 functionals, the HOMO often seems a good estimate for the ionisation potential.
@@ -204,7 +204,7 @@ a lower noise answer) on an increased fidelity integration grid. See:
 If you want the energy of adding an electron to the &lsquo;LUMO&rsquo; (the electron
 affinity), you compare the neutral energy to the system with an added electron
 (Charge=-1, the Anion). This is comparing <code>N</code> to <code>N+1</code> electrons.
-For a Delta-SCF calculation of the Ionisation Potentail (IP), you compare to
+For a Delta-SCF calculation of the Ionisation Potential (IP), you compare to
 the <code>N-1</code> electron case, the cation.</p>
 
 <pre><code>#p sp b3lyp/6-31g* SCF(Tight,Conver=8) Integral(Grid=UltraFine)
