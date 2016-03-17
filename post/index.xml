@@ -6,8 +6,182 @@
     <description>Recent content in Posts on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Fri, 11 Mar 2016 22:44:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Mar 2016 14:44:34 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Delta SCF: Calculating work functions of molecular electronic materials</title>
+      <link>http://jarvist.github.io/post/2016-03-17-delta-scf/</link>
+      <pubDate>Thu, 17 Mar 2016 14:44:34 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-03-17-delta-scf/</guid>
+      <description>
+
+&lt;p&gt;A key issue in the design of functional electronic materials is the alignment
+of energy levels.
+This enables the creation of selective contacts, essential to make
+active electronic components.
+The key metric is the Electron Affinity (energy gain by adding an electron from
+infinite distance) and Ionisation Potential (energy required to remove an
+electron from the bulk to infinite distance).
+In a metal there is no distinction between these values (the same energy state
+is involved), and both are equivalent to the Work Function.&lt;/p&gt;
+
+&lt;p&gt;When calculating electronic structure, in a periodic system (where the
+electronic states are broadened bands) we talk of the Conduction Band Minimum
+(CBM) and Valence Band Maximum (VBM); in a molecular system (where for
+calculation we usually have an isolated molecule in vacuum) we talk in terms of
+the Lowest Unoccupied Molecular Orbital (LUMO) and Highest Occupied Molecular
+Orbital (HOMO).&lt;/p&gt;
+
+&lt;p&gt;The difference (in energy) between CBM and VBM, or similar LUMO and HOMO, gives
+us the Fundamental Gap.
+In a periodic system, this fundamental gap is a good estimate for the optical
+Band Gap of the material.
+This is because the absorption of a photo generates very loosly (negligably)
+bound electron and hole states (the exciton).
+In a molecular system, this difference between the Fundamental and Band Gap
+(the exciton binding energy), can easily be 1 eV.
+Methods that explicitly treat the electron-hole interaction (such as
+Time-Dependent Density-Functional-Theory) are a much better estimate for the
+band gap in such systems.&lt;/p&gt;
+
+&lt;p&gt;But what are these orbital energies relative to?
+The naive expectation would be to the vacuum energy.&lt;/p&gt;
+
+&lt;p&gt;For a periodic calculation this can&amp;rsquo;t be, as there is no absolute reference in
+the periodic summations used to get the electrostatic potential.
+Often codes practically pin these values against the core states of the
+composite atoms used in the pseudo potential - so they &amp;lsquo;look&amp;rsquo; about right, but
+woe betide anyone using these as actual work functions!
+However, you can define a &amp;lsquo;vacuum&amp;rsquo; region in your simulation where no electrons
+are present and use the electrostatic potential in this region as the reference
+for your bulk values.
+My colleague Keith Butler has developed this method into a useful (and fun!)
+code named MacroDensity ([1] - &lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;With non-periodic (molecular) calculations, you do have an absolute
+reference - the vacuum is everywhere around you!
+But are the electron eigenvalues (i.e. HOMO / LUMO) actually what you want?&lt;/p&gt;
+
+&lt;p&gt;A key thing to remember is that the Density Functional Approximation is
+guaranteed to give you one thing - total energy.
+The Kohn-Sham eigenvectors [2] are auxillary functions to enable the solving for
+the total energy of the system, in particular by providing orbitals which can
+be used to evaluate the kinetic energy of the electrons.
+The debate about whether the Kohn-Sham eigenvalues have any greater meaning has
+rumbled on for decades.
+It has become an almost ecumenical matter.
+It is usually referred to as &amp;ldquo;Koopmans&amp;rsquo; Theorem&amp;rdquo; in the literature, which
+refers to the exact agreement in Hartree-Fock theory between the occupied
+orbitals and the ionisation energies (energetic cost to remove an electron).
+Depending on who you ask, this theory is correct for Hybrid Density Functional
+Theory for: all occupied and unoccupied orbitals, just the occupied orbitals,
+just the higest occupied orbital (HOMO).&lt;/p&gt;
+
+&lt;p&gt;Certainly in my testing with organic electron materials and hybrid density
+functionals, the HOMO often seems a good estimate for the ionisation potential.
+The LUMO is often not even correlated with variations in electron affinity
+(i.e. it is qualitatively and quantitatively wrong.)&lt;/p&gt;
+
+&lt;p&gt;So if we don&amp;rsquo;t trust our single-electron eigenvalues, what can we do?&lt;/p&gt;
+
+&lt;p&gt;A conceptually (and practically!) simple method is that of the &amp;lsquo;Delta SCF&amp;rsquo;.
+The name is rather curious, but it seems to have stuck.
+You calculate the total Self-Consistent-Field energy of a &lt;code&gt;N&lt;/code&gt; electron system,
+and deduct the total energy of a &lt;code&gt;N+1&lt;/code&gt; (or &lt;code&gt;N-1&lt;/code&gt;) system.
+This difference is the total energy upon adding (or removing) an electron, and
+is therefore the Electron Affinity (or Ionisation Energy).
+You do this at the geometry of the neutral molecule (apart from anything else,
+this stops the difference in total energy requiring consideration of the
+nuclear-nuclear repulsion which would change between two different geometries).&lt;/p&gt;
+
+&lt;p&gt;As ever in electronic structure theory this method &amp;lsquo;weighs the admiral by weighing
+the battleship with and without him on board&amp;rsquo;.
+It is thus extremely important that errors in the two total energies are
+carefully controlled.&lt;/p&gt;
+
+&lt;p&gt;An alternative, which chemists seem to particularly like, is to estimate the
+Ionisation Potential from the HOMO of a DFT calculation, and then add on the
+Band Gap of the material via a TDDFT calculation to get the Electron Affinity.
+It is somewhat surprising that this often gives a good agreement to the solid
+state energies.
+One possibility is that it represents some kind of &amp;lsquo;Pauling point&amp;rsquo; (correct for
+the wrong reasons), that the exciton binding energy (and assorted systematic
+errors) in the TDDFT is somehow compensating for the delocalisation of the
+wavefunction in a solid, and the effect of the dielectric environment.
+This method I used in a 2009 study of various fullerene adduct isomers [3].
+Later work (alas unpublished) on a much wider range of fullerenes suggested
+that the major variation in the Electron Affinity (~LUMO) was due to there
+being a constant Fundamental Gap between it and the HOMO.&lt;/p&gt;
+
+&lt;p&gt;Mark Casida (yes, that Casida!) has some interesting slides on why there should
+be such an agreement between TDDFT and Delta-SCF [4].&lt;/p&gt;
+
+&lt;h2 id=&#34;doing-it-for-real-with-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;Doing it for real with Gaussian&lt;/h2&gt;
+
+&lt;p&gt;So you want to do a Delta-SCF calculation for a molecule-in-vacuum with Gaussian.
+You start with a carefully converged single point calculation:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#p sp b3lyp/6-31g* SCF(Tight,Conver=8) Integral(Grid=UltraFine)
+
+Neutral calculation - for Delta-SCF.
+
+0 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A standard, single point, energy calculation, with upped convergence &amp;amp; the
+two-electron integrals calculated on an ultrafine grid. The &lt;code&gt;0 1&lt;/code&gt; is the
+&lt;code&gt;Charge Multiplicity&lt;/code&gt;. This is a Neutral (Charge=0) calculation in a spin Singlet
+(Multiplicity=1) configuration.&lt;/p&gt;
+
+&lt;p&gt;We have made the convergence tighter (i.e. it will do more SCF cycles to get
+a lower noise answer) on an increased fidelity integration grid. See:
+&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And now the same structure (no further nuclear relaxation), as a charged doublet.
+If you want the energy of adding an electron to the &amp;lsquo;LUMO&amp;rsquo; (the electron
+affinity), you compare the neutral energy to the system with an added electron
+(Charge=-1, the Anion). This is comparing &lt;code&gt;N&lt;/code&gt; to &lt;code&gt;N+1&lt;/code&gt; electrons.
+For a Delta-SCF calculation of the Ionisation Potentail (IP), you compare to
+the &lt;code&gt;N-1&lt;/code&gt; electron case, the cation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#p sp b3lyp/6-31g* SCF(Tight,Conver=8) Integral(Grid=UltraFine)
+
+Anion calculation - for Delta-SCF of the LUMO / Electron Affinity.
+
+-1 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And that is it. Now run these jobs, calculate the difference of the total SCF
+energy between them, and you have your estimate of the Ionisation Potential or
+the Electron Affinity.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+neutral=` grep &amp;quot;SCF Done&amp;quot; &amp;quot;${1}&amp;quot; | awk &#39;{print $5}&#39; `
+charged=` grep &amp;quot;SCF Done&amp;quot; &amp;quot;${2}&amp;quot; | awk &#39;{print $5}&#39; `
+
+echo -n &amp;quot;${1}    &amp;quot;
+echo -n &amp;quot;($neutral - $charged ) * 27.211&amp;quot; | bc -l
+echo &amp;quot;  eV&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;references:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;[1] Macrodensity - codes to read VASP LOCPOT files and calculate electrostatic
+potential derived quantities (&lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;[2] Kohn, Walter; Sham, Lu Jeu (1965). &amp;ldquo;Self-Consistent Equations Including
+Exchange and Correlation Effects&amp;rdquo;. Physical Review 140 (4A): A1133–A1138 (&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRev.140.A1133&#34;&gt;http://dx.doi.org/10.1103/PhysRev.140.A1133&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;[3] Frost, J. M., Faist, M. A. and Nelson, J. (2010), Energetic Disorder in
+Higher Fullerene Adducts: A Quantum Chemical and Voltammetric Study. Adv.
+Mater., 22: 4881–4884. &lt;a href=&#34;http://dx.doi.org/10.1002/adma.201002189&#34;&gt;http://dx.doi.org/10.1002/adma.201002189&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[4] Mark Casida - Reconciling Delta-SCF and TDDFT, Transparencies from a talk, 1999
+(&lt;a href=&#34;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&#34;&gt;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hello HUGO!</title>
@@ -527,46 +701,6 @@ Beware that some of the books from the dawn of Quantum Theory are more there
 for historical interest than utility as a textbook.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&#34;&gt;http://store.doverpublications.com/by-subject-physics-mathematical-and-theoretical-physics.html&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Snippet: Console diary - vimwiki (now with more git &amp; autohooks)</title>
-      <link>http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</link>
-      <pubDate>Wed, 25 Jun 2014 23:49:41 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve dallied with keeping a computer / online logbook. I&amp;rsquo;ve tried many products, even wrote my own (retrospectively crazy) set of scripts called &amp;lsquo;freck&amp;rsquo;*. But all of these methods were only ever used for a week or two before falling by the wayside. Just too much extra effort for (me) to follow through with. And therefore they all become walled-gardens with no way of getting the information out.&lt;/p&gt;
-
-&lt;p&gt;I keep paper notebooks for talks; I think it is essential to be able to sketch maths and diagrams, and I honestly think my brain is more engaged when I&amp;rsquo;m making notes by hand versus either typing or just listening (i.e. daydreaming). But they&amp;rsquo;re impossible to search through, and just a bit ridiculous to use when sitting in front of a computer.&lt;/p&gt;
-
-&lt;p&gt;The one I&amp;rsquo;ve returned to vaguely reliably is &amp;lsquo;vimwiki&amp;rsquo; (~10&amp;rsquo;000 words over 4 years). Probably because it lives in vim, and is thus only ever two keystrokes away. It runs in two modes, a &amp;lsquo;diary&amp;rsquo; linked to &amp;lsquo;\w\w&amp;rsquo; which drops you into a sensibly dated file for today, and a full blown personal wiki at &amp;lsquo;\ww&amp;rsquo;. All files are just&amp;hellip; files in ~/vimwiki.&lt;/p&gt;
-
-&lt;p&gt;Github: &lt;a href=&#34;https://github.com/vimwiki/vimwiki&#34;&gt;https://github.com/vimwiki/vimwiki&lt;/a&gt;
-Mailing list: &lt;a href=&#34;https://groups.google.com/forum/#!forum/vimwiki&#34;&gt;https://groups.google.com/forum/#!forum/vimwiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So now my ~/vimwiki is a BitBucket private repository, my work machine and laptop both feed from it. But the extra struggle of changing to the correct directory &amp;amp; then &amp;lsquo;git pull&amp;rsquo; or &amp;lsquo;git add / commit / push&amp;rsquo; was just a bit too much effort for me. So I was thinking of doing something primitive like put it in Dropbox, before coming across this blog entry:
-&lt;a href=&#34;http://www.stochasticgeometry.ie/2012/11/23/vimwiki/&#34;&gt;http://www.stochasticgeometry.ie/2012/11/23/vimwiki/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve no interest in encrypting my diary but the auto-hooks to commit to a DVCS are a fantastic idea.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the hooks, translated for git:
-&lt;code&gt;tail ~/.vim/ftplugin/vimwiki.vim
-augroup vimwiki
-au! BufRead /home/jarvist/vimwiki/index.wiki !git pull
-au! BufWritePost /home/jarvist/vimwiki/* !git add ;git commit -m &amp;quot;Auto commit + push.&amp;quot;;git push
-augroup END
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;[ * &amp;lsquo;Freck&amp;rsquo;, evidently a word read here: &lt;a href=&#34;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&#34;&gt;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This was a set of scripts I wrote essentially the day after I submitted my PhD thesis - having struggled with finding original data sources to things I only had as poorly named postscripts and PDFs, or even just hard annotated printouts from supervisor meetings.
-They worked both remotely on the HPC + locally. I recall that &amp;lsquo;freck&amp;rsquo; would take a figure as an argument, send a copy of this back to my workstation, demand a caption, and automatically add a figure to a &amp;lsquo;labbook&amp;rsquo; Latex file, with some commented out sections &amp;lsquo;%&amp;rsquo; informing future-me where exactly this data came from, auto date stamp, where it was generated etc. Different projects were set by an environmental variable, which were then sub-directories in the local ~/freck/ directory with Latex files &amp;amp; figures. I think the idea was that I would have a vim session running locally, and would reload the text, now with a generated figure.&lt;/p&gt;
-
-&lt;p&gt;Writing it&amp;rsquo;s description, it still sounds like a good idea! I&amp;rsquo;d probably now do it with more markdown (at least at the raw &amp;lsquo;freck&amp;rsquo; end), and a DVCS.&lt;/p&gt;
-
-&lt;p&gt;Only surviving remnant: &lt;a href=&#34;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&#34;&gt;https://github.com/jarvist/CoarseGrainPCBM/tree/master/2011-01_JMF_LabBook&lt;/a&gt;
-Though who knows, maybe I&amp;rsquo;ll make it a Friday afternoon project to refind the code &amp;amp; update it for something more sane / general. ]&lt;/p&gt;
 </description>
     </item>
     
