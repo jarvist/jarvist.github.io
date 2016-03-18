@@ -17,13 +17,15 @@
       <guid>http://jarvist.github.io/post/2016-03-17-delta-scf/</guid>
       <description>
 
-&lt;p&gt;A key issue in the design of functional electronic materials is the alignment
-of energy levels.
-This enables the creation of selective contacts, essential to make
-active electronic components.
-The key metric is the Electron Affinity (energy gain by adding an electron from
-infinite distance) and Ionisation Potential (energy required to remove an
-electron from the bulk to infinite distance).
+&lt;p&gt;All modern functional electronic devices are made from semiconductors.
+A semiconductor is a material with a moderate band gap.
+But to turn this semiconductor into a device, you need to be able to
+selectively inject and extract electrons from above and below this band gap,
+forming selective contacts.&lt;/p&gt;
+
+&lt;p&gt;The metrics we want to calculate are the Electron Affinity (energy gain by
+adding an electron from infinite distance) and the Ionisation Potential (energy
+required to remove an electron from the bulk to infinite distance).&lt;br /&gt;
 In a metal there is no distinction between these values (the same energy state
 is involved), and both are equivalent to the Work Function.&lt;/p&gt;
 
@@ -42,6 +44,10 @@ This is because the absorption of a photo generates very loosely (negligibly)
 bound electron and hole states (the exciton).
 In a molecular system, this difference between the Fundamental and Band Gap
 (the exciton binding energy), can easily be 1 eV.
+The excited state (exciton) involves wave functions that are highly localised.
+The electron and hole are energetically bound; as there is large wavefunction
+overlap, the exchange interaction means that Singlet and Triplet states exist,
+and have different energies.
 Methods that explicitly treat the electron-hole interaction (such as
 Time-Dependent Density-Functional-Theory) are a much better estimate for the
 band gap in such systems.&lt;/p&gt;
