@@ -64,7 +64,7 @@
 
             <div class="post-title">
                 <p class="footnote">
-                    <time class="">2016-03-17</time>
+                    <time class="">2016-03-23</time>
 		            
                     
                     
@@ -186,7 +186,7 @@ being a constant Fundamental Gap between it and the HOMO.</p>
 <p>Mark Casida (yes, that Casida!) has some interesting slides on why there should
 be such an agreement between TDDFT and Delta-SCF [4].</p>
 
-<h2 id="doing-it-for-real-with-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a">Doing it for real with Gaussian</h2>
+<h2 id="doing-it-by-hand-with-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a">Doing it by hand with Gaussian</h2>
 
 <p>So you want to do a Delta-SCF calculation for a molecule-in-vacuum with Gaussian.
 You start with a carefully converged single point calculation:</p>
@@ -233,6 +233,23 @@ echo -n &quot;${1}    &quot;
 echo -n &quot;($neutral - $charged ) * 27.211&quot; | bc -l
 echo &quot;  eV&quot;
 </code></pre>
+
+<h2 id="scripts-for-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a">Scripts for Gaussian</h2>
+
+<p>After doing this for the n&rsquo;th time as part of this post, I thought I should sit
+down and write an all-singing script for automating the process.</p>
+
+<p>The files are available as a Github Gist
+(<a href="https://gist.github.com/jarvist/616c8c7c3ea576d03d73">https://gist.github.com/jarvist/616c8c7c3ea576d03d73</a>).</p>
+
+<p>From Gaussian .log outputs with optimised structures, generate <code>.xyz</code> files of
+the coordinates with <code>&gt;extract_list_geoms.sh *.log</code>.
+Then generate your Delta-SCF <code>.com</code> Gaussian input files,
+<code>&gt;g09_xyz_to_delta_SCF_coms_standalone.sh *.xyz</code>.
+Run the resulting <code>.com</code> files through Gaussian.
+Analyse the outputs with <code>&gt; delta_SCF_extract_values.sh</code>.</p>
+
+<script src="https://gist.github.com/jarvist/616c8c7c3ea576d03d73.js"></script>
 
 <h2 id="references:fbce3db7e066d2ec23c5af7d0bd6b47a">References</h2>
 

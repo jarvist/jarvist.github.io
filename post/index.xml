@@ -6,13 +6,13 @@
     <description>Recent content in Posts on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Thu, 17 Mar 2016 14:44:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Mar 2016 14:44:34 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Delta SCF: Calculating work functions of molecular electronic materials</title>
       <link>http://jarvist.github.io/post/2016-03-17-delta-scf/</link>
-      <pubDate>Thu, 17 Mar 2016 14:44:34 +0000</pubDate>
+      <pubDate>Wed, 23 Mar 2016 14:44:34 +0000</pubDate>
       
       <guid>http://jarvist.github.io/post/2016-03-17-delta-scf/</guid>
       <description>
@@ -124,7 +124,7 @@ being a constant Fundamental Gap between it and the HOMO.&lt;/p&gt;
 &lt;p&gt;Mark Casida (yes, that Casida!) has some interesting slides on why there should
 be such an agreement between TDDFT and Delta-SCF [4].&lt;/p&gt;
 
-&lt;h2 id=&#34;doing-it-for-real-with-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;Doing it for real with Gaussian&lt;/h2&gt;
+&lt;h2 id=&#34;doing-it-by-hand-with-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;Doing it by hand with Gaussian&lt;/h2&gt;
 
 &lt;p&gt;So you want to do a Delta-SCF calculation for a molecule-in-vacuum with Gaussian.
 You start with a carefully converged single point calculation:&lt;/p&gt;
@@ -171,6 +171,23 @@ echo -n &amp;quot;${1}    &amp;quot;
 echo -n &amp;quot;($neutral - $charged ) * 27.211&amp;quot; | bc -l
 echo &amp;quot;  eV&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;scripts-for-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;Scripts for Gaussian&lt;/h2&gt;
+
+&lt;p&gt;After doing this for the n&amp;rsquo;th time as part of this post, I thought I should sit
+down and write an all-singing script for automating the process.&lt;/p&gt;
+
+&lt;p&gt;The files are available as a Github Gist
+(&lt;a href=&#34;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&#34;&gt;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;From Gaussian .log outputs with optimised structures, generate &lt;code&gt;.xyz&lt;/code&gt; files of
+the coordinates with &lt;code&gt;&amp;gt;extract_list_geoms.sh *.log&lt;/code&gt;.
+Then generate your Delta-SCF &lt;code&gt;.com&lt;/code&gt; Gaussian input files,
+&lt;code&gt;&amp;gt;g09_xyz_to_delta_SCF_coms_standalone.sh *.xyz&lt;/code&gt;.
+Run the resulting &lt;code&gt;.com&lt;/code&gt; files through Gaussian.
+Analyse the outputs with &lt;code&gt;&amp;gt; delta_SCF_extract_values.sh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/jarvist/616c8c7c3ea576d03d73.js&#34;&gt;&lt;/script&gt;
 
 &lt;h2 id=&#34;references:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;References&lt;/h2&gt;
 
