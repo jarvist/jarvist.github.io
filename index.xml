@@ -6,8 +6,248 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 23 Mar 2016 14:44:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Apr 2016 14:44:34 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mark Tuckerman talk: Free energy based structure prediction</title>
+      <link>http://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</link>
+      <pubDate>Tue, 19 Apr 2016 14:44:34 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</guid>
+      <description>
+
+&lt;p&gt;Mark Tuckerman (MET) visited London on the 31st March 2016, and gave a highlight seminar
+to the TYC at UCL.
+I had been really enjoying his recent (2010) Computational Stat Mech book [1].
+I know very little about structure prediction, but it is of general and
+captivating interest, and an essential step in truly predictive computational
+materials science.
+Here are a summary of my notes from his talk, written up mainly for my own
+reference, and for clickable citations.&lt;/p&gt;
+
+&lt;p&gt;A point Mark made at the start and repeatedly was that we need to go beyond the
+static structure picture - we need the entropic contribution, and we therefore
+need to be able to calculate free energies.&lt;/p&gt;
+
+&lt;h2 id=&#34;small-molecular-crystals:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Small molecular crystals&lt;/h2&gt;
+
+&lt;p&gt;The first area discussed was predicting structure of small molecular crystals,
+the example for them was having taken part in the CCDC Blind Test [2], but
+focusing on a single molecule &amp;amp; attempting to explore the polymorphs.
+The motivation here is that for Pharma research, knowing the existence of
+energetically accessible polymorphs is of utmost importance due to highly
+varying bioavailability of different polymorphs.&lt;/p&gt;
+
+&lt;p&gt;The method started off fairly standard. As general force fields are too coarse,
+and quantum mechanical calculations too expensive, a customised force field was
+developed. QC calculations on dimers were used to parameterise, with a fairly
+normal &lt;code&gt;PBE0+TS; 6-311g**(d,p)&lt;/code&gt;.
+Unit cells were generated with &lt;code&gt;UPACK&lt;/code&gt;, a software package I had not heard of,
+but which seems pretty extensive [3].&lt;/p&gt;
+
+&lt;p&gt;MD (I think just vanilla) on the packed structures lead to trajectories where
+interconversion from one structure to another could be seen. Eventually they
+settled down to 50 leftover structures, plotted on an energy vs. density plot.
+Their 4th lowest energy structure agreed with the &amp;lsquo;blind&amp;rsquo; experimental
+structure.&lt;/p&gt;
+
+&lt;p&gt;So far so good for an interesting seminar, and a laudable result - but this is
+where it got really interesting.&lt;/p&gt;
+
+&lt;p&gt;Mark linked from structure prediction to protein folding via a 2004 PNAS [4],
+which proposed that both problems are essentially the same.
+In both cases you have a rough energy landscape, and you need to determine the
+occupancy of the basins.&lt;/p&gt;
+
+&lt;h2 id=&#34;collective-variables:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Collective variables&lt;/h2&gt;
+
+&lt;p&gt;To do this, Mark suggests targeting collective variables - something that
+distinguishes different conformal states.
+These are selected &amp;lsquo;by hand&amp;rsquo; with &amp;lsquo;insight&amp;rsquo; and &amp;lsquo;chemical intuition&amp;rsquo; to fit the
+problem studied.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The most simple example are the Psi and Theta angles of the Ramachandran plot [5] for amino acid residues.&lt;/li&gt;
+&lt;li&gt;For crystals you can take the unit cell vectors and stuff them into what Mark
+referred to as the &lt;code&gt;h&lt;/code&gt; matrix.&lt;/li&gt;
+&lt;li&gt;For packing, you can take angles and distances, or use &lt;code&gt;Q&lt;/code&gt;, &lt;code&gt;W&lt;/code&gt; Steinhardt
+bond-order parameters.
+
+&lt;ul&gt;
+&lt;li&gt;[Incidentally, I recently learned thanks to another seminar that these
+seemingly mystical parameters are really quite simple - they&amp;rsquo;re just
+spherical harmonics!  You consider only even-l versions of these, making
+them invariant under inversion. [6] ]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;temperature-accelerated-md:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Temperature accelerated MD&lt;/h2&gt;
+
+&lt;p&gt;Temperature accelerated MD was then introduced.
+Mark described it as essentially being an additional (standard) equation of
+motion being simultaneously solved, in the collective variables.
+A very large fictitious mass is used for the collective-variable centre, and
+a separate thermostat (~32000 K was an example).
+This means that the collective variables have the energy to hop potential
+barriers between minima, and the momentum to smoothly move between them.&lt;/p&gt;
+
+&lt;p&gt;I did not realise that temperature accelerated MD was this conceptually simple.&lt;/p&gt;
+
+&lt;p&gt;Metadynamics is an alternative way to explore the free energy landscape, but
+relies on the simulation dropping little Gaussians in the potential energy
+where they are currently, so requires a certain amount of time to fill up the
+basins and escape to the next one. To get the free energy, once you&amp;rsquo;ve filled
+all the basins you invert the Gaussians and this gives you the free energy
+surface.&lt;/p&gt;
+
+&lt;h2 id=&#34;protein-folding-alanine-decamers-between-alpha-helix-and-beta-hairpin:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Protein folding: Alanine Decamers between alpha helix and beta hairpin&lt;/h2&gt;
+
+&lt;p&gt;Accelerated MD on this as a model system (I think with the CHARMM forcefield),
+with the Ramachandran variables (20 collective variables).
+Running this produces lots of structures, with the transition paths identified [10].
+Using a Berendsen thermostat with added noise [7], defining a path as the
+collective variable, you can integrate along to get free energy.
+This gives you a smooth energy along the coordinate, and thus a well found
+value for the free energy difference.&lt;/p&gt;
+
+&lt;p&gt;I found a 2014 YouTube video containing the MD, but the extraction of free
+energy seems a bit different:
+&lt;a href=&#34;https://youtu.be/WKpe8fzATr4?t=21m38s&#34;&gt;https://youtu.be/WKpe8fzATr4?t=21m38s&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;polymorphic-benzene:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Polymorphic benzene&lt;/h2&gt;
+
+&lt;p&gt;Separately they studied polymorphs of benzene.
+The &amp;lsquo;h&amp;rsquo; matrix (lattice basis) was explicitly evolved in the EoM, dragging
+atoms instantly with it.
+With benzene at 100K (atomic thermostat) and 32000 K (collective variable
+thermostat), 5 ns of MD was sufficient for all free energies, 0.5 ns of MD
+found all the polymorphs.&lt;/p&gt;
+
+&lt;p&gt;This is explored in [8], and MET references thereafter.&lt;/p&gt;
+
+&lt;h2 id=&#34;melting-copper:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Melting Copper&lt;/h2&gt;
+
+&lt;p&gt;Melting Cu, with collective variables on the diagonal of &lt;code&gt;h&lt;/code&gt;; and
+a Q4, Q6 spherical harmonic &amp;lsquo;bond order&amp;rsquo;.
+The EAM potential was used.&lt;/p&gt;
+
+&lt;p&gt;Here they looked at classical nuclear theory.
+The simulations showed a more complex story - the hot solid had defects which
+were highly mobile. Defects formed clusters to minimise their free energy&lt;/p&gt;
+
+&lt;h2 id=&#34;navigating-on-a-high-dimensional-surface:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Navigating on a high dimensional surface&lt;/h2&gt;
+
+&lt;p&gt;You can&amp;rsquo;t visualise the surface - it is too high in dimension. But you want to
+see the &amp;lsquo;interesting&amp;rsquo; minima and saddle points.
+You can use a Parrinello-group sketchmap [9], which appears to be a clustering
+graph representation.
+Here [11] they used these ideas, and the &lt;code&gt;START&lt;/code&gt; method where the free energy
+gradient and the Hessian were constructed in terms of collective variables, to
+give you the weakest eigenvector to walk along with steepest descents.&lt;/p&gt;
+
+&lt;p&gt;Some very recent and unpublished data investigated Anthracene crystals,
+defining the Euler angles (though a later figure mentioned an &amp;lsquo;absolute
+quaternion&amp;rsquo;) and cell parameters as collective variables. They found the
+experimental structure, and loads of near-energy polymorphs&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;It was an extremely thought provoking talk. The explanation of temperature
+accelerated molecular dynamics was the first time that it made sense to me.
+The power of integrating the EoM for a collective variable &amp;amp; so ride roughshod
+across a rough potential energy landscape with the ability to extrapolate free
+energies is clearly fantastically powerful.&lt;/p&gt;
+
+&lt;p&gt;However, I felt that everything presented seemed a little clunky.
+Certainly the science was fantastic, but every example seemed to have been set
+up slightly differently and individually by the researchers.
+There was no mention of these codes or methods being made available.&lt;/p&gt;
+
+&lt;p&gt;One thing obviously missing from a scientific point of view was a algorithmic
+way to define the collective variables, rather than relying on intuition.&lt;/p&gt;
+
+&lt;p&gt;In a paper I&amp;rsquo;ve been reading recently [12], the authors of VoroTop introduce
+a method to identify local structure independent of radial distribution
+functions and bond orders. Instead they define the 3D Voronoi cell for individual
+atoms, and then compare the isomorphism (or not!) of the 2D Schlegel diagram
+(i.e. a graph of connectivity of the Voronoi vertices) to identify
+topologically distinct local bonding.
+I wonder if some ideas from here, could be borrowed and used to construct
+collective variables automatically.&lt;/p&gt;
+
+&lt;p&gt;Once you can identify the collective variables automatically, the exploration
+of rough potential energy surfaces, while retaining the free-energy of
+structures, will be practically pleasant.&lt;/p&gt;
+
+&lt;p&gt;With a bit of Googling I found a Tuckerman slide deck from 2014 which
+overlapped with this talk a fair bit:
+&lt;a href=&#34;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&#34;&gt;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mark has a Google Scholar page, for if you want to dig through more of his
+literature [13].&lt;/p&gt;
+
+&lt;h2 id=&#34;references:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;[1] Mark E. Tuckerman (2010), Statistical Mechanics: Theory and Molecular
+Simulation. Oxford Graduate Texts.
+(&lt;a href=&#34;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&#34;&gt;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;[2] &lt;a href=&#34;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&#34;&gt;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3] &lt;a href=&#34;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&#34;&gt;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[4]
+&amp;ldquo;Exercises in
+prognostication: Crystal structures and protein folding&amp;rdquo;.
+Jack D. Dunitz and Harold A. Scheraga (2004).
+PNAS 40(101),
+14309-14311. &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.0405744101&#34;&gt;http://dx.doi.org/10.1073/pnas.0405744101&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[5] &lt;a href=&#34;https://en.wikipedia.org/wiki/Ramachandran_plot&#34;&gt;https://en.wikipedia.org/wiki/Ramachandran_plot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[6] &amp;ldquo;Bond-orientational order in liquids and glasses&amp;rdquo;
+Paul J. Steinhardt, David R. Nelson, and Marco Ronchetti (1983).
+Phys. Rev. B 28, 784.
+&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.28.784&#34;&gt;http://dx.doi.org/10.1103/PhysRevB.28.784&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[7]
+&amp;ldquo;Canonical sampling through velocity rescaling&amp;rdquo;.
+Giovanni Bussi, Davide Donadio and Michele Parrinello (2007).
+J. Chem. Phys. 126, 014101 (2007); &lt;a href=&#34;http://dx.doi.org/10.1063/1.2408420&#34;&gt;http://dx.doi.org/10.1063/1.2408420&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[8]
+&amp;ldquo;Temperature-Accelerated Method for Exploring Polymorphism in Molecular Crystals Based on Free Energy&amp;rdquo;
+Tang-Qing Yu and Mark E. Tuckerman (2011).
+Phys. Rev. Lett. 107, 015701;
+&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevLett.107.015701&#34;&gt;http://dx.doi.org/10.1103/PhysRevLett.107.015701&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[9]
+&amp;ldquo;Simplifying the representation of complex free-energy landscapes using
+sketch-map&amp;rdquo;.
+Michele Ceriotti, Gareth A. Tribello, and Michele Parrinello (2011).
+PNAS 32(108), 13023-13028.
+&lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1108486108&#34;&gt;http://dx.doi.org/10.1073/pnas.1108486108&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[10]
+&amp;ldquo;Sampling saddle points on a free energy surface&amp;rdquo;
+Amit Samanta, Ming Chen, Tang-Qing Yu, Mark Tuckerman and Weinan
+J. Chem. Phys. 140, 164109 (2014); &lt;a href=&#34;http://dx.doi.org/10.1063/1.4869980&#34;&gt;http://dx.doi.org/10.1063/1.4869980&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[11]
+&amp;ldquo;Locating landmarks on high-dimensional free energy surfaces&amp;rdquo;
+Ming Chen, Tang-Qing Yu, and Mark E. Tuckerman (2015).
+PNAS vol. 112 no. 11 (2015); &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1418241112&#34;&gt;http://dx.doi.org/10.1073/pnas.1418241112&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[12]
+&amp;ldquo;Topological framework for local structure analysis in condensed matter&amp;rdquo;
+Emanuel A. Lazar, Jian Han, and David J. Srolovitz (2015).
+PNAS vol. 112 no. 43; &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1505788112&#34;&gt;http://dx.doi.org/10.1073/pnas.1505788112&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[13] Mark E. Tuckerman, Google Scholar.
+&lt;a href=&#34;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Delta SCF: Calculating work functions of molecular electronic materials</title>
@@ -708,24 +948,6 @@ This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweig
       
       <guid>http://jarvist.github.io/post/snippet-mendeley-desktop-mac-os-failed-update/</guid>
       <description>&lt;p&gt;Mendeley Desktop on my Mac at work had silently stopped working - clicking the button in Launchpad did nothing. Navigating to the directory on the shell, cd &amp;ldquo;/Applications/Mendeley\ Desktop.app/Contents/MacOS/&amp;rdquo; it appeared a prior update had broken halfway through, leaving a null file for &amp;lsquo;Mendeley Desktop&amp;rsquo;. Whoops. However there was a &amp;lsquo;Mendeley Desktop.bak&amp;rsquo;. Running this from the shell, Mendeley Desktop appeared, and then offered to update itself, this time completing successfully.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Links from Julia Land</title>
-      <link>http://jarvist.github.io/post/links-from-julia-land/</link>
-      <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/links-from-julia-land/</guid>
-      <description>&lt;p&gt;Julia 0.3 Release Candidate 1 has quietly appeared on the &lt;a href=&#34;http://julialang.org/downloads/&#34;&gt;nightly builds page&lt;/a&gt;; release notes in the &lt;a href=&#34;https://github.com/JuliaLang/julia/blob/master/NEWS.md&#34;&gt;very active GitHub repository&lt;/a&gt; - improvements to the REPL (tab conversion of &amp;lsquo;latex maths&amp;rsquo; to unicode), and a lot of interesting linear algebra improvements.&lt;/p&gt;
-
-&lt;p&gt;The inaugural JuliaCon has been held, and the presentation slidedecks are already online: &lt;a href=&#34;https://github.com/JuliaCon/presentations&#34;&gt;https://github.com/JuliaCon/presentations&lt;/a&gt;; videos are coming but the upload date has been pushed back as they are edited and transcribed.&lt;/p&gt;
-
-&lt;p&gt;On the Julia users email list, there was a link published to a very interesting essay on the history of programming languages: &lt;a href=&#34;https://groups.google.com/forum/?fromgroups=#!topic/julia-users/T6f9hCkDW6g&#34;&gt;https://groups.google.com/forum/?fromgroups=#!topic/julia-users/T6f9hCkDW6g&lt;/a&gt;. It ends on a very pro-Julia note!&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve personally just been using Julia &amp;lsquo;for real&amp;rsquo; in preparing some data for a publication (rather than just using iJulia as a glorified unicode-capable calculator for physical identities). Here I used Julia to calculate the partition function on the fly (by Monte Carlo integration) for an arbitrary torsional potential in a polymer, then form a tight binding Hamiltonian &amp;amp; evaluate the density of states extremely quickly with the Sturm sequence method. If I hadn&amp;rsquo;t discovered Julia, I would have been trying to do this with Python, and though totally feasible I&amp;rsquo;m not sure I would have got here. You are perpetually operating at the absolute limit of your cognitive capacity in scientific theory (and for me, I&amp;rsquo;m pretty limited); the more powerful the tools you have the more you can achieve, and Julia does indeed seem a very well geared &amp;lsquo;bicycle for the mind&amp;rsquo; in scientific computing.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&#34;&gt;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

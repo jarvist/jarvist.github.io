@@ -1,0 +1,374 @@
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <title>Mark Tuckerman talk: Free energy based structure prediction</title>
+  <meta name="description" content="Mark Tuckerman talk: Free energy based structure prediction">
+  <meta name="author" content="Jarvist Moore Frost">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://jarvist.github.io/css/fonts.css">
+  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="http://jarvist.github.io/css/custom.css">
+  
+  
+  <link rel="stylesheet" href="http://jarvist.github.io/highlight/styles/default.css">
+  
+  <script src="http://jarvist.github.io/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://jarvist.github.io/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://jarvist.github.io/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+                
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2016-04-19</time>
+		            
+                    
+                    
+
+                    
+
+                    
+                </p>
+                <h1>Mark Tuckerman talk: Free energy based structure prediction</h1>
+            </div>
+
+            <div class="post-content">
+                
+
+<p>Mark Tuckerman (MET) visited London on the 31st March 2016, and gave a highlight seminar
+to the TYC at UCL.
+I had been really enjoying his recent (2010) Computational Stat Mech book [1].
+I know very little about structure prediction, but it is of general and
+captivating interest, and an essential step in truly predictive computational
+materials science.
+Here are a summary of my notes from his talk, written up mainly for my own
+reference, and for clickable citations.</p>
+
+<p>A point Mark made at the start and repeatedly was that we need to go beyond the
+static structure picture - we need the entropic contribution, and we therefore
+need to be able to calculate free energies.</p>
+
+<h2 id="small-molecular-crystals:e5bb1008c4e7cb9f959a30ec9e9da6d1">Small molecular crystals</h2>
+
+<p>The first area discussed was predicting structure of small molecular crystals,
+the example for them was having taken part in the CCDC Blind Test [2], but
+focusing on a single molecule &amp; attempting to explore the polymorphs.
+The motivation here is that for Pharma research, knowing the existence of
+energetically accessible polymorphs is of utmost importance due to highly
+varying bioavailability of different polymorphs.</p>
+
+<p>The method started off fairly standard. As general force fields are too coarse,
+and quantum mechanical calculations too expensive, a customised force field was
+developed. QC calculations on dimers were used to parameterise, with a fairly
+normal <code>PBE0+TS; 6-311g**(d,p)</code>.
+Unit cells were generated with <code>UPACK</code>, a software package I had not heard of,
+but which seems pretty extensive [3].</p>
+
+<p>MD (I think just vanilla) on the packed structures lead to trajectories where
+interconversion from one structure to another could be seen. Eventually they
+settled down to 50 leftover structures, plotted on an energy vs. density plot.
+Their 4th lowest energy structure agreed with the &lsquo;blind&rsquo; experimental
+structure.</p>
+
+<p>So far so good for an interesting seminar, and a laudable result - but this is
+where it got really interesting.</p>
+
+<p>Mark linked from structure prediction to protein folding via a 2004 PNAS [4],
+which proposed that both problems are essentially the same.
+In both cases you have a rough energy landscape, and you need to determine the
+occupancy of the basins.</p>
+
+<h2 id="collective-variables:e5bb1008c4e7cb9f959a30ec9e9da6d1">Collective variables</h2>
+
+<p>To do this, Mark suggests targeting collective variables - something that
+distinguishes different conformal states.
+These are selected &lsquo;by hand&rsquo; with &lsquo;insight&rsquo; and &lsquo;chemical intuition&rsquo; to fit the
+problem studied.</p>
+
+<ul>
+<li>The most simple example are the Psi and Theta angles of the Ramachandran plot [5] for amino acid residues.</li>
+<li>For crystals you can take the unit cell vectors and stuff them into what Mark
+referred to as the <code>h</code> matrix.</li>
+<li>For packing, you can take angles and distances, or use <code>Q</code>, <code>W</code> Steinhardt
+bond-order parameters.
+
+<ul>
+<li>[Incidentally, I recently learned thanks to another seminar that these
+seemingly mystical parameters are really quite simple - they&rsquo;re just
+spherical harmonics!  You consider only even-l versions of these, making
+them invariant under inversion. [6] ]</li>
+</ul></li>
+</ul>
+
+<h2 id="temperature-accelerated-md:e5bb1008c4e7cb9f959a30ec9e9da6d1">Temperature accelerated MD</h2>
+
+<p>Temperature accelerated MD was then introduced.
+Mark described it as essentially being an additional (standard) equation of
+motion being simultaneously solved, in the collective variables.
+A very large fictitious mass is used for the collective-variable centre, and
+a separate thermostat (~32000 K was an example).
+This means that the collective variables have the energy to hop potential
+barriers between minima, and the momentum to smoothly move between them.</p>
+
+<p>I did not realise that temperature accelerated MD was this conceptually simple.</p>
+
+<p>Metadynamics is an alternative way to explore the free energy landscape, but
+relies on the simulation dropping little Gaussians in the potential energy
+where they are currently, so requires a certain amount of time to fill up the
+basins and escape to the next one. To get the free energy, once you&rsquo;ve filled
+all the basins you invert the Gaussians and this gives you the free energy
+surface.</p>
+
+<h2 id="protein-folding-alanine-decamers-between-alpha-helix-and-beta-hairpin:e5bb1008c4e7cb9f959a30ec9e9da6d1">Protein folding: Alanine Decamers between alpha helix and beta hairpin</h2>
+
+<p>Accelerated MD on this as a model system (I think with the CHARMM forcefield),
+with the Ramachandran variables (20 collective variables).
+Running this produces lots of structures, with the transition paths identified [10].
+Using a Berendsen thermostat with added noise [7], defining a path as the
+collective variable, you can integrate along to get free energy.
+This gives you a smooth energy along the coordinate, and thus a well found
+value for the free energy difference.</p>
+
+<p>I found a 2014 YouTube video containing the MD, but the extraction of free
+energy seems a bit different:
+<a href="https://youtu.be/WKpe8fzATr4?t=21m38s">https://youtu.be/WKpe8fzATr4?t=21m38s</a></p>
+
+<h2 id="polymorphic-benzene:e5bb1008c4e7cb9f959a30ec9e9da6d1">Polymorphic benzene</h2>
+
+<p>Separately they studied polymorphs of benzene.
+The &lsquo;h&rsquo; matrix (lattice basis) was explicitly evolved in the EoM, dragging
+atoms instantly with it.
+With benzene at 100K (atomic thermostat) and 32000 K (collective variable
+thermostat), 5 ns of MD was sufficient for all free energies, 0.5 ns of MD
+found all the polymorphs.</p>
+
+<p>This is explored in [8], and MET references thereafter.</p>
+
+<h2 id="melting-copper:e5bb1008c4e7cb9f959a30ec9e9da6d1">Melting Copper</h2>
+
+<p>Melting Cu, with collective variables on the diagonal of <code>h</code>; and
+a Q4, Q6 spherical harmonic &lsquo;bond order&rsquo;.
+The EAM potential was used.</p>
+
+<p>Here they looked at classical nuclear theory.
+The simulations showed a more complex story - the hot solid had defects which
+were highly mobile. Defects formed clusters to minimise their free energy</p>
+
+<h2 id="navigating-on-a-high-dimensional-surface:e5bb1008c4e7cb9f959a30ec9e9da6d1">Navigating on a high dimensional surface</h2>
+
+<p>You can&rsquo;t visualise the surface - it is too high in dimension. But you want to
+see the &lsquo;interesting&rsquo; minima and saddle points.
+You can use a Parrinello-group sketchmap [9], which appears to be a clustering
+graph representation.
+Here [11] they used these ideas, and the <code>START</code> method where the free energy
+gradient and the Hessian were constructed in terms of collective variables, to
+give you the weakest eigenvector to walk along with steepest descents.</p>
+
+<p>Some very recent and unpublished data investigated Anthracene crystals,
+defining the Euler angles (though a later figure mentioned an &lsquo;absolute
+quaternion&rsquo;) and cell parameters as collective variables. They found the
+experimental structure, and loads of near-energy polymorphs</p>
+
+<h2 id="conclusion:e5bb1008c4e7cb9f959a30ec9e9da6d1">Conclusion</h2>
+
+<p>It was an extremely thought provoking talk. The explanation of temperature
+accelerated molecular dynamics was the first time that it made sense to me.
+The power of integrating the EoM for a collective variable &amp; so ride roughshod
+across a rough potential energy landscape with the ability to extrapolate free
+energies is clearly fantastically powerful.</p>
+
+<p>However, I felt that everything presented seemed a little clunky.
+Certainly the science was fantastic, but every example seemed to have been set
+up slightly differently and individually by the researchers.
+There was no mention of these codes or methods being made available.</p>
+
+<p>One thing obviously missing from a scientific point of view was a algorithmic
+way to define the collective variables, rather than relying on intuition.</p>
+
+<p>In a paper I&rsquo;ve been reading recently [12], the authors of VoroTop introduce
+a method to identify local structure independent of radial distribution
+functions and bond orders. Instead they define the 3D Voronoi cell for individual
+atoms, and then compare the isomorphism (or not!) of the 2D Schlegel diagram
+(i.e. a graph of connectivity of the Voronoi vertices) to identify
+topologically distinct local bonding.
+I wonder if some ideas from here, could be borrowed and used to construct
+collective variables automatically.</p>
+
+<p>Once you can identify the collective variables automatically, the exploration
+of rough potential energy surfaces, while retaining the free-energy of
+structures, will be practically pleasant.</p>
+
+<p>With a bit of Googling I found a Tuckerman slide deck from 2014 which
+overlapped with this talk a fair bit:
+<a href="http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf">http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf</a></p>
+
+<p>Mark has a Google Scholar page, for if you want to dig through more of his
+literature [13].</p>
+
+<h2 id="references:e5bb1008c4e7cb9f959a30ec9e9da6d1">References</h2>
+
+<p>[1] Mark E. Tuckerman (2010), Statistical Mechanics: Theory and Molecular
+Simulation. Oxford Graduate Texts.
+(<a href="https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265">https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265</a>)</p>
+
+<p>[2] <a href="https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/">https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/</a></p>
+
+<p>[3] <a href="http://www.crystal.chem.uu.nl/~vaneyck/upack.html">http://www.crystal.chem.uu.nl/~vaneyck/upack.html</a></p>
+
+<p>[4]
+&ldquo;Exercises in
+prognostication: Crystal structures and protein folding&rdquo;.
+Jack D. Dunitz and Harold A. Scheraga (2004).
+PNAS 40(101),
+14309-14311. <a href="http://dx.doi.org/10.1073/pnas.0405744101">http://dx.doi.org/10.1073/pnas.0405744101</a></p>
+
+<p>[5] <a href="https://en.wikipedia.org/wiki/Ramachandran_plot">https://en.wikipedia.org/wiki/Ramachandran_plot</a></p>
+
+<p>[6] &ldquo;Bond-orientational order in liquids and glasses&rdquo;
+Paul J. Steinhardt, David R. Nelson, and Marco Ronchetti (1983).
+Phys. Rev. B 28, 784.
+<a href="http://dx.doi.org/10.1103/PhysRevB.28.784">http://dx.doi.org/10.1103/PhysRevB.28.784</a></p>
+
+<p>[7]
+&ldquo;Canonical sampling through velocity rescaling&rdquo;.
+Giovanni Bussi, Davide Donadio and Michele Parrinello (2007).
+J. Chem. Phys. 126, 014101 (2007); <a href="http://dx.doi.org/10.1063/1.2408420">http://dx.doi.org/10.1063/1.2408420</a></p>
+
+<p>[8]
+&ldquo;Temperature-Accelerated Method for Exploring Polymorphism in Molecular Crystals Based on Free Energy&rdquo;
+Tang-Qing Yu and Mark E. Tuckerman (2011).
+Phys. Rev. Lett. 107, 015701;
+<a href="http://dx.doi.org/10.1103/PhysRevLett.107.015701">http://dx.doi.org/10.1103/PhysRevLett.107.015701</a></p>
+
+<p>[9]
+&ldquo;Simplifying the representation of complex free-energy landscapes using
+sketch-map&rdquo;.
+Michele Ceriotti, Gareth A. Tribello, and Michele Parrinello (2011).
+PNAS 32(108), 13023-13028.
+<a href="http://dx.doi.org/10.1073/pnas.1108486108">http://dx.doi.org/10.1073/pnas.1108486108</a></p>
+
+<p>[10]
+&ldquo;Sampling saddle points on a free energy surface&rdquo;
+Amit Samanta, Ming Chen, Tang-Qing Yu, Mark Tuckerman and Weinan
+J. Chem. Phys. 140, 164109 (2014); <a href="http://dx.doi.org/10.1063/1.4869980">http://dx.doi.org/10.1063/1.4869980</a></p>
+
+<p>[11]
+&ldquo;Locating landmarks on high-dimensional free energy surfaces&rdquo;
+Ming Chen, Tang-Qing Yu, and Mark E. Tuckerman (2015).
+PNAS vol. 112 no. 11 (2015); <a href="http://dx.doi.org/10.1073/pnas.1418241112">http://dx.doi.org/10.1073/pnas.1418241112</a></p>
+
+<p>[12]
+&ldquo;Topological framework for local structure analysis in condensed matter&rdquo;
+Emanuel A. Lazar, Jian Han, and David J. Srolovitz (2015).
+PNAS vol. 112 no. 43; <a href="http://dx.doi.org/10.1073/pnas.1505788112">http://dx.doi.org/10.1073/pnas.1505788112</a></p>
+
+<p>[13] Mark E. Tuckerman, Google Scholar.
+<a href="https://scholar.google.co.uk/citations?hl=en&amp;user=w_7furwAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">https://scholar.google.co.uk/citations?hl=en&amp;user=w_7furwAAAAJ&amp;view_op=list_works&amp;sortby=pubdate</a></p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                </li>
+                
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://jarvist.github.io/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://jarvist.github.io/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+</body>
+</html>
+
