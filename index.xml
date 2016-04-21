@@ -17,8 +17,8 @@
       <guid>http://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</guid>
       <description>
 
-&lt;p&gt;Mark Tuckerman (MET) visited London on the 31st March 2016, and gave a highlight seminar
-to the TYC at UCL.
+&lt;p&gt;Mark Tuckerman (MET) visited London on the 31st March 2016, and gave
+a highlight seminar to the TYC at UCL.
 I had been really enjoying his recent (2010) Computational Stat Mech book [1].
 I know very little about structure prediction, but it is of general and
 captivating interest, and an essential step in truly predictive computational
@@ -43,22 +43,24 @@ varying bioavailability of different polymorphs.&lt;/p&gt;
 and quantum mechanical calculations too expensive, a customised force field was
 developed. QC calculations on dimers were used to parameterise, with a fairly
 normal &lt;code&gt;PBE0+TS; 6-311g**(d,p)&lt;/code&gt;.
-Unit cells were generated with &lt;code&gt;UPACK&lt;/code&gt;, a software package I had not heard of,
-but which seems pretty extensive [3].&lt;/p&gt;
+25000 Unit cells were generated with &lt;code&gt;UPACK&lt;/code&gt;, a software package I had not
+heard of, but which seems pretty extensive [3].&lt;/p&gt;
 
 &lt;p&gt;MD (I think just vanilla) on the packed structures lead to trajectories where
 interconversion from one structure to another could be seen. Eventually they
-settled down to 50 leftover structures, plotted on an energy vs. density plot.
+settled down to 50 (lowest energy?) structures, plotted on an energy vs.
+density plot.&lt;br /&gt;
 Their 4th lowest energy structure agreed with the &amp;lsquo;blind&amp;rsquo; experimental
-structure.&lt;/p&gt;
+structure.
+Mark was more pleased with having found a lot of low lying polymorphs.&lt;/p&gt;
 
 &lt;p&gt;So far so good for an interesting seminar, and a laudable result - but this is
 where it got really interesting.&lt;/p&gt;
 
 &lt;p&gt;Mark linked from structure prediction to protein folding via a 2004 PNAS [4],
 which proposed that both problems are essentially the same.
-In both cases you have a rough energy landscape, and you need to determine the
-occupancy of the basins.&lt;/p&gt;
+You have a rough energy landscape, you need to determine the occupancy of the
+basins.&lt;/p&gt;
 
 &lt;h2 id=&#34;collective-variables:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Collective variables&lt;/h2&gt;
 
@@ -89,8 +91,11 @@ Mark described it as essentially being an additional (standard) equation of
 motion being simultaneously solved, in the collective variables.
 A very large fictitious mass is used for the collective-variable centre, and
 a separate thermostat (~32000 K was an example).
-This means that the collective variables have the energy to hop potential
-barriers between minima, and the momentum to smoothly move between them.&lt;/p&gt;
+This physically means that the collective variables have the energy to hop
+potential barriers between minima, and the momentum to smoothly move between
+them.
+The large difference in mass allows for an adiabatic decoupling of the
+Equations of Motion.&lt;/p&gt;
 
 &lt;p&gt;I did not realise that temperature accelerated MD was this conceptually simple.&lt;/p&gt;
 
@@ -101,7 +106,7 @@ basins and escape to the next one. To get the free energy, once you&amp;rsquo;ve
 all the basins you invert the Gaussians and this gives you the free energy
 surface.&lt;/p&gt;
 
-&lt;h2 id=&#34;protein-folding-alanine-decamers-between-alpha-helix-and-beta-hairpin:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Protein folding: Alanine Decamers between alpha helix and beta hairpin&lt;/h2&gt;
+&lt;h3 id=&#34;protein-folding-alanine-decamers-between-alpha-helix-and-beta-hairpin:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Protein folding: Alanine Decamers between alpha helix and beta hairpin&lt;/h3&gt;
 
 &lt;p&gt;Accelerated MD on this as a model system (I think with the CHARMM forcefield),
 with the Ramachandran variables (20 collective variables).
@@ -115,7 +120,7 @@ value for the free energy difference.&lt;/p&gt;
 energy seems a bit different:
 &lt;a href=&#34;https://youtu.be/WKpe8fzATr4?t=21m38s&#34;&gt;https://youtu.be/WKpe8fzATr4?t=21m38s&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;polymorphic-benzene:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Polymorphic benzene&lt;/h2&gt;
+&lt;h3 id=&#34;polymorphic-benzene:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Polymorphic benzene&lt;/h3&gt;
 
 &lt;p&gt;Separately they studied polymorphs of benzene.
 The &amp;lsquo;h&amp;rsquo; matrix (lattice basis) was explicitly evolved in the EoM, dragging
@@ -126,7 +131,7 @@ found all the polymorphs.&lt;/p&gt;
 
 &lt;p&gt;This is explored in [8], and MET references thereafter.&lt;/p&gt;
 
-&lt;h2 id=&#34;melting-copper:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Melting Copper&lt;/h2&gt;
+&lt;h3 id=&#34;melting-copper:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Melting Copper&lt;/h3&gt;
 
 &lt;p&gt;Melting Cu, with collective variables on the diagonal of &lt;code&gt;h&lt;/code&gt;; and
 a Q4, Q6 spherical harmonic &amp;lsquo;bond order&amp;rsquo;.
@@ -136,7 +141,7 @@ The EAM potential was used.&lt;/p&gt;
 The simulations showed a more complex story - the hot solid had defects which
 were highly mobile. Defects formed clusters to minimise their free energy&lt;/p&gt;
 
-&lt;h2 id=&#34;navigating-on-a-high-dimensional-surface:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Navigating on a high dimensional surface&lt;/h2&gt;
+&lt;h3 id=&#34;navigating-on-a-high-dimensional-surface:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Navigating on a high dimensional surface&lt;/h3&gt;
 
 &lt;p&gt;You can&amp;rsquo;t visualise the surface - it is too high in dimension. But you want to
 see the &amp;lsquo;interesting&amp;rsquo; minima and saddle points.
@@ -159,6 +164,11 @@ The power of integrating the EoM for a collective variable &amp;amp; so ride rou
 across a rough potential energy landscape with the ability to extrapolate free
 energies is clearly fantastically powerful.&lt;/p&gt;
 
+&lt;p&gt;One bit of black magic that I do not understand, is where the force
+acting on the collective variables comes from.
+Some kind of potential defined in the collective variables? By direct coupling
+between the atomistic positions and the collective variables?&lt;/p&gt;
+
 &lt;p&gt;However, I felt that everything presented seemed a little clunky.
 Certainly the science was fantastic, but every example seemed to have been set
 up slightly differently and individually by the researchers.
@@ -171,7 +181,7 @@ way to define the collective variables, rather than relying on intuition.&lt;/p&
 a method to identify local structure independent of radial distribution
 functions and bond orders. Instead they define the 3D Voronoi cell for individual
 atoms, and then compare the isomorphism (or not!) of the 2D Schlegel diagram
-(i.e. a graph of connectivity of the Voronoi vertices) to identify
+(i.e. a planar graph of connectivity of the Voronoi vertices) to identify
 topologically distinct local bonding.
 I wonder if some ideas from here, could be borrowed and used to construct
 collective variables automatically.&lt;/p&gt;
