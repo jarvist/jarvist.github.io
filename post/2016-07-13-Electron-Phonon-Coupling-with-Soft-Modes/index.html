@@ -1,0 +1,320 @@
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <title>Electron Phonon Coupling with Soft Modes</title>
+  <meta name="description" content="Electron Phonon Coupling with Soft Modes">
+  <meta name="author" content="Jarvist Moore Frost">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://jarvist.github.io/css/fonts.css">
+  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="http://jarvist.github.io/css/custom.css">
+  
+  
+  <link rel="stylesheet" href="http://jarvist.github.io/highlight/styles/default.css">
+  
+  <script src="http://jarvist.github.io/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://jarvist.github.io/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://jarvist.github.io/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+                
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2016-07-13</time>
+		            
+                    
+                    
+
+                    
+
+                    
+                </p>
+                <h1>Electron Phonon Coupling with Soft Modes</h1>
+            </div>
+
+            <div class="post-content">
+                <!-- MathJax -->
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<p>I&rsquo;ve spent a lot of time over the last three years thinking about
+electron-phonon coupling. Thinking, not doing, being the operative word, as
+I&rsquo;ve found the theory really quite a large mass to get my head around!</p>
+
+<p>Recently I saw my way in to something that seemed vaguely useful and
+interesting. I&rsquo;d put together a 1D Time-Independent-Schr&ouml;dinger-Equation
+solver, originally for my own amusement, then to show my second year Chemistry
+tutees, then rebuilt for actual science.
+It&rsquo;s surprisingly easy - discretise space, place your potential energy on the
+diagonal of a matrix, place a finite-difference approximation to the gradient
+on the tridiagonal (the kinetic energy), and via an application of the
+variational method this gives you a full set of eigenstates and eigenenergies
+when you diagonalise the matrix.</p>
+
+<p>Seeing the workbook would be useful to follow the discussion in the rest of
+this post:-
+<a href="https://github.com/jarvist/Julia-SoftModeTISH-DeformationPotential/blob/master/iJulia-Notebooks/2016-06_SoftMAPIModes_TISH_electron_phonon_coupling.ipynb">iJuliaNotebook on Github</a></p>
+
+<p>The same method is just as applicable to an electron in an electrostatic
+potential, or a nuclear degree of freedom in the potential energy of
+a material.
+If you have a harmonic potential, the resulting wavefunctions are Gaussian.
+The most simple anharmonic potential you can imagine, while still being even
+(retaining inversion crystal symmetry) is the biquadratic Mexican Hat
+\(E(Q)=A.Q^2+B.Q^4\).</p>
+
+<p>With the Mexican Hat potential you get some important bits of undergraduate
+quantum mechanics turning up. For instance, the isolated states in the two minima are
+degenerate, but forced to adopt opposite parity forms by the Pauli exclusion
+principle.</p>
+
+<p>So this is just in 1D, but we can consider this to be Q, a generalised reaction
+coordinate within a Normal Mode of the motion of a material.
+These Normal Modes come from the eigen decomposition of the Dynamic Matrix (a
+set of second-order force constants).
+These are what you get when within your favourite electronic structure package
+you do a &lsquo;phonon&rsquo; calculation in a periodic solid, or a &lsquo;frequency&rsquo; calculation
+in a molecule.
+These modes form an orthogonal set; they are implicitly separated (in the
+harmonic limit) and so can be considered independently.</p>
+
+<p>Our Mexican Hat potential is now a good model for a soft phonon mode, as seen
+in a large class of materials, including important technological applications
+in ferroelectrics.
+The potential energy surface can be recovered by walking along the normal
+eigenmode associated with an &lsquo;imaginary&rsquo; mode, the eigenvector pointing in the
+direction of maximum curvature. I don&rsquo;t know how accurate this is for soft
+phonon modes, the motion is large and you are going in a straight line in
+a direction derived from the local curvature.
+The solution to this Schr&ouml;dinger equation is the nuclear wavefunction for
+this normal mode.</p>
+
+<p>But how this does this relate to electron-phonon coupling?
+Most modern approaches to electron-phonon coupling are based on
+density-functional-perturbation-theory.
+As a perturbation theory, this only holds true for small variations around the
+equilibrium geometry, i.e. you assume the range of motion is small, that the
+material is stiff.
+To evaluate coupling terms, you assume that the deformation
+potential (how the electron energy varies as a function of distortion) is
+quadratic, which allows the second order perturbation theory to pull out a well
+defined value.</p>
+
+<p>Typically, the codes that calculate these parameters give up when detecting
+a soft mode, giving a zero contribution.
+In some cases this is likely to be missing the largest contribution, where the
+large range of motion of a soft mode makes up the majority electron phonon
+coupling.</p>
+
+<p>So to try and calculate this parameter, let us start by making the
+Born-Oppenheimer approximation of separating the full wavefunction \(\Psi\)
+into a product of electron \(\psi\) and nuclear \(\chi\) parts, within the
+(assumed independent) normal mode we are interested in, Q.</p>
+
+<div>
+$$ \Phi(r,Q) = \Psi(r; Q) \, \chi(Q)$$
+</div>
+
+<p>The nuclear \(\chi\) wavefunction depends only on the normal mode coordinate,
+whereas the electron and full wavefunction depend (naturally!) on the electron
+locations \(r\).</p>
+
+<p>By solving the nuclear wavefunction in the manner above, for a potential energy
+surface derived by mode following, we have a set of vibrational eigenstates
+which we can populate with a Bose-Einstein distribution. The sum of the
+\(\Psi^2\)
+contributions (normalised) gives us a probability density function for the
+nuclear coordinates in this normal mode, as a function of temperature.</p>
+
+<p>The electronic structure we can solve (and offload all the pain of dealing with
+the electrons!) by calculating, with the Born-Oppenheimer approximation (now
+the frozen-phonon approximation), the
+electron structure only along the same normal mode Q.
+You use your favourite code to generate \(E_g(Q)\), a deformation potential
+along a phonon mode Q.
+This includes all the electron-electron interaction (to which we can add by
+including exact electron exchange, and other electron correlation contributions).
+By the assumptions used in perturbation electron-phonon calculations, you
+expect this to be roughly quadratic around Q=0.
+Following symmetry, for most modes in most crystals, it should be an even
+expansion around Q=0.</p>
+
+<p>This assumes that the nuclear wavefunction does not mix into the full
+electron+nuclear wavefunction, which is likely to be correct if you are considering
+low-frequency (i.e. soft) nuclear motions.</p>
+
+<p>We can then get back to the temperature resolved electron-phonon
+coupling for this mode by calculating the following integral:</p>
+
+<div>
+$$ E_g(T) = \left< \chi(Q,T) \,\rvert\, E_g(Q) \,\lvert\, \chi(Q,T) \right> $$
+</div>
+
+<p>This is trivial to evaluate in 1D, it&rsquo;s just a matter of multiplying the
+normalised probability density function for the Bose-Einstein occupied nuclear
+wavefunction, by the deformation potential.</p>
+
+<p>So that&rsquo;s grand.
+A seemingly new and very simple method to calculate electron-phonon couplings
+of soft modes (of which there are many many important technological examples).
+The result is Temperature dependent, including the Zero Point Fluctuation.
+(The quantum mechanical vibrational ground state is very different to the
+classical prediction.)</p>
+
+<p>I am however much concerned by how easy it was, and that no one else seems to
+have tried it yet!</p>
+
+<p>As a theory there are some nice features.
+It has full vibrational wavefunctions, albeit they are treated in a mean-field
+way when the electron-phonon interaction is calculated by only considering the
+nuclear-wavefunction-density.
+I would argue that by using a deformation-potential in Q, we are taking some kind of
+zeroth-order approximation to the electron-phonon coupling.
+As the physical range of motion for a soft mode is large, this might be fairly accurate.
+For standard, harmonic, phonons, the contribution is tiny, and higher orders in
+the electron-phonon interaction will dominate.</p>
+
+<p>A distinct drawback is that we&rsquo;re currently evaluating for just one arbitrary
+location in the vibrational Brillouin-Zone of the material. There&rsquo;s an explicit
+phase term (i.e. location in q-space) which is chosen to then generate
+real-space distortions in Q to enable the calculation of the electronic
+structure. It is well known that the electron-phonon interaction should be
+integrated across the full Brillouin-Zone in both vibrational (q) and
+electronic (k) phase space, and that convergence of this summation is nasty as
+the electronic-phonon coupling is very spiky.
+I would argue that this method is still useful when you have a mode with
+a known softness at one particular location in the Brillouin Zone;
+with Bose-Einstein statistics, this soft mode will end up extremely highly
+populated at room temperature (i.e. it makes up the majority of the thermal
+motion of the crystal).</p>
+
+<p>I was slightly reassured  when reading this recent paper - Figure 4 seems to be
+almost identical to what I am suggesting, just for a rather boring harmonic
+example, and only considering the ground state, rather than a Bose-Einstein
+ensemble. <a href="http://dx.doi.org/10.1103/PhysRevB.92.085137">Phys. Rev. B 92, 085137, 2015</a></p>
+
+<p>So I&rsquo;m very interested if anyone out there has any thoughts to the validity or
+otherwise of the above method. Probably it&rsquo;s a terrible idea, guaranteed to
+fail, or been done and discarded many years ago.
+I finish on a cheery quote:</p>
+
+<blockquote>
+<p>&ldquo;The previous methods for calculating the electron-phonon matrix element in
+a metal are neither rigorously formulated nor satisfactory in their results.
+From each method there is something to learn&mdash;usually that the method is
+unreliable in some important aspect.&rdquo; Ziman, 1960 &lsquo;Electrons and Phonons&rsquo;,
+&sect; 5.7, page 197.</p>
+</blockquote>
+
+<p>Useful references:
+<a href="http://dx.doi.org/10.1016/S0081-1947(08)60593-7">Sham and Ziman, Solid State Physics Volume 15, 1963, Pages 221–298</a></p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                </li>
+                
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://jarvist.github.io/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://jarvist.github.io/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+</body>
+</html>
+

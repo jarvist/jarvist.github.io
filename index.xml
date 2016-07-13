@@ -6,8 +6,279 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 19 Apr 2016 14:44:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jul 2016 20:00:00 +0100</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Electron Phonon Coupling with Soft Modes</title>
+      <link>http://jarvist.github.io/post/2016-07-13-Electron-Phonon-Coupling-with-Soft-Modes/</link>
+      <pubDate>Wed, 13 Jul 2016 20:00:00 +0100</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-07-13-Electron-Phonon-Coupling-with-Soft-Modes/</guid>
+      <description>&lt;!-- MathJax --&gt;
+
+&lt;script type=&#34;text/javascript&#34;
+  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
+&lt;/script&gt;
+
+&lt;p&gt;I&amp;rsquo;ve spent a lot of time over the last three years thinking about
+electron-phonon coupling. Thinking, not doing, being the operative word, as
+I&amp;rsquo;ve found the theory really quite a large mass to get my head around!&lt;/p&gt;
+
+&lt;p&gt;Recently I saw my way in to something that seemed vaguely useful and
+interesting. I&amp;rsquo;d put together a 1D Time-Independent-Schr&amp;ouml;dinger-Equation
+solver, originally for my own amusement, then to show my second year Chemistry
+tutees, then rebuilt for actual science.
+It&amp;rsquo;s surprisingly easy - discretise space, place your potential energy on the
+diagonal of a matrix, place a finite-difference approximation to the gradient
+on the tridiagonal (the kinetic energy), and via an application of the
+variational method this gives you a full set of eigenstates and eigenenergies
+when you diagonalise the matrix.&lt;/p&gt;
+
+&lt;p&gt;Seeing the workbook would be useful to follow the discussion in the rest of
+this post:-
+&lt;a href=&#34;https://github.com/jarvist/Julia-SoftModeTISH-DeformationPotential/blob/master/iJulia-Notebooks/2016-06_SoftMAPIModes_TISH_electron_phonon_coupling.ipynb&#34;&gt;iJuliaNotebook on Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The same method is just as applicable to an electron in an electrostatic
+potential, or a nuclear degree of freedom in the potential energy of
+a material.
+If you have a harmonic potential, the resulting wavefunctions are Gaussian.
+The most simple anharmonic potential you can imagine, while still being even
+(retaining inversion crystal symmetry) is the biquadratic Mexican Hat
+\(E(Q)=A.Q^2+B.Q^4\).&lt;/p&gt;
+
+&lt;p&gt;With the Mexican Hat potential you get some important bits of undergraduate
+quantum mechanics turning up. For instance, the isolated states in the two minima are
+degenerate, but forced to adopt opposite parity forms by the Pauli exclusion
+principle.&lt;/p&gt;
+
+&lt;p&gt;So this is just in 1D, but we can consider this to be Q, a generalised reaction
+coordinate within a Normal Mode of the motion of a material.
+These Normal Modes come from the eigen decomposition of the Dynamic Matrix (a
+set of second-order force constants).
+These are what you get when within your favourite electronic structure package
+you do a &amp;lsquo;phonon&amp;rsquo; calculation in a periodic solid, or a &amp;lsquo;frequency&amp;rsquo; calculation
+in a molecule.
+These modes form an orthogonal set; they are implicitly separated (in the
+harmonic limit) and so can be considered independently.&lt;/p&gt;
+
+&lt;p&gt;Our Mexican Hat potential is now a good model for a soft phonon mode, as seen
+in a large class of materials, including important technological applications
+in ferroelectrics.
+The potential energy surface can be recovered by walking along the normal
+eigenmode associated with an &amp;lsquo;imaginary&amp;rsquo; mode, the eigenvector pointing in the
+direction of maximum curvature. I don&amp;rsquo;t know how accurate this is for soft
+phonon modes, the motion is large and you are going in a straight line in
+a direction derived from the local curvature.
+The solution to this Schr&amp;ouml;dinger equation is the nuclear wavefunction for
+this normal mode.&lt;/p&gt;
+
+&lt;p&gt;But how this does this relate to electron-phonon coupling?
+Most modern approaches to electron-phonon coupling are based on
+density-functional-perturbation-theory.
+As a perturbation theory, this only holds true for small variations around the
+equilibrium geometry, i.e. you assume the range of motion is small, that the
+material is stiff.
+To evaluate coupling terms, you assume that the deformation
+potential (how the electron energy varies as a function of distortion) is
+quadratic, which allows the second order perturbation theory to pull out a well
+defined value.&lt;/p&gt;
+
+&lt;p&gt;Typically, the codes that calculate these parameters give up when detecting
+a soft mode, giving a zero contribution.
+In some cases this is likely to be missing the largest contribution, where the
+large range of motion of a soft mode makes up the majority electron phonon
+coupling.&lt;/p&gt;
+
+&lt;p&gt;So to try and calculate this parameter, let us start by making the
+Born-Oppenheimer approximation of separating the full wavefunction \(\Psi\)
+into a product of electron \(\psi\) and nuclear \(\chi\) parts, within the
+(assumed independent) normal mode we are interested in, Q.&lt;/p&gt;
+
+&lt;div&gt;
+$$ \Phi(r,Q) = \Psi(r; Q) \, \chi(Q)$$
+&lt;/div&gt;
+
+&lt;p&gt;The nuclear \(\chi\) wavefunction depends only on the normal mode coordinate,
+whereas the electron and full wavefunction depend (naturally!) on the electron
+locations \(r\).&lt;/p&gt;
+
+&lt;p&gt;By solving the nuclear wavefunction in the manner above, for a potential energy
+surface derived by mode following, we have a set of vibrational eigenstates
+which we can populate with a Bose-Einstein distribution. The sum of the
+\(\Psi^2\)
+contributions (normalised) gives us a probability density function for the
+nuclear coordinates in this normal mode, as a function of temperature.&lt;/p&gt;
+
+&lt;p&gt;The electronic structure we can solve (and offload all the pain of dealing with
+the electrons!) by calculating, with the Born-Oppenheimer approximation (now
+the frozen-phonon approximation), the
+electron structure only along the same normal mode Q.
+You use your favourite code to generate \(E_g(Q)\), a deformation potential
+along a phonon mode Q.
+This includes all the electron-electron interaction (to which we can add by
+including exact electron exchange, and other electron correlation contributions).
+By the assumptions used in perturbation electron-phonon calculations, you
+expect this to be roughly quadratic around Q=0.
+Following symmetry, for most modes in most crystals, it should be an even
+expansion around Q=0.&lt;/p&gt;
+
+&lt;p&gt;This assumes that the nuclear wavefunction does not mix into the full
+electron+nuclear wavefunction, which is likely to be correct if you are considering
+low-frequency (i.e. soft) nuclear motions.&lt;/p&gt;
+
+&lt;p&gt;We can then get back to the temperature resolved electron-phonon
+coupling for this mode by calculating the following integral:&lt;/p&gt;
+
+&lt;div&gt;
+$$ E_g(T) = \left&lt; \chi(Q,T) \,\rvert\, E_g(Q) \,\lvert\, \chi(Q,T) \right&gt; $$
+&lt;/div&gt;
+
+&lt;p&gt;This is trivial to evaluate in 1D, it&amp;rsquo;s just a matter of multiplying the
+normalised probability density function for the Bose-Einstein occupied nuclear
+wavefunction, by the deformation potential.&lt;/p&gt;
+
+&lt;p&gt;So that&amp;rsquo;s grand.
+A seemingly new and very simple method to calculate electron-phonon couplings
+of soft modes (of which there are many many important technological examples).
+The result is Temperature dependent, including the Zero Point Fluctuation.
+(The quantum mechanical vibrational ground state is very different to the
+classical prediction.)&lt;/p&gt;
+
+&lt;p&gt;I am however much concerned by how easy it was, and that no one else seems to
+have tried it yet!&lt;/p&gt;
+
+&lt;p&gt;As a theory there are some nice features.
+It has full vibrational wavefunctions, albeit they are treated in a mean-field
+way when the electron-phonon interaction is calculated by only considering the
+nuclear-wavefunction-density.
+I would argue that by using a deformation-potential in Q, we are taking some kind of
+zeroth-order approximation to the electron-phonon coupling.
+As the physical range of motion for a soft mode is large, this might be fairly accurate.
+For standard, harmonic, phonons, the contribution is tiny, and higher orders in
+the electron-phonon interaction will dominate.&lt;/p&gt;
+
+&lt;p&gt;A distinct drawback is that we&amp;rsquo;re currently evaluating for just one arbitrary
+location in the vibrational Brillouin-Zone of the material. There&amp;rsquo;s an explicit
+phase term (i.e. location in q-space) which is chosen to then generate
+real-space distortions in Q to enable the calculation of the electronic
+structure. It is well known that the electron-phonon interaction should be
+integrated across the full Brillouin-Zone in both vibrational (q) and
+electronic (k) phase space, and that convergence of this summation is nasty as
+the electronic-phonon coupling is very spiky.
+I would argue that this method is still useful when you have a mode with
+a known softness at one particular location in the Brillouin Zone;
+with Bose-Einstein statistics, this soft mode will end up extremely highly
+populated at room temperature (i.e. it makes up the majority of the thermal
+motion of the crystal).&lt;/p&gt;
+
+&lt;p&gt;I was slightly reassured  when reading this recent paper - Figure 4 seems to be
+almost identical to what I am suggesting, just for a rather boring harmonic
+example, and only considering the ground state, rather than a Bose-Einstein
+ensemble. &lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.92.085137&#34;&gt;Phys. Rev. B 92, 085137, 2015&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m very interested if anyone out there has any thoughts to the validity or
+otherwise of the above method. Probably it&amp;rsquo;s a terrible idea, guaranteed to
+fail, or been done and discarded many years ago.
+I finish on a cheery quote:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;The previous methods for calculating the electron-phonon matrix element in
+a metal are neither rigorously formulated nor satisfactory in their results.
+From each method there is something to learn&amp;mdash;usually that the method is
+unreliable in some important aspect.&amp;rdquo; Ziman, 1960 &amp;lsquo;Electrons and Phonons&amp;rsquo;,
+&amp;sect; 5.7, page 197.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Useful references:
+&lt;a href=&#34;http://dx.doi.org/10.1016/S0081-1947(08)60593-7&#34;&gt;Sham and Ziman, Solid State Physics Volume 15, 1963, Pages 221–298&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Royal Society 2015 URF Scheme - Lay Report</title>
+      <link>http://jarvist.github.io/post/2016-07-13-RoyalSociety2015URF-LayReport/</link>
+      <pubDate>Wed, 13 Jul 2016 16:00:00 +0100</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-07-13-RoyalSociety2015URF-LayReport/</guid>
+      <description>
+
+&lt;p&gt;I applied for the Royal Society University Research Fellowship scheme last
+summer. I wasn&amp;rsquo;t successful (Boo). As part of the application, I wrote
+a lay-person summary of my research project, limited to 3500 characters.&lt;/p&gt;
+
+&lt;p&gt;There wasn&amp;rsquo;t much guidance as to who or what it was for, so I wrote it for
+a typical imagined audience of A-level students.
+I had quite a lot of fun writing it (certainly more fun that trying to get the
+costings to add up&amp;hellip;), so I thought I may as well publish it here to avoid it
+festering in some dark corner of my hard drive.&lt;/p&gt;
+
+&lt;h2 id=&#34;lay-report-computational-design-of-optoelectric-materials:0cd36b36729c7b5180f232d11e71f528&#34;&gt;Lay Report &amp;mdash; Computational Design of Optoelectric Materials&lt;/h2&gt;
+
+&lt;!-- ^[Plain text only: maximum 3,500 characters (including spaces)] --&gt;
+
+&lt;p&gt;Building the future will require new materials, materials that are lighter and
+better, cheaper and with less environmental impact.
+Most materials we use now were discovered and improved by long experiment, not
+designed.
+My research is in designing the materials of the future.&lt;/p&gt;
+
+&lt;p&gt;Photovoltaics are one particular type of material I work on.
+These are a beautifully simple engine for converting sunlight (photons) into
+electricity (volts).
+Sunlight is the only renewable energy source that is large enough to replace all
+of humanity&amp;rsquo;s requirements, and is available to everyone.
+Designing Photovoltaics is particularly difficult as the material must be both optically
+and electrically active.&lt;/p&gt;
+
+&lt;p&gt;Currently most photovoltaics are made out of silicon.
+This material is abundant (sand is mainly silicon dioxide), but the
+manufacturing process of turning it into a solar cell is expensive (with high
+temperatures and vacuum processing in special clean rooms) and environmentally
+costly (it requires a lot of strong chemicals to purify and treat the
+silicon).
+My work looks to design better and cheaper photovoltaic materials,
+by solving equations with a computer.&lt;/p&gt;
+
+&lt;p&gt;Everything that we see and touch and feel and hear is due to the structure of
+the electrons in the matter around us.
+It is this electronic structure that makes the material strong or weak,
+transparent or opaque, insulate or conduct electricity.
+The electrons in a material are very lightweight so they move quickly,
+this means that they display very quantum mechanical behaviour.
+The equations that describe this electronic structure, were discovered in the
+1930s and are simple to write down.&lt;br /&gt;
+Unfortunately we cannot solve these equations exactly.
+Instead we use super computers to build an approximate solution for a small model system.
+The main problem when solving these equations is that every single electron in
+the system interacts with every other one.
+Solving these equations is like trying to choose a restaurant with a large
+crowd of people.
+The more people the more difficult to consider everyone&amp;rsquo;s individual
+preferences, and you end up somewhere that&amp;rsquo;s a bad choice for everyone.&lt;/p&gt;
+
+&lt;p&gt;When we build these computer models correctly, we can start with an
+arrangement of atoms that doesn&amp;rsquo;t exist (yet), and predict its properties, all
+within the computer.
+This is much cheaper and faster than making the material.
+Validating these computer models against reality and understanding the limits
+of the techniques available, is essential to be able to make genuine
+predictions.
+For this reason though I work entirely on a computer, I talk everyday with
+experimentalists who make new materials and then measure their properties.
+By comparing our measurements and calculations we can really begin to
+understand how these new materials work, and this understanding can help us to
+design better materials.
+Theory and calculation enables us to design materials with specific
+properties, so we no longer have to just hope to discover materials with these
+properties by accident.
+Working together, theory and calculation can suggest the direction for the next
+step into the unknown, while experiment keeps the theory grounded in reality.&lt;/p&gt;
+
+&lt;p&gt;Materials design will enable humanity to face the challenges of building the
+future.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Mark Tuckerman talk: Free energy based structure prediction</title>
@@ -936,28 +1207,6 @@ This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweig
 &lt;p&gt;So with a Bit Twiddling hack found via Stackoverflow (&lt;a href=&#34;http://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64BitsDiv&#34;&gt;http://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64BitsDiv&lt;/a&gt;), the totally crazy bit-shifting code (for a byte, so covering 256 values) looks like: &lt;a href=&#34;https://gist.github.com/jarvist/368622717a5d3bcadfc0&#34;&gt;https://gist.github.com/jarvist/368622717a5d3bcadfc0&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s pretty low level (in Python or similar, you could reorder a list, and iterate over that instead), but the result is nice! It&amp;rsquo;s almost so useful that perhaps one should write it into a mini function or macro&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Snippet: Tiddlywiki for Scholars</title>
-      <link>http://jarvist.github.io/post/snippet-tiddlywiki-for-scholars/</link>
-      <pubDate>Fri, 05 Sep 2014 12:35:32 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/snippet-tiddlywiki-for-scholars/</guid>
-      <description>&lt;p&gt;This looks like it might be extremely useful for a personal knowledge base / article discussion. It&amp;rsquo;s setup more for humanities work currently (books, biographies and authors), than science (some way to import a DOI to build a paper-discussion place would be fantastic). A collaborative journal club / papercore / paper summary might also work wonderfully within here.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://tw5.scholars.tiddlyspot.com/&#34;&gt;http://tw5.scholars.tiddlyspot.com/&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Snippet: Mendeley Desktop (Mac OS) failed update</title>
-      <link>http://jarvist.github.io/post/snippet-mendeley-desktop-mac-os-failed-update/</link>
-      <pubDate>Wed, 23 Jul 2014 14:51:18 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/snippet-mendeley-desktop-mac-os-failed-update/</guid>
-      <description>&lt;p&gt;Mendeley Desktop on my Mac at work had silently stopped working - clicking the button in Launchpad did nothing. Navigating to the directory on the shell, cd &amp;ldquo;/Applications/Mendeley\ Desktop.app/Contents/MacOS/&amp;rdquo; it appeared a prior update had broken halfway through, leaving a null file for &amp;lsquo;Mendeley Desktop&amp;rsquo;. Whoops. However there was a &amp;lsquo;Mendeley Desktop.bak&amp;rsquo;. Running this from the shell, Mendeley Desktop appeared, and then offered to update itself, this time completing successfully.&lt;/p&gt;
 </description>
     </item>
     
