@@ -39,8 +39,8 @@ dynamics, your nuclear coordinate is classical.&lt;/p&gt;
 &lt;p&gt;However, there is, of course, also quantum mechanical tunnelling directly
 through the barrier.
 The boss (&lt;a href=&#34;https://twitter.com/lonepair&#34;&gt;@lonepair&lt;/a&gt;) asked me to consider
-whether this rate was easily calcuable, to complement the considerable
-soft-phonon work occuring in the group.&lt;/p&gt;
+whether this rate was easily calculable, to complement the considerable
+soft-phonon work occurring in the group.&lt;/p&gt;
 
 &lt;p&gt;To calculate this rate, there are a number of different approaches you could
 take.
@@ -71,7 +71,7 @@ the degeneracy.&lt;/p&gt;
 &lt;p&gt;Our Hamiltonian is time independent, which means that we can use our eigenstates as a basis
 $$\Psi_n(Q,t) = \Psi_n(Q).e^{-i \omega_n t}$$&lt;/p&gt;
 
-&lt;p&gt;As expected, the time-dependence of this wavefunction just leads to a phase term (entirely imaginary dependence on \(t\), as the \(\Psi_n\) are eigenstates of a time-independent Hamiltonian. The states will just beat at a characteristic frequency.&lt;/p&gt;
+&lt;p&gt;As expected, the time-dependence of this wavefunction just leads to a phase term (entirely imaginary dependence on \(t\)), as the \(\Psi_n\) are eigenstates of a time-independent Hamiltonian. The states will just beat at a characteristic frequency.&lt;/p&gt;
 
 &lt;p&gt;So let&amp;rsquo;s construct a wavepacket of \(\Psi_1\) and \(\Psi_2\).&lt;/p&gt;
 
@@ -109,7 +109,7 @@ But the key thing is that the state is phasing between&lt;/p&gt;
 \lvert\Psi_2\rangle \;\rightarrow\;
 \lvert\Psi_2\Psi_1\rangle \;\circlearrowright$$&lt;/p&gt;
 
-&lt;p&gt;The \(\Psi_1\) and \(\Psi_2\) states are delocalised between the two wells,
+&lt;p&gt;The \(\Psi_1\) and \(\Psi_2\) states are de-localised between the two wells,
 but as these are Even and Odd wavefunctions, the combinations will be localised
 in state 1 and state 2.&lt;/p&gt;
 
@@ -128,9 +128,9 @@ in state 1 and state 2.&lt;/p&gt;
 &lt;p&gt;So really quite trivial! The time constant of beating between the states
 (tunnelling through the potential barrier) is directly related to the degeneracy
 splitting of the states.
-This makes sense, becaus from a semi-classical picture, the degeneracy
-splitting is linked to the magnitude of the transfer, or wavefunction overlap,
-integral between state 1 and 2.&lt;/p&gt;
+This makes sense as in the semi-classical picture, the degeneracy splitting is
+linked to the magnitude of the transfer (wavefunction overlap) integral
+between state 1 and 2.&lt;/p&gt;
 
 &lt;p&gt;I was initially concerned that there was no mass term here&amp;mdash;obviously mass
 should come into the time constant of tunnelling! But it is there, hidden in the
