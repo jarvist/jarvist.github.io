@@ -6,8 +6,170 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 13 Jul 2016 20:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jul 2016 20:00:00 +0100</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Soft Mode Tunnelling</title>
+      <link>http://jarvist.github.io/post/2016-07-14-Soft-Mode-Tunnelling/</link>
+      <pubDate>Thu, 14 Jul 2016 20:00:00 +0100</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-07-14-Soft-Mode-Tunnelling/</guid>
+      <description>&lt;!-- MathJax --&gt;
+
+&lt;script type=&#34;text/javascript&#34;
+  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
+&lt;/script&gt;
+
+&lt;p&gt;If we consider the Mexican Hat potential discussed in the previous blog post,
+as a stand in for a soft phonon mode, a fundamental question in
+chemical physics is how regularly the mode tunnels between the vibrational
+states localised on one side, versus the other.&lt;/p&gt;
+
+&lt;p&gt;Classically, the chance of crossing over is zero, unless you have sufficient
+energy to overtop the barrier.
+From a Statistical Physics point of view, at finite temperature, some states
+will be Boltzmann populated with sufficient energy, and from this fraction and
+an attempt frequency from the rate of oscillation within an individual well,
+you could approximate the classical rate.
+You could directly extract this rate from a Molecular Dynamics simulation,
+including anharmonic and correlation terms, but even with &lt;em&gt;ab-initio&lt;/em&gt; molecular
+dynamics, your nuclear coordinate is classical.&lt;/p&gt;
+
+&lt;p&gt;However, there is, of course, also quantum mechanical tunnelling directly
+through the barrier.
+The boss (&lt;a href=&#34;https://twitter.com/lonepair&#34;&gt;@lonepair&lt;/a&gt;) asked me to consider
+whether this rate was easily calcuable, to complement the considerable
+soft-phonon work occuring in the group.&lt;/p&gt;
+
+&lt;p&gt;To calculate this rate, there are a number of different approaches you could
+take.
+This includes semi-classical WKB theory, and methods used in small polaron hopping.&lt;br /&gt;
+Here I start with a very general analytic quantum mechanical analysis, which
+seems to to give you a very nice and general result to then use with your
+numeric method.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;../../images/2016-07-14-SoftWell.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Mexican Hat confined modes&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;If we look at the states (\(\Psi_n\)) localised in the wells, you can see
+that the first state is symmetric, and the then the second state is
+anti-symmetric. The Pauli exclusion principle leads to a slight splitting in
+the degeneracy.&lt;/p&gt;
+
+&lt;p&gt;Our Hamiltonian is time independent, which means that we can use our eigenstates as a basis
+$$\Psi_n(Q,t) = \Psi_n(Q).e^{-i \omega_n t}$$&lt;/p&gt;
+
+&lt;p&gt;As expected, the time-dependence of this wavefunction just leads to a phase term (entirely imaginary dependence on \(t\), as the \(\Psi_n\) are eigenstates of a time-independent Hamiltonian. The states will just beat at a characteristic frequency.&lt;/p&gt;
+
+&lt;p&gt;So let&amp;rsquo;s construct a wavepacket of \(\Psi_1\) and \(\Psi_2\).&lt;/p&gt;
+
+&lt;p&gt;$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q,t) + \Psi_2(Q,t)  \right)$$&lt;/p&gt;
+
+&lt;p&gt;Expand to our time-dependent form above,&lt;/p&gt;
+
+&lt;p&gt;$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q).e^{-i \omega_1 t} + \Psi_2(Q).e^{-i \omega_2 t}  \right)$$&lt;/p&gt;
+
+&lt;p&gt;Bring out the base frequency-beating term,&lt;/p&gt;
+
+&lt;p&gt;$$\Phi(Q,t)=\frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right)$$&lt;/p&gt;
+
+&lt;p&gt;The observable we are interested in is the location of the wavepacket.
+We evaluate the probability density function by calculating the state&amp;rsquo;s
+expectation value with the position operator&lt;/p&gt;
+
+&lt;div&gt;
+$$ 
+\begin{align}
+&lt; \Phi(Q,t) | \, \hat{X} \, | \Phi(Q,t &gt; &amp; =  \lvert\Phi(Q,t)\rvert^2 = \Phi(Q,t) \; \Phi^{\ast}(Q,t)
+\\
+&amp; = \frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right) \frac{1}{\sqrt{2}} e^{+i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{+i (\omega_2-\omega_1) t}  \right)
+\\
+&amp; = \frac{1}{2} \left( \Psi_1^2(Q) + \Psi_1(Q)\Psi_2(Q).e^{-i (\omega_2-\omega_1) t} + \Psi_2(Q)\Psi_1(Q).e^{+i (\omega_2-\omega_1)t} + \Psi_2^2(Q) \right) 
+\end{align}
+$$
+&lt;/div&gt;
+
+&lt;p&gt;Not 100% sure I got all the algebra correct there :^)
+But the key thing is that the state is phasing between&lt;/p&gt;
+
+&lt;p&gt;$$ \lvert\Psi_1\rangle \;\rightarrow\;
+\lvert\Psi_1\Psi_2\rangle \;\rightarrow\;
+\lvert\Psi_2\rangle \;\rightarrow\;
+\lvert\Psi_2\Psi_1\rangle \;\circlearrowright$$&lt;/p&gt;
+
+&lt;p&gt;The \(\Psi_1\) and \(\Psi_2\) states are delocalised between the two wells,
+but as these are Even and Odd wavefunctions, the combinations will be localised
+in state 1 and state 2.&lt;/p&gt;
+
+&lt;p&gt;And there&amp;rsquo;s only one, obvious, time constant generated by the phase term&lt;/p&gt;
+
+&lt;p&gt;$$e^{-i (\omega_2-\omega_1) t}$$&lt;/p&gt;
+
+&lt;p&gt;By Euler&amp;rsquo;s identity, \(e^{i\pi}=-1\)&lt;/p&gt;
+
+&lt;p&gt;$$\tau=(\omega_2-\omega_1)/\pi$$&lt;/p&gt;
+
+&lt;p&gt;By \(E=\hbar\omega , \omega=E/\hbar\), this is&lt;/p&gt;
+
+&lt;p&gt;$$\tau = \frac{E_2-E_1}{\pi\hbar}$$&lt;/p&gt;
+
+&lt;p&gt;So really quite trivial! The time constant of beating between the states
+(tunnelling through the potential barrier) is directly related to the degeneracy
+splitting of the states.
+This makes sense, becaus from a semi-classical picture, the degeneracy
+splitting is linked to the magnitude of the transfer, or wavefunction overlap,
+integral between state 1 and 2.&lt;/p&gt;
+
+&lt;p&gt;I was initially concerned that there was no mass term here&amp;mdash;obviously mass
+should come into the time constant of tunnelling! But it is there, hidden in the
+solution of the Time Independent Schr&amp;ouml;dinger Equation.&lt;/p&gt;
+
+&lt;p&gt;For the potential + states above, the values are not so ridiculous&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure &gt;
+    
+        &lt;img src=&#34;../../images/2016-07-14-TunnellingTimes.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Time to tunnel between states&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Classically, with a harmonic potential, you would have a Simple Harmonic
+Oscillator with&lt;/p&gt;
+
+&lt;p&gt;$$\tau=\frac{2\pi}{\omega}$$&lt;/p&gt;
+
+&lt;p&gt;where&lt;/p&gt;
+
+&lt;p&gt;$$\omega=\sqrt{\frac{k}{m}}$$&lt;/p&gt;
+
+&lt;p&gt;For this system at a finite temperature, we should be able to consider a
+Bose-Einstein distribution of weights, and then collect an overall tunnelling
+time constant by summing the weighted rates. I haven&amp;rsquo;t yet tried this.&lt;/p&gt;
+
+&lt;p&gt;$$\tau_{total} = \left( \frac{p_1}{\tau_1} + \frac{p_2}{\tau_2} + \frac{p_3}{\tau_3} &amp;hellip; \right)^{-1} $$&lt;/p&gt;
+
+&lt;p&gt;It was very enjoyable to find myself doing some basic pen + paper physics!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Electron Phonon Coupling with Soft Modes</title>
@@ -1190,24 +1352,6 @@ This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweig
 [2] &lt;a href=&#34;http://ricostacruz.com/flatdoc/&#34;&gt;http://ricostacruz.com/flatdoc/&lt;/a&gt;
 [3] &lt;a href=&#34;http://jarvist.github.io/PerovskiteKinematics/&#34;&gt;http://jarvist.github.io/PerovskiteKinematics/&lt;/a&gt;
 [4] &lt;a href=&#34;https://github.com/jarvist/PerovskiteKinematics&#34;&gt;https://github.com/jarvist/PerovskiteKinematics&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Maximum coverage for loops; bit reversing integars</title>
-      <link>http://jarvist.github.io/post/maximum-coverage-for-loops-bit-reversing-integars/</link>
-      <pubDate>Thu, 18 Sep 2014 18:44:51 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/maximum-coverage-for-loops-bit-reversing-integars/</guid>
-      <description>&lt;p&gt;So I was live-plotting some results from a simulation code (written in C), which was producing results for an input parameter (in this case Temperature), over a range generated by a for loop. Pretty standard computational physics. It was clearly suboptimal watching the new dataset arrive in small, fine, increments from zero upwards; the obvious thing was to change the discretisation of the for loop &amp;amp; make it more coarse. Yet, surely there is some way to get better coverage of the dataset, like a &amp;lsquo;streaming&amp;rsquo; JPEG or GIF arriving with increasing discretisations of the blockiness?&lt;/p&gt;
-
-&lt;p&gt;What about some mathematical function that would jump around the space with good coverage? A pseudo-random number generator with a fixed period? Some mathematical function that would map an ascending series of integers into spatial coverage? Modulus arithmetic on some prime or co-prome addition?&lt;/p&gt;
-
-&lt;p&gt;How about reversing the binary digits in an incrementing integer? So instead of going 0,1,2,3&amp;hellip;254,255; you would bounce around the number line: 0,128,64,192,32,160 &amp;hellip; 127,255. So it&amp;rsquo;s sort of doing a binary split of the unoccupied locations on the number line at each step. You get maximum coverage, with increasing levels of fidelity, ending up with a complete (but missorted) dataset.&lt;/p&gt;
-
-&lt;p&gt;So with a Bit Twiddling hack found via Stackoverflow (&lt;a href=&#34;http://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64BitsDiv&#34;&gt;http://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64BitsDiv&lt;/a&gt;), the totally crazy bit-shifting code (for a byte, so covering 256 values) looks like: &lt;a href=&#34;https://gist.github.com/jarvist/368622717a5d3bcadfc0&#34;&gt;https://gist.github.com/jarvist/368622717a5d3bcadfc0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s pretty low level (in Python or similar, you could reorder a list, and iterate over that instead), but the result is nice! It&amp;rsquo;s almost so useful that perhaps one should write it into a mini function or macro&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     

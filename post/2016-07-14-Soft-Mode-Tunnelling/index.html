@@ -1,0 +1,296 @@
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <title>Soft Mode Tunnelling</title>
+  <meta name="description" content="Soft Mode Tunnelling">
+  <meta name="author" content="Jarvist Moore Frost">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://jarvist.github.io/css/fonts.css">
+  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="http://jarvist.github.io/css/custom.css">
+  
+  
+  <link rel="stylesheet" href="http://jarvist.github.io/highlight/styles/default.css">
+  
+  <script src="http://jarvist.github.io/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://jarvist.github.io/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://jarvist.github.io/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+                
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2016-07-14</time>
+		            
+                    
+                    
+
+                    
+
+                    
+                </p>
+                <h1>Soft Mode Tunnelling</h1>
+            </div>
+
+            <div class="post-content">
+                <!-- MathJax -->
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<p>If we consider the Mexican Hat potential discussed in the previous blog post,
+as a stand in for a soft phonon mode, a fundamental question in
+chemical physics is how regularly the mode tunnels between the vibrational
+states localised on one side, versus the other.</p>
+
+<p>Classically, the chance of crossing over is zero, unless you have sufficient
+energy to overtop the barrier.
+From a Statistical Physics point of view, at finite temperature, some states
+will be Boltzmann populated with sufficient energy, and from this fraction and
+an attempt frequency from the rate of oscillation within an individual well,
+you could approximate the classical rate.
+You could directly extract this rate from a Molecular Dynamics simulation,
+including anharmonic and correlation terms, but even with <em>ab-initio</em> molecular
+dynamics, your nuclear coordinate is classical.</p>
+
+<p>However, there is, of course, also quantum mechanical tunnelling directly
+through the barrier.
+The boss (<a href="https://twitter.com/lonepair">@lonepair</a>) asked me to consider
+whether this rate was easily calcuable, to complement the considerable
+soft-phonon work occuring in the group.</p>
+
+<p>To calculate this rate, there are a number of different approaches you could
+take.
+This includes semi-classical WKB theory, and methods used in small polaron hopping.<br />
+Here I start with a very general analytic quantum mechanical analysis, which
+seems to to give you a very nice and general result to then use with your
+numeric method.</p>
+
+<p>
+<figure >
+    
+        <img src="../../images/2016-07-14-SoftWell.png" />
+    
+    
+    <figcaption>
+        <h4>Mexican Hat confined modes</h4>
+        
+    </figcaption>
+    
+</figure>
+</p>
+
+<p>If we look at the states (\(\Psi_n\)) localised in the wells, you can see
+that the first state is symmetric, and the then the second state is
+anti-symmetric. The Pauli exclusion principle leads to a slight splitting in
+the degeneracy.</p>
+
+<p>Our Hamiltonian is time independent, which means that we can use our eigenstates as a basis
+$$\Psi_n(Q,t) = \Psi_n(Q).e^{-i \omega_n t}$$</p>
+
+<p>As expected, the time-dependence of this wavefunction just leads to a phase term (entirely imaginary dependence on \(t\), as the \(\Psi_n\) are eigenstates of a time-independent Hamiltonian. The states will just beat at a characteristic frequency.</p>
+
+<p>So let&rsquo;s construct a wavepacket of \(\Psi_1\) and \(\Psi_2\).</p>
+
+<p>$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q,t) + \Psi_2(Q,t)  \right)$$</p>
+
+<p>Expand to our time-dependent form above,</p>
+
+<p>$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q).e^{-i \omega_1 t} + \Psi_2(Q).e^{-i \omega_2 t}  \right)$$</p>
+
+<p>Bring out the base frequency-beating term,</p>
+
+<p>$$\Phi(Q,t)=\frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right)$$</p>
+
+<p>The observable we are interested in is the location of the wavepacket.
+We evaluate the probability density function by calculating the state&rsquo;s
+expectation value with the position operator</p>
+
+<div>
+$$ 
+\begin{align}
+< \Phi(Q,t) | \, \hat{X} \, | \Phi(Q,t > & =  \lvert\Phi(Q,t)\rvert^2 = \Phi(Q,t) \; \Phi^{\ast}(Q,t)
+\\
+& = \frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right) \frac{1}{\sqrt{2}} e^{+i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{+i (\omega_2-\omega_1) t}  \right)
+\\
+& = \frac{1}{2} \left( \Psi_1^2(Q) + \Psi_1(Q)\Psi_2(Q).e^{-i (\omega_2-\omega_1) t} + \Psi_2(Q)\Psi_1(Q).e^{+i (\omega_2-\omega_1)t} + \Psi_2^2(Q) \right) 
+\end{align}
+$$
+</div>
+
+<p>Not 100% sure I got all the algebra correct there :^)
+But the key thing is that the state is phasing between</p>
+
+<p>$$ \lvert\Psi_1\rangle \;\rightarrow\;
+\lvert\Psi_1\Psi_2\rangle \;\rightarrow\;
+\lvert\Psi_2\rangle \;\rightarrow\;
+\lvert\Psi_2\Psi_1\rangle \;\circlearrowright$$</p>
+
+<p>The \(\Psi_1\) and \(\Psi_2\) states are delocalised between the two wells,
+but as these are Even and Odd wavefunctions, the combinations will be localised
+in state 1 and state 2.</p>
+
+<p>And there&rsquo;s only one, obvious, time constant generated by the phase term</p>
+
+<p>$$e^{-i (\omega_2-\omega_1) t}$$</p>
+
+<p>By Euler&rsquo;s identity, \(e^{i\pi}=-1\)</p>
+
+<p>$$\tau=(\omega_2-\omega_1)/\pi$$</p>
+
+<p>By \(E=\hbar\omega , \omega=E/\hbar\), this is</p>
+
+<p>$$\tau = \frac{E_2-E_1}{\pi\hbar}$$</p>
+
+<p>So really quite trivial! The time constant of beating between the states
+(tunnelling through the potential barrier) is directly related to the degeneracy
+splitting of the states.
+This makes sense, becaus from a semi-classical picture, the degeneracy
+splitting is linked to the magnitude of the transfer, or wavefunction overlap,
+integral between state 1 and 2.</p>
+
+<p>I was initially concerned that there was no mass term here&mdash;obviously mass
+should come into the time constant of tunnelling! But it is there, hidden in the
+solution of the Time Independent Schr&ouml;dinger Equation.</p>
+
+<p>For the potential + states above, the values are not so ridiculous</p>
+
+<p>
+<figure >
+    
+        <img src="../../images/2016-07-14-TunnellingTimes.png" />
+    
+    
+    <figcaption>
+        <h4>Time to tunnel between states</h4>
+        
+    </figcaption>
+    
+</figure>
+</p>
+
+<p>Classically, with a harmonic potential, you would have a Simple Harmonic
+Oscillator with</p>
+
+<p>$$\tau=\frac{2\pi}{\omega}$$</p>
+
+<p>where</p>
+
+<p>$$\omega=\sqrt{\frac{k}{m}}$$</p>
+
+<p>For this system at a finite temperature, we should be able to consider a
+Bose-Einstein distribution of weights, and then collect an overall tunnelling
+time constant by summing the weighted rates. I haven&rsquo;t yet tried this.</p>
+
+<p>$$\tau_{total} = \left( \frac{p_1}{\tau_1} + \frac{p_2}{\tau_2} + \frac{p_3}{\tau_3} &hellip; \right)^{-1} $$</p>
+
+<p>It was very enjoyable to find myself doing some basic pen + paper physics!</p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                </li>
+                
+
+                
+
+                
+
+                
+                <li class="pure-menu-item">
+                    <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                </li>
+                
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://jarvist.github.io/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://jarvist.github.io/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+</body>
+</html>
+
