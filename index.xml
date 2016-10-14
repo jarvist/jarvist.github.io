@@ -1153,17 +1153,18 @@ by inefficient photosynthesis and geological happenstance.&lt;/p&gt;
 from photons of light) are a beautifully simple engine that silently run on
 sunlight and thermodynamics to produce electrical power. There are no parts to
 wear out, no bearings to service, no oil to change. The only problem is that
-the solar resource is not very concentrated — bright sunlight is about
-a kilowatt per metre squared. So you have to build big panels to produce
-a meaningful amount of energy.&lt;/p&gt;
+the solar resource is not very concentrated — bright sunlight provides about
+a kilowatt of power per metre squared.
+So you have to build big panels (and cover a not insignificant land area) to
+produce a meaningful amount of energy.&lt;/p&gt;
 
 &lt;p&gt;Our present best technology for making photovoltaics is based on Silicon. This
 is an abundant material (sand is mainly Silicon Dioxide), but forming pure
 Silicon requires a lot of energy, and making Silicon solar panels requires
-vacuum processing and some pretty nasty chemicals which keeps the cost
-relatively high.&lt;/p&gt;
+vacuum processing and some pretty nasty chemicals which keeps the cost, and
+environmental burden, relatively high.&lt;/p&gt;
 
-&lt;p&gt;My research is in trying to understand and design new materials for solar
+&lt;p&gt;My research is directed towards trying to understand and design new materials for solar
 cells. By using computational chemistry and materials science techniques we try
 to understand how novel solar cells work (in particular, what limits their
 efficiency or longevity), and how we can make them better. These new solar
@@ -1181,10 +1182,12 @@ these models and understanding the limits of the techniques available, is what
 I spend the majority of my time doing.&lt;/p&gt;
 
 &lt;p&gt;At Bath I am in the Chemistry Department, funded under the EPSRC Programme
-Grant Energy Materials: Computational Solutions,
-working in the Walsh Material Design group. So far the majority of my
-computer time has been provided by EPSRC on the new Cray XC30 supercomputer
-ARCHER.&lt;/p&gt;
+Grant &amp;ldquo;Energy Materials: Computational Solutions&amp;rdquo;.
+Physically I am a long-term academic visitor at Imperial College London,
+working in the Materials Department, Walsh Material Design group.
+The majority of my computer time has been provided by EPSRC on the Cray
+XC30 supercomputer ARCHER, and by the University of Bath and Imperial College
+London on their internal systems..&lt;/p&gt;
 
 &lt;p&gt;You may find my academic papers on &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
 Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
@@ -1198,7 +1201,7 @@ with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the &lt;code
 tweaked).
 I moved this blog from Wordpress to GitHub pages as I had grown irritated with
 the online-only editing experience (in particular their new &amp;lsquo;Web 2.0&amp;rsquo;
-experience).
+experience made my laptop overheat!).
 I hope that being able to edit and push from the command line will get me
 blogging more regularly.&lt;/p&gt;
 
