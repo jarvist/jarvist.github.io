@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hpc on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/hpc/</link>
-    <description>Recent content in Hpc on Jarvist Moore Frost: Academic blog</description>
+    <title>Jarvist Moore Frost: Academic blog</title>
+    <link>http://jarvist.github.io/tags/hpc/index.xml</link>
+    <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 20 Nov 2013 13:41:32 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/tags/hpc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

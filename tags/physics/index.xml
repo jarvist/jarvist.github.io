@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Physics on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/physics/</link>
-    <description>Recent content in Physics on Jarvist Moore Frost: Academic blog</description>
+    <title>Jarvist Moore Frost: Academic blog</title>
+    <link>http://jarvist.github.io/tags/physics/index.xml</link>
+    <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 01 Jul 2014 12:36:09 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/tags/physics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -29,7 +28,7 @@ the one fundamental force you can actually interact with.&lt;/p&gt;
 &lt;p&gt;Partially inspired by Gerard &amp;rsquo;t Hooft&amp;rsquo;s far more complete summary
 &lt;a href=&#34;http://www.staff.science.uu.nl/~Gadda001/goodtheorist/index.html&#34;&gt;http://www.staff.science.uu.nl/~Gadda001/goodtheorist/index.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;lecture-notes:415b107632de82fd60457d6653a32eb1&#34;&gt;Lecture Notes&lt;/h2&gt;
+&lt;h2 id=&#34;lecture-notes&#34;&gt;Lecture Notes&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Richard Feynman&lt;/strong&gt; (Caltech) The Feynman lectures on physics are now available
 to read freely online.
@@ -85,14 +84,14 @@ a guess for other years!
 &lt;a href=&#34;http://www.tddft.org/TDDFT2010/school/&#34;&gt;http://www.tddft.org/TDDFT2010/school/&lt;/a&gt;
 &lt;a href=&#34;http://www.tddft.org/TDDFT2008/lectures/&#34;&gt;http://www.tddft.org/TDDFT2008/lectures/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;journal-clubs:415b107632de82fd60457d6653a32eb1&#34;&gt;Journal Clubs&lt;/h2&gt;
+&lt;h2 id=&#34;journal-clubs&#34;&gt;Journal Clubs&lt;/h2&gt;
 
 &lt;p&gt;Papercore is an interesting idea - produce a &amp;lsquo;super abstract&amp;rsquo; summary of
 a research paper. Quite a spin-glass focus for the papers in here, where
 I guess it is used as the internal journal club.
 &lt;a href=&#34;http://papercore.org/summaries&#34;&gt;http://papercore.org/summaries&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;books:415b107632de82fd60457d6653a32eb1&#34;&gt;Books&lt;/h2&gt;
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
 
 &lt;p&gt;In truth, all the best stuff is in the books; quality and presentation of the
 above notes is relatively hit and miss, and more polished and complete at the

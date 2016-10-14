@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Os X Mavericks on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/os-x-mavericks/</link>
-    <description>Recent content in Os X Mavericks on Jarvist Moore Frost: Academic blog</description>
+    <title>Jarvist Moore Frost: Academic blog</title>
+    <link>http://jarvist.github.io/tags/os-x-mavericks/index.xml</link>
+    <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Mon, 18 Nov 2013 11:28:20 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/tags/os-x-mavericks/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Statistics on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/statistics/</link>
-    <description>Recent content in Statistics on Jarvist Moore Frost: Academic blog</description>
+    <title>Jarvist Moore Frost: Academic blog</title>
+    <link>http://jarvist.github.io/tags/statistics/index.xml</link>
+    <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 17 Nov 2013 13:00:13 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

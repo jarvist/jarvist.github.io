@@ -2,12 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/</link>
+    <link>http://jarvist.github.io/index.xml</link>
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Thu, 14 Jul 2016 20:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 13 Oct 2016 11:29:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Constrained geometry optimisation in Gaussian</title>
+      <link>http://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</link>
+      <pubDate>Thu, 13 Oct 2016 11:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Summary&lt;/em&gt;: If you want to do a geometry relaxation around a constrained degree of
+freedom (bond length, angle, dihedral, etc.) in Gaussian 09, you need two
+&amp;lsquo;ModRedundant&amp;rsquo; specifications, one to &lt;code&gt;B&lt;/code&gt;uild in the coordinate with the value
+you set, the next to then &lt;code&gt;F&lt;/code&gt;reeze this coordinate so that it is constrained
+during the optimisation.&lt;/p&gt;
+
+&lt;p&gt;Here is an example for Biphenyl, setting the torsional angle to 90 degrees
+(making the phenyls orthogonal).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#p opt=ModRedundant am1
+
+Biphenyl ModRedundant - Minimalist working constrained optimisation
+
+0 1
+C                 -4.41584965    0.94482757    0.00000000
+C                 -3.02068965    0.94482757    0.00000000
+C                 -2.32315165    2.15257857    0.00000000
+C                 -3.02080565    3.36108757   -0.00119900
+C                 -4.41563065    3.36100957   -0.00167800
+C                 -5.11323165    2.15280357   -0.00068200
+H                 -4.96560865   -0.00748943    0.00045000
+H                 -2.47118165   -0.00768543    0.00131500
+H                 -2.47060565    4.31323057   -0.00125800
+H                 -4.96575265    4.31329057   -0.00263100
+H                 -6.21283565    2.15298657   -0.00086200
+C                 -0.78315191    2.15269060    0.00088786
+C                 -0.08606526    3.36121931    0.00088734
+C                 -0.08548693    0.94501548    0.00335961
+C                  1.30876256    3.36175187    0.00267704
+H                 -0.63630428    4.31325796   -0.00061165
+C                  1.30993941    0.94551682    0.00463341
+H                 -0.63486990   -0.00759907    0.00399419
+C                  2.00679196    2.15379382    0.00415373
+H                  1.85833456    4.31416964    0.00249700
+H                  1.85980667   -0.00681651    0.00652304
+H                  3.10655225    2.15452197    0.00514924
+
+2       3       12      13      =90.0       B
+2       3       12      13      F
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Longer Version&lt;/em&gt;:
+Doing a constrained geometry optimisation is a common necessity when modelling
+organic electronics.
+A particular occurrence is wanting to set the backbone-torsion (the dihedral) of
+an oligomer fragment (representing a polymer).
+This can be due to the fact that structural measurements show a particular
+packing motif, and you want to override the behaviour of your quantum
+chemistry, or you are interested in studying something (transfer integral, HOMO
+/ LUMO energy, potential energy) as a function of the rotation.&lt;/p&gt;
+
+&lt;p&gt;The relevant &lt;code&gt;ModRedundant&lt;/code&gt; part of the Gaussian manual
+(&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&lt;/a&gt;) is at best confusing.&lt;/p&gt;
+
+&lt;p&gt;If you want a single job that scans along a coordinate, you can use &lt;code&gt;S&lt;/code&gt; for
+Scan. However, this has some issues: you end up with all the intermediate
+geometries buried in a massive .log file; you can&amp;rsquo;t parallelise the geometry
+optimisations; you can get some weird effects from steric hindrance, so should
+really do the scans in the two different directions to detect any &amp;lsquo;clicking&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;So being able to &lt;code&gt;F&lt;/code&gt;reeze in a constraint is really useful, so that you can
+then have a load of &lt;code&gt;.com&lt;/code&gt; files named &lt;code&gt;000.com&lt;/code&gt;, &lt;code&gt;010.com&lt;/code&gt; etc. for the angle
+along the coordinate.
+These are then trivial to use in further processing by i.e. something like
+(&lt;a href=&#34;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&#34;&gt;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&lt;/a&gt;) to
+extract all the optimised geometries into new &lt;code&gt;.com&lt;/code&gt; files, to do single point
+calculations.&lt;/p&gt;
+
+&lt;p&gt;So that&amp;rsquo;s grand; from 2007 to 2012 I had been using &lt;code&gt;opt=ModRedundant&lt;/code&gt; with
+a single &lt;code&gt;Freeze&lt;/code&gt; line after the atom specification, to do a constrained
+geometry optimisation.
+Then sometime around &lt;code&gt;G09.B&lt;/code&gt;, this stopped working!
+The jobs would run, but all geometries would optimise to their relaxed
+configurations.
+I didn&amp;rsquo;t really understand why this occurred; it was immensely frustrating.
+As a work-around I used the old versions of Gaussian to do geometry
+optimisations.&lt;/p&gt;
+
+&lt;p&gt;My student was recently bitten by this bug (my fault - as I sent her one of my
+&amp;lsquo;working&amp;rsquo; files from circa. 2008!).
+So we investigated properly, and eventually found out the reason.
+If you have a single &lt;code&gt;F&lt;/code&gt; line such as:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;2       3       12      13      =90.0       F
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and then go and look for the relevant part in the output &lt;code&gt;.log&lt;/code&gt; file, you will
+find that the ModRedundant section echoes back:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;The following ModRedundant input section has been read:
+D       2       3      12      13 90.000 B
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wait a second - that&amp;rsquo;s a B! I told you F!
+So therein lies the rub.
+Gaussian, if you specify &lt;code&gt;F&lt;/code&gt;reeze alongside specifying a value to set the
+constrained coordinate to, it will silently rewrite this to &lt;code&gt;B&lt;/code&gt;uild, and so set
+that coordinate for the initial optimisation, but then relax away from that
+coordinate.
+Previously a single line with &lt;code&gt;F&lt;/code&gt; specifying the coordinate, set the
+constraint, and froze it.&lt;/p&gt;
+
+&lt;p&gt;Another curiosity which I do not understand, is that you can&amp;rsquo;t seem to do
+a constrained geometry optimisation with a empirical potential (such as &lt;code&gt;UFF&lt;/code&gt;)
+in the above.&lt;br /&gt;
+Maybe it uses different optimisation routines (i.e. Cartesian)?&lt;/p&gt;
+
+&lt;p&gt;All in all, the new behaviour is perhaps more logical.&lt;br /&gt;
+Essentially Gaussian is now doing something different when encountering
+undefined behaviour.
+Internally I would guess there&amp;rsquo;s some absolute horror show of a series of
+Fortran routines messing around with internal variables based on this flags,
+rather than a sensible parser.
+It just always feels that when someone breaks something you had working
+previously, that they are working against you!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Soft Mode Tunnelling</title>
@@ -49,7 +174,7 @@ Here I start with a very general analytic quantum mechanical analysis, which
 seems to to give you a very nice and general result to then use with your
 numeric method.&lt;/p&gt;
 
-&lt;p&gt;
+
 &lt;figure &gt;
     
         &lt;img src=&#34;../../images/2016-07-14-SoftWell.png&#34; /&gt;
@@ -61,7 +186,7 @@ numeric method.&lt;/p&gt;
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;If we look at the states (\(\Psi_n\)) localised in the wells, you can see
 that the first state is symmetric, and the then the second state is
@@ -138,7 +263,7 @@ solution of the Time Independent Schr&amp;ouml;dinger Equation.&lt;/p&gt;
 
 &lt;p&gt;For the potential + states above, the values are not so ridiculous&lt;/p&gt;
 
-&lt;p&gt;
+
 &lt;figure &gt;
     
         &lt;img src=&#34;../../images/2016-07-14-TunnellingTimes.png&#34; /&gt;
@@ -150,7 +275,7 @@ solution of the Time Independent Schr&amp;ouml;dinger Equation.&lt;/p&gt;
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Classically, with a harmonic potential, you would have a Simple Harmonic
 Oscillator with&lt;/p&gt;
@@ -376,7 +501,7 @@ I had quite a lot of fun writing it (certainly more fun that trying to get the
 costings to add up&amp;hellip;), so I thought I may as well publish it here to avoid it
 festering in some dark corner of my hard drive.&lt;/p&gt;
 
-&lt;h2 id=&#34;lay-report-computational-design-of-optoelectric-materials:0cd36b36729c7b5180f232d11e71f528&#34;&gt;Lay Report &amp;mdash; Computational Design of Optoelectric Materials&lt;/h2&gt;
+&lt;h2 id=&#34;lay-report-computational-design-of-optoelectric-materials&#34;&gt;Lay Report &amp;mdash; Computational Design of Optoelectric Materials&lt;/h2&gt;
 
 &lt;!-- ^[Plain text only: maximum 3,500 characters (including spaces)] --&gt;
 
@@ -464,7 +589,7 @@ reference, and for clickable citations.&lt;/p&gt;
 static structure picture - we need the entropic contribution, and we therefore
 need to be able to calculate free energies.&lt;/p&gt;
 
-&lt;h2 id=&#34;small-molecular-crystals:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Small molecular crystals&lt;/h2&gt;
+&lt;h2 id=&#34;small-molecular-crystals&#34;&gt;Small molecular crystals&lt;/h2&gt;
 
 &lt;p&gt;The first area discussed was predicting structure of small molecular crystals,
 the example for them was having taken part in the CCDC Blind Test [2], but
@@ -496,7 +621,7 @@ which proposed that both problems are essentially the same.
 You have a rough energy landscape, you need to determine the occupancy of the
 basins.&lt;/p&gt;
 
-&lt;h2 id=&#34;collective-variables:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Collective variables&lt;/h2&gt;
+&lt;h2 id=&#34;collective-variables&#34;&gt;Collective variables&lt;/h2&gt;
 
 &lt;p&gt;To do this, Mark suggests targeting collective variables - something that
 distinguishes different conformal states.
@@ -518,7 +643,7 @@ them invariant under inversion. [6] ]&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;temperature-accelerated-md:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Temperature accelerated MD&lt;/h2&gt;
+&lt;h2 id=&#34;temperature-accelerated-md&#34;&gt;Temperature accelerated MD&lt;/h2&gt;
 
 &lt;p&gt;Temperature accelerated MD was then introduced.
 Mark described it as essentially being an additional (standard) equation of
@@ -540,7 +665,7 @@ basins and escape to the next one. To get the free energy, once you&amp;rsquo;ve
 all the basins you invert the Gaussians and this gives you the free energy
 surface.&lt;/p&gt;
 
-&lt;h3 id=&#34;protein-folding-alanine-decamers-between-alpha-helix-and-beta-hairpin:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Protein folding: Alanine Decamers between alpha helix and beta hairpin&lt;/h3&gt;
+&lt;h3 id=&#34;protein-folding-alanine-decamers-between-alpha-helix-and-beta-hairpin&#34;&gt;Protein folding: Alanine Decamers between alpha helix and beta hairpin&lt;/h3&gt;
 
 &lt;p&gt;Accelerated MD on this as a model system (I think with the CHARMM forcefield),
 with the Ramachandran variables (20 collective variables).
@@ -554,7 +679,7 @@ value for the free energy difference.&lt;/p&gt;
 energy seems a bit different:
 &lt;a href=&#34;https://youtu.be/WKpe8fzATr4?t=21m38s&#34;&gt;https://youtu.be/WKpe8fzATr4?t=21m38s&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;polymorphic-benzene:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Polymorphic benzene&lt;/h3&gt;
+&lt;h3 id=&#34;polymorphic-benzene&#34;&gt;Polymorphic benzene&lt;/h3&gt;
 
 &lt;p&gt;Separately they studied polymorphs of benzene.
 The &amp;lsquo;h&amp;rsquo; matrix (lattice basis) was explicitly evolved in the EoM, dragging
@@ -565,7 +690,7 @@ found all the polymorphs.&lt;/p&gt;
 
 &lt;p&gt;This is explored in [8], and MET references thereafter.&lt;/p&gt;
 
-&lt;h3 id=&#34;melting-copper:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Melting Copper&lt;/h3&gt;
+&lt;h3 id=&#34;melting-copper&#34;&gt;Melting Copper&lt;/h3&gt;
 
 &lt;p&gt;Melting Cu, with collective variables on the diagonal of &lt;code&gt;h&lt;/code&gt;; and
 a Q4, Q6 spherical harmonic &amp;lsquo;bond order&amp;rsquo;.
@@ -575,7 +700,7 @@ The EAM potential was used.&lt;/p&gt;
 The simulations showed a more complex story - the hot solid had defects which
 were highly mobile. Defects formed clusters to minimise their free energy&lt;/p&gt;
 
-&lt;h3 id=&#34;navigating-on-a-high-dimensional-surface:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Navigating on a high dimensional surface&lt;/h3&gt;
+&lt;h3 id=&#34;navigating-on-a-high-dimensional-surface&#34;&gt;Navigating on a high dimensional surface&lt;/h3&gt;
 
 &lt;p&gt;You can&amp;rsquo;t visualise the surface - it is too high in dimension. But you want to
 see the &amp;lsquo;interesting&amp;rsquo; minima and saddle points.
@@ -590,7 +715,7 @@ defining the Euler angles (though a later figure mentioned an &amp;lsquo;absolut
 quaternion&amp;rsquo;) and cell parameters as collective variables. They found the
 experimental structure, and loads of near-energy polymorphs&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;It was an extremely thought provoking talk. The explanation of temperature
 accelerated molecular dynamics was the first time that it made sense to me.
@@ -631,7 +756,7 @@ overlapped with this talk a fair bit:
 &lt;p&gt;Mark has a Google Scholar page, for if you want to dig through more of his
 literature [13].&lt;/p&gt;
 
-&lt;h2 id=&#34;references:e5bb1008c4e7cb9f959a30ec9e9da6d1&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;p&gt;[1] Mark E. Tuckerman (2010), Statistical Mechanics: Theory and Molecular
 Simulation. Oxford Graduate Texts.
@@ -808,7 +933,7 @@ being a constant Fundamental Gap between it and the HOMO.&lt;/p&gt;
 &lt;p&gt;Mark Casida (yes, that Casida!) has some interesting slides on why there should
 be such an agreement between TDDFT and Delta-SCF [4].&lt;/p&gt;
 
-&lt;h2 id=&#34;doing-it-by-hand-with-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;Doing it by hand with Gaussian&lt;/h2&gt;
+&lt;h2 id=&#34;doing-it-by-hand-with-gaussian&#34;&gt;Doing it by hand with Gaussian&lt;/h2&gt;
 
 &lt;p&gt;So you want to do a Delta-SCF calculation for a molecule-in-vacuum with Gaussian.
 You start with a carefully converged single point calculation:&lt;/p&gt;
@@ -856,7 +981,7 @@ echo -n &amp;quot;($neutral - $charged ) * 27.211&amp;quot; | bc -l
 echo &amp;quot;  eV&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;scripts-for-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;Scripts for Gaussian&lt;/h2&gt;
+&lt;h2 id=&#34;scripts-for-gaussian&#34;&gt;Scripts for Gaussian&lt;/h2&gt;
 
 &lt;p&gt;After doing this for the n&amp;rsquo;th time as part of this post, I thought I should sit
 down and write an all-singing script for automating the process.&lt;/p&gt;
@@ -873,7 +998,7 @@ Analyse the outputs with &lt;code&gt;&amp;gt; delta_SCF_extract_values.sh&lt;/co
 
 &lt;script src=&#34;https://gist.github.com/jarvist/616c8c7c3ea576d03d73.js&#34;&gt;&lt;/script&gt;
 
-&lt;h2 id=&#34;references:fbce3db7e066d2ec23c5af7d0bd6b47a&#34;&gt;References&lt;/h2&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;p&gt;[1] Macrodensity - codes to read VASP LOCPOT files and calculate electrostatic
 potential derived quantities (&lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;)&lt;/p&gt;
@@ -990,7 +1115,7 @@ But it&amp;rsquo;s flexible enough that you can also just use this to separate y
       <guid>http://jarvist.github.io/about/</guid>
       <description>
 
-&lt;p&gt;
+
 &lt;figure &gt;
     
         &lt;img src=&#34;http://jarvist.github.io/images/JarvistMooreFrost_Dec2010_FP4_CanonA1_Mirror_Square_256px.jpg&#34; /&gt;
@@ -1002,7 +1127,7 @@ But it&amp;rsquo;s flexible enough that you can also just use this to separate y
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;&lt;strong&gt;Electronic Mail:&lt;/strong&gt; J.M.Frost@bath.ac.uk&lt;/p&gt;
 
@@ -1014,7 +1139,7 @@ Bath,
 BA2 7AY,
 United Kingdom&lt;/p&gt;
 
-&lt;h3 id=&#34;research-statement:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Research Statement&lt;/h3&gt;
+&lt;h3 id=&#34;research-statement&#34;&gt;Research Statement&lt;/h3&gt;
 
 &lt;p&gt;Over 122 PetaWatts of solar power reach the Earth&amp;rsquo;s surface. This figure is
 vastly greater than the 15 TeraWatts (while still a crazy big number, that&amp;rsquo;s
@@ -1064,7 +1189,7 @@ ARCHER.&lt;/p&gt;
 &lt;p&gt;You may find my academic papers on &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
 Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;this-blog-other-presence:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;This blog &amp;amp; other presence&lt;/h3&gt;
+&lt;h3 id=&#34;this-blog-other-presence&#34;&gt;This blog &amp;amp; other presence&lt;/h3&gt;
 
 &lt;p&gt;This is my academic (mainly!) blog. It used to be on wordpress, at
 &lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
@@ -1175,7 +1300,7 @@ specific version you have installed, and it can be extremely frustrating to
 reproduce a tweaked diagram). I&amp;rsquo;ve found some useful websites on tips + tricks
 for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt;
 
-&lt;h3 id=&#34;useful-general-resources:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Useful general resources&lt;/h3&gt;
+&lt;h3 id=&#34;useful-general-resources&#34;&gt;Useful general resources&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Simon Peyton Jones talk &lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;https://www.youtube.com/watch?v=g3dkRsTqdDA&lt;/a&gt;
@@ -1190,7 +1315,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;Economist - Style Guide &lt;a href=&#34;http://www.economist.com/styleguide/introduction&#34;&gt;http://www.economist.com/styleguide/introduction&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;colour:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Colour&lt;/h3&gt;
+&lt;h3 id=&#34;colour&#34;&gt;Colour&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;IBM paper &amp;ldquo;Why should engineers and scientists be worried about color?&amp;rdquo;
@@ -1203,7 +1328,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;Colorbrewer &lt;a href=&#34;http://colorbrewer2.org/&#34;&gt;http://colorbrewer2.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;writing:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Writing&lt;/h3&gt;
+&lt;h3 id=&#34;writing&#34;&gt;Writing&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;20 Obsolete English Words
@@ -1215,7 +1340,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;a href=&#34;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&#34;&gt;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;plotting:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Plotting&lt;/h3&gt;
+&lt;h3 id=&#34;plotting&#34;&gt;Plotting&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Xmgrace tips &lt;a href=&#34;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&#34;&gt;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&lt;/a&gt;&lt;/li&gt;
@@ -1236,7 +1361,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;gnuplot-colorbrewer &lt;a href=&#34;https://github.com/aschn/gnuplot-colorbrewer&#34;&gt;https://github.com/aschn/gnuplot-colorbrewer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;git-latex-markdown:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Git / Latex / Markdown&lt;/h3&gt;
+&lt;h3 id=&#34;git-latex-markdown&#34;&gt;Git / Latex / Markdown&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Word by word diffs in Git
@@ -1259,7 +1384,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;a href=&#34;http://blog.felixbreuer.net/2010/10/24/poster.html&#34;&gt;http://blog.felixbreuer.net/2010/10/24/poster.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ambient-music-for-headphones-in-noisy-offices:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Ambient music for headphones in noisy offices&lt;/h3&gt;
+&lt;h3 id=&#34;ambient-music-for-headphones-in-noisy-offices&#34;&gt;Ambient music for headphones in noisy offices&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Music to let you concentrate &lt;a href=&#34;https://news.ycombinator.com/item?id=5872414&#34;&gt;https://news.ycombinator.com/item?id=5872414&lt;/a&gt;&lt;/li&gt;
@@ -1324,34 +1449,6 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 
 &lt;p&gt;via the ever useful, if distracting, Hacker News:
 &lt;a href=&#34;https://news.ycombinator.com/item?id=8576411&#34;&gt;https://news.ycombinator.com/item?id=8576411&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How I made a poster; 2014</title>
-      <link>http://jarvist.github.io/post/how-i-made-a-poster-2014/</link>
-      <pubDate>Thu, 16 Oct 2014 04:09:51 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/how-i-made-a-poster-2014/</guid>
-      <description>&lt;p&gt;I made a scientific poster last week, for the first time in five years.&lt;/p&gt;
-
-&lt;p&gt;I drew it in Inkscape, a free opensource vector drawing package. I&amp;rsquo;m have quite a lot of experience using Inkscape in drawing cave surveys, but I believe it&amp;rsquo;s both relatively easy to use, and has some extremely useful tools for constructing posters (most notably the alignment &amp;amp; distribution tool). The one gotcha is that you have to explicitly ask for it to spell check your text fields! It&amp;rsquo;s native fileformat is SVG based, and it is very happy to import PDFs (i.e. figures / graphs - from gnuplot I use the colour postscript terminal, then &amp;lsquo;ps2pdf&amp;rsquo; on the command line).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/PerovskiteKinematics/raw/master/2014-10_JMF_Korea_Poster.pdf&#34;&gt;&lt;img src=&#34;https://jarvistmoorefrost.files.wordpress.com/2014/10/poster.jpg&#34; alt=&#34;Crystal Kinematics Poster&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Like most scientists, I am no designer. So I&amp;rsquo;m mainly winging it, and can&amp;rsquo;t rely on whether things look right or not! I found a colour scheme that was close to some of my figures from Adobe&amp;rsquo;s Color CC [1], and then put those five colours in a swatch just outside the page on the Inkscape. I put all the main text in a medium weight Futura clone, because I like it.&lt;/p&gt;
-
-&lt;p&gt;These days I make my talk slides in Google Present, viewing a certain slide and then selecting &amp;ldquo;Download as SVG&amp;rdquo;, opened in Inkscape as a fairly well-behaved vector images with embedded bitmaps, to then have the slide template objects deleted &amp;amp; used within the poster.&lt;/p&gt;
-
-&lt;p&gt;I also made a tie-in website, linked from a QR code (generated with a free web service) on the poster, as a place to collate links to the YouTube videos and a reprint of the poster itself.
-This I generated with GitHub pages and the Flatdoc HTML/JS code [2], a lightweight and modern responsive web framework. You put the Flatdoc HTML file (template.html) as index.html on the &amp;lsquo;gh-pages&amp;rsquo; branch of your GitHub repo, having edited the HTML to set the USER/REPO/Title correctly. It then pulls down the README.md from your &amp;lsquo;master&amp;rsquo; branch of the repo, and live renders any changes on the browser. Assuming you are used to GitHub &amp;amp; have (fairly minimal) HTML/CSS abilities this is a really quick way to put together something that looks pretty acceptable. [3]&lt;/p&gt;
-
-&lt;p&gt;Overall I was quite pleased with how easy it is to put together something that looks acceptable. If you are interested - have a look at the Inkscape SVG &amp;amp; the structure of the github REPO. [4]&lt;/p&gt;
-
-&lt;p&gt;[1] &lt;a href=&#34;https://color.adobe.com/explore/&#34;&gt;https://color.adobe.com/explore/&lt;/a&gt;
-[2] &lt;a href=&#34;http://ricostacruz.com/flatdoc/&#34;&gt;http://ricostacruz.com/flatdoc/&lt;/a&gt;
-[3] &lt;a href=&#34;http://jarvist.github.io/PerovskiteKinematics/&#34;&gt;http://jarvist.github.io/PerovskiteKinematics/&lt;/a&gt;
-[4] &lt;a href=&#34;https://github.com/jarvist/PerovskiteKinematics&#34;&gt;https://github.com/jarvist/PerovskiteKinematics&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
