@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openbabel on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/openbabel/</link>
+    <link>http://jarvist.github.io/tags/openbabel/index.xml</link>
     <description>Recent content in Openbabel on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 23 Jul 2013 14:48:13 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/tags/openbabel/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

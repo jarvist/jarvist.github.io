@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writing on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/writing/</link>
+    <link>http://jarvist.github.io/tags/writing/index.xml</link>
     <description>Recent content in Writing on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 01 Mar 2015 22:44:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/tags/writing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -95,7 +94,7 @@ specific version you have installed, and it can be extremely frustrating to
 reproduce a tweaked diagram). I&amp;rsquo;ve found some useful websites on tips + tricks
 for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt;
 
-&lt;h3 id=&#34;useful-general-resources:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Useful general resources&lt;/h3&gt;
+&lt;h3 id=&#34;useful-general-resources&#34;&gt;Useful general resources&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Simon Peyton Jones talk &lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;https://www.youtube.com/watch?v=g3dkRsTqdDA&lt;/a&gt;
@@ -110,7 +109,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;Economist - Style Guide &lt;a href=&#34;http://www.economist.com/styleguide/introduction&#34;&gt;http://www.economist.com/styleguide/introduction&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;colour:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Colour&lt;/h3&gt;
+&lt;h3 id=&#34;colour&#34;&gt;Colour&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;IBM paper &amp;ldquo;Why should engineers and scientists be worried about color?&amp;rdquo;
@@ -123,7 +122,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;Colorbrewer &lt;a href=&#34;http://colorbrewer2.org/&#34;&gt;http://colorbrewer2.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;writing:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Writing&lt;/h3&gt;
+&lt;h3 id=&#34;writing&#34;&gt;Writing&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;20 Obsolete English Words
@@ -135,7 +134,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;a href=&#34;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&#34;&gt;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;plotting:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Plotting&lt;/h3&gt;
+&lt;h3 id=&#34;plotting&#34;&gt;Plotting&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Xmgrace tips &lt;a href=&#34;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&#34;&gt;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&lt;/a&gt;&lt;/li&gt;
@@ -156,7 +155,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;gnuplot-colorbrewer &lt;a href=&#34;https://github.com/aschn/gnuplot-colorbrewer&#34;&gt;https://github.com/aschn/gnuplot-colorbrewer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;git-latex-markdown:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Git / Latex / Markdown&lt;/h3&gt;
+&lt;h3 id=&#34;git-latex-markdown&#34;&gt;Git / Latex / Markdown&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Word by word diffs in Git
@@ -179,7 +178,7 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;a href=&#34;http://blog.felixbreuer.net/2010/10/24/poster.html&#34;&gt;http://blog.felixbreuer.net/2010/10/24/poster.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;ambient-music-for-headphones-in-noisy-offices:eef4a03bfcc260366f6af32064313cc4&#34;&gt;Ambient music for headphones in noisy offices&lt;/h3&gt;
+&lt;h3 id=&#34;ambient-music-for-headphones-in-noisy-offices&#34;&gt;Ambient music for headphones in noisy offices&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Music to let you concentrate &lt;a href=&#34;https://news.ycombinator.com/item?id=5872414&#34;&gt;https://news.ycombinator.com/item?id=5872414&lt;/a&gt;&lt;/li&gt;

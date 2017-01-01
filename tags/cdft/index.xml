@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cdft on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/cdft/</link>
+    <link>http://jarvist.github.io/tags/cdft/index.xml</link>
     <description>Recent content in Cdft on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Fri, 01 Feb 2013 19:45:53 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/tags/cdft/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

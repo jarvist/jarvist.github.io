@@ -186,7 +186,7 @@ being a constant Fundamental Gap between it and the HOMO.</p>
 <p>Mark Casida (yes, that Casida!) has some interesting slides on why there should
 be such an agreement between TDDFT and Delta-SCF [4].</p>
 
-<h2 id="doing-it-by-hand-with-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a">Doing it by hand with Gaussian</h2>
+<h2 id="doing-it-by-hand-with-gaussian">Doing it by hand with Gaussian</h2>
 
 <p>So you want to do a Delta-SCF calculation for a molecule-in-vacuum with Gaussian.
 You start with a carefully converged single point calculation:</p>
@@ -234,7 +234,7 @@ echo -n &quot;($neutral - $charged ) * 27.211&quot; | bc -l
 echo &quot;  eV&quot;
 </code></pre>
 
-<h2 id="scripts-for-gaussian:fbce3db7e066d2ec23c5af7d0bd6b47a">Scripts for Gaussian</h2>
+<h2 id="scripts-for-gaussian">Scripts for Gaussian</h2>
 
 <p>After doing this for the n&rsquo;th time as part of this post, I thought I should sit
 down and write an all-singing script for automating the process.</p>
@@ -251,7 +251,7 @@ Analyse the outputs with <code>&gt; delta_SCF_extract_values.sh</code>.</p>
 
 <script src="https://gist.github.com/jarvist/616c8c7c3ea576d03d73.js"></script>
 
-<h2 id="references:fbce3db7e066d2ec23c5af7d0bd6b47a">References</h2>
+<h2 id="references">References</h2>
 
 <p>[1] Macrodensity - codes to read VASP LOCPOT files and calculate electrostatic
 potential derived quantities (<a href="https://github.com/WMD-group/MacroDensity">https://github.com/WMD-group/MacroDensity</a>)</p>
