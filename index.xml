@@ -6,8 +6,130 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Thu, 13 Oct 2016 11:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 01:16:34 +0100</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jarvist Moore Frost</title>
+      <link>http://jarvist.github.io/about/</link>
+      <pubDate>Sun, 01 Jan 2017 01:16:34 +0100</pubDate>
+      
+      <guid>http://jarvist.github.io/about/</guid>
+      <description>
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://jarvist.github.io/images/JarvistMooreFrost_Dec2010_FP4_CanonA1_Mirror_Square_256px.jpg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Dr Jarvist Moore Frost&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Electronic Mail:&lt;/strong&gt; Jarvist.Frost@imperial.ac.uk&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Postal Address:&lt;/strong&gt;
+Dr Jarvist Moore Frost&lt;br /&gt;
+Department of Materials&lt;br /&gt;
+Imperial College London&lt;br /&gt;
+Royal School of Mines&lt;br /&gt;
+Exhibition Road&lt;br /&gt;
+London, SW7 2AZ - UK&lt;/p&gt;
+
+&lt;h3 id=&#34;research-statement&#34;&gt;Research Statement&lt;/h3&gt;
+
+&lt;p&gt;Over 122 Petawatts of solar power reach the Earth&amp;rsquo;s surface. This figure is
+vastly greater than humanity&amp;rsquo;s total power requirement.&lt;br /&gt;
+(Which is 15 Terawatts, while still a crazy big number, is only 0.015 Petawatts.)&lt;/p&gt;
+
+&lt;p&gt;Long term I think it is inevitable that all of our power will be solar power.
+60 GWp of solar power was installed during 2016, the growth is currently
+exponential.&lt;br /&gt;
+All the energy in fossil fuels is essentially ancient sunlight, captured
+by inefficient photosynthesis and geological happenstance.&lt;/p&gt;
+
+&lt;p&gt;Solar cells (formally called photovoltaics, as they generate electrical voltage
+from photons of light) are a beautifully simple engine that silently run on
+sunlight and thermodynamics to produce electrical power. There are no parts to
+wear out, no bearings to service, no oil to change. The only problem is that
+the solar resource is not very concentrated — bright sunlight is about
+a kilowatt per metre squared. So you have to build big panels to produce
+a meaningful amount of energy.&lt;/p&gt;
+
+&lt;p&gt;Our present best technology for making photovoltaics is based on Silicon. This
+is an abundant material (sand is mainly silicon dioxide), but forming pure
+Silicon requires a lot of energy, and making silicon solar panels requires
+vacuum processing and some pretty nasty chemicals which keeps the cost
+relatively high.&lt;/p&gt;
+
+&lt;p&gt;My research is in trying to understand and design new materials for solar
+cells.
+We try to understand how experimental solar cells work (in particular, what limits
+their efficiency or longevity), and how we can make them better. These new
+solar
+cells are typically more complex than silicon cells – rely on the subtle
+interplay of multiple elements in a complex structure or fiendishly
+complex molecules dreamt up by an organic chemist (and then we often don&amp;rsquo;t even
+know the structure!).&lt;/p&gt;
+
+&lt;p&gt;I work with computational physics techniques.
+Everything we see and touch and hear is due to the electronic structure of the
+materials around us.
+The equations which govern this quantum mechanical behaviour are simple to
+write down, but impossible to solve exactly for any but the most trivial of
+examples.
+Instead we rely on computational algorithms to numerically solve approximate
+models for the real system.&lt;/p&gt;
+
+&lt;p&gt;Even very limited and flawed solutions of small systems can require
+absolutely stunning amounts of computer time.
+The systems I woke on are often disordered, and dynamically responding,
+requiring new methods to be developed, and toy models to be devised.
+Validating (against reality) these models and understanding the limits of the
+techniques available, is what I spend the majority of my time doing.&lt;/p&gt;
+
+&lt;p&gt;At Bath I am in the Chemistry Department, funded under the EPSRC Programme
+Grant Energy Materials: Computational Solutions, working in the Walsh Material
+Design group.
+Since September 2016 I have been physically based in the Department of
+Materials, Imperial College London.&lt;br /&gt;
+So far the majority of my computer time has been provided by EPSRC on the new
+Cray XC30 supercomputer ARCHER.&lt;/p&gt;
+
+&lt;h3 id=&#34;this-blog-other-presence&#34;&gt;This blog &amp;amp; other presence&lt;/h3&gt;
+
+&lt;p&gt;This is my academic (mainly!) blog. It used to be on Wordpress, at
+&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
+Files were extracted to a plain text Markdown format, and are now published
+with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the &lt;code&gt;nofancy&lt;/code&gt; theme (slightly
+tweaked).
+I moved this blog from Wordpress to GitHub pages as I had grown irritated with
+the online-only editing experience (in particular their new &amp;lsquo;Web 2.0&amp;rsquo;
+experience).
+I hope that being able to edit and push from the command line will get me
+blogging more regularly.&lt;/p&gt;
+
+&lt;p&gt;In January 2016 I started using a Google+ &amp;lsquo;Collection&amp;rsquo; to publish &lt;a href=&#34;https://plus.google.com/collection/wKpRZB&#34;&gt;reviews of
+Electronic Structure Theory books&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You may find my academic papers on &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
+Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;On Twitter I&amp;rsquo;m &lt;a href=&#34;https://twitter.com/JarvistFrost&#34;&gt;@JarvistFrost&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Outside academics, I have less and less time for riding bicycles, sailing,
+diving and exploratory caving.
+But the little I have written up, is accessible at
+&lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;| What Would Dirac Do [WWDD] ? |&amp;gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Constrained geometry optimisation in Gaussian</title>
@@ -1104,113 +1226,6 @@ But it&amp;rsquo;s flexible enough that you can also just use this to separate y
 
 &lt;p&gt;Anyhow, check it out here + I&amp;rsquo;m always interested in all + any feedback!
 &lt;a href=&#34;https://github.com/jarvist/freck&#34;&gt;https://github.com/jarvist/freck&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Jarvist Moore Frost</title>
-      <link>http://jarvist.github.io/about/</link>
-      <pubDate>Mon, 13 Apr 2015 14:16:34 +0100</pubDate>
-      
-      <guid>http://jarvist.github.io/about/</guid>
-      <description>
-
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://jarvist.github.io/images/JarvistMooreFrost_Dec2010_FP4_CanonA1_Mirror_Square_256px.jpg&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Dr Jarvist Moore Frost&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-
-&lt;p&gt;&lt;strong&gt;Electronic Mail:&lt;/strong&gt; J.M.Frost@bath.ac.uk&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Postal Address:&lt;/strong&gt;
-Dr Jarvist Moore Frost,
-Dept of Chemistry,
-University of Bath,
-Bath,
-BA2 7AY,
-United Kingdom&lt;/p&gt;
-
-&lt;h3 id=&#34;research-statement&#34;&gt;Research Statement&lt;/h3&gt;
-
-&lt;p&gt;Over 122 PetaWatts of solar power reach the Earth&amp;rsquo;s surface. This figure is
-vastly greater than the 15 TeraWatts (while still a crazy big number, that&amp;rsquo;s
-only 0.015 PetaWatts) which is humanity&amp;rsquo;s total power requirement.&lt;/p&gt;
-
-&lt;p&gt;So long term, I think it is inevitable that all of our power will come from
-solar. All the energy in fossil fuels is essentially ancient sunlight, captured
-by inefficient photosynthesis and geological happenstance.&lt;/p&gt;
-
-&lt;p&gt;Solar cells (formally called photovoltaics, as they generate electrical voltage
-from photons of light) are a beautifully simple engine that silently run on
-sunlight and thermodynamics to produce electrical power. There are no parts to
-wear out, no bearings to service, no oil to change. The only problem is that
-the solar resource is not very concentrated — bright sunlight is about
-a kilowatt per metre squared. So you have to build big panels to produce
-a meaningful amount of energy.&lt;/p&gt;
-
-&lt;p&gt;Our present best technology for making photovoltaics is based on Silicon. This
-is an abundant material (sand is mainly Silicon Dioxide), but forming pure
-Silicon requires a lot of energy, and making Silicon solar panels requires
-vacuum processing and some pretty nasty chemicals which keeps the cost
-relatively high.&lt;/p&gt;
-
-&lt;p&gt;My research is in trying to understand and design new materials for solar
-cells. By using computational chemistry and materials science techniques we try
-to understand how novel solar cells work (in particular, what limits their
-efficiency or longevity), and how we can make them better. These new solar
-cells are typically more complex than Silicon cells – relying on a subtle
-interplay of multiple elements in a particular crystal structure or fiendishly
-complex molecules dreamt up by an organic chemist.&lt;/p&gt;
-
-&lt;p&gt;I work with computational physics techniques. The equations which govern the
-behaviour of our everyday materials are simple to write down, but impossible to
-solve exactly for any but the most trivial of examples. Instead we rely on
-computational algorithms to numerically solve approximate models for the real
-system. Even very limited and flawed solutions of small systems can require
-absolutely stunning amounts of computer time. Validating (against reality)
-these models and understanding the limits of the techniques available, is what
-I spend the majority of my time doing.&lt;/p&gt;
-
-&lt;p&gt;At Bath I am in the Chemistry Department, funded under the EPSRC Programme
-Grant Energy Materials: Computational Solutions,
-working in the Walsh Material Design group. So far the majority of my
-computer time has been provided by EPSRC on the new Cray XC30 supercomputer
-ARCHER.&lt;/p&gt;
-
-&lt;p&gt;You may find my academic papers on &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
-Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;this-blog-other-presence&#34;&gt;This blog &amp;amp; other presence&lt;/h3&gt;
-
-&lt;p&gt;This is my academic (mainly!) blog. It used to be on wordpress, at
-&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
-Files were extracted to a plain text Markdown format, and are now published
-with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the &lt;code&gt;nofancy&lt;/code&gt; theme (slightly
-tweaked).
-I moved this blog from Wordpress to GitHub pages as I had grown irritated with
-the online-only editing experience (in particular their new &amp;lsquo;Web 2.0&amp;rsquo;
-experience).
-I hope that being able to edit and push from the command line will get me
-blogging more regularly.&lt;/p&gt;
-
-&lt;p&gt;In January 2016 I started using a Google+ &amp;lsquo;Collection&amp;rsquo; to publish &lt;a href=&#34;https://plus.google.com/collection/wKpRZB&#34;&gt;reviews of
-Electronic Structure Theory books&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Outside academics, I have less and less time for riding bicycles, sailing,
-diving and exploratory caving.
-But the little I have written up, is accessible at
-&lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;| What Would Dirac Do [WWDD] ? |&amp;gt;&lt;/p&gt;
 </description>
     </item>
     
