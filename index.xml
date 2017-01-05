@@ -6,8 +6,65 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 01 Jan 2017 01:16:34 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jan 2017 12:29:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ICL Bookclub</title>
+      <link>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
+      <pubDate>Wed, 04 Jan 2017 12:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
+      <description>&lt;p&gt;Now that the Walsh group has a critical mass at Imperial College London, I am
+planning to restart the Bookclub.&lt;/p&gt;
+
+&lt;p&gt;Keith Butler kicked these off in Bath with the guiding words of everyone&amp;rsquo;s
+favourite German pessimist, Arthur Schopenhauer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Buying books would be a good thing if one could also buy the time to read
+ them in: but as a rule the purchase of books is mistaken for the
+ appropriation of their contents.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The plan is to do some reading &amp;amp; self-directed study of a relevant book, and
+then get together at &lt;strong&gt;5PM on Thursdays&lt;/strong&gt; (in weeks when there is not an
+interesting TYC seminar) to discuss and explain things to each other.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re going to start with the first one and a half chapters of Ziman&amp;rsquo;s
+solid-state book &amp;ldquo;Principles of the theory of solids&amp;rdquo;, ideally the second
+edition (1971).
+( There is currently 1 copy of the 2nd edition, and 3 copies of the 1st
+edition, available for loan at the Central Library, Level 4 (530.41 ZIM).)&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s Chapter 1: Periodic structures, reciprocal lattice, Bloch&amp;rsquo;s theorem,
+Brillouin zone; and Chapter 2: Lattice Waves: Lattice dynamics, lattice sums
+(Ewald), lattice specific heat and lattice spectrum (DoS). So stopping before
+the diffraction + Debye waller + phonon scattering, in the second half of the
+second chapter.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll get together to discuss this at 5PM on Thursday 12th January, &lt;strong&gt;floor two
+of the RSM (Dept Materials), Imperial College London.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Other books which we are planning to visit in the near future are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Martin&amp;rsquo;s DFT book&lt;/li&gt;
+&lt;li&gt;Krauth&amp;rsquo;s Stat. Mech. - Algo and Computation&lt;/li&gt;
+&lt;li&gt;Tinkham&amp;rsquo;s Group Theory and Quantum Mechanics&lt;/li&gt;
+&lt;li&gt;Feynman&amp;rsquo;s Statistical Mechanics&lt;/li&gt;
+&lt;li&gt;Nye&amp;rsquo;s Physical Properties of Materials by Tensors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Everybody welcome! You certainly don&amp;rsquo;t need to do DFT to be able to, or to
+benefit from, knowing the theory. (Arguably doing calculations actually gets in
+the way&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;We have a discussion channel on our &amp;ldquo;Materials Discovery Network&amp;rdquo; Slack group.
+&lt;a href=&#34;https://mdn-uk.slack.com/messages/icl-bookclub/&#34;&gt;https://mdn-uk.slack.com/messages/icl-bookclub/&lt;/a&gt;
+It&amp;rsquo;s on the &amp;lsquo;free&amp;rsquo; plan, so messages are ephemeral, but all friendly electronic structure people very welcome!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Jarvist Moore Frost</title>
@@ -57,9 +114,10 @@ by inefficient photosynthesis and geological happenstance.&lt;/p&gt;
 from photons of light) are a beautifully simple engine that silently run on
 sunlight and thermodynamics to produce electrical power. There are no parts to
 wear out, no bearings to service, no oil to change. The only problem is that
-the solar resource is not very concentrated — bright sunlight is about
-a kilowatt per metre squared. So you have to build big panels to produce
-a meaningful amount of energy.&lt;/p&gt;
+the solar resource is not very concentrated — bright sunlight provides about
+a kilowatt of power per metre squared.
+So you have to build big panels (and cover a not insignificant land area) to
+produce a meaningful amount of energy.&lt;/p&gt;
 
 &lt;p&gt;Our present best technology for making photovoltaics is based on Silicon. This
 is an abundant material (sand is mainly silicon dioxide), but forming pure
@@ -110,7 +168,7 @@ with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the &lt;code
 tweaked).
 I moved this blog from Wordpress to GitHub pages as I had grown irritated with
 the online-only editing experience (in particular their new &amp;lsquo;Web 2.0&amp;rsquo;
-experience).
+experience made my laptop overheat!).
 I hope that being able to edit and push from the command line will get me
 blogging more regularly.&lt;/p&gt;
 
@@ -121,14 +179,17 @@ Electronic Structure Theory books&lt;/a&gt;.&lt;/p&gt;
 Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;On Twitter I&amp;rsquo;m &lt;a href=&#34;https://twitter.com/JarvistFrost&#34;&gt;@JarvistFrost&lt;/a&gt;.
-Find my Molecular Dynamics videos on  &lt;a href=&#34;https://www.youtube.com/user/jarvist1984/&#34;&gt;YouTube&lt;/a&gt;&lt;/p&gt;
+Find my Molecular Dynamics videos on  &lt;a href=&#34;https://www.youtube.com/user/jarvist1984/&#34;&gt;YouTube&lt;/a&gt;
+I try and put my conference slides on
+&lt;a href=&#34;https://speakerdeck.com/jarvist&#34;&gt;SpeakerDeck&lt;/a&gt;, as and when I&amp;rsquo;ve had time to
+redact any unpublished experimental data of collaborators.&lt;/p&gt;
 
 &lt;p&gt;Outside academics, I have less and less time for riding bicycles, sailing,
 diving and exploratory caving.
 But the little I have written up, is accessible at
 &lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;| What Would Dirac Do [WWDD] ? |&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://people.bath.ac.uk/jmf45/wwdd.html&#34;&gt;&amp;lt;| What Would Dirac Do [WWDD] ? |&amp;gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1450,21 +1511,6 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1OhQL_P5VT_467JhfcCVCFSmryZ0UoQkm_QzGTLNb7bU/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Google Present Slides&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/filthy-dotfiles/blob/master/ssh-config&#34;&gt;https://github.com/jarvist/filthy-dotfiles/blob/master/ssh-config&lt;/a&gt; - my ssh-config, with Bath (&amp;amp; jarvist!) specific settings.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Snippet: New Julia paper from the developers</title>
-      <link>http://jarvist.github.io/post/snippet-new-julia-paper-from-the-developers/</link>
-      <pubDate>Sat, 08 Nov 2014 13:32:50 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/snippet-new-julia-paper-from-the-developers/</guid>
-      <description>&lt;p&gt;Looks to be a great reference, with plenty of code snippets getting bits of numerical methods working, finishing on the random-matrix semicircle theory, with @parallel speedup! Wish this was around when I was figuring out my little toy model&amp;hellip; &lt;a href=&#34;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&#34;&gt;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://arxiv.org/abs/1411.1607&#34;&gt;http://arxiv.org/abs/1411.1607&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;via the ever useful, if distracting, Hacker News:
-&lt;a href=&#34;https://news.ycombinator.com/item?id=8576411&#34;&gt;https://news.ycombinator.com/item?id=8576411&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

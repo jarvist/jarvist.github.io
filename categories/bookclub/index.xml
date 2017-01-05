@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bookclub on Jarvist Moore Frost: Academic blog</title>
+    <link>http://jarvist.github.io/categories/bookclub/index.xml</link>
+    <description>Recent content in Bookclub on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <atom:link href="http://jarvist.github.io/categories/bookclub/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ICL Bookclub</title>
+      <link>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
+      <pubDate>Wed, 04 Jan 2017 12:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
+      <description>&lt;p&gt;Now that the Walsh group has a critical mass at Imperial College London, I am
+planning to restart the Bookclub.&lt;/p&gt;
+
+&lt;p&gt;Keith Butler kicked these off in Bath with the guiding words of everyone&amp;rsquo;s
+favourite German pessimist, Arthur Schopenhauer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Buying books would be a good thing if one could also buy the time to read
+ them in: but as a rule the purchase of books is mistaken for the
+ appropriation of their contents.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The plan is to do some reading &amp;amp; self-directed study of a relevant book, and
+then get together at &lt;strong&gt;5PM on Thursdays&lt;/strong&gt; (in weeks when there is not an
+interesting TYC seminar) to discuss and explain things to each other.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;re going to start with the first one and a half chapters of Ziman&amp;rsquo;s
+solid-state book &amp;ldquo;Principles of the theory of solids&amp;rdquo;, ideally the second
+edition (1971).
+( There is currently 1 copy of the 2nd edition, and 3 copies of the 1st
+edition, available for loan at the Central Library, Level 4 (530.41 ZIM).)&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s Chapter 1: Periodic structures, reciprocal lattice, Bloch&amp;rsquo;s theorem,
+Brillouin zone; and Chapter 2: Lattice Waves: Lattice dynamics, lattice sums
+(Ewald), lattice specific heat and lattice spectrum (DoS). So stopping before
+the diffraction + Debye waller + phonon scattering, in the second half of the
+second chapter.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll get together to discuss this at 5PM on Thursday 12th January, &lt;strong&gt;floor two
+of the RSM (Dept Materials), Imperial College London.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Other books which we are planning to visit in the near future are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Martin&amp;rsquo;s DFT book&lt;/li&gt;
+&lt;li&gt;Krauth&amp;rsquo;s Stat. Mech. - Algo and Computation&lt;/li&gt;
+&lt;li&gt;Tinkham&amp;rsquo;s Group Theory and Quantum Mechanics&lt;/li&gt;
+&lt;li&gt;Feynman&amp;rsquo;s Statistical Mechanics&lt;/li&gt;
+&lt;li&gt;Nye&amp;rsquo;s Physical Properties of Materials by Tensors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Everybody welcome! You certainly don&amp;rsquo;t need to do DFT to be able to, or to
+benefit from, knowing the theory. (Arguably doing calculations actually gets in
+the way&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;We have a discussion channel on our &amp;ldquo;Materials Discovery Network&amp;rdquo; Slack group.
+&lt;a href=&#34;https://mdn-uk.slack.com/messages/icl-bookclub/&#34;&gt;https://mdn-uk.slack.com/messages/icl-bookclub/&lt;/a&gt;
+It&amp;rsquo;s on the &amp;lsquo;free&amp;rsquo; plan, so messages are ephemeral, but all friendly electronic structure people very welcome!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
