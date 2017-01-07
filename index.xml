@@ -6,8 +6,66 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Wed, 04 Jan 2017 12:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Jan 2017 23:29:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Publication history in LaTeX from Google Scholar</title>
+      <link>http://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</link>
+      <pubDate>Sat, 07 Jan 2017 23:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</guid>
+      <description>&lt;p&gt;Having your publication history in a LaTeX document is not the worst idea in
+the world. Updating a &lt;code&gt;.bib&lt;/code&gt; file is natural and easy when making incremental
+changes (for the next, seemingly inevitable, academic application in 6 months
+time).&lt;/p&gt;
+
+&lt;p&gt;A recommendation though&amp;mdash;don&amp;rsquo;t decide to do this two hours before a submission
+deadline!&lt;/p&gt;
+
+&lt;p&gt;1) Get the data. I only discovered this mass-export by accident.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to your &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
+Scholar&lt;/a&gt; page&lt;/li&gt;
+&lt;li&gt;click on all the publications on the first page, using the header-checkbox.&lt;/li&gt;
+&lt;li&gt;Click on Export / BibTeX&lt;/li&gt;
+&lt;li&gt;A pop-up box should ask you &amp;ldquo;Export selected articles&amp;rdquo; or &amp;ldquo;Export all my
+articles&amp;rdquo;,&lt;/li&gt;
+&lt;li&gt;You should now have well formatted  &lt;code&gt;.bib&lt;/code&gt; file with all your articles.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2) In an ideal world, you should probably be using &lt;code&gt;biblatex&lt;/code&gt; and associated
+helper program &lt;code&gt;biber&lt;/code&gt;. This allows you to specify the ordering (i.e.
+chronological).&lt;/p&gt;
+
+&lt;p&gt;See &lt;code&gt;sorting&lt;/code&gt; and &lt;code&gt;style&lt;/code&gt; options here: (&lt;a href=&#34;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&#34;&gt;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;3) However, my TeX installation was missing &lt;code&gt;biber&lt;/code&gt;. (In a sort of
+broken-package, what on earth have I done to Debian kind of way.). So using the
+more traditional &lt;code&gt;bibtex&lt;/code&gt;, you are left with using an unsorted bibliography and
+enforcing the order by hand.&lt;/p&gt;
+
+&lt;p&gt;From inspection, the Google &lt;code&gt;.bibs&lt;/code&gt; are mostly chronological (pre 2010 seemed
+less ordered, I guess recent entries have been appended as they were
+published), so it didn&amp;rsquo;t take me too long to reorder it correctly. (I needed to
+delete some spurious entries anyway.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;\subsection*{Journal articles}
+
+\nocite{*} % cite all bib items, without text
+
+\begingroup % stops printing &#39;references&#39;;
+%   http://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography
+\renewcommand{\section}[2]{}%
+
+\bibliography{PublicationsFull}{}
+\bibliographystyle{unsrt}
+
+\endgroup
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>ICL Bookclub</title>
@@ -1495,22 +1553,6 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;p&gt;&lt;a href=&#34;http://www.redblobgames.com/grids/hexagons/&#34;&gt;http://www.redblobgames.com/grids/hexagons/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;via HN discussion &lt;a href=&#34;https://news.ycombinator.com/item?id=8941588&#34;&gt;https://news.ycombinator.com/item?id=8941588&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Snippet: SSH at Bath Uni</title>
-      <link>http://jarvist.github.io/post/snippet-ssh-at-bath-uni/</link>
-      <pubDate>Fri, 09 Jan 2015 14:36:35 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/snippet-ssh-at-bath-uni/</guid>
-      <description>&lt;p&gt;I polished some slides I gave at our group meeting last summer, on using &amp;lsquo;ssh&amp;rsquo; proficiently at Bath university. I thought they may be of use to other&amp;rsquo;s, so published them online.&lt;/p&gt;
-
-&lt;p&gt;They mainly cover the setting up of a ssh-config (the examples are probably useful for most people that use HPC facilities), and tunneling via the LCPU facility (fairly Bath specific, though other academic institutes might offer a similar unix machine in a DMZ to bounce through).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1OhQL_P5VT_467JhfcCVCFSmryZ0UoQkm_QzGTLNb7bU/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Google Present Slides&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/filthy-dotfiles/blob/master/ssh-config&#34;&gt;https://github.com/jarvist/filthy-dotfiles/blob/master/ssh-config&lt;/a&gt; - my ssh-config, with Bath (&amp;amp; jarvist!) specific settings.&lt;/p&gt;
 </description>
     </item>
     
