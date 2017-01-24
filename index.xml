@@ -6,8 +6,80 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sat, 07 Jan 2017 23:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Jan 2017 09:29:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ICL Bookclub - Ziman Chapter 3</title>
+      <link>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</link>
+      <pubDate>Tue, 24 Jan 2017 09:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</guid>
+      <description>&lt;p&gt;A little update to the book club. It&amp;rsquo;s going well! We&amp;rsquo;ve decided to work our
+way through John M. Ziman&amp;rsquo;s Principles of the Theory of Solids (2nd Edition).
+I really like this text, as I find the style very agreeable. It&amp;rsquo;s very
+conversational, in it&amp;rsquo;s best bits it feels like standing at a black-board
+having something explained just to you, the reader.&lt;/p&gt;
+
+&lt;p&gt;&amp;sect; 1 introduces periodicity as the central theme of solid state physics,
+showing how the translational symmetry leads to multiply periodic functions,
+which then leads to Bloch&amp;rsquo;s theorem (that the energy eigenstates in a crystal
+can be written as a phase-factor / plane wave). It then builds the Brillouin
+zone, and introduces periodic boundary conditions.&lt;/p&gt;
+
+&lt;p&gt;&amp;sect; 2 applies this mathematical machinery to lattice vibrations (phonons).
+The construction of the dynamic matrix is described, and then a simple 1D
+diatomic chain is used to show how the bands split off &amp;amp; form an optical mode.
+The Ewald summation is introduced as needed when reversing from the enthalpy of
+formation of an ionic crystal back to the force coefficients. The van Hove
+singularities in the lattice spectrum are described, as arising from inevitable
+saddle-points in the potential energy surfaces. &amp;sect; 2.11 describes
+phonon-phonon interactions, but at a level that may be useful to get some more
+science out of calculations with phono3py and similar software, &amp;sect; 2.12
+treats imperfect lattices, and show how to embed defect-force pairs as
+a perturbation to the periodic dynamic matrix. These last two sections are
+actually really useful for work we&amp;rsquo;re doing currently.&lt;/p&gt;
+
+&lt;p&gt;&amp;sect; 3 describes electron states in the material, introducing them via nearly
+free electrons. Its really quite dense, and dives into the state of the art for
+solving the electronic structure problem in the late 60s. It&amp;rsquo;s really nice to
+see where the theory underlying most of today&amp;rsquo;s periodic electronic structure
+codes comes from, but it&amp;rsquo;s also quite heavy going! For this reason we are
+re-reading this chapter separately for this week.&lt;/p&gt;
+
+&lt;p&gt;Some other more verbose Ziman publications in this area are given below.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Dear Solid-State Book Clubbers,&lt;/p&gt;
+
+&lt;p&gt;This week we are reading (again) Chapter 3 of Ziman&amp;rsquo;s &amp;ldquo;Principles of the theory
+of solids&amp;rdquo; (2nd edition). Muffin tins, pseudo potentials, Green&amp;rsquo;s functions and
+the orthogonalised plane waves.&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash;&amp;gt; 5PM level 2 in the RSM, as usual, Thurs 26th January 2017.&lt;/p&gt;
+
+&lt;p&gt;Additional Ziman Review papers (really book chapters) that may be useful are:-&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1971 - The Calculation of Bloch Functions
+&lt;a href=&#34;https://doi.org/10.1016/S0081-1947(08)60491-9&#34;&gt;https://doi.org/10.1016/S0081-1947(08)60491-9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This goes into much more detail, and is less terse than chapter 3.
+It also has some of the most surreal (and beautiful!) diagrams I&amp;rsquo;ve seen in a
+scientific publication:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;../../images/2017-01-24-icl-bookclub-ziman-chapter-3.png&#34; alt=&#34;The calculation of Bloch Functions, muffin tins.&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1962 - Electrons in metals: A short guide to the Fermi surface
+&lt;a href=&#34;https://doi.org/10.1080/00107516208205311&#34;&gt;https://doi.org/10.1080/00107516208205311&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This older paper can also be useful; it&amp;rsquo;s sort of a condensed form of what became the book we are reading, but presents the material from a slightly different point of view.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Publication history in LaTeX from Google Scholar</title>
@@ -42,14 +114,23 @@ chronological).&lt;/p&gt;
 &lt;p&gt;See &lt;code&gt;sorting&lt;/code&gt; and &lt;code&gt;style&lt;/code&gt; options here: (&lt;a href=&#34;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&#34;&gt;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;3) However, my TeX installation was missing &lt;code&gt;biber&lt;/code&gt;. (In a sort of
-broken-package, what on earth have I done to Debian kind of way.). So using the
-more traditional &lt;code&gt;bibtex&lt;/code&gt;, you are left with using an unsorted bibliography and
-enforcing the order by hand.&lt;/p&gt;
+broken-package, what on earth have I done to Debian kind of way.)&lt;/p&gt;
 
-&lt;p&gt;From inspection, the Google &lt;code&gt;.bibs&lt;/code&gt; are mostly chronological (pre 2010 seemed
-less ordered, I guess recent entries have been appended as they were
-published), so it didn&amp;rsquo;t take me too long to reorder it correctly. (I needed to
-delete some spurious entries anyway.)&lt;/p&gt;
+&lt;p&gt;So I decided to use the more primitive &lt;code&gt;bibtex&lt;/code&gt;, with an &amp;lsquo;unsrt&amp;rsquo; (unsorted) bibliography.&lt;/p&gt;
+
+&lt;p&gt;This then just lists the items in the order they are present in the &lt;code&gt;.bib&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;My Google Scholar &lt;code&gt;.bib&lt;/code&gt; was mostly chronological (pre 2010 seemed
+less ordered, I suppose recent entries have been appended as they were
+published).&lt;/p&gt;
+
+&lt;p&gt;This meant it didn&amp;rsquo;t take too long to reorder it correctly.&lt;/p&gt;
+
+&lt;p&gt;(I also needed to delete some spurious entries.)&lt;/p&gt;
+
+&lt;p&gt;4) My LaTeX file listing the journal articles, was piece together from bits of
+tex.stackexchange, and the important bit read as follows (my bib file was
+&lt;code&gt;PublicationsFull.bib&lt;/code&gt;):&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;\subsection*{Journal articles}
 
@@ -1525,34 +1606,6 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;Music to let you concentrate &lt;a href=&#34;https://news.ycombinator.com/item?id=5872414&#34;&gt;https://news.ycombinator.com/item?id=5872414&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Headphone Commute - electronic, ambient &lt;a href=&#34;http://reviews.headphonecommute.com/&#34;&gt;http://reviews.headphonecommute.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hex Grids</title>
-      <link>http://jarvist.github.io/post/hex-grids/</link>
-      <pubDate>Sun, 25 Jan 2015 23:06:52 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/hex-grids/</guid>
-      <description>&lt;p&gt;Solid state materials pack together in a myriad of ways. The crystal structures are typically referred to with the name of the archetype compound. This ranges from fairly common English words such as &amp;lsquo;diamond&amp;rsquo; and &amp;lsquo;rock-salt&amp;rsquo; to, &amp;lsquo;zinc-blend&amp;rsquo; &amp;lsquo;wurtzite&amp;rsquo; and, of course, &amp;lsquo;perovskite&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;The atomic packing within these structures is fully described by their space-group, of which there are 230 to choose from. These space groups take the crystallographic (periodic structure) compatible point groups, and combine them with different possible lattice vectors.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://img.chem.ucl.ac.uk/sgp/large/sgp.htm&#34;&gt;http://img.chem.ucl.ac.uk/sgp/large/sgp.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some structures are fiendishly complicated, others are effectively cubic grids (perhaps with lattice vectors which are neither orthogonal nor equal in length). Even very complicated structures often have a sub lattice which packs cubically, or with hexagonal close packing.&lt;/p&gt;
-
-&lt;p&gt;One of the perhaps surprising things is that hexagonal packing and cubic packing are extremely similar to one other - in particular cubic (BCC and FCC) and hexagonal close packing both have a coordination number of 12. Each sphere (atom) has 12 nearest neighbours.&lt;/p&gt;
-
-&lt;p&gt;This is very useful, when you are building a computer model for a large structure. You can store the data about site occupancy in a simple array[][][], and calculate various necessary metrics (in particular real space distance vectors) via simple (i.e. free, in terms of computer time) arithmetic.&lt;/p&gt;
-
-&lt;p&gt;I came across an article on hexagonal grids today; much of it was startling familiar, but in that way that it was giving you a framework and lexicon for understanding for what you&amp;rsquo;d hacked together with a partial glimpse of true understanding.&lt;/p&gt;
-
-&lt;p&gt;(It&amp;rsquo;s written from the perspective of a games developer, but it&amp;rsquo;s directly applicable to scientific computation - just don&amp;rsquo;t tell the Research Councils how similar our austere science is to a game engine!)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.redblobgames.com/grids/hexagons/&#34;&gt;http://www.redblobgames.com/grids/hexagons/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;via HN discussion &lt;a href=&#34;https://news.ycombinator.com/item?id=8941588&#34;&gt;https://news.ycombinator.com/item?id=8941588&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

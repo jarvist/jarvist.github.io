@@ -2,8 +2,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Publication history in LaTeX from Google Scholar</title>
-  <meta name="description" content="Publication history in LaTeX from Google Scholar">
+  <title>ICL Bookclub - Ziman Chapter 3</title>
+  <meta name="description" content="ICL Bookclub - Ziman Chapter 3">
   <meta name="author" content="Jarvist Moore Frost">
   
   
@@ -72,77 +72,86 @@
 
             <div class="post-title">
                 <p class="footnote">
-                    <time class="">2017-01-07</time>
+                    <time class="">2017-01-24</time>
 		            
+                    
+                    |
                     
                     
 
+                    
+                    categories:<a href="http://jarvist.github.io/categories/bookclub">Bookclub</a> 
                     
 
                     
                 </p>
-                <h1>Publication history in LaTeX from Google Scholar</h1>
+                <h1>ICL Bookclub - Ziman Chapter 3</h1>
             </div>
 
             <div class="post-content">
-                <p>Having your publication history in a LaTeX document is not the worst idea in
-the world. Updating a <code>.bib</code> file is natural and easy when making incremental
-changes (for the next, seemingly inevitable, academic application in 6 months
-time).</p>
+                <p>A little update to the book club. It&rsquo;s going well! We&rsquo;ve decided to work our
+way through John M. Ziman&rsquo;s Principles of the Theory of Solids (2nd Edition).
+I really like this text, as I find the style very agreeable. It&rsquo;s very
+conversational, in it&rsquo;s best bits it feels like standing at a black-board
+having something explained just to you, the reader.</p>
 
-<p>A recommendation though&mdash;don&rsquo;t decide to do this two hours before a submission
-deadline!</p>
+<p>&sect; 1 introduces periodicity as the central theme of solid state physics,
+showing how the translational symmetry leads to multiply periodic functions,
+which then leads to Bloch&rsquo;s theorem (that the energy eigenstates in a crystal
+can be written as a phase-factor / plane wave). It then builds the Brillouin
+zone, and introduces periodic boundary conditions.</p>
 
-<p>1) Get the data. I only discovered this mass-export by accident.</p>
+<p>&sect; 2 applies this mathematical machinery to lattice vibrations (phonons).
+The construction of the dynamic matrix is described, and then a simple 1D
+diatomic chain is used to show how the bands split off &amp; form an optical mode.
+The Ewald summation is introduced as needed when reversing from the enthalpy of
+formation of an ionic crystal back to the force coefficients. The van Hove
+singularities in the lattice spectrum are described, as arising from inevitable
+saddle-points in the potential energy surfaces. &sect; 2.11 describes
+phonon-phonon interactions, but at a level that may be useful to get some more
+science out of calculations with phono3py and similar software, &sect; 2.12
+treats imperfect lattices, and show how to embed defect-force pairs as
+a perturbation to the periodic dynamic matrix. These last two sections are
+actually really useful for work we&rsquo;re doing currently.</p>
+
+<p>&sect; 3 describes electron states in the material, introducing them via nearly
+free electrons. Its really quite dense, and dives into the state of the art for
+solving the electronic structure problem in the late 60s. It&rsquo;s really nice to
+see where the theory underlying most of today&rsquo;s periodic electronic structure
+codes comes from, but it&rsquo;s also quite heavy going! For this reason we are
+re-reading this chapter separately for this week.</p>
+
+<p>Some other more verbose Ziman publications in this area are given below.</p>
+
+<hr />
+
+<p>Dear Solid-State Book Clubbers,</p>
+
+<p>This week we are reading (again) Chapter 3 of Ziman&rsquo;s &ldquo;Principles of the theory
+of solids&rdquo; (2nd edition). Muffin tins, pseudo potentials, Green&rsquo;s functions and
+the orthogonalised plane waves.</p>
+
+<p>&ndash;&gt; 5PM level 2 in the RSM, as usual, Thurs 26th January 2017.</p>
+
+<p>Additional Ziman Review papers (really book chapters) that may be useful are:-</p>
 
 <ul>
-<li>Go to your <a href="https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;hl=en">Google
-Scholar</a> page</li>
-<li>click on all the publications on the first page, using the header-checkbox.</li>
-<li>Click on Export / BibTeX</li>
-<li>A pop-up box should ask you &ldquo;Export selected articles&rdquo; or &ldquo;Export all my
-articles&rdquo;,</li>
-<li>You should now have well formatted  <code>.bib</code> file with all your articles.</li>
+<li>1971 - The Calculation of Bloch Functions
+<a href="https://doi.org/10.1016/S0081-1947(08)60491-9">https://doi.org/10.1016/S0081-1947(08)60491-9</a></li>
 </ul>
 
-<p>2) In an ideal world, you should probably be using <code>biblatex</code> and associated
-helper program <code>biber</code>. This allows you to specify the ordering (i.e.
-chronological).</p>
+<p>This goes into much more detail, and is less terse than chapter 3.
+It also has some of the most surreal (and beautiful!) diagrams I&rsquo;ve seen in a
+scientific publication:</p>
 
-<p>See <code>sorting</code> and <code>style</code> options here: (<a href="https://www.sharelatex.com/learn/Bibliography_management_with_biblatex">https://www.sharelatex.com/learn/Bibliography_management_with_biblatex</a>)</p>
+<p><img src="../../images/2017-01-24-icl-bookclub-ziman-chapter-3.png" alt="The calculation of Bloch Functions, muffin tins." /></p>
 
-<p>3) However, my TeX installation was missing <code>biber</code>. (In a sort of
-broken-package, what on earth have I done to Debian kind of way.)</p>
+<ul>
+<li>1962 - Electrons in metals: A short guide to the Fermi surface
+<a href="https://doi.org/10.1080/00107516208205311">https://doi.org/10.1080/00107516208205311</a></li>
+</ul>
 
-<p>So I decided to use the more primitive <code>bibtex</code>, with an &lsquo;unsrt&rsquo; (unsorted) bibliography.</p>
-
-<p>This then just lists the items in the order they are present in the <code>.bib</code> file.</p>
-
-<p>My Google Scholar <code>.bib</code> was mostly chronological (pre 2010 seemed
-less ordered, I suppose recent entries have been appended as they were
-published).</p>
-
-<p>This meant it didn&rsquo;t take too long to reorder it correctly.</p>
-
-<p>(I also needed to delete some spurious entries.)</p>
-
-<p>4) My LaTeX file listing the journal articles, was piece together from bits of
-tex.stackexchange, and the important bit read as follows (my bib file was
-<code>PublicationsFull.bib</code>):</p>
-
-<pre><code>\subsection*{Journal articles}
-
-\nocite{*} % cite all bib items, without text
-
-\begingroup % stops printing 'references';
-%   http://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography
-\renewcommand{\section}[2]{}%
-
-\bibliography{PublicationsFull}{}
-\bibliographystyle{unsrt}
-
-\endgroup
-</code></pre>
+<p>This older paper can also be useful; it&rsquo;s sort of a condensed form of what became the book we are reading, but presents the material from a slightly different point of view.</p>
 
             </div>
         </div>
