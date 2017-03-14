@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>Experimental measures of photovoltaic materials</title>
+  <meta name="description" content="Experimental measures of photovoltaic materials">
+  <meta name="author" content="Jarvist Moore Frost">
+    
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://jarvist.github.io/css/fonts.css">
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css" integrity="sha384-CCTZv2q9I9m3UOxRLaJneXrrqKwUNOzZ6NGEUMwHtShDJ+nCoiXJCAgi05KfkLGY" crossorigin="anonymous">
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/grids-responsive-min.css">
+  
+  <link rel="stylesheet" href="http://jarvist.github.io/css/custom.css">
+
+  
+  
+  <link rel="stylesheet" href="http://jarvist.github.io/highlight/styles/default.css">
+  
+  <script src="http://jarvist.github.io/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <meta name="generator" content="Hugo 0.18.1" />
+  
+</head>
+<body>
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://jarvist.github.io/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+				
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://jarvist.github.io/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+				
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2017-02-20</time>
+		            
+                    
+                    
+
+                    
+
+                    
+                </p>
+                <h1>Experimental measures of photovoltaic materials</h1>
+            </div>
+
+            <div class="post-content">
+                
+
+<p>Starting my PhD in 2007, I spent many many years in seminar and conference
+talks on Photovoltaics being confused by the enormous array of experimental
+probes for photovoltaic materials.
+This is an attempt, stimulated (as always!) by questions from a student, to put
+down a list of standard experimental photovoltaic (or other optoelectronic)
+device characterisations.</p>
+
+<p>High energy theorists often ape Gell-Mann in describing solid-state physics as
+the &lsquo;squalid-state&rsquo;. Certainly there is an awful lot going on at once.
+This is reflected in the experimental probes, which are similarly diverse, and
+though they are often supposedly measuring the same observable in the same
+material, come to contradictory conclusions.</p>
+
+<p>In terms of device physics, almost all measures are optical,
+electrical or optical-electrical.
+This forms a rough hierachy of techniques which are applied sequentially to
+a new material, as the purely optical probes can be done with &lsquo;a flect of
+dust&rsquo;, whereas contacts requires another level of complexity.</p>
+
+<p>It only makes sense to start doing this on
+relatively pure samples (i.e. whereas structural characterisation by X-Ray
+Diffraction [XRD] just needs <em>some</em>  crystalline material).
+Similarly short-time (picosecond) optical measures may need 99.99% materials,
+whereas electrical measures (where the charges have to live for micro or
+miliseconds) needs 99.999%+ pure materials.</p>
+
+<h2 id="1-pure-optical-non-contacted">1 - pure optical / non contacted)</h2>
+
+<p><strong>The key thing</strong> to remember with optical characterisation is that even
+a standard bench-top solid-state laser is <em>INCREDIBLY</em> bright. It&rsquo;s very easy
+to do a measure at the equivalent of a million or a billion Sun equivalents.
+This is well outside the regime where any solar cell (even under a lens / light
+concentrator) will be operating, and this can massively change the photophysics
+in operation. If the authors do not tell you what equivalent number of suns
+they are at, try and calculate it yourself from the laser spot size, absorption
+coefficient, laser intensity etc. Experimentalists don&rsquo;t do this out of spite
+or foolishness, but because they need to have sufficient signal-to-noise ratio
+to measure a signal.</p>
+
+<ul>
+<li>&lsquo;UV/Vis&rsquo; (where does the material absorb?); better measures are with an integrating
+sphere / total scattering, use of a scattering medium to get the SNR to find
+the Bg;</li>
+<li>Photoluminescence (PL) (once it absorbs, where does it emit?);</li>
+<li>Time-resolved PhotoLuminescence (TRPL) (what are the dynamics of this
+emission? &mdash; note this often means sacrificing ability to resolve by energy of emission);</li>
+<li>&lsquo;quench-studies&rsquo; (where you kill the light emission by adding an electron donor
+/ acceptor to probe how long lived / mobile the excitons / generated charges
+are);</li>
+<li>Time-resolved Microwave Conductivity (TRMC) / time-resolved teraherz
+spectroscopy - see changes in conductivity as a function of time, infer
+mobility from estimating number of free charges;</li>
+<li>Hall-effect measurement
+(identify whether material is n or p type, and approximate doping);</li>
+<li>work-functions via Cyclic voltammetry (in electrolyte, easy experiment) or
+UPS/XPS + Band gap</li>
+</ul>
+
+<h2 id="2-pure-electrical-needs-contacts-usually-capable-of-injecting-charges">2 - pure electrical - needs contacts, usually capable of injecting charges:</h2>
+
+<ul>
+<li>Mobility measures via:
+
+<ul>
+<li>Field-Effect-Transistor (a semiconductor deposited on a patterned substrate), tends to overestimate mobility and only probe first few nm of material;</li>
+<li>Space Charge Limited Current (form a diode out of the device + push charge through it);</li>
+</ul></li>
+<li>Kelvin Probe / Four-point probe (measures something ~akin~  to workfunction; and conductivity);</li>
+<li>Shubnikov–de Haas (similar but different to Hall, less common)</li>
+</ul>
+
+<h2 id="3-optoelectrical-measurements-essential-needs-a-device-contacted-top-and-bottom">3 - optoelectrical measurements - essential needs a device, contacted top and bottom:</h2>
+
+<ul>
+<li>Time of Flight (directly probes the bulk mobility, requires non-injecting contacts, the higher the mobility the larger the thickness of sample required - so it&rsquo;s mainly good for low mobility materials);</li>
+<li>Transient-photo-voltage, Transient-photo-current (as a solar cell, what happens when you abruptly turn the light off);</li>
+<li>Electro-luminescence (inject charges, look at frequency of light emitted. SNR is ~10^6 higher than PL, so you can look at emission from defect states / deep within gap);</li>
+</ul>
+
+<h2 id="from-the-point-of-view-of-a-new-pv-material-the-ordered-set-of-questions-to-answer-are">From the point of view of a new PV material, the ordered set of questions to answer are:</h2>
+
+<ul>
+<li>Does it absorb? (Is it black? Where is the Bandgap?) &ndash;&gt; UV/Vis, optical measures</li>
+<li>Once it absorbs, does it generate charges?  &ndash;&gt; TRPL (emission beyond a ps indicates seperated charges then finding each other)</li>
+<li>These charges, can they get to the contacts? &ndash;&gt; mobility measure; defect recombination rates</li>
+<li>Can we get charges in and out of the device? &ndash;&gt; Workfunction measure</li>
+<li>Can we build a device architecture (injecting contacts, control of doping) &ndash;&gt; Efficiency, and then all the actual device physics</li>
+</ul>
+
+<p>A common and very unfortunate (for the science) situation is that editors and
+reviewers obsess over the final bottom line of &lsquo;power conversion efficiency&rsquo;,
+not wanting to publish even very good science if the particular devices used are not
+world leading. Though arguably you do want a similar order of magnitude
+efficiency, so that you know the same physics is present, this leads to the
+perverse incentive of scientists being motivated to burn effort and time on
+incremental improvements, and to neglect deep study of the underlying processes
+and device physics from which true breakthroughs come.</p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="footer-content">
+		  <div class="pure-menu pure-menu-horizontal">
+              <ul>
+			      
+                  <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+                  
+				  
+                  
+          
+                  
+                  <li class="pure-menu-item">
+                      <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                  </li>
+                  
+          
+                  
+          
+                  
+          
+                  
+                  <li class="pure-menu-item">
+                      <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                  </li>
+                  
+          
+              </ul>
+              <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+          </div>
+		  
+		</div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://jarvist.github.io/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://jarvist.github.io/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+</body>
+</html>
+

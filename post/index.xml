@@ -6,8 +6,116 @@
     <description>Recent content in Posts on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Tue, 24 Jan 2017 09:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Feb 2017 12:29:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Experimental measures of photovoltaic materials</title>
+      <link>http://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</link>
+      <pubDate>Mon, 20 Feb 2017 12:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</guid>
+      <description>
+
+&lt;p&gt;Starting my PhD in 2007, I spent many many years in seminar and conference
+talks on Photovoltaics being confused by the enormous array of experimental
+probes for photovoltaic materials.
+This is an attempt, stimulated (as always!) by questions from a student, to put
+down a list of standard experimental photovoltaic (or other optoelectronic)
+device characterisations.&lt;/p&gt;
+
+&lt;p&gt;High energy theorists often ape Gell-Mann in describing solid-state physics as
+the &amp;lsquo;squalid-state&amp;rsquo;. Certainly there is an awful lot going on at once.
+This is reflected in the experimental probes, which are similarly diverse, and
+though they are often supposedly measuring the same observable in the same
+material, come to contradictory conclusions.&lt;/p&gt;
+
+&lt;p&gt;In terms of device physics, almost all measures are optical,
+electrical or optical-electrical.
+This forms a rough hierachy of techniques which are applied sequentially to
+a new material, as the purely optical probes can be done with &amp;lsquo;a flect of
+dust&amp;rsquo;, whereas contacts requires another level of complexity.&lt;/p&gt;
+
+&lt;p&gt;It only makes sense to start doing this on
+relatively pure samples (i.e. whereas structural characterisation by X-Ray
+Diffraction [XRD] just needs &lt;em&gt;some&lt;/em&gt;  crystalline material).
+Similarly short-time (picosecond) optical measures may need 99.99% materials,
+whereas electrical measures (where the charges have to live for micro or
+miliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-pure-optical-non-contacted&#34;&gt;1 - pure optical / non contacted)&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;The key thing&lt;/strong&gt; to remember with optical characterisation is that even
+a standard bench-top solid-state laser is &lt;em&gt;INCREDIBLY&lt;/em&gt; bright. It&amp;rsquo;s very easy
+to do a measure at the equivalent of a million or a billion Sun equivalents.
+This is well outside the regime where any solar cell (even under a lens / light
+concentrator) will be operating, and this can massively change the photophysics
+in operation. If the authors do not tell you what equivalent number of suns
+they are at, try and calculate it yourself from the laser spot size, absorption
+coefficient, laser intensity etc. Experimentalists don&amp;rsquo;t do this out of spite
+or foolishness, but because they need to have sufficient signal-to-noise ratio
+to measure a signal.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;UV/Vis&amp;rsquo; (where does the material absorb?); better measures are with an integrating
+sphere / total scattering, use of a scattering medium to get the SNR to find
+the Bg;&lt;/li&gt;
+&lt;li&gt;Photoluminescence (PL) (once it absorbs, where does it emit?);&lt;/li&gt;
+&lt;li&gt;Time-resolved PhotoLuminescence (TRPL) (what are the dynamics of this
+emission? &amp;mdash; note this often means sacrificing ability to resolve by energy of emission);&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;quench-studies&amp;rsquo; (where you kill the light emission by adding an electron donor
+/ acceptor to probe how long lived / mobile the excitons / generated charges
+are);&lt;/li&gt;
+&lt;li&gt;Time-resolved Microwave Conductivity (TRMC) / time-resolved teraherz
+spectroscopy - see changes in conductivity as a function of time, infer
+mobility from estimating number of free charges;&lt;/li&gt;
+&lt;li&gt;Hall-effect measurement
+(identify whether material is n or p type, and approximate doping);&lt;/li&gt;
+&lt;li&gt;work-functions via Cyclic voltammetry (in electrolyte, easy experiment) or
+UPS/XPS + Band gap&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-pure-electrical-needs-contacts-usually-capable-of-injecting-charges&#34;&gt;2 - pure electrical - needs contacts, usually capable of injecting charges:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mobility measures via:
+
+&lt;ul&gt;
+&lt;li&gt;Field-Effect-Transistor (a semiconductor deposited on a patterned substrate), tends to overestimate mobility and only probe first few nm of material;&lt;/li&gt;
+&lt;li&gt;Space Charge Limited Current (form a diode out of the device + push charge through it);&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Kelvin Probe / Four-point probe (measures something ~akin~  to workfunction; and conductivity);&lt;/li&gt;
+&lt;li&gt;Shubnikov–de Haas (similar but different to Hall, less common)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;3-optoelectrical-measurements-essential-needs-a-device-contacted-top-and-bottom&#34;&gt;3 - optoelectrical measurements - essential needs a device, contacted top and bottom:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Time of Flight (directly probes the bulk mobility, requires non-injecting contacts, the higher the mobility the larger the thickness of sample required - so it&amp;rsquo;s mainly good for low mobility materials);&lt;/li&gt;
+&lt;li&gt;Transient-photo-voltage, Transient-photo-current (as a solar cell, what happens when you abruptly turn the light off);&lt;/li&gt;
+&lt;li&gt;Electro-luminescence (inject charges, look at frequency of light emitted. SNR is ~10^6 higher than PL, so you can look at emission from defect states / deep within gap);&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;from-the-point-of-view-of-a-new-pv-material-the-ordered-set-of-questions-to-answer-are&#34;&gt;From the point of view of a new PV material, the ordered set of questions to answer are:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Does it absorb? (Is it black? Where is the Bandgap?) &amp;ndash;&amp;gt; UV/Vis, optical measures&lt;/li&gt;
+&lt;li&gt;Once it absorbs, does it generate charges?  &amp;ndash;&amp;gt; TRPL (emission beyond a ps indicates seperated charges then finding each other)&lt;/li&gt;
+&lt;li&gt;These charges, can they get to the contacts? &amp;ndash;&amp;gt; mobility measure; defect recombination rates&lt;/li&gt;
+&lt;li&gt;Can we get charges in and out of the device? &amp;ndash;&amp;gt; Workfunction measure&lt;/li&gt;
+&lt;li&gt;Can we build a device architecture (injecting contacts, control of doping) &amp;ndash;&amp;gt; Efficiency, and then all the actual device physics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A common and very unfortunate (for the science) situation is that editors and
+reviewers obsess over the final bottom line of &amp;lsquo;power conversion efficiency&amp;rsquo;,
+not wanting to publish even very good science if the particular devices used are not
+world leading. Though arguably you do want a similar order of magnitude
+efficiency, so that you know the same physics is present, this leads to the
+perverse incentive of scientists being motivated to burn effort and time on
+incremental improvements, and to neglect deep study of the underlying processes
+and device physics from which true breakthroughs come.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ICL Bookclub - Ziman Chapter 3</title>
@@ -1479,34 +1587,6 @@ for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt
 &lt;li&gt;Music to let you concentrate &lt;a href=&#34;https://news.ycombinator.com/item?id=5872414&#34;&gt;https://news.ycombinator.com/item?id=5872414&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Headphone Commute - electronic, ambient &lt;a href=&#34;http://reviews.headphonecommute.com/&#34;&gt;http://reviews.headphonecommute.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hex Grids</title>
-      <link>http://jarvist.github.io/post/hex-grids/</link>
-      <pubDate>Sun, 25 Jan 2015 23:06:52 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/hex-grids/</guid>
-      <description>&lt;p&gt;Solid state materials pack together in a myriad of ways. The crystal structures are typically referred to with the name of the archetype compound. This ranges from fairly common English words such as &amp;lsquo;diamond&amp;rsquo; and &amp;lsquo;rock-salt&amp;rsquo; to, &amp;lsquo;zinc-blend&amp;rsquo; &amp;lsquo;wurtzite&amp;rsquo; and, of course, &amp;lsquo;perovskite&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;The atomic packing within these structures is fully described by their space-group, of which there are 230 to choose from. These space groups take the crystallographic (periodic structure) compatible point groups, and combine them with different possible lattice vectors.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://img.chem.ucl.ac.uk/sgp/large/sgp.htm&#34;&gt;http://img.chem.ucl.ac.uk/sgp/large/sgp.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some structures are fiendishly complicated, others are effectively cubic grids (perhaps with lattice vectors which are neither orthogonal nor equal in length). Even very complicated structures often have a sub lattice which packs cubically, or with hexagonal close packing.&lt;/p&gt;
-
-&lt;p&gt;One of the perhaps surprising things is that hexagonal packing and cubic packing are extremely similar to one other - in particular cubic (BCC and FCC) and hexagonal close packing both have a coordination number of 12. Each sphere (atom) has 12 nearest neighbours.&lt;/p&gt;
-
-&lt;p&gt;This is very useful, when you are building a computer model for a large structure. You can store the data about site occupancy in a simple array[][][], and calculate various necessary metrics (in particular real space distance vectors) via simple (i.e. free, in terms of computer time) arithmetic.&lt;/p&gt;
-
-&lt;p&gt;I came across an article on hexagonal grids today; much of it was startling familiar, but in that way that it was giving you a framework and lexicon for understanding for what you&amp;rsquo;d hacked together with a partial glimpse of true understanding.&lt;/p&gt;
-
-&lt;p&gt;(It&amp;rsquo;s written from the perspective of a games developer, but it&amp;rsquo;s directly applicable to scientific computation - just don&amp;rsquo;t tell the Research Councils how similar our austere science is to a game engine!)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.redblobgames.com/grids/hexagons/&#34;&gt;http://www.redblobgames.com/grids/hexagons/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;via HN discussion &lt;a href=&#34;https://news.ycombinator.com/item?id=8941588&#34;&gt;https://news.ycombinator.com/item?id=8941588&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
