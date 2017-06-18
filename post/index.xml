@@ -6,8 +6,55 @@
     <description>Recent content in Posts on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Mon, 20 Feb 2017 12:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jun 2017 10:59:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Carbon cost of High Performance Computing</title>
+      <link>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</link>
+      <pubDate>Sun, 18 Jun 2017 10:59:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
+      <description>&lt;p&gt;ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&amp;rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used for accounting.&lt;/p&gt;
+
+&lt;p&gt;So that&amp;rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.&lt;/p&gt;
+
+&lt;p&gt;The UK electricity grid carbon intensity is roughly 400 g / kwhr averaged over the year. So that&amp;rsquo;s 280 kg / MAU of calculation.&lt;/p&gt;
+
+&lt;p&gt;A relatively small research project doing hybrid calculations can easily consume 10s of MAU!&lt;/p&gt;
+
+&lt;p&gt;By comparison, an economy return flight from London to Boston (for Fall MRS) is 0.8 tons of CO2[2].&lt;/p&gt;
+
+&lt;p&gt;So flying London to Boston and back for Fall MRS, adds as much carbon to the atmosphere as 3 MAU of calculations on Archer.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, if you were to have a 24-node server continuously running calculations, this adds to roughly 8.6 (kAU) * 365 = 3.1 MAU for the whole year.&lt;/p&gt;
+
+&lt;p&gt;So my take home message was to be less concerned about the travel to
+conferences to present my science, and more careful with spending HPC time
+wisely!&lt;/p&gt;
+
+&lt;p&gt;[1] &lt;a href=&#34;http://www.archer.ac.uk/about-archer/hardware/&#34;&gt;http://www.archer.ac.uk/about-archer/hardware/&lt;/a&gt;
+[2] &lt;a href=&#34;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&#34;&gt;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MIT Licensing</title>
+      <link>http://jarvist.github.io/post/2017-06-18-mit-licensing/</link>
+      <pubDate>Sun, 18 Jun 2017 10:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-06-18-mit-licensing/</guid>
+      <description>&lt;p&gt;Open-source software licenses are intensely boring things to read about. The choice available makes it very easy to default to not organising a license. Particularly when you are a serial procrastinator like me!&lt;/p&gt;
+
+&lt;p&gt;However I would love for others to use my codes. It&amp;rsquo;s why I wrote them. So I sat down for a concerted half hour reading. My personal bias having benefited so much from GNU software would be for the GPL. But as the codes I write are relatively simple, they are likely to be incorporated into other larger packages, rather than be forked and developed as is. The MIT license therefore seems to provide a minimal-touch mechanism, and guarantees that all important (for an academic) aspect of attribution.&lt;/p&gt;
+
+&lt;p&gt;This is GPL compatible, which I hadn&amp;rsquo;t really thought about as being a necessity. So in the future, if I ever build something complete enough that I would worry about a commercial entity forking it &amp;amp; producing a closed-source derivative work, I could license that under the GPL yet pull in all of my prior work.&lt;/p&gt;
+
+&lt;p&gt;Here was the most succinct article on this issue I found:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&#34;&gt;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Experimental measures of photovoltaic materials</title>
@@ -47,14 +94,15 @@ miliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The key thing&lt;/strong&gt; to remember with optical characterisation is that even
 a standard bench-top solid-state laser is &lt;em&gt;INCREDIBLY&lt;/em&gt; bright. It&amp;rsquo;s very easy
-to do a measure at the equivalent of a million or a billion Sun equivalents.
-This is well outside the regime where any solar cell (even under a lens / light
+to do a measure at the equivalent of a million or a billion Suns.
+This is well outside the regime where any solar cell (even under light
 concentrator) will be operating, and this can massively change the photophysics
 in operation. If the authors do not tell you what equivalent number of suns
 they are at, try and calculate it yourself from the laser spot size, absorption
-coefficient, laser intensity etc. Experimentalists don&amp;rsquo;t do this out of spite
-or foolishness, but because they need to have sufficient signal-to-noise ratio
-to measure a signal.&lt;/p&gt;
+coefficient, laser intensity / pulse energy, etc.
+Experimentalists don&amp;rsquo;t measure at such crazy intensities out of spite or
+foolishness, but because they need to have sufficient signal-to-noise ratio
+to measure a signal, i.e. the volume is turned right up to be able to hear it.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&amp;lsquo;UV/Vis&amp;rsquo; (where does the material absorb?); better measures are with an integrating
@@ -66,11 +114,12 @@ emission? &amp;mdash; note this often means sacrificing ability to resolve by en
 &lt;li&gt;&amp;lsquo;quench-studies&amp;rsquo; (where you kill the light emission by adding an electron donor
 / acceptor to probe how long lived / mobile the excitons / generated charges
 are);&lt;/li&gt;
-&lt;li&gt;Time-resolved Microwave Conductivity (TRMC) / time-resolved teraherz
+&lt;li&gt;Time-resolved Microwave Conductivity (TRMC) / time-resolved terahertz
 spectroscopy - see changes in conductivity as a function of time, infer
 mobility from estimating number of free charges;&lt;/li&gt;
 &lt;li&gt;Hall-effect measurement
-(identify whether material is n or p type, and approximate doping);&lt;/li&gt;
+(identify whether material is n or p type, and approximate doping), infer
+mobility;&lt;/li&gt;
 &lt;li&gt;work-functions via Cyclic voltammetry (in electrolyte, easy experiment) or
 UPS/XPS + Band gap&lt;/li&gt;
 &lt;/ul&gt;
@@ -1381,212 +1430,6 @@ The change in energy variable &amp;lsquo;dE&amp;rsquo; is a natural reduction ve
 &lt;p&gt;Scaling will be more limited on bigger machines, and increase in speed will only be seen where this energy summation, rather than the single-core modifications to the simulation volume and random number generator, dominate the CPU required.&lt;/p&gt;
 
 &lt;p&gt;But still. Embarrassing embarrassingly parallel, because I could have and should have seen this a year ago!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Organising computational job workflow, as you go: freck</title>
-      <link>http://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</link>
-      <pubDate>Sun, 26 Apr 2015 16:15:52 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</guid>
-      <description>&lt;p&gt;The workflow in computational materials modelling is often highly complex, and bespoke to the particular calculations you are doing. The flow is highly derivative (results of later jobs depend on work on prior jobs), but can also be quite chaotic and multiply branching. Unsurprisingly, your files easily end up very messy, with significant confusion about what steps were required to get to the present working setup.&lt;/p&gt;
-
-&lt;p&gt;Version control is an absolute godsend, being able to flow down the list settings changes is extremely useful, and then being able to simply open the Git archive on GitHub as a way of archiving your research data is fantastic. However, this still leaves problems to be solved - the main one is actually constructing the folder structure sensibly. (A lesser issue is that intermediate and binary files in electronic structure calculations can be enormous (&amp;gt;multi gigabyte) and so far too large for git.)&lt;/p&gt;
-
-&lt;p&gt;To aid this I&amp;rsquo;ve written a very lightweight shell script called &amp;lsquo;freck&amp;rsquo; (to move swiftly or nimbly, an obsolete English word). Each time this is run in a working directory, it generates a folder named 0001-, 0002- etc. with a user-requested file name, and then moves all the present working files into that directory. It also saves a &amp;lsquo;breadcrumb&amp;rsquo; file with information about when and where you are writing this. I would like it to also add information extracted from your present history (i.e. all the commands you have used to work on the data), but the problem is that the shell script runs within its own shell, and it&amp;rsquo;s not obvious how to easily or portably access this.
-(history &amp;gt; history.log ; is very quick to run though)&lt;/p&gt;
-
-&lt;p&gt;The suggestion would be that you then typically run a &amp;lsquo;git add&amp;rsquo; on the small input / output files, and commit these to a repository with a sensible commit history.
-Then copy the necessary files to continue your job into the PWD, and continue work.
-But it&amp;rsquo;s flexible enough that you can also just use this to separate your work when running on a cluster.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;m not the only one who&amp;rsquo;s ended up with a folder structure that ends up looking hellishly like this:-
-~/PROJECT_FOO/geom_opt/geom_opt_restart/geom_opt_restart_higher_convergence/moar_kpoints/cation_geom/cation_geom_restart/frequency_calc/ etc.&lt;/p&gt;
-
-&lt;p&gt;Instead you end up with something much more sensible, time ordered and single-depthh: &lt;a href=&#34;https://github.com/jarvist/CDFT-C2H4&#34;&gt;https://github.com/jarvist/CDFT-C2H4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyhow, check it out here + I&amp;rsquo;m always interested in all + any feedback!
-&lt;a href=&#34;https://github.com/jarvist/freck&#34;&gt;https://github.com/jarvist/freck&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Writing scientific papers</title>
-      <link>http://jarvist.github.io/post/writing-scientific-papers/</link>
-      <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/writing-scientific-papers/</guid>
-      <description>
-
-&lt;p&gt;(Updated 2016-03-12 to re-add the links)&lt;/p&gt;
-
-&lt;p&gt;I am probably the last person you would want to consult on tips to write
-a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the
-best, much work lies on the cutting room floor - skeletons of half assembled
-papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m
-very interested in improving, and certainly enjoy reading a well written paper.&lt;/p&gt;
-
-&lt;p&gt;It is an unfortunate fact that the quality of scientific writing is
-decreasing as a function of time.
-Some of this can be explained by the laudable continuing expansion of
-scienitific research across the world resulting in a greater number of authors
-writing English as an additional language.
-I believe the major reason stems from the unrelenting pressure to publish.
-Many more papers are written, yet there are still only the same number of days
-in the year.
-With these publication metrics deciding so much of our future careers (and thus
-lives), there is also enormous pressure to &amp;lsquo;glam up&amp;rsquo; work and oversell, as well
-as to &amp;lsquo;salami slice&amp;rsquo; and represent work that belongs together in one
-paper in many.&lt;/p&gt;
-
-&lt;p&gt;It used to be that scientists would work continuously on a problem, and then
-publish when a &amp;lsquo;breakthrough&amp;rsquo; had been made.
-To be honest I think we would have a better scientific corpus if this was still
-the case - careful work on a hard problem for a few years until we gain some
-traction, then write it up for the benefit of anyone who could take it
-elsewhere.&lt;/p&gt;
-
-&lt;p&gt;(Along these lines, Ross McKenzie has a recent blog post &amp;lsquo;&lt;a href=&#34;http://condensedconcepts.blogspot.co.uk/2015/02/in-praise-of-modest-goals.html&#34;&gt;In praise of modest
-goals&lt;/a&gt;&amp;rsquo;.)&lt;/p&gt;
-
-&lt;p&gt;So the first thing to do when writing is to overcome the cynicism!
-When I get particular disaffected I return to Simon Peyton Jones&amp;rsquo; talk on &lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;how
-to write a great research paper&lt;/a&gt;
-. His enthusiasm and motivation is infectious. I am a worm. A worm with
-a infectious mind virus, and that is good.&lt;/p&gt;
-
-&lt;p&gt;Sabine Hossenfelder wrote a useful blog post on &lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;How to write your first
-scientific
-paper&lt;/a&gt;,
-this covers the construction and sectioning of a physics paper.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve personally found the Penguin Writer&amp;rsquo;s Manual very useful for the nitty
-gritty of &amp;lsquo;that&amp;rsquo; vs &amp;lsquo;which&amp;rsquo;. I&amp;rsquo;ve also read Strunk and White (The elements of
-style), though I&amp;rsquo;m not sure how much I took from it. The &lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;economist style
-guide&lt;/a&gt;
-(available online) is also very useful as a reference.
-(2016 update: Steven Pinker&amp;rsquo;s &amp;lsquo;The Sense of Style&amp;rsquo; is fantastic. Dispels a lot
-of prescriptive myths, but also teaches how to analyse your sentences and
-identify clumsy phrases.)&lt;/p&gt;
-
-&lt;p&gt;I much prefer to write with Latex. Sometimes I first go via Markdown (a
-lightweight markup language that looks a lot like how you would naturally
-format a text email), so I don&amp;rsquo;t need to bother with thinking about the Latex
-commands when forming a text, and then convert to Latex (with pandoc) for
-inclusions of figures &amp;amp; all the revisions that incur thereafter. The whole
-project I put within a &amp;lsquo;git&amp;rsquo; repository and so have version control,
-effectively offsite backup (to Github / Bitbucket). To get the diffs to work
-well with the files, it&amp;rsquo;s easiest to add a newline after the end of every
-sentence (I usually hard-break my lines at 80 chars as I write in Vim).&lt;/p&gt;
-
-&lt;p&gt;I have contributed to papers in Microsoft Word (usually originating with
-collaborators). It works OK, and the track changes / comment tool can be really
-useful, though a distressing number of collaborators seem to send you back
-a &amp;lsquo;clean&amp;rsquo; document with the tracking dropped. Whether that&amp;rsquo;s due to ignorance
-of the tools, compatibility with different versions of Word, or an attempt to
-bury any information about which of your changes they reverted, I do not know.
-Certainly it makes me respect them less both academically and professionally.
-It is most incredibly frustrating to be editing a sentence, not sure
-whether you&amp;rsquo;re applying the same change again, undoing an important correction
-or what.&lt;/p&gt;
-
-&lt;p&gt;I typically plot data in GNUPLOT or XMGRACE, sometimes also in Python&amp;rsquo;s
-Matplotlib (though this is much less deterministic - the output depends on the
-specific version you have installed, and it can be extremely frustrating to
-reproduce a tweaked diagram). I&amp;rsquo;ve found some useful websites on tips + tricks
-for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt;
-
-&lt;h3 id=&#34;useful-general-resources&#34;&gt;Useful general resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Simon Peyton Jones talk &lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;https://www.youtube.com/watch?v=g3dkRsTqdDA&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hacker News discussion &lt;a href=&#34;https://news.ycombinator.com/item?id=6989806&#34;&gt;https://news.ycombinator.com/item?id=6989806&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Sabine Hossenfelder blogpost
-&lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The Researcher&amp;rsquo;s Bible
-&lt;a href=&#34;http://homepages.inf.ed.ac.uk/bundy/how-tos/resbible.html&#34;&gt;http://homepages.inf.ed.ac.uk/bundy/how-tos/resbible.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Economist - Style Guide &lt;a href=&#34;http://www.economist.com/styleguide/introduction&#34;&gt;http://www.economist.com/styleguide/introduction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;colour&#34;&gt;Colour&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;IBM paper &amp;ldquo;Why should engineers and scientists be worried about color?&amp;rdquo;
-&lt;a href=&#34;http://www.research.ibm.com/people/l/lloydt/color/color.HTM&#34;&gt;http://www.research.ibm.com/people/l/lloydt/color/color.HTM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Adobe&amp;rsquo;s Color CC &lt;a href=&#34;https://color.adobe.com/explore/most-popular/?time=all&#34;&gt;https://color.adobe.com/explore/most-popular/?time=all&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TIGERcolor, Introduction to color theory
-&lt;a href=&#34;http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm&#34;&gt;http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Smashing Magazine, Color theory for designers
-&lt;a href=&#34;https://www.smashingmagazine.com/2010/02/color-theory-for-designer-part-3-creating-your-own-color-palettes/&#34;&gt;https://www.smashingmagazine.com/2010/02/color-theory-for-designer-part-3-creating-your-own-color-palettes/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Colorbrewer &lt;a href=&#34;http://colorbrewer2.org/&#34;&gt;http://colorbrewer2.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;writing&#34;&gt;Writing&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;20 Obsolete English Words
-&lt;a href=&#34;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&#34;&gt;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;University of Manchester academic phrasebank &lt;a href=&#34;http://www.phrasebank.manchester.ac.uk/&#34;&gt;http://www.phrasebank.manchester.ac.uk/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Uni of Illinois, Captilisation and dashes in Physics (PDF)
-&lt;a href=&#34;http://www.nt.ntnu.no/users/haugwarb/Misc/capitalization.pdf&#34;&gt;http://www.nt.ntnu.no/users/haugwarb/Misc/capitalization.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;David Marsh, 10 grammar rules to forget
-&lt;a href=&#34;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&#34;&gt;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;plotting&#34;&gt;Plotting&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Xmgrace tips &lt;a href=&#34;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&#34;&gt;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A Grace/Inkscape workflow
-&lt;a href=&#34;https://sites.google.com/site/patrickbwarren/beautiful-figures&#34;&gt;https://sites.google.com/site/patrickbwarren/beautiful-figures&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Grace Forum &lt;a href=&#34;http://plasma-gate.weizmann.ac.il/Grace/phpbb/&#34;&gt;http://plasma-gate.weizmann.ac.il/Grace/phpbb/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Gnuplot Tricks &lt;a href=&#34;http://gnuplot-tricks.blogspot.co.uk/&#34;&gt;http://gnuplot-tricks.blogspot.co.uk/&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Publication quality example
-&lt;a href=&#34;http://gnuplot-tricks.blogspot.co.uk/2009/05/gnuplot-tricks-many-say-that-it-is.html&#34;&gt;http://gnuplot-tricks.blogspot.co.uk/2009/05/gnuplot-tricks-many-say-that-it-is.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Gnuplotting &lt;a href=&#34;http://www.gnuplotting.org/&#34;&gt;http://www.gnuplotting.org/&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Output terminals &lt;a href=&#34;http://www.gnuplotting.org/output-terminals/&#34;&gt;http://www.gnuplotting.org/output-terminals/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;gnuplot-colorbrewer &lt;a href=&#34;https://github.com/aschn/gnuplot-colorbrewer&#34;&gt;https://github.com/aschn/gnuplot-colorbrewer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;git-latex-markdown&#34;&gt;Git / Latex / Markdown&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Word by word diffs in Git
-&lt;a href=&#34;https://idnotfound.wordpress.com/2009/05/09/word-by-word-diffs-in-git/&#34;&gt;https://idnotfound.wordpress.com/2009/05/09/word-by-word-diffs-in-git/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A call for scholarly markdown
-&lt;a href=&#34;http://blogs.plos.org/mfenner/2012/12/13/a-call-for-scholarly-markdown/&#34;&gt;http://blogs.plos.org/mfenner/2012/12/13/a-call-for-scholarly-markdown/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CodeCogs LaTeX equation editor (useful for talks not in LaTeX Beamer!)
-&lt;a href=&#34;http://www.codecogs.com/latex/eqneditor.php&#34;&gt;http://www.codecogs.com/latex/eqneditor.php&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Detexify - draw a symbol, find the Latex
-&lt;a href=&#34;http://detexify.kirelabs.org/classify.html&#34;&gt;http://detexify.kirelabs.org/classify.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;LaTeX Templates &lt;a href=&#34;http://www.latextemplates.com/&#34;&gt;http://www.latextemplates.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TikZ example &lt;a href=&#34;http://www.texample.net/tikz/examples/membrane-surface/&#34;&gt;http://www.texample.net/tikz/examples/membrane-surface/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Top four LaTeX mistakes
-&lt;a href=&#34;http://www.johndcook.com/blog/2010/02/15/top-latex-mistakes/&#34;&gt;http://www.johndcook.com/blog/2010/02/15/top-latex-mistakes/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Precise positioning in LaTeX Beamer
-&lt;a href=&#34;http://blogs.helsinki.fi/smsiltan/2012/10/12/precise-positioning-in-latex-beamer/&#34;&gt;http://blogs.helsinki.fi/smsiltan/2012/10/12/precise-positioning-in-latex-beamer/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Papercore summaries
-&lt;a href=&#34;http://papercore.org/summaries&#34;&gt;http://papercore.org/summaries&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Making a poster with Inkscape
-&lt;a href=&#34;http://blog.felixbreuer.net/2010/10/24/poster.html&#34;&gt;http://blog.felixbreuer.net/2010/10/24/poster.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;ambient-music-for-headphones-in-noisy-offices&#34;&gt;Ambient music for headphones in noisy offices&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Music to let you concentrate &lt;a href=&#34;https://news.ycombinator.com/item?id=5872414&#34;&gt;https://news.ycombinator.com/item?id=5872414&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Headphone Commute - electronic, ambient &lt;a href=&#34;http://reviews.headphonecommute.com/&#34;&gt;http://reviews.headphonecommute.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

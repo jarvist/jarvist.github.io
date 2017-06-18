@@ -6,8 +6,55 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Mon, 20 Feb 2017 12:29:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jun 2017 10:59:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Carbon cost of High Performance Computing</title>
+      <link>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</link>
+      <pubDate>Sun, 18 Jun 2017 10:59:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
+      <description>&lt;p&gt;ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&amp;rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used for accounting.&lt;/p&gt;
+
+&lt;p&gt;So that&amp;rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.&lt;/p&gt;
+
+&lt;p&gt;The UK electricity grid carbon intensity is roughly 400 g / kwhr averaged over the year. So that&amp;rsquo;s 280 kg / MAU of calculation.&lt;/p&gt;
+
+&lt;p&gt;A relatively small research project doing hybrid calculations can easily consume 10s of MAU!&lt;/p&gt;
+
+&lt;p&gt;By comparison, an economy return flight from London to Boston (for Fall MRS) is 0.8 tons of CO2[2].&lt;/p&gt;
+
+&lt;p&gt;So flying London to Boston and back for Fall MRS, adds as much carbon to the atmosphere as 3 MAU of calculations on Archer.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, if you were to have a 24-node server continuously running calculations, this adds to roughly 8.6 (kAU) * 365 = 3.1 MAU for the whole year.&lt;/p&gt;
+
+&lt;p&gt;So my take home message was to be less concerned about the travel to
+conferences to present my science, and more careful with spending HPC time
+wisely!&lt;/p&gt;
+
+&lt;p&gt;[1] &lt;a href=&#34;http://www.archer.ac.uk/about-archer/hardware/&#34;&gt;http://www.archer.ac.uk/about-archer/hardware/&lt;/a&gt;
+[2] &lt;a href=&#34;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&#34;&gt;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MIT Licensing</title>
+      <link>http://jarvist.github.io/post/2017-06-18-mit-licensing/</link>
+      <pubDate>Sun, 18 Jun 2017 10:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-06-18-mit-licensing/</guid>
+      <description>&lt;p&gt;Open-source software licenses are intensely boring things to read about. The choice available makes it very easy to default to not organising a license. Particularly when you are a serial procrastinator like me!&lt;/p&gt;
+
+&lt;p&gt;However I would love for others to use my codes. It&amp;rsquo;s why I wrote them. So I sat down for a concerted half hour reading. My personal bias having benefited so much from GNU software would be for the GPL. But as the codes I write are relatively simple, they are likely to be incorporated into other larger packages, rather than be forked and developed as is. The MIT license therefore seems to provide a minimal-touch mechanism, and guarantees that all important (for an academic) aspect of attribution.&lt;/p&gt;
+
+&lt;p&gt;This is GPL compatible, which I hadn&amp;rsquo;t really thought about as being a necessity. So in the future, if I ever build something complete enough that I would worry about a commercial entity forking it &amp;amp; producing a closed-source derivative work, I could license that under the GPL yet pull in all of my prior work.&lt;/p&gt;
+
+&lt;p&gt;Here was the most succinct article on this issue I found:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&#34;&gt;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Experimental measures of photovoltaic materials</title>
@@ -47,14 +94,15 @@ miliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The key thing&lt;/strong&gt; to remember with optical characterisation is that even
 a standard bench-top solid-state laser is &lt;em&gt;INCREDIBLY&lt;/em&gt; bright. It&amp;rsquo;s very easy
-to do a measure at the equivalent of a million or a billion Sun equivalents.
-This is well outside the regime where any solar cell (even under a lens / light
+to do a measure at the equivalent of a million or a billion Suns.
+This is well outside the regime where any solar cell (even under light
 concentrator) will be operating, and this can massively change the photophysics
 in operation. If the authors do not tell you what equivalent number of suns
 they are at, try and calculate it yourself from the laser spot size, absorption
-coefficient, laser intensity etc. Experimentalists don&amp;rsquo;t do this out of spite
-or foolishness, but because they need to have sufficient signal-to-noise ratio
-to measure a signal.&lt;/p&gt;
+coefficient, laser intensity / pulse energy, etc.
+Experimentalists don&amp;rsquo;t measure at such crazy intensities out of spite or
+foolishness, but because they need to have sufficient signal-to-noise ratio
+to measure a signal, i.e. the volume is turned right up to be able to hear it.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&amp;lsquo;UV/Vis&amp;rsquo; (where does the material absorb?); better measures are with an integrating
@@ -66,11 +114,12 @@ emission? &amp;mdash; note this often means sacrificing ability to resolve by en
 &lt;li&gt;&amp;lsquo;quench-studies&amp;rsquo; (where you kill the light emission by adding an electron donor
 / acceptor to probe how long lived / mobile the excitons / generated charges
 are);&lt;/li&gt;
-&lt;li&gt;Time-resolved Microwave Conductivity (TRMC) / time-resolved teraherz
+&lt;li&gt;Time-resolved Microwave Conductivity (TRMC) / time-resolved terahertz
 spectroscopy - see changes in conductivity as a function of time, infer
 mobility from estimating number of free charges;&lt;/li&gt;
 &lt;li&gt;Hall-effect measurement
-(identify whether material is n or p type, and approximate doping);&lt;/li&gt;
+(identify whether material is n or p type, and approximate doping), infer
+mobility;&lt;/li&gt;
 &lt;li&gt;work-functions via Cyclic voltammetry (in electrolyte, easy experiment) or
 UPS/XPS + Band gap&lt;/li&gt;
 &lt;/ul&gt;
@@ -1484,56 +1533,6 @@ complete, but I try and see what&amp;rsquo;s on at all of these events for every
 &lt;p&gt;Maths: Numerical Analysis group seminars: &lt;a href=&#34;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&#34;&gt;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Physics: Nanoseminars: &lt;a href=&#34;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&#34;&gt;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Embarrassing embarrassingly parallel</title>
-      <link>http://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</link>
-      <pubDate>Fri, 22 May 2015 21:03:00 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</guid>
-      <description>&lt;p&gt;I gave up OPENMP&amp;rsquo;ing my Monte Carlo code about a year ago. I was trying to do it at the level of MC moves, and there are massive issues here in that the different threads are trying to sample and update the same simulation space - leading to segfaults as the variables crash into one another.&lt;/p&gt;
-
-&lt;p&gt;One method I&amp;rsquo;ve seen used in the literature is domain decomposition - where each thread runs MC on a segment of the simulation volume. This is quite a headache to set up, and then you have issues about simultaneous updates, and the inability to exchange particles / states across the boundaries. All scary issues.&lt;/p&gt;
-
-&lt;p&gt;So I gave up. I am not a computer scientist. I could not understand even the terms of reference; Lambda calculus reductions and all that jazz. In Simon Peyton Jones&amp;rsquo; terms, &amp;ldquo;I am a worm.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;I revisited it this evening, with the intention of seeing whether I could separate the thread of the random number generator at least. However, it instantaneously struct me what I should do. Each MC-move attempt calls &amp;lsquo;site-energy&amp;rsquo; with the test move which has a set of for loops evaluating over nearby space (i.e. with a cutoff) to get a total energy change for the test move.
-The change in energy variable &amp;lsquo;dE&amp;rsquo; is a natural reduction vector, none of this modifies the simulation volume, and in a production run where you are integrating out a large volume of space for accurate energies - the majority of computer time is spend in these for loops.&lt;/p&gt;
-
-&lt;p&gt;One: &lt;code&gt;#pragma omp parallel for reduction(+:dE)&lt;/code&gt; before the start of the for-loop nest; and a recompile with &lt;code&gt;-fopenmp&lt;/code&gt;, and it now maxes out the 4 hyperthreaded cores on my laptop.&lt;/p&gt;
-
-&lt;p&gt;Scaling will be more limited on bigger machines, and increase in speed will only be seen where this energy summation, rather than the single-core modifications to the simulation volume and random number generator, dominate the CPU required.&lt;/p&gt;
-
-&lt;p&gt;But still. Embarrassing embarrassingly parallel, because I could have and should have seen this a year ago!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Organising computational job workflow, as you go: freck</title>
-      <link>http://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</link>
-      <pubDate>Sun, 26 Apr 2015 16:15:52 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</guid>
-      <description>&lt;p&gt;The workflow in computational materials modelling is often highly complex, and bespoke to the particular calculations you are doing. The flow is highly derivative (results of later jobs depend on work on prior jobs), but can also be quite chaotic and multiply branching. Unsurprisingly, your files easily end up very messy, with significant confusion about what steps were required to get to the present working setup.&lt;/p&gt;
-
-&lt;p&gt;Version control is an absolute godsend, being able to flow down the list settings changes is extremely useful, and then being able to simply open the Git archive on GitHub as a way of archiving your research data is fantastic. However, this still leaves problems to be solved - the main one is actually constructing the folder structure sensibly. (A lesser issue is that intermediate and binary files in electronic structure calculations can be enormous (&amp;gt;multi gigabyte) and so far too large for git.)&lt;/p&gt;
-
-&lt;p&gt;To aid this I&amp;rsquo;ve written a very lightweight shell script called &amp;lsquo;freck&amp;rsquo; (to move swiftly or nimbly, an obsolete English word). Each time this is run in a working directory, it generates a folder named 0001-, 0002- etc. with a user-requested file name, and then moves all the present working files into that directory. It also saves a &amp;lsquo;breadcrumb&amp;rsquo; file with information about when and where you are writing this. I would like it to also add information extracted from your present history (i.e. all the commands you have used to work on the data), but the problem is that the shell script runs within its own shell, and it&amp;rsquo;s not obvious how to easily or portably access this.
-(history &amp;gt; history.log ; is very quick to run though)&lt;/p&gt;
-
-&lt;p&gt;The suggestion would be that you then typically run a &amp;lsquo;git add&amp;rsquo; on the small input / output files, and commit these to a repository with a sensible commit history.
-Then copy the necessary files to continue your job into the PWD, and continue work.
-But it&amp;rsquo;s flexible enough that you can also just use this to separate your work when running on a cluster.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m sure I&amp;rsquo;m not the only one who&amp;rsquo;s ended up with a folder structure that ends up looking hellishly like this:-
-~/PROJECT_FOO/geom_opt/geom_opt_restart/geom_opt_restart_higher_convergence/moar_kpoints/cation_geom/cation_geom_restart/frequency_calc/ etc.&lt;/p&gt;
-
-&lt;p&gt;Instead you end up with something much more sensible, time ordered and single-depthh: &lt;a href=&#34;https://github.com/jarvist/CDFT-C2H4&#34;&gt;https://github.com/jarvist/CDFT-C2H4&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Anyhow, check it out here + I&amp;rsquo;m always interested in all + any feedback!
-&lt;a href=&#34;https://github.com/jarvist/freck&#34;&gt;https://github.com/jarvist/freck&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
