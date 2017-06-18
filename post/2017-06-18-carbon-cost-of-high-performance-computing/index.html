@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>Carbon cost of High Performance Computing</title>
+  <meta name="description" content="Carbon cost of High Performance Computing">
+  <meta name="author" content="Jarvist Moore Frost">
+    
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://jarvist.github.io/css/fonts.css">
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css" integrity="sha384-CCTZv2q9I9m3UOxRLaJneXrrqKwUNOzZ6NGEUMwHtShDJ+nCoiXJCAgi05KfkLGY" crossorigin="anonymous">
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/grids-responsive-min.css">
+  
+  <link rel="stylesheet" href="http://jarvist.github.io/css/custom.css">
+
+  
+  
+  <link rel="stylesheet" href="http://jarvist.github.io/highlight/styles/default.css">
+  
+  <script src="http://jarvist.github.io/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <meta name="generator" content="Hugo 0.18.1" />
+  
+</head>
+<body>
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="http://jarvist.github.io/" class="site-title pure-menu-heading">Jarvist Moore Frost: Academic blog</a>
+            <ul class="pure-menu-list">
+				
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="http://jarvist.github.io/" class="pure-menu-heading" id="toggle-home">Jarvist Moore Frost: Academic blog</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+				
+                <li class="pure-menu-item">
+                    <a href="http://jarvist.github.io/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2017-06-18</time>
+		            
+                    
+                    |
+                    
+                    
+
+                    
+                    categories:<a href="http://jarvist.github.io/categories/computing">computing</a> 
+                    
+
+                    
+                </p>
+                <h1>Carbon cost of High Performance Computing</h1>
+            </div>
+
+            <div class="post-content">
+                <p>ARCHER pulls 1.2 MW [1] to run it&rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &lsquo;kAU&rsquo; in the internal compute units used for accounting.</p>
+
+<p>So that&rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.</p>
+
+<p>The UK electricity grid carbon intensity is roughly 400 g / kwhr averaged over the year. So that&rsquo;s 280 kg / MAU of calculation.</p>
+
+<p>A relatively small research project doing hybrid calculations can easily consume 10s of MAU!</p>
+
+<p>By comparison, an economy return flight from London to Boston (for Fall MRS) is 0.8 tons of CO2[2].</p>
+
+<p>So flying London to Boston and back for Fall MRS, adds as much carbon to the atmosphere as 3 MAU of calculations on Archer.</p>
+
+<p>Interestingly, if you were to have a 24-node server continuously running calculations, this adds to roughly 8.6 (kAU) * 365 = 3.1 MAU for the whole year.</p>
+
+<p>So my take home message was to be less concerned about the travel to
+conferences to present my science, and more careful with spending HPC time
+wisely!</p>
+
+<p>[1] <a href="http://www.archer.ac.uk/about-archer/hardware/">http://www.archer.ac.uk/about-archer/hardware/</a>
+[2] <a href="http://calculator.carbonfootprint.com/calculator.aspx?tab=3">http://calculator.carbonfootprint.com/calculator.aspx?tab=3</a></p>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="footer-content">
+		  <div class="pure-menu pure-menu-horizontal">
+              <ul>
+			      
+                  <li class="pure-menu-heading" id="foot-name">Jarvist Moore Frost:</li>
+                  
+				  
+                  
+          
+                  
+                  <li class="pure-menu-item">
+                      <a href="https://github.com/jarvist" class="pure-menu-link">GitHub</a>
+                  </li>
+                  
+          
+                  
+          
+                  
+          
+                  
+                  <li class="pure-menu-item">
+                      <a href="https://twitter.com/jarvistfrost" class="pure-menu-link">Twitter</a>
+                  </li>
+                  
+          
+              </ul>
+              <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+          </div>
+		  
+		</div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="http://jarvist.github.io/js/jquery.min.js" type="text/javascript"></script>
+<script src="http://jarvist.github.io/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+</body>
+</html>
+

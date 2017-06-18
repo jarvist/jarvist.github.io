@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computing on Jarvist Moore Frost: Academic blog</title>
+    <link>http://jarvist.github.io/categories/computing/index.xml</link>
+    <description>Recent content in Computing on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <atom:link href="http://jarvist.github.io/categories/computing/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Carbon cost of High Performance Computing</title>
+      <link>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</link>
+      <pubDate>Sun, 18 Jun 2017 10:59:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
+      <description>&lt;p&gt;ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&amp;rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used for accounting.&lt;/p&gt;
+
+&lt;p&gt;So that&amp;rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.&lt;/p&gt;
+
+&lt;p&gt;The UK electricity grid carbon intensity is roughly 400 g / kwhr averaged over the year. So that&amp;rsquo;s 280 kg / MAU of calculation.&lt;/p&gt;
+
+&lt;p&gt;A relatively small research project doing hybrid calculations can easily consume 10s of MAU!&lt;/p&gt;
+
+&lt;p&gt;By comparison, an economy return flight from London to Boston (for Fall MRS) is 0.8 tons of CO2[2].&lt;/p&gt;
+
+&lt;p&gt;So flying London to Boston and back for Fall MRS, adds as much carbon to the atmosphere as 3 MAU of calculations on Archer.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, if you were to have a 24-node server continuously running calculations, this adds to roughly 8.6 (kAU) * 365 = 3.1 MAU for the whole year.&lt;/p&gt;
+
+&lt;p&gt;So my take home message was to be less concerned about the travel to
+conferences to present my science, and more careful with spending HPC time
+wisely!&lt;/p&gt;
+
+&lt;p&gt;[1] &lt;a href=&#34;http://www.archer.ac.uk/about-archer/hardware/&#34;&gt;http://www.archer.ac.uk/about-archer/hardware/&lt;/a&gt;
+[2] &lt;a href=&#34;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&#34;&gt;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

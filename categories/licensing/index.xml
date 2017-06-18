@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Licensing on Jarvist Moore Frost: Academic blog</title>
+    <link>http://jarvist.github.io/categories/licensing/index.xml</link>
+    <description>Recent content in Licensing on Jarvist Moore Frost: Academic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-GB</language>
+    <atom:link href="http://jarvist.github.io/categories/licensing/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MIT Licensing</title>
+      <link>http://jarvist.github.io/post/2017-06-18-mit-licensing/</link>
+      <pubDate>Sun, 18 Jun 2017 10:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-06-18-mit-licensing/</guid>
+      <description>&lt;p&gt;Open-source software licenses are intensely boring things to read about. The choice available makes it very easy to default to not organising a license. Particularly when you are a serial procrastinator like me!&lt;/p&gt;
+
+&lt;p&gt;However I would love for others to use my codes. It&amp;rsquo;s why I wrote them. So I sat down for a concerted half hour reading. My personal bias having benefited so much from GNU software would be for the GPL. But as the codes I write are relatively simple, they are likely to be incorporated into other larger packages, rather than be forked and developed as is. The MIT license therefore seems to provide a minimal-touch mechanism, and guarantees that all important (for an academic) aspect of attribution.&lt;/p&gt;
+
+&lt;p&gt;This is GPL compatible, which I hadn&amp;rsquo;t really thought about as being a necessity. So in the future, if I ever build something complete enough that I would worry about a commercial entity forking it &amp;amp; producing a closed-source derivative work, I could license that under the GPL yet pull in all of my prior work.&lt;/p&gt;
+
+&lt;p&gt;Here was the most succinct article on this issue I found:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&#34;&gt;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
