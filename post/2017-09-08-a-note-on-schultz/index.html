@@ -4,12 +4,9 @@
 
   
   <meta charset="utf-8">
-  <title>Categories</title>
-  <meta name="description" content="Categories">
+  <title>A note on Schultz</title>
+  <meta name="description" content="A note on Schultz">
   <meta name="author" content="Jarvist Moore Frost">
-  
-  <link href="http://jarvist.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="Jarvist Moore Frost: Academic blog" />
-  <link href="http://jarvist.github.io/categories/index.xml" rel="feed" type="application/rss+xml" title="Jarvist Moore Frost: Academic blog" />
     
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,38 +62,76 @@
     </div>
     <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
+
 <div class="pure-g">
-<div class="pure-u-1-24 pure-u-md-5-24"></div>
-<div class="pure-u-11-12 pure-u-md-5-8">
-	<p class="posts-name">Categories:</p>
-	<div class="post-content">
-		<ul class="posts">
-		
-		
-			<li>
-				<a href="bookclub">bookclub</a>
-				<span>&#40;2&#41;</span>
-			</li>
-		
-			<li>
-				<a href="computing">computing</a>
-				<span>&#40;1&#41;</span>
-			</li>
-		
-			<li>
-				<a href="licensing">licensing</a>
-				<span>&#40;1&#41;</span>
-			</li>
-		
-			<li>
-				<a href="maths">maths</a>
-				<span>&#40;1&#41;</span>
-			</li>
-		
-		</ul>
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2017-09-08</time>
+		            
+                    
+                    |
+                    
+                    
+
+                    
+                    categories:<a href="http://jarvist.github.io/categories/maths">maths</a> 
+                    
+
+                    
+                </p>
+                <h1>A note on Schultz</h1>
+            </div>
+
+            <div class="post-content">
+                
+
+<!-- MathJax -->
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h2 id="a-note-on-schultz">A note on Schultz</h2>
+
+<p>In Schultz1959 (<a href="https://doi.org/10.1103%2Fphysrev.116.526">https://doi.org/10.1103%2Fphysrev.116.526</a>), a Feynman polaron
+radius is defined from the Gaussian form of the Simple Harmonic Oscillator
+specified by the Feynman solution to the polaron problem.</p>
+
+<p>I rederived some of these results (and the key thing - figured out that a 0.44
+&lsquo;magic number&rsquo; was actually <sup>2</sup>&frasl;<sub>9</sub>, i.e. 0.4 recurring), and decided to put the info out there
+somewhere.
+The core I&rsquo;ve written up as LaTeX here:
+<a href="https://github.com/jarvist/PolaronNotes">https://github.com/jarvist/PolaronNotes</a></p>
+
+<p>If I get time I may do some more work + put it on the ArXiv for a bit of
+greater coverage.</p>
+
+<p>However, I think maybe actually scans of a long-hand form would be more useful.</p>
+
+<p>Schultz uses a very early digital computer for these results.
+It&rsquo;s not obvious which results are analytic, and which numerical.
+(Some of this may be due to something displayed in the acknowledgements - &lsquo;Mrs.
+Hannah Landsman for most of the numerical work&rsquo;. If Schultz didn&rsquo;t actually do
+the programming, he probably didn&rsquo;t realise what went in to it, when he came to
+write this up!)
+On careful reading, I think his Table I must be from numeric optimisation of
+the v and w parameters, using the athermal Feynman variational statement.
+It would be well worth adding this construction to my codes (which currently
+use a finite-temperature statement originally due to \=Osaka), and cross-check
+these values.</p>
+
+<p><a href="https://github.com/jarvist/PolaronMobility.jl">https://github.com/jarvist/PolaronMobility.jl</a> .</p>
+
+            </div>
+        </div>
 	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
-<div class="pure-u-1-24 pure-u-md-1-6"></div>
+
 <div class="footer pure-g">
     <div class="pure-u-1-24 pure-u-md-5-24"></div>
     <div class="pure-u-11-12 pure-u-md-5-8">

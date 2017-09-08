@@ -6,8 +6,55 @@
     <description>Recent content in Posts on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 18 Jun 2017 10:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Sep 2017 14:29:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A note on Schultz</title>
+      <link>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
+      <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
+      <description>
+
+&lt;!-- MathJax --&gt;
+
+&lt;script type=&#34;text/javascript&#34;
+  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
+&lt;/script&gt;
+
+&lt;h2 id=&#34;a-note-on-schultz&#34;&gt;A note on Schultz&lt;/h2&gt;
+
+&lt;p&gt;In Schultz1959 (&lt;a href=&#34;https://doi.org/10.1103%2Fphysrev.116.526&#34;&gt;https://doi.org/10.1103%2Fphysrev.116.526&lt;/a&gt;), a Feynman polaron
+radius is defined from the Gaussian form of the Simple Harmonic Oscillator
+specified by the Feynman solution to the polaron problem.&lt;/p&gt;
+
+&lt;p&gt;I rederived some of these results (and the key thing - figured out that a 0.44
+&amp;lsquo;magic number&amp;rsquo; was actually &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;9&lt;/sub&gt;, i.e. 0.4 recurring), and decided to put the info out there
+somewhere.
+The core I&amp;rsquo;ve written up as LaTeX here:
+&lt;a href=&#34;https://github.com/jarvist/PolaronNotes&#34;&gt;https://github.com/jarvist/PolaronNotes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If I get time I may do some more work + put it on the ArXiv for a bit of
+greater coverage.&lt;/p&gt;
+
+&lt;p&gt;However, I think maybe actually scans of a long-hand form would be more useful.&lt;/p&gt;
+
+&lt;p&gt;Schultz uses a very early digital computer for these results.
+It&amp;rsquo;s not obvious which results are analytic, and which numerical.
+(Some of this may be due to something displayed in the acknowledgements - &amp;lsquo;Mrs.
+Hannah Landsman for most of the numerical work&amp;rsquo;. If Schultz didn&amp;rsquo;t actually do
+the programming, he probably didn&amp;rsquo;t realise what went in to it, when he came to
+write this up!)
+On careful reading, I think his Table I must be from numeric optimisation of
+the v and w parameters, using the athermal Feynman variational statement.
+It would be well worth adding this construction to my codes (which currently
+use a finite-temperature statement originally due to \=Osaka), and cross-check
+these values.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/PolaronMobility.jl&#34;&gt;https://github.com/jarvist/PolaronMobility.jl&lt;/a&gt; .&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Carbon cost of High Performance Computing</title>
@@ -1407,29 +1454,6 @@ complete, but I try and see what&amp;rsquo;s on at all of these events for every
 &lt;p&gt;Maths: Numerical Analysis group seminars: &lt;a href=&#34;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&#34;&gt;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Physics: Nanoseminars: &lt;a href=&#34;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&#34;&gt;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Embarrassing embarrassingly parallel</title>
-      <link>http://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</link>
-      <pubDate>Fri, 22 May 2015 21:03:00 +0000</pubDate>
-      
-      <guid>http://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</guid>
-      <description>&lt;p&gt;I gave up OPENMP&amp;rsquo;ing my Monte Carlo code about a year ago. I was trying to do it at the level of MC moves, and there are massive issues here in that the different threads are trying to sample and update the same simulation space - leading to segfaults as the variables crash into one another.&lt;/p&gt;
-
-&lt;p&gt;One method I&amp;rsquo;ve seen used in the literature is domain decomposition - where each thread runs MC on a segment of the simulation volume. This is quite a headache to set up, and then you have issues about simultaneous updates, and the inability to exchange particles / states across the boundaries. All scary issues.&lt;/p&gt;
-
-&lt;p&gt;So I gave up. I am not a computer scientist. I could not understand even the terms of reference; Lambda calculus reductions and all that jazz. In Simon Peyton Jones&amp;rsquo; terms, &amp;ldquo;I am a worm.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;I revisited it this evening, with the intention of seeing whether I could separate the thread of the random number generator at least. However, it instantaneously struct me what I should do. Each MC-move attempt calls &amp;lsquo;site-energy&amp;rsquo; with the test move which has a set of for loops evaluating over nearby space (i.e. with a cutoff) to get a total energy change for the test move.
-The change in energy variable &amp;lsquo;dE&amp;rsquo; is a natural reduction vector, none of this modifies the simulation volume, and in a production run where you are integrating out a large volume of space for accurate energies - the majority of computer time is spend in these for loops.&lt;/p&gt;
-
-&lt;p&gt;One: &lt;code&gt;#pragma omp parallel for reduction(+:dE)&lt;/code&gt; before the start of the for-loop nest; and a recompile with &lt;code&gt;-fopenmp&lt;/code&gt;, and it now maxes out the 4 hyperthreaded cores on my laptop.&lt;/p&gt;
-
-&lt;p&gt;Scaling will be more limited on bigger machines, and increase in speed will only be seen where this energy summation, rather than the single-core modifications to the simulation volume and random number generator, dominate the CPU required.&lt;/p&gt;
-
-&lt;p&gt;But still. Embarrassing embarrassingly parallel, because I could have and should have seen this a year ago!&lt;/p&gt;
 </description>
     </item>
     

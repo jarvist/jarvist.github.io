@@ -6,8 +6,55 @@
     <description>Recent content on Jarvist Moore Frost: Academic blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
-    <lastBuildDate>Sun, 18 Jun 2017 10:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Sep 2017 14:29:00 +0000</lastBuildDate>
     <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A note on Schultz</title>
+      <link>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
+      <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
+      
+      <guid>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
+      <description>
+
+&lt;!-- MathJax --&gt;
+
+&lt;script type=&#34;text/javascript&#34;
+  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
+&lt;/script&gt;
+
+&lt;h2 id=&#34;a-note-on-schultz&#34;&gt;A note on Schultz&lt;/h2&gt;
+
+&lt;p&gt;In Schultz1959 (&lt;a href=&#34;https://doi.org/10.1103%2Fphysrev.116.526&#34;&gt;https://doi.org/10.1103%2Fphysrev.116.526&lt;/a&gt;), a Feynman polaron
+radius is defined from the Gaussian form of the Simple Harmonic Oscillator
+specified by the Feynman solution to the polaron problem.&lt;/p&gt;
+
+&lt;p&gt;I rederived some of these results (and the key thing - figured out that a 0.44
+&amp;lsquo;magic number&amp;rsquo; was actually &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;9&lt;/sub&gt;, i.e. 0.4 recurring), and decided to put the info out there
+somewhere.
+The core I&amp;rsquo;ve written up as LaTeX here:
+&lt;a href=&#34;https://github.com/jarvist/PolaronNotes&#34;&gt;https://github.com/jarvist/PolaronNotes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If I get time I may do some more work + put it on the ArXiv for a bit of
+greater coverage.&lt;/p&gt;
+
+&lt;p&gt;However, I think maybe actually scans of a long-hand form would be more useful.&lt;/p&gt;
+
+&lt;p&gt;Schultz uses a very early digital computer for these results.
+It&amp;rsquo;s not obvious which results are analytic, and which numerical.
+(Some of this may be due to something displayed in the acknowledgements - &amp;lsquo;Mrs.
+Hannah Landsman for most of the numerical work&amp;rsquo;. If Schultz didn&amp;rsquo;t actually do
+the programming, he probably didn&amp;rsquo;t realise what went in to it, when he came to
+write this up!)
+On careful reading, I think his Table I must be from numeric optimisation of
+the v and w parameters, using the athermal Feynman variational statement.
+It would be well worth adding this construction to my codes (which currently
+use a finite-temperature statement originally due to \=Osaka), and cross-check
+these values.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/PolaronMobility.jl&#34;&gt;https://github.com/jarvist/PolaronMobility.jl&lt;/a&gt; .&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Carbon cost of High Performance Computing</title>
@@ -1512,27 +1559,6 @@ grown irritated with the editing experience, and I hope that being able to edit
 and push from the command line would get me blogging more regularly.&lt;/p&gt;
 
 &lt;p&gt;Time will see.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Talks and Seminars at Bath University</title>
-      <link>http://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</link>
-      <pubDate>Tue, 08 Dec 2015 14:16:34 +0100</pubDate>
-      
-      <guid>http://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</guid>
-      <description>&lt;p&gt;There are a number of groups at Bath University doing work of interest to
-Condensed Matter Theorists. This is just a quick set of &amp;lsquo;hot links&amp;rsquo; to the
-individual seminar sites + pages. It is not intended to be exhaustive or
-complete, but I try and see what&amp;rsquo;s on at all of these events for every week.&lt;/p&gt;
-
-&lt;p&gt;Physics: Theory group seminars: &lt;a href=&#34;http://people.bath.ac.uk/rj248/theory_seminars.html&#34;&gt;http://people.bath.ac.uk/rj248/theory_seminars.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Maths: General colloquium, Landscapes in Mathematical Sciences: &lt;a href=&#34;http://people.bath.ac.uk/masgks/Landscapes/&#34;&gt;http://people.bath.ac.uk/masgks/Landscapes/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Maths: Numerical Analysis group seminars: &lt;a href=&#34;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&#34;&gt;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Physics: Nanoseminars: &lt;a href=&#34;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&#34;&gt;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

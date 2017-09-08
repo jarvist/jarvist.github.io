@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</loc>
+    <lastmod>2017-09-08T14:29:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</loc>
     <lastmod>2017-06-18T10:59:00+00:00</lastmod>
   </url>
@@ -500,7 +505,7 @@
   
   <url>
     <loc>http://jarvist.github.io/</loc>
-    <lastmod>2017-06-18T10:59:00+00:00</lastmod>
+    <lastmod>2017-09-08T14:29:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -537,6 +542,12 @@
   <url>
     <loc>http://jarvist.github.io/tags/mapi/</loc>
     <lastmod>2014-02-21T12:07:54+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://jarvist.github.io/categories/maths/</loc>
+    <lastmod>2017-09-08T14:29:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -626,7 +637,7 @@
   
   <url>
     <loc>http://jarvist.github.io/post/</loc>
-    <lastmod>2017-06-18T10:59:00+00:00</lastmod>
+    <lastmod>2017-09-08T14:29:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
