@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/index.xml</link>
-    <description>Recent content on Jarvist Moore Frost: Academic blog</description>
+    <title>Jarvist Moore Frost on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/</link>
+    <description>Recent content in Jarvist Moore Frost on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <lastBuildDate>Fri, 08 Sep 2017 14:29:00 +0000</lastBuildDate>
-    <atom:link href="http://jarvist.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A note on Schultz</title>
-      <link>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
+      <link>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
       <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
+      <guid>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
       <description>
 
 &lt;!-- MathJax --&gt;
@@ -25,7 +26,7 @@
 
 &lt;h2 id=&#34;a-note-on-schultz&#34;&gt;A note on Schultz&lt;/h2&gt;
 
-&lt;p&gt;In Schultz1959 (&lt;a href=&#34;https://doi.org/10.1103%2Fphysrev.116.526&#34;&gt;https://doi.org/10.1103%2Fphysrev.116.526&lt;/a&gt;), a Feynman polaron
+&lt;p&gt;In Schultz1959 (&lt;a href=&#34;https://doi.org/10.1103%2Fphysrev.116.526&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1103%2Fphysrev.116.526&lt;/a&gt;), a Feynman polaron
 radius is defined from the Gaussian form of the Simple Harmonic Oscillator
 specified by the Feynman solution to the polaron problem.&lt;/p&gt;
 
@@ -33,7 +34,7 @@ specified by the Feynman solution to the polaron problem.&lt;/p&gt;
 &amp;lsquo;magic number&amp;rsquo; was actually &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;9&lt;/sub&gt;, i.e. 0.4 recurring), and decided to put the info out there
 somewhere.
 The core I&amp;rsquo;ve written up as LaTeX here:
-&lt;a href=&#34;https://github.com/jarvist/PolaronNotes&#34;&gt;https://github.com/jarvist/PolaronNotes&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://github.com/jarvist/PolaronNotes&#34; target=&#34;_blank&#34;&gt;https://github.com/jarvist/PolaronNotes&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If I get time I may do some more work + put it on the ArXiv for a bit of
 greater coverage.&lt;/p&gt;
@@ -52,16 +53,16 @@ It would be well worth adding this construction to my codes (which currently
 use a finite-temperature statement originally due to \=Osaka), and cross-check
 these values.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/PolaronMobility.jl&#34;&gt;https://github.com/jarvist/PolaronMobility.jl&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/PolaronMobility.jl&#34; target=&#34;_blank&#34;&gt;https://github.com/jarvist/PolaronMobility.jl&lt;/a&gt; .&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Carbon cost of High Performance Computing</title>
-      <link>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</link>
+      <link>https://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</link>
       <pubDate>Sun, 18 Jun 2017 10:59:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
+      <guid>https://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
       <description>&lt;p&gt;ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&amp;rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used for accounting.&lt;/p&gt;
 
 &lt;p&gt;So that&amp;rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.&lt;/p&gt;
@@ -80,17 +81,17 @@ these values.&lt;/p&gt;
 conferences to present my science, and more careful with spending HPC time
 wisely!&lt;/p&gt;
 
-&lt;p&gt;[1] &lt;a href=&#34;http://www.archer.ac.uk/about-archer/hardware/&#34;&gt;http://www.archer.ac.uk/about-archer/hardware/&lt;/a&gt;
-[2] &lt;a href=&#34;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&#34;&gt;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[1] &lt;a href=&#34;http://www.archer.ac.uk/about-archer/hardware/&#34; target=&#34;_blank&#34;&gt;http://www.archer.ac.uk/about-archer/hardware/&lt;/a&gt;
+[2] &lt;a href=&#34;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&#34; target=&#34;_blank&#34;&gt;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>MIT Licensing</title>
-      <link>http://jarvist.github.io/post/2017-06-18-mit-licensing/</link>
+      <link>https://jarvist.github.io/post/2017-06-18-mit-licensing/</link>
       <pubDate>Sun, 18 Jun 2017 10:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-06-18-mit-licensing/</guid>
+      <guid>https://jarvist.github.io/post/2017-06-18-mit-licensing/</guid>
       <description>&lt;p&gt;Open-source software licenses are intensely boring things to read about. The choice available makes it very easy to default to not organising a license. Particularly when you are a serial procrastinator like me!&lt;/p&gt;
 
 &lt;p&gt;However I would love for others to use my codes. It&amp;rsquo;s why I wrote them. So I sat down for a concerted half hour reading. My personal bias having benefited so much from GNU software would be for the GPL. But as the codes I write are relatively simple, they are likely to be incorporated into other larger packages, rather than be forked and developed as is. The MIT license therefore seems to provide a minimal-touch mechanism, and guarantees that all important (for an academic) aspect of attribution.&lt;/p&gt;
@@ -99,16 +100,16 @@ wisely!&lt;/p&gt;
 
 &lt;p&gt;Here was the most succinct article on this issue I found:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&#34;&gt;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&#34; target=&#34;_blank&#34;&gt;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Experimental measures of photovoltaic materials</title>
-      <link>http://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</link>
+      <link>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</link>
       <pubDate>Mon, 20 Feb 2017 12:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</guid>
+      <guid>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</guid>
       <description>
 
 &lt;p&gt;Starting my PhD in 2007, I spent many many years in seminar and conference
@@ -215,10 +216,10 @@ and device physics from which true breakthroughs come.&lt;/p&gt;
     
     <item>
       <title>ICL Bookclub - Ziman Chapter 3</title>
-      <link>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</link>
+      <link>https://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</link>
       <pubDate>Tue, 24 Jan 2017 09:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</guid>
+      <guid>https://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</guid>
       <description>&lt;p&gt;A little update to the book club. It&amp;rsquo;s going well! We&amp;rsquo;ve decided to work our
 way through John M. Ziman&amp;rsquo;s Principles of the Theory of Solids (2nd Edition).
 I really like this text, as I find the style very agreeable. It&amp;rsquo;s very
@@ -267,7 +268,7 @@ the orthogonalised plane waves.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;1971 - The Calculation of Bloch Functions
-&lt;a href=&#34;https://doi.org/10.1016/S0081-1947(08)60491-9&#34;&gt;https://doi.org/10.1016/S0081-1947(08)60491-9&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://doi.org/10.1016/S0081-1947(08)60491-9&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1016/S0081-1947(08)60491-9&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This goes into much more detail, and is less terse than chapter 3.
@@ -278,7 +279,7 @@ scientific publication:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;1962 - Electrons in metals: A short guide to the Fermi surface
-&lt;a href=&#34;https://doi.org/10.1080/00107516208205311&#34;&gt;https://doi.org/10.1080/00107516208205311&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://doi.org/10.1080/00107516208205311&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1080/00107516208205311&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This older paper can also be useful; it&amp;rsquo;s sort of a condensed form of what became the book we are reading, but presents the material from a slightly different point of view.&lt;/p&gt;
@@ -287,10 +288,10 @@ scientific publication:&lt;/p&gt;
     
     <item>
       <title>Publication history in LaTeX from Google Scholar</title>
-      <link>http://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</link>
+      <link>https://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</link>
       <pubDate>Sat, 07 Jan 2017 23:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</guid>
+      <guid>https://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</guid>
       <description>&lt;p&gt;Having your publication history in a LaTeX document is not the worst idea in
 the world. Updating a &lt;code&gt;.bib&lt;/code&gt; file is natural and easy when making incremental
 changes (for the next, seemingly inevitable, academic application in 6 months
@@ -302,7 +303,7 @@ deadline!&lt;/p&gt;
 &lt;p&gt;1) Get the data. I only discovered this mass-export by accident.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Go to your &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
+&lt;li&gt;Go to your &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;Google
 Scholar&lt;/a&gt; page&lt;/li&gt;
 &lt;li&gt;click on all the publications on the first page, using the header-checkbox.&lt;/li&gt;
 &lt;li&gt;Click on Export / BibTeX&lt;/li&gt;
@@ -315,7 +316,7 @@ articles&amp;rdquo;,&lt;/li&gt;
 helper program &lt;code&gt;biber&lt;/code&gt;. This allows you to specify the ordering (i.e.
 chronological).&lt;/p&gt;
 
-&lt;p&gt;See &lt;code&gt;sorting&lt;/code&gt; and &lt;code&gt;style&lt;/code&gt; options here: (&lt;a href=&#34;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&#34;&gt;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;See &lt;code&gt;sorting&lt;/code&gt; and &lt;code&gt;style&lt;/code&gt; options here: (&lt;a href=&#34;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&#34; target=&#34;_blank&#34;&gt;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;3) However, my TeX installation was missing &lt;code&gt;biber&lt;/code&gt;. (In a sort of
 broken-package, what on earth have I done to Debian kind of way.)&lt;/p&gt;
@@ -354,10 +355,10 @@ tex.stackexchange, and the important bit read as follows (my bib file was
     
     <item>
       <title>ICL Bookclub</title>
-      <link>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
+      <link>https://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
       <pubDate>Wed, 04 Jan 2017 12:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
+      <guid>https://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
       <description>&lt;p&gt;Now that the Walsh group has a critical mass at Imperial College London, I am
 planning to restart the Bookclub.&lt;/p&gt;
 
@@ -404,23 +405,23 @@ benefit from, knowing the theory. (Arguably doing calculations actually gets in
 the way&amp;hellip;)&lt;/p&gt;
 
 &lt;p&gt;We have a discussion channel on our &amp;ldquo;Materials Discovery Network&amp;rdquo; Slack group.
-&lt;a href=&#34;https://mdn-uk.slack.com/messages/icl-bookclub/&#34;&gt;https://mdn-uk.slack.com/messages/icl-bookclub/&lt;/a&gt;
+&lt;a href=&#34;https://mdn-uk.slack.com/messages/icl-bookclub/&#34; target=&#34;_blank&#34;&gt;https://mdn-uk.slack.com/messages/icl-bookclub/&lt;/a&gt;
 It&amp;rsquo;s on the &amp;lsquo;free&amp;rsquo; plan, so messages are ephemeral, but all friendly electronic structure people very welcome!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Jarvist Moore Frost</title>
-      <link>http://jarvist.github.io/about/</link>
+      <link>https://jarvist.github.io/about/</link>
       <pubDate>Sun, 01 Jan 2017 01:16:34 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/about/</guid>
+      <guid>https://jarvist.github.io/about/</guid>
       <description>
 
 
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://jarvist.github.io/images/JarvistMooreFrost_Feb2017_SonyA1_RedJumper_Square_250px.jpg&#34; /&gt;
+        &lt;img src=&#34;https://jarvist.github.io/images/JarvistMooreFrost_Feb2017_SonyA1_RedJumper_Square_250px.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -504,9 +505,9 @@ Cray XC30 supercomputer ARCHER.&lt;/p&gt;
 &lt;h3 id=&#34;this-blog-other-online-presence&#34;&gt;This blog &amp;amp; other online presence&lt;/h3&gt;
 
 &lt;p&gt;This is my academic (mainly!) blog. It used to be on Wordpress, at
-&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
+&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34; target=&#34;_blank&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
 Files were extracted to a plain text Markdown format, and are now published
-with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the &lt;code&gt;nofancy&lt;/code&gt; theme (slightly
+with &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; with the &lt;code&gt;nofancy&lt;/code&gt; theme (slightly
 tweaked).
 I moved this blog from Wordpress to GitHub pages as I had grown irritated with
 the online-only editing experience (in particular their new &amp;lsquo;Web 2.0&amp;rsquo;
@@ -514,33 +515,33 @@ experience made my laptop overheat!).
 I hope that being able to edit and push from the command line will get me
 blogging more regularly.&lt;/p&gt;
 
-&lt;p&gt;In January 2016 I started using a Google+ &amp;lsquo;Collection&amp;rsquo; to publish &lt;a href=&#34;https://plus.google.com/collection/wKpRZB&#34;&gt;reviews of
+&lt;p&gt;In January 2016 I started using a Google+ &amp;lsquo;Collection&amp;rsquo; to publish &lt;a href=&#34;https://plus.google.com/collection/wKpRZB&#34; target=&#34;_blank&#34;&gt;reviews of
 Electronic Structure Theory books&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You may find my academic papers on &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
-Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You may find my academic papers on &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;Google
+Scholar&lt;/a&gt;, or via my &lt;a href=&#34;http://orcid.org/0000-0003-1938-4430&#34; target=&#34;_blank&#34;&gt;ORCID ID&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;On Twitter I&amp;rsquo;m &lt;a href=&#34;https://twitter.com/JarvistFrost&#34;&gt;@JarvistFrost&lt;/a&gt;.
-Find my Molecular Dynamics videos on  &lt;a href=&#34;https://www.youtube.com/user/jarvist1984/&#34;&gt;YouTube&lt;/a&gt;
+&lt;p&gt;On Twitter I&amp;rsquo;m &lt;a href=&#34;https://twitter.com/JarvistFrost&#34; target=&#34;_blank&#34;&gt;@JarvistFrost&lt;/a&gt;.
+Find my Molecular Dynamics videos on  &lt;a href=&#34;https://www.youtube.com/user/jarvist1984/&#34; target=&#34;_blank&#34;&gt;YouTube&lt;/a&gt;
 I try and put my conference and tutorial slides on
-&lt;a href=&#34;https://speakerdeck.com/jarvist&#34;&gt;SpeakerDeck&lt;/a&gt;, as and when I&amp;rsquo;ve had time to
+&lt;a href=&#34;https://speakerdeck.com/jarvist&#34; target=&#34;_blank&#34;&gt;SpeakerDeck&lt;/a&gt;, as and when I&amp;rsquo;ve had time to
 redact any unpublished experimental data of collaborators.&lt;/p&gt;
 
 &lt;p&gt;Outside academics, I have less and less time for riding bicycles, sailing,
 diving and exploratory caving.
 But the little I have written up, is accessible at
-&lt;a href=&#34;https://jarvbites.wordpress.com/&#34;&gt;https://jarvbites.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://jarvbites.wordpress.com/&#34; target=&#34;_blank&#34;&gt;https://jarvbites.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://people.bath.ac.uk/jmf45/wwdd.html&#34;&gt;&amp;lt;| What Would Dirac Do [WWDD] ? |&amp;gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://people.bath.ac.uk/jmf45/wwdd.html&#34; target=&#34;_blank&#34;&gt;&amp;lt;| What Would Dirac Do [WWDD] ? |&amp;gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Constrained geometry optimisation in Gaussian</title>
-      <link>http://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</link>
+      <link>https://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</link>
       <pubDate>Thu, 13 Oct 2016 11:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</guid>
+      <guid>https://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</guid>
       <description>&lt;p&gt;&lt;em&gt;Summary&lt;/em&gt;: If you want to do a geometry relaxation around a constrained degree of
 freedom (bond length, angle, dihedral, etc.) in Gaussian 09, you need two
 &amp;lsquo;ModRedundant&amp;rsquo; specifications, one to &lt;code&gt;B&lt;/code&gt;uild in the coordinate with the value
@@ -594,7 +595,7 @@ chemistry, or you are interested in studying something (transfer integral, HOMO
 / LUMO energy, potential energy) as a function of the rotation.&lt;/p&gt;
 
 &lt;p&gt;The relevant &lt;code&gt;ModRedundant&lt;/code&gt; part of the Gaussian manual
-(&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&lt;/a&gt;) is at best confusing.&lt;/p&gt;
+(&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&#34; target=&#34;_blank&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&lt;/a&gt;) is at best confusing.&lt;/p&gt;
 
 &lt;p&gt;If you want a single job that scans along a coordinate, you can use &lt;code&gt;S&lt;/code&gt; for
 Scan. However, this has some issues: you end up with all the intermediate
@@ -606,7 +607,7 @@ really do the scans in the two different directions to detect any &amp;lsquo;cli
 then have a load of &lt;code&gt;.com&lt;/code&gt; files named &lt;code&gt;000.com&lt;/code&gt;, &lt;code&gt;010.com&lt;/code&gt; etc. for the angle
 along the coordinate.
 These are then trivial to use in further processing by i.e. something like
-(&lt;a href=&#34;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&#34;&gt;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&lt;/a&gt;) to
+(&lt;a href=&#34;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&#34; target=&#34;_blank&#34;&gt;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&lt;/a&gt;) to
 extract all the optimised geometries into new &lt;code&gt;.com&lt;/code&gt; files, to do single point
 calculations.&lt;/p&gt;
 
@@ -662,10 +663,10 @@ previously, that they are working against you!&lt;/p&gt;
     
     <item>
       <title>Soft Mode Tunnelling</title>
-      <link>http://jarvist.github.io/post/2016-07-14-Soft-Mode-Tunnelling/</link>
+      <link>https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/</link>
       <pubDate>Thu, 14 Jul 2016 20:00:00 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-07-14-Soft-Mode-Tunnelling/</guid>
+      <guid>https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/</guid>
       <description>&lt;!-- MathJax --&gt;
 
 &lt;script type=&#34;text/javascript&#34;
@@ -689,7 +690,7 @@ dynamics, your nuclear coordinate is classical.&lt;/p&gt;
 
 &lt;p&gt;However, there is, of course, also quantum mechanical tunnelling directly
 through the barrier.
-The boss (&lt;a href=&#34;https://twitter.com/lonepair&#34;&gt;@lonepair&lt;/a&gt;) asked me to consider
+The boss (&lt;a href=&#34;https://twitter.com/lonepair&#34; target=&#34;_blank&#34;&gt;@lonepair&lt;/a&gt;) asked me to consider
 whether this rate was easily calculable, to complement the considerable
 soft-phonon work occurring in the group.&lt;/p&gt;
 
@@ -824,10 +825,10 @@ time constant by summing the weighted rates. I haven&amp;rsquo;t yet tried this.
     
     <item>
       <title>Electron Phonon Coupling with Soft Modes</title>
-      <link>http://jarvist.github.io/post/2016-07-13-Electron-Phonon-Coupling-with-Soft-Modes/</link>
+      <link>https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/</link>
       <pubDate>Wed, 13 Jul 2016 20:00:00 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-07-13-Electron-Phonon-Coupling-with-Soft-Modes/</guid>
+      <guid>https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/</guid>
       <description>&lt;!-- MathJax --&gt;
 
 &lt;script type=&#34;text/javascript&#34;
@@ -850,7 +851,7 @@ when you diagonalise the matrix.&lt;/p&gt;
 
 &lt;p&gt;Seeing the workbook would be useful to follow the discussion in the rest of
 this post:-
-&lt;a href=&#34;https://github.com/jarvist/Julia-SoftModeTISH-DeformationPotential/blob/master/iJulia-Notebooks/2016-06_SoftMAPIModes_TISH_electron_phonon_coupling.ipynb&#34;&gt;iJuliaNotebook on Github&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://github.com/jarvist/Julia-SoftModeTISH-DeformationPotential/blob/master/iJulia-Notebooks/2016-06_SoftMAPIModes_TISH_electron_phonon_coupling.ipynb&#34; target=&#34;_blank&#34;&gt;iJuliaNotebook on Github&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The same method is just as applicable to an electron in an electrostatic
 potential, or a nuclear degree of freedom in the potential energy of
@@ -989,7 +990,7 @@ motion of the crystal).&lt;/p&gt;
 &lt;p&gt;I was slightly reassured  when reading this recent paper - Figure 4 seems to be
 almost identical to what I am suggesting, just for a rather boring harmonic
 example, and only considering the ground state, rather than a Bose-Einstein
-ensemble. &lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.92.085137&#34;&gt;Phys. Rev. B 92, 085137, 2015&lt;/a&gt;&lt;/p&gt;
+ensemble. &lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.92.085137&#34; target=&#34;_blank&#34;&gt;Phys. Rev. B 92, 085137, 2015&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;So I&amp;rsquo;m very interested if anyone out there has any thoughts to the validity or
 otherwise of the above method. Probably it&amp;rsquo;s a terrible idea, guaranteed to
@@ -1005,16 +1006,16 @@ unreliable in some important aspect.&amp;rdquo; Ziman, 1960 &amp;lsquo;Electrons
 &lt;/blockquote&gt;
 
 &lt;p&gt;Useful references:
-&lt;a href=&#34;http://dx.doi.org/10.1016/S0081-1947(08)60593-7&#34;&gt;Sham and Ziman, Solid State Physics Volume 15, 1963, Pages 221–298&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://dx.doi.org/10.1016/S0081-1947(08)60593-7&#34; target=&#34;_blank&#34;&gt;Sham and Ziman, Solid State Physics Volume 15, 1963, Pages 221–298&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Royal Society 2015 URF Scheme - Lay Report</title>
-      <link>http://jarvist.github.io/post/2016-07-13-RoyalSociety2015URF-LayReport/</link>
+      <link>https://jarvist.github.io/post/2016-07-13-royalsociety2015urf-layreport/</link>
       <pubDate>Wed, 13 Jul 2016 16:00:00 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-07-13-RoyalSociety2015URF-LayReport/</guid>
+      <guid>https://jarvist.github.io/post/2016-07-13-royalsociety2015urf-layreport/</guid>
       <description>
 
 &lt;p&gt;I applied for the Royal Society University Research Fellowship scheme last
@@ -1096,10 +1097,10 @@ future.&lt;/p&gt;
     
     <item>
       <title>Mark Tuckerman talk: Free energy based structure prediction</title>
-      <link>http://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</link>
+      <link>https://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</link>
       <pubDate>Tue, 19 Apr 2016 14:44:34 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</guid>
+      <guid>https://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</guid>
       <description>
 
 &lt;p&gt;Mark Tuckerman (MET) visited London on the 31st March 2016, and gave
@@ -1203,7 +1204,7 @@ value for the free energy difference.&lt;/p&gt;
 
 &lt;p&gt;I found a 2014 YouTube video containing the MD, but the extraction of free
 energy seems a bit different:
-&lt;a href=&#34;https://youtu.be/WKpe8fzATr4?t=21m38s&#34;&gt;https://youtu.be/WKpe8fzATr4?t=21m38s&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://youtu.be/WKpe8fzATr4?t=21m38s&#34; target=&#34;_blank&#34;&gt;https://youtu.be/WKpe8fzATr4?t=21m38s&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;polymorphic-benzene&#34;&gt;Polymorphic benzene&lt;/h3&gt;
 
@@ -1277,7 +1278,7 @@ structures, will be practically pleasant.&lt;/p&gt;
 
 &lt;p&gt;With a bit of Googling I found a Tuckerman slide deck from 2014 which
 overlapped with this talk a fair bit:
-&lt;a href=&#34;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&#34;&gt;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&#34; target=&#34;_blank&#34;&gt;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Mark has a Google Scholar page, for if you want to dig through more of his
 literature [13].&lt;/p&gt;
@@ -1286,70 +1287,70 @@ literature [13].&lt;/p&gt;
 
 &lt;p&gt;[1] Mark E. Tuckerman (2010), Statistical Mechanics: Theory and Molecular
 Simulation. Oxford Graduate Texts.
-(&lt;a href=&#34;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&#34;&gt;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&lt;/a&gt;)&lt;/p&gt;
+(&lt;a href=&#34;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&#34; target=&#34;_blank&#34;&gt;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&lt;/a&gt;)&lt;/p&gt;
 
-&lt;p&gt;[2] &lt;a href=&#34;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&#34;&gt;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] &lt;a href=&#34;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&#34; target=&#34;_blank&#34;&gt;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[3] &lt;a href=&#34;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&#34;&gt;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[3] &lt;a href=&#34;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&#34; target=&#34;_blank&#34;&gt;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[4]
 &amp;ldquo;Exercises in
 prognostication: Crystal structures and protein folding&amp;rdquo;.
 Jack D. Dunitz and Harold A. Scheraga (2004).
 PNAS 40(101),
-14309-14311. &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.0405744101&#34;&gt;http://dx.doi.org/10.1073/pnas.0405744101&lt;/a&gt;&lt;/p&gt;
+14309-14311. &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.0405744101&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1073/pnas.0405744101&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[5] &lt;a href=&#34;https://en.wikipedia.org/wiki/Ramachandran_plot&#34;&gt;https://en.wikipedia.org/wiki/Ramachandran_plot&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[5] &lt;a href=&#34;https://en.wikipedia.org/wiki/Ramachandran_plot&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/Ramachandran_plot&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[6] &amp;ldquo;Bond-orientational order in liquids and glasses&amp;rdquo;
 Paul J. Steinhardt, David R. Nelson, and Marco Ronchetti (1983).
 Phys. Rev. B 28, 784.
-&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.28.784&#34;&gt;http://dx.doi.org/10.1103/PhysRevB.28.784&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.28.784&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1103/PhysRevB.28.784&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[7]
 &amp;ldquo;Canonical sampling through velocity rescaling&amp;rdquo;.
 Giovanni Bussi, Davide Donadio and Michele Parrinello (2007).
-J. Chem. Phys. 126, 014101 (2007); &lt;a href=&#34;http://dx.doi.org/10.1063/1.2408420&#34;&gt;http://dx.doi.org/10.1063/1.2408420&lt;/a&gt;&lt;/p&gt;
+J. Chem. Phys. 126, 014101 (2007); &lt;a href=&#34;http://dx.doi.org/10.1063/1.2408420&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1063/1.2408420&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[8]
 &amp;ldquo;Temperature-Accelerated Method for Exploring Polymorphism in Molecular Crystals Based on Free Energy&amp;rdquo;
 Tang-Qing Yu and Mark E. Tuckerman (2011).
 Phys. Rev. Lett. 107, 015701;
-&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevLett.107.015701&#34;&gt;http://dx.doi.org/10.1103/PhysRevLett.107.015701&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevLett.107.015701&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1103/PhysRevLett.107.015701&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[9]
 &amp;ldquo;Simplifying the representation of complex free-energy landscapes using
 sketch-map&amp;rdquo;.
 Michele Ceriotti, Gareth A. Tribello, and Michele Parrinello (2011).
 PNAS 32(108), 13023-13028.
-&lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1108486108&#34;&gt;http://dx.doi.org/10.1073/pnas.1108486108&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1108486108&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1073/pnas.1108486108&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[10]
 &amp;ldquo;Sampling saddle points on a free energy surface&amp;rdquo;
 Amit Samanta, Ming Chen, Tang-Qing Yu, Mark Tuckerman and Weinan
-J. Chem. Phys. 140, 164109 (2014); &lt;a href=&#34;http://dx.doi.org/10.1063/1.4869980&#34;&gt;http://dx.doi.org/10.1063/1.4869980&lt;/a&gt;&lt;/p&gt;
+J. Chem. Phys. 140, 164109 (2014); &lt;a href=&#34;http://dx.doi.org/10.1063/1.4869980&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1063/1.4869980&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[11]
 &amp;ldquo;Locating landmarks on high-dimensional free energy surfaces&amp;rdquo;
 Ming Chen, Tang-Qing Yu, and Mark E. Tuckerman (2015).
-PNAS vol. 112 no. 11 (2015); &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1418241112&#34;&gt;http://dx.doi.org/10.1073/pnas.1418241112&lt;/a&gt;&lt;/p&gt;
+PNAS vol. 112 no. 11 (2015); &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1418241112&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1073/pnas.1418241112&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[12]
 &amp;ldquo;Topological framework for local structure analysis in condensed matter&amp;rdquo;
 Emanuel A. Lazar, Jian Han, and David J. Srolovitz (2015).
-PNAS vol. 112 no. 43; &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1505788112&#34;&gt;http://dx.doi.org/10.1073/pnas.1505788112&lt;/a&gt;&lt;/p&gt;
+PNAS vol. 112 no. 43; &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1505788112&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1073/pnas.1505788112&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[13] Mark E. Tuckerman, Google Scholar.
-&lt;a href=&#34;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34; target=&#34;_blank&#34;&gt;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Delta SCF: Calculating work functions of molecular electronic materials</title>
-      <link>http://jarvist.github.io/post/2016-03-17-delta-scf/</link>
+      <link>https://jarvist.github.io/post/2016-03-17-delta-scf/</link>
       <pubDate>Wed, 23 Mar 2016 14:44:34 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-03-17-delta-scf/</guid>
+      <guid>https://jarvist.github.io/post/2016-03-17-delta-scf/</guid>
       <description>
 
 &lt;p&gt;All modern functional electronic devices are made from semiconductors.
@@ -1399,7 +1400,7 @@ However, you can define a &amp;lsquo;vacuum&amp;rsquo; region in your simulation
 are present and use the electrostatic potential in this region as the reference
 for your bulk values.
 My colleague Keith Butler has developed this method into a useful (and fun!)
-code named MacroDensity ([1] - &lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;).&lt;/p&gt;
+code named MacroDensity ([1] - &lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34; target=&#34;_blank&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;With non-periodic (molecular) calculations, you do have an absolute
 reference - the vacuum is everywhere around you!
@@ -1478,7 +1479,7 @@ two-electron integrals calculated on an ultrafine grid. The &lt;code&gt;0 1&lt;/
 
 &lt;p&gt;We have made the convergence tighter (i.e. it will do more SCF cycles to get
 a lower noise answer) on an increased fidelity integration grid. See:
-&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&#34; target=&#34;_blank&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And now the same structure (no further nuclear relaxation), as a charged doublet.
 If you want the energy of adding an electron to the &amp;lsquo;LUMO&amp;rsquo; (the electron
@@ -1513,7 +1514,7 @@ echo &amp;quot;  eV&amp;quot;
 down and write an all-singing script for automating the process.&lt;/p&gt;
 
 &lt;p&gt;The files are available as a Github Gist
-(&lt;a href=&#34;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&#34;&gt;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&lt;/a&gt;).&lt;/p&gt;
+(&lt;a href=&#34;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&#34; target=&#34;_blank&#34;&gt;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;From Gaussian .log outputs with optimised structures, generate &lt;code&gt;.xyz&lt;/code&gt; files of
 the coordinates with &lt;code&gt;&amp;gt;extract_list_geoms.sh *.log&lt;/code&gt;.
@@ -1527,33 +1528,33 @@ Analyse the outputs with &lt;code&gt;&amp;gt; delta_SCF_extract_values.sh&lt;/co
 &lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 
 &lt;p&gt;[1] Macrodensity - codes to read VASP LOCPOT files and calculate electrostatic
-potential derived quantities (&lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;)&lt;/p&gt;
+potential derived quantities (&lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34; target=&#34;_blank&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;[2] Kohn, Walter; Sham, Lu Jeu (1965). &amp;ldquo;Self-Consistent Equations Including
-Exchange and Correlation Effects&amp;rdquo;. Physical Review 140 (4A): A1133–A1138 (&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRev.140.A1133&#34;&gt;http://dx.doi.org/10.1103/PhysRev.140.A1133&lt;/a&gt;)&lt;/p&gt;
+Exchange and Correlation Effects&amp;rdquo;. Physical Review 140 (4A): A1133–A1138 (&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRev.140.A1133&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1103/PhysRev.140.A1133&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;[3] Frost, J. M., Faist, M. A. and Nelson, J. (2010), Energetic Disorder in
 Higher Fullerene Adducts: A Quantum Chemical and Voltammetric Study. Adv.
-Mater., 22: 4881–4884. &lt;a href=&#34;http://dx.doi.org/10.1002/adma.201002189&#34;&gt;http://dx.doi.org/10.1002/adma.201002189&lt;/a&gt;&lt;/p&gt;
+Mater., 22: 4881–4884. &lt;a href=&#34;http://dx.doi.org/10.1002/adma.201002189&#34; target=&#34;_blank&#34;&gt;http://dx.doi.org/10.1002/adma.201002189&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[4] Mark Casida - Reconciling Delta-SCF and TDDFT, Transparencies from a talk, 1999
-(&lt;a href=&#34;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&#34;&gt;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&lt;/a&gt;)&lt;/p&gt;
+(&lt;a href=&#34;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&#34; target=&#34;_blank&#34;&gt;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&lt;/a&gt;)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Hello HUGO!</title>
-      <link>http://jarvist.github.io/post/2016-03-11-hello-hugo/</link>
+      <link>https://jarvist.github.io/post/2016-03-11-hello-hugo/</link>
       <pubDate>Fri, 11 Mar 2016 22:44:34 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-03-11-hello-hugo/</guid>
+      <guid>https://jarvist.github.io/post/2016-03-11-hello-hugo/</guid>
       <description>&lt;p&gt;This blog used to be on wordpress, at
-&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
+&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34; target=&#34;_blank&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
 ( There are a few comments by other people scattered amongst those posts, I&amp;rsquo;m
 not sure how to best transfer / archive these. )&lt;/p&gt;
 
 &lt;p&gt;Files were extracted to a plain text Markdown
-format, and are now published with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the
+format, and are now published with &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; with the
 &lt;code&gt;nofancy&lt;/code&gt; theme (slightly tweaked). I moved this blog from wordpress as I had
 grown irritated with the editing experience, and I hope that being able to edit
 and push from the command line would get me blogging more regularly.&lt;/p&gt;

@@ -1,1460 +1,762 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/post/index.xml</link>
-    <description>Recent content in Posts on Jarvist Moore Frost: Academic blog</description>
+    <title>Posts on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/post/</link>
+    <description>Recent content in Posts on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <lastBuildDate>Fri, 08 Sep 2017 14:29:00 +0000</lastBuildDate>
-    <atom:link href="http://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A note on Schultz</title>
-      <link>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
+      <link>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
       <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
-      <description>
-
-&lt;!-- MathJax --&gt;
-
-&lt;script type=&#34;text/javascript&#34;
-  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
-&lt;/script&gt;
-
-&lt;h2 id=&#34;a-note-on-schultz&#34;&gt;A note on Schultz&lt;/h2&gt;
-
-&lt;p&gt;In Schultz1959 (&lt;a href=&#34;https://doi.org/10.1103%2Fphysrev.116.526&#34;&gt;https://doi.org/10.1103%2Fphysrev.116.526&lt;/a&gt;), a Feynman polaron
-radius is defined from the Gaussian form of the Simple Harmonic Oscillator
-specified by the Feynman solution to the polaron problem.&lt;/p&gt;
-
-&lt;p&gt;I rederived some of these results (and the key thing - figured out that a 0.44
-&amp;lsquo;magic number&amp;rsquo; was actually &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;9&lt;/sub&gt;, i.e. 0.4 recurring), and decided to put the info out there
-somewhere.
-The core I&amp;rsquo;ve written up as LaTeX here:
-&lt;a href=&#34;https://github.com/jarvist/PolaronNotes&#34;&gt;https://github.com/jarvist/PolaronNotes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;If I get time I may do some more work + put it on the ArXiv for a bit of
-greater coverage.&lt;/p&gt;
-
-&lt;p&gt;However, I think maybe actually scans of a long-hand form would be more useful.&lt;/p&gt;
-
-&lt;p&gt;Schultz uses a very early digital computer for these results.
-It&amp;rsquo;s not obvious which results are analytic, and which numerical.
-(Some of this may be due to something displayed in the acknowledgements - &amp;lsquo;Mrs.
-Hannah Landsman for most of the numerical work&amp;rsquo;. If Schultz didn&amp;rsquo;t actually do
-the programming, he probably didn&amp;rsquo;t realise what went in to it, when he came to
-write this up!)
-On careful reading, I think his Table I must be from numeric optimisation of
-the v and w parameters, using the athermal Feynman variational statement.
-It would be well worth adding this construction to my codes (which currently
-use a finite-temperature statement originally due to \=Osaka), and cross-check
-these values.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/PolaronMobility.jl&#34;&gt;https://github.com/jarvist/PolaronMobility.jl&lt;/a&gt; .&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
+      <description>A note on Schultz In Schultz1959 (https://doi.org/10.1103%2Fphysrev.116.526), a Feynman polaron radius is defined from the Gaussian form of the Simple Harmonic Oscillator specified by the Feynman solution to the polaron problem.
+I rederived some of these results (and the key thing - figured out that a 0.44 &amp;lsquo;magic number&amp;rsquo; was actually 2&amp;frasl;9, i.e. 0.4 recurring), and decided to put the info out there somewhere. The core I&amp;rsquo;ve written up as LaTeX here: https://github.</description>
     </item>
     
     <item>
       <title>Carbon cost of High Performance Computing</title>
-      <link>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</link>
+      <link>https://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</link>
       <pubDate>Sun, 18 Jun 2017 10:59:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
-      <description>&lt;p&gt;ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&amp;rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used for accounting.&lt;/p&gt;
-
-&lt;p&gt;So that&amp;rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.&lt;/p&gt;
-
-&lt;p&gt;The UK electricity grid carbon intensity is roughly 400 g / kwhr averaged over the year. So that&amp;rsquo;s 280 kg / MAU of calculation.&lt;/p&gt;
-
-&lt;p&gt;A relatively small research project doing hybrid calculations can easily consume 10s of MAU!&lt;/p&gt;
-
-&lt;p&gt;By comparison, an economy return flight from London to Boston (for Fall MRS) is 0.8 tons of CO2[2].&lt;/p&gt;
-
-&lt;p&gt;So flying London to Boston and back for Fall MRS, adds as much carbon to the atmosphere as 3 MAU of calculations on Archer.&lt;/p&gt;
-
-&lt;p&gt;Interestingly, if you were to have a 24-node server continuously running calculations, this adds to roughly 8.6 (kAU) * 365 = 3.1 MAU for the whole year.&lt;/p&gt;
-
-&lt;p&gt;So my take home message was to be less concerned about the travel to
-conferences to present my science, and more careful with spending HPC time
-wisely!&lt;/p&gt;
-
-&lt;p&gt;[1] &lt;a href=&#34;http://www.archer.ac.uk/about-archer/hardware/&#34;&gt;http://www.archer.ac.uk/about-archer/hardware/&lt;/a&gt;
-[2] &lt;a href=&#34;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&#34;&gt;http://calculator.carbonfootprint.com/calculator.aspx?tab=3&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
+      <description>ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&amp;rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used for accounting.
+So that&amp;rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.
+The UK electricity grid carbon intensity is roughly 400 g / kwhr averaged over the year.</description>
     </item>
     
     <item>
       <title>MIT Licensing</title>
-      <link>http://jarvist.github.io/post/2017-06-18-mit-licensing/</link>
+      <link>https://jarvist.github.io/post/2017-06-18-mit-licensing/</link>
       <pubDate>Sun, 18 Jun 2017 10:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-06-18-mit-licensing/</guid>
-      <description>&lt;p&gt;Open-source software licenses are intensely boring things to read about. The choice available makes it very easy to default to not organising a license. Particularly when you are a serial procrastinator like me!&lt;/p&gt;
-
-&lt;p&gt;However I would love for others to use my codes. It&amp;rsquo;s why I wrote them. So I sat down for a concerted half hour reading. My personal bias having benefited so much from GNU software would be for the GPL. But as the codes I write are relatively simple, they are likely to be incorporated into other larger packages, rather than be forked and developed as is. The MIT license therefore seems to provide a minimal-touch mechanism, and guarantees that all important (for an academic) aspect of attribution.&lt;/p&gt;
-
-&lt;p&gt;This is GPL compatible, which I hadn&amp;rsquo;t really thought about as being a necessity. So in the future, if I ever build something complete enough that I would worry about a commercial entity forking it &amp;amp; producing a closed-source derivative work, I could license that under the GPL yet pull in all of my prior work.&lt;/p&gt;
-
-&lt;p&gt;Here was the most succinct article on this issue I found:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&#34;&gt;http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-06-18-mit-licensing/</guid>
+      <description>Open-source software licenses are intensely boring things to read about. The choice available makes it very easy to default to not organising a license. Particularly when you are a serial procrastinator like me!
+However I would love for others to use my codes. It&amp;rsquo;s why I wrote them. So I sat down for a concerted half hour reading. My personal bias having benefited so much from GNU software would be for the GPL.</description>
     </item>
     
     <item>
       <title>Experimental measures of photovoltaic materials</title>
-      <link>http://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</link>
+      <link>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</link>
       <pubDate>Mon, 20 Feb 2017 12:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</guid>
-      <description>
-
-&lt;p&gt;Starting my PhD in 2007, I spent many many years in seminar and conference
-talks on Photovoltaics being confused by the enormous array of experimental
-probes for photovoltaic materials.
-This is an attempt, stimulated (as always!) by questions from a student, to put
-down a list of standard experimental photovoltaic (or other optoelectronic)
-device characterisations.&lt;/p&gt;
-
-&lt;p&gt;High energy theorists often ape Gell-Mann in describing solid-state physics as
-the &amp;lsquo;squalid-state&amp;rsquo;. Certainly there is an awful lot going on at once.
-This is reflected in the experimental probes, which are similarly diverse, and
-though they are often supposedly measuring the same observable in the same
-material, come to contradictory conclusions.&lt;/p&gt;
-
-&lt;p&gt;In terms of device physics, almost all measures are optical,
-electrical or optical-electrical.
-This forms a rough hierachy of techniques which are applied sequentially to
-a new material, as the purely optical probes can be done with &amp;lsquo;a flect of
-dust&amp;rsquo;, whereas contacts requires another level of complexity.&lt;/p&gt;
-
-&lt;p&gt;It only makes sense to start doing this on
-relatively pure samples (i.e. whereas structural characterisation by X-Ray
-Diffraction [XRD] just needs &lt;em&gt;some&lt;/em&gt;  crystalline material).
-Similarly short-time (picosecond) optical measures may need 99.99% materials,
-whereas electrical measures (where the charges have to live for micro or
-miliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
-
-&lt;h2 id=&#34;1-pure-optical-non-contacted&#34;&gt;1 - pure optical / non contacted)&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;The key thing&lt;/strong&gt; to remember with optical characterisation is that even
-a standard bench-top solid-state laser is &lt;em&gt;INCREDIBLY&lt;/em&gt; bright. It&amp;rsquo;s very easy
-to do a measure at the equivalent of a million or a billion Suns.
-This is well outside the regime where any solar cell (even under light
-concentrator) will be operating, and this can massively change the photophysics
-in operation. If the authors do not tell you what equivalent number of suns
-they are at, try and calculate it yourself from the laser spot size, absorption
-coefficient, laser intensity / pulse energy, etc.
-Experimentalists don&amp;rsquo;t measure at such crazy intensities out of spite or
-foolishness, but because they need to have sufficient signal-to-noise ratio
-to measure a signal, i.e. the volume is turned right up to be able to hear it.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&amp;lsquo;UV/Vis&amp;rsquo; (where does the material absorb?); better measures are with an integrating
-sphere / total scattering, use of a scattering medium to get the SNR to find
-the Bg;&lt;/li&gt;
-&lt;li&gt;Photoluminescence (PL) (once it absorbs, where does it emit?);&lt;/li&gt;
-&lt;li&gt;Time-resolved PhotoLuminescence (TRPL) (what are the dynamics of this
-emission? &amp;mdash; note this often means sacrificing ability to resolve by energy of emission);&lt;/li&gt;
-&lt;li&gt;&amp;lsquo;quench-studies&amp;rsquo; (where you kill the light emission by adding an electron donor
-/ acceptor to probe how long lived / mobile the excitons / generated charges
-are);&lt;/li&gt;
-&lt;li&gt;Time-resolved Microwave Conductivity (TRMC) / time-resolved terahertz
-spectroscopy - see changes in conductivity as a function of time, infer
-mobility from estimating number of free charges;&lt;/li&gt;
-&lt;li&gt;Hall-effect measurement
-(identify whether material is n or p type, and approximate doping), infer
-mobility;&lt;/li&gt;
-&lt;li&gt;work-functions via Cyclic voltammetry (in electrolyte, easy experiment) or
-UPS/XPS + Band gap&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;2-pure-electrical-needs-contacts-usually-capable-of-injecting-charges&#34;&gt;2 - pure electrical - needs contacts, usually capable of injecting charges:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Mobility measures via:
-
-&lt;ul&gt;
-&lt;li&gt;Field-Effect-Transistor (a semiconductor deposited on a patterned substrate), tends to overestimate mobility and only probe first few nm of material;&lt;/li&gt;
-&lt;li&gt;Space Charge Limited Current (form a diode out of the device + push charge through it);&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Kelvin Probe / Four-point probe (measures something ~akin~  to workfunction; and conductivity);&lt;/li&gt;
-&lt;li&gt;Shubnikov–de Haas (similar but different to Hall, less common)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;3-optoelectrical-measurements-essential-needs-a-device-contacted-top-and-bottom&#34;&gt;3 - optoelectrical measurements - essential needs a device, contacted top and bottom:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Time of Flight (directly probes the bulk mobility, requires non-injecting contacts, the higher the mobility the larger the thickness of sample required - so it&amp;rsquo;s mainly good for low mobility materials);&lt;/li&gt;
-&lt;li&gt;Transient-photo-voltage, Transient-photo-current (as a solar cell, what happens when you abruptly turn the light off);&lt;/li&gt;
-&lt;li&gt;Electro-luminescence (inject charges, look at frequency of light emitted. SNR is ~10^6 higher than PL, so you can look at emission from defect states / deep within gap);&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;from-the-point-of-view-of-a-new-pv-material-the-ordered-set-of-questions-to-answer-are&#34;&gt;From the point of view of a new PV material, the ordered set of questions to answer are:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Does it absorb? (Is it black? Where is the Bandgap?) &amp;ndash;&amp;gt; UV/Vis, optical measures&lt;/li&gt;
-&lt;li&gt;Once it absorbs, does it generate charges?  &amp;ndash;&amp;gt; TRPL (emission beyond a ps indicates seperated charges then finding each other)&lt;/li&gt;
-&lt;li&gt;These charges, can they get to the contacts? &amp;ndash;&amp;gt; mobility measure; defect recombination rates&lt;/li&gt;
-&lt;li&gt;Can we get charges in and out of the device? &amp;ndash;&amp;gt; Workfunction measure&lt;/li&gt;
-&lt;li&gt;Can we build a device architecture (injecting contacts, control of doping) &amp;ndash;&amp;gt; Efficiency, and then all the actual device physics&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A common and very unfortunate (for the science) situation is that editors and
-reviewers obsess over the final bottom line of &amp;lsquo;power conversion efficiency&amp;rsquo;,
-not wanting to publish even very good science if the particular devices used are not
-world leading. Though arguably you do want a similar order of magnitude
-efficiency, so that you know the same physics is present, this leads to the
-perverse incentive of scientists being motivated to burn effort and time on
-incremental improvements, and to neglect deep study of the underlying processes
-and device physics from which true breakthroughs come.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</guid>
+      <description>Starting my PhD in 2007, I spent many many years in seminar and conference talks on Photovoltaics being confused by the enormous array of experimental probes for photovoltaic materials. This is an attempt, stimulated (as always!) by questions from a student, to put down a list of standard experimental photovoltaic (or other optoelectronic) device characterisations.
+High energy theorists often ape Gell-Mann in describing solid-state physics as the &amp;lsquo;squalid-state&amp;rsquo;. Certainly there is an awful lot going on at once.</description>
     </item>
     
     <item>
       <title>ICL Bookclub - Ziman Chapter 3</title>
-      <link>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</link>
+      <link>https://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</link>
       <pubDate>Tue, 24 Jan 2017 09:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</guid>
-      <description>&lt;p&gt;A little update to the book club. It&amp;rsquo;s going well! We&amp;rsquo;ve decided to work our
-way through John M. Ziman&amp;rsquo;s Principles of the Theory of Solids (2nd Edition).
-I really like this text, as I find the style very agreeable. It&amp;rsquo;s very
-conversational, in it&amp;rsquo;s best bits it feels like standing at a black-board
-having something explained just to you, the reader.&lt;/p&gt;
-
-&lt;p&gt;&amp;sect; 1 introduces periodicity as the central theme of solid state physics,
-showing how the translational symmetry leads to multiply periodic functions,
-which then leads to Bloch&amp;rsquo;s theorem (that the energy eigenstates in a crystal
-can be written as a phase-factor / plane wave). It then builds the Brillouin
-zone, and introduces periodic boundary conditions.&lt;/p&gt;
-
-&lt;p&gt;&amp;sect; 2 applies this mathematical machinery to lattice vibrations (phonons).
-The construction of the dynamic matrix is described, and then a simple 1D
-diatomic chain is used to show how the bands split off &amp;amp; form an optical mode.
-The Ewald summation is introduced as needed when reversing from the enthalpy of
-formation of an ionic crystal back to the force coefficients. The van Hove
-singularities in the lattice spectrum are described, as arising from inevitable
-saddle-points in the potential energy surfaces. &amp;sect; 2.11 describes
-phonon-phonon interactions, but at a level that may be useful to get some more
-science out of calculations with phono3py and similar software, &amp;sect; 2.12
-treats imperfect lattices, and show how to embed defect-force pairs as
-a perturbation to the periodic dynamic matrix. These last two sections are
-actually really useful for work we&amp;rsquo;re doing currently.&lt;/p&gt;
-
-&lt;p&gt;&amp;sect; 3 describes electron states in the material, introducing them via nearly
-free electrons. Its really quite dense, and dives into the state of the art for
-solving the electronic structure problem in the late 60s. It&amp;rsquo;s really nice to
-see where the theory underlying most of today&amp;rsquo;s periodic electronic structure
-codes comes from, but it&amp;rsquo;s also quite heavy going! For this reason we are
-re-reading this chapter separately for this week.&lt;/p&gt;
-
-&lt;p&gt;Some other more verbose Ziman publications in this area are given below.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Dear Solid-State Book Clubbers,&lt;/p&gt;
-
-&lt;p&gt;This week we are reading (again) Chapter 3 of Ziman&amp;rsquo;s &amp;ldquo;Principles of the theory
-of solids&amp;rdquo; (2nd edition). Muffin tins, pseudo potentials, Green&amp;rsquo;s functions and
-the orthogonalised plane waves.&lt;/p&gt;
-
-&lt;p&gt;&amp;ndash;&amp;gt; 5PM level 2 in the RSM, as usual, Thurs 26th January 2017.&lt;/p&gt;
-
-&lt;p&gt;Additional Ziman Review papers (really book chapters) that may be useful are:-&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1971 - The Calculation of Bloch Functions
-&lt;a href=&#34;https://doi.org/10.1016/S0081-1947(08)60491-9&#34;&gt;https://doi.org/10.1016/S0081-1947(08)60491-9&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This goes into much more detail, and is less terse than chapter 3.
-It also has some of the most surreal (and beautiful!) diagrams I&amp;rsquo;ve seen in a
-scientific publication:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../../images/2017-01-24-icl-bookclub-ziman-chapter-3.png&#34; alt=&#34;The calculation of Bloch Functions, muffin tins.&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1962 - Electrons in metals: A short guide to the Fermi surface
-&lt;a href=&#34;https://doi.org/10.1080/00107516208205311&#34;&gt;https://doi.org/10.1080/00107516208205311&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This older paper can also be useful; it&amp;rsquo;s sort of a condensed form of what became the book we are reading, but presents the material from a slightly different point of view.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</guid>
+      <description>A little update to the book club. It&amp;rsquo;s going well! We&amp;rsquo;ve decided to work our way through John M. Ziman&amp;rsquo;s Principles of the Theory of Solids (2nd Edition). I really like this text, as I find the style very agreeable. It&amp;rsquo;s very conversational, in it&amp;rsquo;s best bits it feels like standing at a black-board having something explained just to you, the reader.
+&amp;sect; 1 introduces periodicity as the central theme of solid state physics, showing how the translational symmetry leads to multiply periodic functions, which then leads to Bloch&amp;rsquo;s theorem (that the energy eigenstates in a crystal can be written as a phase-factor / plane wave).</description>
     </item>
     
     <item>
       <title>Publication history in LaTeX from Google Scholar</title>
-      <link>http://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</link>
+      <link>https://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</link>
       <pubDate>Sat, 07 Jan 2017 23:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</guid>
-      <description>&lt;p&gt;Having your publication history in a LaTeX document is not the worst idea in
-the world. Updating a &lt;code&gt;.bib&lt;/code&gt; file is natural and easy when making incremental
-changes (for the next, seemingly inevitable, academic application in 6 months
-time).&lt;/p&gt;
-
-&lt;p&gt;A recommendation though&amp;mdash;don&amp;rsquo;t decide to do this two hours before a submission
-deadline!&lt;/p&gt;
-
-&lt;p&gt;1) Get the data. I only discovered this mass-export by accident.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Go to your &lt;a href=&#34;https://scholar.google.co.uk/citations?user=qNlfsFEAAAAJ&amp;amp;hl=en&#34;&gt;Google
-Scholar&lt;/a&gt; page&lt;/li&gt;
-&lt;li&gt;click on all the publications on the first page, using the header-checkbox.&lt;/li&gt;
-&lt;li&gt;Click on Export / BibTeX&lt;/li&gt;
-&lt;li&gt;A pop-up box should ask you &amp;ldquo;Export selected articles&amp;rdquo; or &amp;ldquo;Export all my
-articles&amp;rdquo;,&lt;/li&gt;
-&lt;li&gt;You should now have well formatted  &lt;code&gt;.bib&lt;/code&gt; file with all your articles.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;2) In an ideal world, you should probably be using &lt;code&gt;biblatex&lt;/code&gt; and associated
-helper program &lt;code&gt;biber&lt;/code&gt;. This allows you to specify the ordering (i.e.
-chronological).&lt;/p&gt;
-
-&lt;p&gt;See &lt;code&gt;sorting&lt;/code&gt; and &lt;code&gt;style&lt;/code&gt; options here: (&lt;a href=&#34;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&#34;&gt;https://www.sharelatex.com/learn/Bibliography_management_with_biblatex&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;3) However, my TeX installation was missing &lt;code&gt;biber&lt;/code&gt;. (In a sort of
-broken-package, what on earth have I done to Debian kind of way.)&lt;/p&gt;
-
-&lt;p&gt;So I decided to use the more primitive &lt;code&gt;bibtex&lt;/code&gt;, with an &amp;lsquo;unsrt&amp;rsquo; (unsorted) bibliography.&lt;/p&gt;
-
-&lt;p&gt;This then just lists the items in the order they are present in the &lt;code&gt;.bib&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;p&gt;My Google Scholar &lt;code&gt;.bib&lt;/code&gt; was mostly chronological (pre 2010 seemed
-less ordered, I suppose recent entries have been appended as they were
-published).&lt;/p&gt;
-
-&lt;p&gt;This meant it didn&amp;rsquo;t take too long to reorder it correctly.&lt;/p&gt;
-
-&lt;p&gt;(I also needed to delete some spurious entries.)&lt;/p&gt;
-
-&lt;p&gt;4) My LaTeX file listing the journal articles, was piece together from bits of
-tex.stackexchange, and the important bit read as follows (my bib file was
-&lt;code&gt;PublicationsFull.bib&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;\subsection*{Journal articles}
-
-\nocite{*} % cite all bib items, without text
-
-\begingroup % stops printing &#39;references&#39;;
-%   http://tex.stackexchange.com/questions/22645/hiding-the-title-of-the-bibliography
-\renewcommand{\section}[2]{}%
-
-\bibliography{PublicationsFull}{}
-\bibliographystyle{unsrt}
-
-\endgroup
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-01-03-publication-history-in-latex-from-google-scholar/</guid>
+      <description>Having your publication history in a LaTeX document is not the worst idea in the world. Updating a .bib file is natural and easy when making incremental changes (for the next, seemingly inevitable, academic application in 6 months time).
+A recommendation though&amp;mdash;don&amp;rsquo;t decide to do this two hours before a submission deadline!
+1) Get the data. I only discovered this mass-export by accident.
+ Go to your Google Scholar page click on all the publications on the first page, using the header-checkbox.</description>
     </item>
     
     <item>
       <title>ICL Bookclub</title>
-      <link>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
+      <link>https://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
       <pubDate>Wed, 04 Jan 2017 12:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
-      <description>&lt;p&gt;Now that the Walsh group has a critical mass at Imperial College London, I am
-planning to restart the Bookclub.&lt;/p&gt;
-
-&lt;p&gt;Keith Butler kicked these off in Bath with the guiding words of everyone&amp;rsquo;s
-favourite German pessimist, Arthur Schopenhauer:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Buying books would be a good thing if one could also buy the time to read
- them in: but as a rule the purchase of books is mistaken for the
- appropriation of their contents.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The plan is to do some reading &amp;amp; self-directed study of a relevant book, and
-then get together at &lt;strong&gt;5PM on Thursdays&lt;/strong&gt; (in weeks when there is not an
-interesting TYC seminar) to discuss and explain things to each other.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;re going to start with the first one and a half chapters of Ziman&amp;rsquo;s
-solid-state book &amp;ldquo;Principles of the theory of solids&amp;rdquo;, ideally the second
-edition (1971).
-( There is currently 1 copy of the 2nd edition, and 3 copies of the 1st
-edition, available for loan at the Central Library, Level 4 (530.41 ZIM).)&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s Chapter 1: Periodic structures, reciprocal lattice, Bloch&amp;rsquo;s theorem,
-Brillouin zone; and Chapter 2: Lattice Waves: Lattice dynamics, lattice sums
-(Ewald), lattice specific heat and lattice spectrum (DoS). So stopping before
-the diffraction + Debye waller + phonon scattering, in the second half of the
-second chapter.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ll get together to discuss this at 5PM on Thursday 12th January, &lt;strong&gt;floor two
-of the RSM (Dept Materials), Imperial College London.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Other books which we are planning to visit in the near future are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Martin&amp;rsquo;s DFT book&lt;/li&gt;
-&lt;li&gt;Krauth&amp;rsquo;s Stat. Mech. - Algo and Computation&lt;/li&gt;
-&lt;li&gt;Tinkham&amp;rsquo;s Group Theory and Quantum Mechanics&lt;/li&gt;
-&lt;li&gt;Feynman&amp;rsquo;s Statistical Mechanics&lt;/li&gt;
-&lt;li&gt;Nye&amp;rsquo;s Physical Properties of Materials by Tensors&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Everybody welcome! You certainly don&amp;rsquo;t need to do DFT to be able to, or to
-benefit from, knowing the theory. (Arguably doing calculations actually gets in
-the way&amp;hellip;)&lt;/p&gt;
-
-&lt;p&gt;We have a discussion channel on our &amp;ldquo;Materials Discovery Network&amp;rdquo; Slack group.
-&lt;a href=&#34;https://mdn-uk.slack.com/messages/icl-bookclub/&#34;&gt;https://mdn-uk.slack.com/messages/icl-bookclub/&lt;/a&gt;
-It&amp;rsquo;s on the &amp;lsquo;free&amp;rsquo; plan, so messages are ephemeral, but all friendly electronic structure people very welcome!&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
+      <description>Now that the Walsh group has a critical mass at Imperial College London, I am planning to restart the Bookclub.
+Keith Butler kicked these off in Bath with the guiding words of everyone&amp;rsquo;s favourite German pessimist, Arthur Schopenhauer:
+ &amp;ldquo;Buying books would be a good thing if one could also buy the time to read them in: but as a rule the purchase of books is mistaken for the appropriation of their contents.</description>
     </item>
     
     <item>
       <title>Constrained geometry optimisation in Gaussian</title>
-      <link>http://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</link>
+      <link>https://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</link>
       <pubDate>Thu, 13 Oct 2016 11:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Summary&lt;/em&gt;: If you want to do a geometry relaxation around a constrained degree of
-freedom (bond length, angle, dihedral, etc.) in Gaussian 09, you need two
-&amp;lsquo;ModRedundant&amp;rsquo; specifications, one to &lt;code&gt;B&lt;/code&gt;uild in the coordinate with the value
-you set, the next to then &lt;code&gt;F&lt;/code&gt;reeze this coordinate so that it is constrained
-during the optimisation.&lt;/p&gt;
-
-&lt;p&gt;Here is an example for Biphenyl, setting the torsional angle to 90 degrees
-(making the phenyls orthogonal).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#p opt=ModRedundant am1
-
-Biphenyl ModRedundant - Minimalist working constrained optimisation
-
-0 1
-C                 -4.41584965    0.94482757    0.00000000
-C                 -3.02068965    0.94482757    0.00000000
-C                 -2.32315165    2.15257857    0.00000000
-C                 -3.02080565    3.36108757   -0.00119900
-C                 -4.41563065    3.36100957   -0.00167800
-C                 -5.11323165    2.15280357   -0.00068200
-H                 -4.96560865   -0.00748943    0.00045000
-H                 -2.47118165   -0.00768543    0.00131500
-H                 -2.47060565    4.31323057   -0.00125800
-H                 -4.96575265    4.31329057   -0.00263100
-H                 -6.21283565    2.15298657   -0.00086200
-C                 -0.78315191    2.15269060    0.00088786
-C                 -0.08606526    3.36121931    0.00088734
-C                 -0.08548693    0.94501548    0.00335961
-C                  1.30876256    3.36175187    0.00267704
-H                 -0.63630428    4.31325796   -0.00061165
-C                  1.30993941    0.94551682    0.00463341
-H                 -0.63486990   -0.00759907    0.00399419
-C                  2.00679196    2.15379382    0.00415373
-H                  1.85833456    4.31416964    0.00249700
-H                  1.85980667   -0.00681651    0.00652304
-H                  3.10655225    2.15452197    0.00514924
-
-2       3       12      13      =90.0       B
-2       3       12      13      F
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;Longer Version&lt;/em&gt;:
-Doing a constrained geometry optimisation is a common necessity when modelling
-organic electronics.
-A particular occurrence is wanting to set the backbone-torsion (the dihedral) of
-an oligomer fragment (representing a polymer).
-This can be due to the fact that structural measurements show a particular
-packing motif, and you want to override the behaviour of your quantum
-chemistry, or you are interested in studying something (transfer integral, HOMO
-/ LUMO energy, potential energy) as a function of the rotation.&lt;/p&gt;
-
-&lt;p&gt;The relevant &lt;code&gt;ModRedundant&lt;/code&gt; part of the Gaussian manual
-(&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_opt.htm&lt;/a&gt;) is at best confusing.&lt;/p&gt;
-
-&lt;p&gt;If you want a single job that scans along a coordinate, you can use &lt;code&gt;S&lt;/code&gt; for
-Scan. However, this has some issues: you end up with all the intermediate
-geometries buried in a massive .log file; you can&amp;rsquo;t parallelise the geometry
-optimisations; you can get some weird effects from steric hindrance, so should
-really do the scans in the two different directions to detect any &amp;lsquo;clicking&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;So being able to &lt;code&gt;F&lt;/code&gt;reeze in a constraint is really useful, so that you can
-then have a load of &lt;code&gt;.com&lt;/code&gt; files named &lt;code&gt;000.com&lt;/code&gt;, &lt;code&gt;010.com&lt;/code&gt; etc. for the angle
-along the coordinate.
-These are then trivial to use in further processing by i.e. something like
-(&lt;a href=&#34;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&#34;&gt;https://github.com/jarvist/hpc-bin/blob/master/jkp_extract_geom.awk&lt;/a&gt;) to
-extract all the optimised geometries into new &lt;code&gt;.com&lt;/code&gt; files, to do single point
-calculations.&lt;/p&gt;
-
-&lt;p&gt;So that&amp;rsquo;s grand; from 2007 to 2012 I had been using &lt;code&gt;opt=ModRedundant&lt;/code&gt; with
-a single &lt;code&gt;Freeze&lt;/code&gt; line after the atom specification, to do a constrained
-geometry optimisation.
-Then sometime around &lt;code&gt;G09.B&lt;/code&gt;, this stopped working!
-The jobs would run, but all geometries would optimise to their relaxed
-configurations.
-I didn&amp;rsquo;t really understand why this occurred; it was immensely frustrating.
-As a work-around I used the old versions of Gaussian to do geometry
-optimisations.&lt;/p&gt;
-
-&lt;p&gt;My student was recently bitten by this bug (my fault - as I sent her one of my
-&amp;lsquo;working&amp;rsquo; files from circa. 2008!).
-So we investigated properly, and eventually found out the reason.
-If you have a single &lt;code&gt;F&lt;/code&gt; line such as:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;2       3       12      13      =90.0       F
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and then go and look for the relevant part in the output &lt;code&gt;.log&lt;/code&gt; file, you will
-find that the ModRedundant section echoes back:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;The following ModRedundant input section has been read:
-D       2       3      12      13 90.000 B
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Wait a second - that&amp;rsquo;s a B! I told you F!
-So therein lies the rub.
-Gaussian, if you specify &lt;code&gt;F&lt;/code&gt;reeze alongside specifying a value to set the
-constrained coordinate to, it will silently rewrite this to &lt;code&gt;B&lt;/code&gt;uild, and so set
-that coordinate for the initial optimisation, but then relax away from that
-coordinate.
-Previously a single line with &lt;code&gt;F&lt;/code&gt; specifying the coordinate, set the
-constraint, and froze it.&lt;/p&gt;
-
-&lt;p&gt;Another curiosity which I do not understand, is that you can&amp;rsquo;t seem to do
-a constrained geometry optimisation with a empirical potential (such as &lt;code&gt;UFF&lt;/code&gt;)
-in the above.&lt;br /&gt;
-Maybe it uses different optimisation routines (i.e. Cartesian)?&lt;/p&gt;
-
-&lt;p&gt;All in all, the new behaviour is perhaps more logical.&lt;br /&gt;
-Essentially Gaussian is now doing something different when encountering
-undefined behaviour.
-Internally I would guess there&amp;rsquo;s some absolute horror show of a series of
-Fortran routines messing around with internal variables based on this flags,
-rather than a sensible parser.
-It just always feels that when someone breaks something you had working
-previously, that they are working against you!&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2016-10-13-constrained-geometry-optimisation-in-gaussian/</guid>
+      <description>Summary: If you want to do a geometry relaxation around a constrained degree of freedom (bond length, angle, dihedral, etc.) in Gaussian 09, you need two &amp;lsquo;ModRedundant&amp;rsquo; specifications, one to Build in the coordinate with the value you set, the next to then Freeze this coordinate so that it is constrained during the optimisation.
+Here is an example for Biphenyl, setting the torsional angle to 90 degrees (making the phenyls orthogonal).</description>
     </item>
     
     <item>
       <title>Soft Mode Tunnelling</title>
-      <link>http://jarvist.github.io/post/2016-07-14-Soft-Mode-Tunnelling/</link>
+      <link>https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/</link>
       <pubDate>Thu, 14 Jul 2016 20:00:00 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-07-14-Soft-Mode-Tunnelling/</guid>
-      <description>&lt;!-- MathJax --&gt;
-
-&lt;script type=&#34;text/javascript&#34;
-  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
-&lt;/script&gt;
-
-&lt;p&gt;If we consider the Mexican Hat potential discussed in the previous blog post,
-as a stand in for a soft phonon mode, a fundamental question in
-chemical physics is how regularly the mode tunnels between the vibrational
-states localised on one side, versus the other.&lt;/p&gt;
-
-&lt;p&gt;Classically, the chance of crossing over is zero, unless you have sufficient
-energy to overtop the barrier.
-From a Statistical Physics point of view, at finite temperature, some states
-will be Boltzmann populated with sufficient energy, and from this fraction and
-an attempt frequency from the rate of oscillation within an individual well,
-you could approximate the classical rate.
-You could directly extract this rate from a Molecular Dynamics simulation,
-including anharmonic and correlation terms, but even with &lt;em&gt;ab-initio&lt;/em&gt; molecular
-dynamics, your nuclear coordinate is classical.&lt;/p&gt;
-
-&lt;p&gt;However, there is, of course, also quantum mechanical tunnelling directly
-through the barrier.
-The boss (&lt;a href=&#34;https://twitter.com/lonepair&#34;&gt;@lonepair&lt;/a&gt;) asked me to consider
-whether this rate was easily calculable, to complement the considerable
-soft-phonon work occurring in the group.&lt;/p&gt;
-
-&lt;p&gt;To calculate this rate, there are a number of different approaches you could
-take.
-This includes semi-classical WKB theory, and methods used in small polaron hopping.&lt;br /&gt;
-Here I start with a very general analytic quantum mechanical analysis, which
-seems to to give you a very nice and general result to then use with your
-numeric method.&lt;/p&gt;
-
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;../../images/2016-07-14-SoftWell.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Mexican Hat confined modes&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-
-&lt;p&gt;If we look at the states (\(\Psi_n\)) localised in the wells, you can see
-that the first state is symmetric, and the then the second state is
-anti-symmetric. The Pauli exclusion principle leads to a slight splitting in
-the degeneracy.&lt;/p&gt;
-
-&lt;p&gt;Our Hamiltonian is time independent, which means that we can use our eigenstates as a basis
-$$\Psi_n(Q,t) = \Psi_n(Q).e^{-i \omega_n t}$$&lt;/p&gt;
-
-&lt;p&gt;As expected, the time-dependence of this wavefunction just leads to a phase term (entirely imaginary dependence on \(t\)), as the \(\Psi_n\) are eigenstates of a time-independent Hamiltonian. The states will just beat at a characteristic frequency.&lt;/p&gt;
-
-&lt;p&gt;So let&amp;rsquo;s construct a wavepacket of \(\Psi_1\) and \(\Psi_2\).&lt;/p&gt;
-
-&lt;p&gt;$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q,t) + \Psi_2(Q,t)  \right)$$&lt;/p&gt;
-
-&lt;p&gt;Expand to our time-dependent form above,&lt;/p&gt;
-
-&lt;p&gt;$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q).e^{-i \omega_1 t} + \Psi_2(Q).e^{-i \omega_2 t}  \right)$$&lt;/p&gt;
-
-&lt;p&gt;Bring out the base frequency-beating term,&lt;/p&gt;
-
-&lt;p&gt;$$\Phi(Q,t)=\frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right)$$&lt;/p&gt;
-
-&lt;p&gt;The observable we are interested in is the location of the wavepacket.
-We evaluate the probability density function by calculating the state&amp;rsquo;s
-expectation value with the position operator&lt;/p&gt;
-
-&lt;div&gt;
-$$ 
-\begin{align}
-&lt; \Phi(Q,t) | \, \hat{X} \, | \Phi(Q,t &gt; &amp; =  \lvert\Phi(Q,t)\rvert^2 = \Phi(Q,t) \; \Phi^{\ast}(Q,t)
-\\
-&amp; = \frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right) \frac{1}{\sqrt{2}} e^{+i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{+i (\omega_2-\omega_1) t}  \right)
-\\
-&amp; = \frac{1}{2} \left( \Psi_1^2(Q) + \Psi_1(Q)\Psi_2(Q).e^{-i (\omega_2-\omega_1) t} + \Psi_2(Q)\Psi_1(Q).e^{+i (\omega_2-\omega_1)t} + \Psi_2^2(Q) \right) 
-\end{align}
-$$
-&lt;/div&gt;
-
-&lt;p&gt;Not 100% sure I got all the algebra correct there :^)
-But the key thing is that the state is phasing between&lt;/p&gt;
-
-&lt;p&gt;$$ \lvert\Psi_1\rangle \;\rightarrow\;
-\lvert\Psi_1\Psi_2\rangle \;\rightarrow\;
-\lvert\Psi_2\rangle \;\rightarrow\;
-\lvert\Psi_2\Psi_1\rangle \;\circlearrowright$$&lt;/p&gt;
-
-&lt;p&gt;The \(\Psi_1\) and \(\Psi_2\) states are de-localised between the two wells,
-but as these are Even and Odd wavefunctions, the combinations will be localised
-in state 1 and state 2.&lt;/p&gt;
-
-&lt;p&gt;And there&amp;rsquo;s only one, obvious, time constant generated by the phase term&lt;/p&gt;
-
-&lt;p&gt;$$e^{-i (\omega_2-\omega_1) t}$$&lt;/p&gt;
-
-&lt;p&gt;By Euler&amp;rsquo;s identity, \(e^{i\pi}=-1\)&lt;/p&gt;
-
-&lt;p&gt;$$\tau=(\omega_2-\omega_1)/\pi$$&lt;/p&gt;
-
-&lt;p&gt;By \(E=\hbar\omega , \omega=E/\hbar\), this is&lt;/p&gt;
-
-&lt;p&gt;$$\tau = \frac{E_2-E_1}{\pi\hbar}$$&lt;/p&gt;
-
-&lt;p&gt;So really quite trivial! The time constant of beating between the states
-(tunnelling through the potential barrier) is directly related to the degeneracy
-splitting of the states.
-This makes sense as in the semi-classical picture, the degeneracy splitting is
-linked to the magnitude of the transfer (wavefunction overlap) integral
-between state 1 and 2.&lt;/p&gt;
-
-&lt;p&gt;I was initially concerned that there was no mass term here&amp;mdash;obviously mass
-should come into the time constant of tunnelling! But it is there, hidden in the
-solution of the Time Independent Schr&amp;ouml;dinger Equation.&lt;/p&gt;
-
-&lt;p&gt;For the potential + states above, the values are not so ridiculous&lt;/p&gt;
-
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;../../images/2016-07-14-TunnellingTimes.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Time to tunnel between states&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-
-&lt;p&gt;Classically, with a harmonic potential, you would have a Simple Harmonic
-Oscillator with&lt;/p&gt;
-
-&lt;p&gt;$$\tau=\frac{2\pi}{\omega}$$&lt;/p&gt;
-
-&lt;p&gt;where&lt;/p&gt;
-
-&lt;p&gt;$$\omega=\sqrt{\frac{k}{m}}$$&lt;/p&gt;
-
-&lt;p&gt;For this system at a finite temperature, we should be able to consider a
-Bose-Einstein distribution of weights, and then collect an overall tunnelling
-time constant by summing the weighted rates. I haven&amp;rsquo;t yet tried this.&lt;/p&gt;
-
-&lt;p&gt;$$\tau_{total} = \left( \frac{p_1}{\tau_1} + \frac{p_2}{\tau_2} + \frac{p_3}{\tau_3} &amp;hellip; \right)^{-1} $$&lt;/p&gt;
-
-&lt;p&gt;It was very enjoyable to find myself doing some basic pen + paper physics!&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/</guid>
+      <description>If we consider the Mexican Hat potential discussed in the previous blog post, as a stand in for a soft phonon mode, a fundamental question in chemical physics is how regularly the mode tunnels between the vibrational states localised on one side, versus the other.
+Classically, the chance of crossing over is zero, unless you have sufficient energy to overtop the barrier. From a Statistical Physics point of view, at finite temperature, some states will be Boltzmann populated with sufficient energy, and from this fraction and an attempt frequency from the rate of oscillation within an individual well, you could approximate the classical rate.</description>
     </item>
     
     <item>
       <title>Electron Phonon Coupling with Soft Modes</title>
-      <link>http://jarvist.github.io/post/2016-07-13-Electron-Phonon-Coupling-with-Soft-Modes/</link>
+      <link>https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/</link>
       <pubDate>Wed, 13 Jul 2016 20:00:00 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-07-13-Electron-Phonon-Coupling-with-Soft-Modes/</guid>
-      <description>&lt;!-- MathJax --&gt;
-
-&lt;script type=&#34;text/javascript&#34;
-  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
-&lt;/script&gt;
-
-&lt;p&gt;I&amp;rsquo;ve spent a lot of time over the last three years thinking about
-electron-phonon coupling. Thinking, not doing, being the operative word, as
-I&amp;rsquo;ve found the theory really quite a large mass to get my head around!&lt;/p&gt;
-
-&lt;p&gt;Recently I saw my way in to something that seemed vaguely useful and
-interesting. I&amp;rsquo;d put together a 1D Time-Independent-Schr&amp;ouml;dinger-Equation
-solver, originally for my own amusement, then to show my second year Chemistry
-tutees, then rebuilt for actual science.
-It&amp;rsquo;s surprisingly easy - discretise space, place your potential energy on the
-diagonal of a matrix, place a finite-difference approximation to the gradient
-on the tridiagonal (the kinetic energy), and via an application of the
-variational method this gives you a full set of eigenstates and eigenenergies
-when you diagonalise the matrix.&lt;/p&gt;
-
-&lt;p&gt;Seeing the workbook would be useful to follow the discussion in the rest of
-this post:-
-&lt;a href=&#34;https://github.com/jarvist/Julia-SoftModeTISH-DeformationPotential/blob/master/iJulia-Notebooks/2016-06_SoftMAPIModes_TISH_electron_phonon_coupling.ipynb&#34;&gt;iJuliaNotebook on Github&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The same method is just as applicable to an electron in an electrostatic
-potential, or a nuclear degree of freedom in the potential energy of
-a material.
-If you have a harmonic potential, the resulting wavefunctions are Gaussian.
-The most simple anharmonic potential you can imagine, while still being even
-(retaining inversion crystal symmetry) is the biquadratic Mexican Hat
-\(E(Q)=A.Q^2+B.Q^4\).&lt;/p&gt;
-
-&lt;p&gt;With the Mexican Hat potential you get some important bits of undergraduate
-quantum mechanics turning up. For instance, the isolated states in the two minima are
-degenerate, but forced to adopt opposite parity forms by the Pauli exclusion
-principle.&lt;/p&gt;
-
-&lt;p&gt;So this is just in 1D, but we can consider this to be Q, a generalised reaction
-coordinate within a Normal Mode of the motion of a material.
-These Normal Modes come from the eigen decomposition of the Dynamic Matrix (a
-set of second-order force constants).
-These are what you get when within your favourite electronic structure package
-you do a &amp;lsquo;phonon&amp;rsquo; calculation in a periodic solid, or a &amp;lsquo;frequency&amp;rsquo; calculation
-in a molecule.
-These modes form an orthogonal set; they are implicitly separated (in the
-harmonic limit) and so can be considered independently.&lt;/p&gt;
-
-&lt;p&gt;Our Mexican Hat potential is now a good model for a soft phonon mode, as seen
-in a large class of materials, including important technological applications
-in ferroelectrics.
-The potential energy surface can be recovered by walking along the normal
-eigenmode associated with an &amp;lsquo;imaginary&amp;rsquo; mode, the eigenvector pointing in the
-direction of maximum curvature. I don&amp;rsquo;t know how accurate this is for soft
-phonon modes, the motion is large and you are going in a straight line in
-a direction derived from the local curvature.
-The solution to this Schr&amp;ouml;dinger equation is the nuclear wavefunction for
-this normal mode.&lt;/p&gt;
-
-&lt;p&gt;But how this does this relate to electron-phonon coupling?
-Most modern approaches to electron-phonon coupling are based on
-density-functional-perturbation-theory.
-As a perturbation theory, this only holds true for small variations around the
-equilibrium geometry, i.e. you assume the range of motion is small, that the
-material is stiff.
-To evaluate coupling terms, you assume that the deformation
-potential (how the electron energy varies as a function of distortion) is
-quadratic, which allows the second order perturbation theory to pull out a well
-defined value.&lt;/p&gt;
-
-&lt;p&gt;Typically, the codes that calculate these parameters give up when detecting
-a soft mode, giving a zero contribution.
-In some cases this is likely to be missing the largest contribution, where the
-large range of motion of a soft mode makes up the majority electron phonon
-coupling.&lt;/p&gt;
-
-&lt;p&gt;So to try and calculate this parameter, let us start by making the
-Born-Oppenheimer approximation of separating the full wavefunction \(\Phi\)
-into a product of electron \(\Psi\) and nuclear \(\chi\) parts, within the
-(assumed independent) normal mode we are interested in, Q.&lt;/p&gt;
-
-&lt;div&gt;
-$$ \Phi(r,\,Q) = \Psi(r;\, Q) \, \chi(Q)$$
-&lt;/div&gt;
-
-&lt;p&gt;The nuclear \(\chi\) wavefunction depends only on the normal mode coordinate,
-whereas the electron and full wavefunction depend (naturally!) on the electron
-locations \(r\).&lt;/p&gt;
-
-&lt;p&gt;By solving the nuclear wavefunction in the manner above, for a potential energy
-surface derived by mode following, we have a set of vibrational eigenstates
-which we can populate with a Bose-Einstein distribution. The sum of the
-\(\Psi^2\)
-contributions (normalised) gives us a probability density function for the
-nuclear coordinates in this normal mode, as a function of temperature.&lt;/p&gt;
-
-&lt;p&gt;The electronic structure we can solve (and offload all the pain of dealing with
-the electrons!) by calculating, with the Born-Oppenheimer approximation (now
-the frozen-phonon approximation), the
-electron structure only along the same normal mode Q.
-You use your favourite code to generate \(E_g(Q)\), a deformation potential
-along a phonon mode Q.
-This includes all the electron-electron interaction (to which we can add by
-including exact electron exchange, and other electron correlation contributions).
-By the assumptions used in perturbation electron-phonon calculations, you
-expect this to be roughly quadratic around Q=0.
-Following symmetry, for most modes in most crystals, it should be an even
-expansion around Q=0.&lt;/p&gt;
-
-&lt;p&gt;This assumes that the nuclear wavefunction does not mix into the full
-electron+nuclear wavefunction, which is likely to be correct if you are considering
-low-frequency (i.e. soft) nuclear motions.&lt;/p&gt;
-
-&lt;p&gt;We can then get back to the temperature resolved electron-phonon
-coupling for this mode by calculating the following integral:&lt;/p&gt;
-
-&lt;div&gt;
-$$ E_g(T) = \left&lt; \chi(Q,T) \,\rvert\, E_g(Q) \,\lvert\, \chi(Q,T) \right&gt; $$
-&lt;/div&gt;
-
-&lt;p&gt;This is trivial to evaluate in 1D, it&amp;rsquo;s just a matter of multiplying the
-normalised probability density function for the Bose-Einstein occupied nuclear
-wavefunction, by the deformation potential.&lt;/p&gt;
-
-&lt;p&gt;So that&amp;rsquo;s grand.
-A seemingly new and very simple method to calculate electron-phonon couplings
-of soft modes (of which there are many many important technological examples).
-The result is Temperature dependent, including the Zero Point Fluctuation.
-(The quantum mechanical vibrational ground state is very different to the
-classical prediction.)&lt;/p&gt;
-
-&lt;p&gt;I am however much concerned by how easy it was, and that no one else seems to
-have tried it yet!&lt;/p&gt;
-
-&lt;p&gt;As a theory there are some nice features.
-It has full vibrational wavefunctions, albeit they are treated in a mean-field
-way when the electron-phonon interaction is calculated by only considering the
-nuclear-wavefunction-density.
-I would argue that by using a deformation-potential in Q, we are taking some kind of
-zeroth-order approximation to the electron-phonon coupling.
-As the physical range of motion for a soft mode is large, this might be fairly accurate.
-For standard, harmonic, phonons, the contribution is tiny, and higher orders in
-the electron-phonon interaction will dominate.&lt;/p&gt;
-
-&lt;p&gt;A distinct drawback is that we&amp;rsquo;re currently evaluating for just one arbitrary
-location in the vibrational Brillouin-Zone of the material. There&amp;rsquo;s an explicit
-phase term (i.e. location in q-space) which is chosen to then generate
-real-space distortions in Q to enable the calculation of the electronic
-structure (and so both the electron deformation potential, and nuclear vibrational potential).
-It is well known that the electron-phonon interaction should be
-integrated across the full Brillouin-Zone in both vibrational (q) and
-electronic (k) phase space, and that convergence of this summation is nasty as
-the electronic-phonon coupling is very spiky.
-I would argue that this method is still useful when you have a mode with
-a known softness at one particular location in the Brillouin Zone;
-with Bose-Einstein statistics, this soft mode will end up extremely highly
-populated at room temperature (i.e. it makes up the majority of the thermal
-motion of the crystal).&lt;/p&gt;
-
-&lt;p&gt;I was slightly reassured  when reading this recent paper - Figure 4 seems to be
-almost identical to what I am suggesting, just for a rather boring harmonic
-example, and only considering the ground state, rather than a Bose-Einstein
-ensemble. &lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.92.085137&#34;&gt;Phys. Rev. B 92, 085137, 2015&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;So I&amp;rsquo;m very interested if anyone out there has any thoughts to the validity or
-otherwise of the above method. Probably it&amp;rsquo;s a terrible idea, guaranteed to
-fail, or been done and discarded many years ago.
-I finish on a cheery quote:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;The previous methods for calculating the electron-phonon matrix element in
-a metal are neither rigorously formulated nor satisfactory in their results.
-From each method there is something to learn&amp;mdash;usually that the method is
-unreliable in some important aspect.&amp;rdquo; Ziman, 1960 &amp;lsquo;Electrons and Phonons&amp;rsquo;,
-&amp;sect; 5.7, page 197.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Useful references:
-&lt;a href=&#34;http://dx.doi.org/10.1016/S0081-1947(08)60593-7&#34;&gt;Sham and Ziman, Solid State Physics Volume 15, 1963, Pages 221–298&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/</guid>
+      <description>I&amp;rsquo;ve spent a lot of time over the last three years thinking about electron-phonon coupling. Thinking, not doing, being the operative word, as I&amp;rsquo;ve found the theory really quite a large mass to get my head around!
+Recently I saw my way in to something that seemed vaguely useful and interesting. I&amp;rsquo;d put together a 1D Time-Independent-Schr&amp;ouml;dinger-Equation solver, originally for my own amusement, then to show my second year Chemistry tutees, then rebuilt for actual science.</description>
     </item>
     
     <item>
       <title>Royal Society 2015 URF Scheme - Lay Report</title>
-      <link>http://jarvist.github.io/post/2016-07-13-RoyalSociety2015URF-LayReport/</link>
+      <link>https://jarvist.github.io/post/2016-07-13-royalsociety2015urf-layreport/</link>
       <pubDate>Wed, 13 Jul 2016 16:00:00 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-07-13-RoyalSociety2015URF-LayReport/</guid>
-      <description>
-
-&lt;p&gt;I applied for the Royal Society University Research Fellowship scheme last
-summer. I wasn&amp;rsquo;t successful (Boo). As part of the application, I wrote
-a lay-person summary of my research project, limited to 3500 characters.&lt;/p&gt;
-
-&lt;p&gt;There wasn&amp;rsquo;t much guidance as to who or what it was for, so I wrote it for
-a typical imagined audience of A-level students.
-I had quite a lot of fun writing it (certainly more fun that trying to get the
-costings to add up&amp;hellip;), so I thought I may as well publish it here to avoid it
-festering in some dark corner of my hard drive.&lt;/p&gt;
-
-&lt;h2 id=&#34;lay-report-computational-design-of-optoelectric-materials&#34;&gt;Lay Report &amp;mdash; Computational Design of Optoelectric Materials&lt;/h2&gt;
-
-&lt;!-- ^[Plain text only: maximum 3,500 characters (including spaces)] --&gt;
-
-&lt;p&gt;Building the future will require new materials, materials that are lighter and
-better, cheaper and with less environmental impact.
-Most materials we use now were discovered and improved by long experiment, not
-designed.
-My research is in designing the materials of the future.&lt;/p&gt;
-
-&lt;p&gt;Photovoltaics are one particular type of material I work on.
-These are a beautifully simple engine for converting sunlight (photons) into
-electricity (volts).
-Sunlight is the only renewable energy source that is large enough to replace all
-of humanity&amp;rsquo;s requirements, and is available to everyone.
-Designing Photovoltaics is particularly difficult as the material must be both optically
-and electrically active.&lt;/p&gt;
-
-&lt;p&gt;Currently most photovoltaics are made out of silicon.
-This material is abundant (sand is mainly silicon dioxide), but the
-manufacturing process of turning it into a solar cell is expensive (with high
-temperatures and vacuum processing in special clean rooms) and environmentally
-costly (it requires a lot of strong chemicals to purify and treat the
-silicon).
-My work looks to design better and cheaper photovoltaic materials,
-by solving equations with a computer.&lt;/p&gt;
-
-&lt;p&gt;Everything that we see and touch and feel and hear is due to the structure of
-the electrons in the matter around us.
-It is this electronic structure that makes the material strong or weak,
-transparent or opaque, insulate or conduct electricity.
-The electrons in a material are very lightweight so they move quickly,
-this means that they display very quantum mechanical behaviour.
-The equations that describe this electronic structure, were discovered in the
-1930s and are simple to write down.&lt;br /&gt;
-Unfortunately we cannot solve these equations exactly.
-Instead we use super computers to build an approximate solution for a small model system.
-The main problem when solving these equations is that every single electron in
-the system interacts with every other one.
-Solving these equations is like trying to choose a restaurant with a large
-crowd of people.
-The more people the more difficult to consider everyone&amp;rsquo;s individual
-preferences, and you end up somewhere that&amp;rsquo;s a bad choice for everyone.&lt;/p&gt;
-
-&lt;p&gt;When we build these computer models correctly, we can start with an
-arrangement of atoms that doesn&amp;rsquo;t exist (yet), and predict its properties, all
-within the computer.
-This is much cheaper and faster than making the material.
-Validating these computer models against reality and understanding the limits
-of the techniques available, is essential to be able to make genuine
-predictions.
-For this reason though I work entirely on a computer, I talk everyday with
-experimentalists who make new materials and then measure their properties.
-By comparing our measurements and calculations we can really begin to
-understand how these new materials work, and this understanding can help us to
-design better materials.
-Theory and calculation enables us to design materials with specific
-properties, so we no longer have to just hope to discover materials with these
-properties by accident.
-Working together, theory and calculation can suggest the direction for the next
-step into the unknown, while experiment keeps the theory grounded in reality.&lt;/p&gt;
-
-&lt;p&gt;Materials design will enable humanity to face the challenges of building the
-future.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2016-07-13-royalsociety2015urf-layreport/</guid>
+      <description>I applied for the Royal Society University Research Fellowship scheme last summer. I wasn&amp;rsquo;t successful (Boo). As part of the application, I wrote a lay-person summary of my research project, limited to 3500 characters.
+There wasn&amp;rsquo;t much guidance as to who or what it was for, so I wrote it for a typical imagined audience of A-level students. I had quite a lot of fun writing it (certainly more fun that trying to get the costings to add up&amp;hellip;), so I thought I may as well publish it here to avoid it festering in some dark corner of my hard drive.</description>
     </item>
     
     <item>
       <title>Mark Tuckerman talk: Free energy based structure prediction</title>
-      <link>http://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</link>
+      <link>https://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</link>
       <pubDate>Tue, 19 Apr 2016 14:44:34 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</guid>
-      <description>
-
-&lt;p&gt;Mark Tuckerman (MET) visited London on the 31st March 2016, and gave
-a highlight seminar to the TYC at UCL.
-I had been really enjoying his recent (2010) Computational Stat Mech book [1].
-I know very little about structure prediction, but it is of general and
-captivating interest, and an essential step in truly predictive computational
-materials science.
-Here are a summary of my notes from his talk, written up mainly for my own
-reference, and for clickable citations.&lt;/p&gt;
-
-&lt;p&gt;A point Mark made at the start and repeatedly was that we need to go beyond the
-static structure picture - we need the entropic contribution, and we therefore
-need to be able to calculate free energies.&lt;/p&gt;
-
-&lt;h2 id=&#34;small-molecular-crystals&#34;&gt;Small molecular crystals&lt;/h2&gt;
-
-&lt;p&gt;The first area discussed was predicting structure of small molecular crystals,
-the example for them was having taken part in the CCDC Blind Test [2], but
-focusing on a single molecule &amp;amp; attempting to explore the polymorphs.
-The motivation here is that for Pharma research, knowing the existence of
-energetically accessible polymorphs is of utmost importance due to highly
-varying bioavailability of different polymorphs.&lt;/p&gt;
-
-&lt;p&gt;The method started off fairly standard. As general force fields are too coarse,
-and quantum mechanical calculations too expensive, a customised force field was
-developed. QC calculations on dimers were used to parameterise, with a fairly
-normal &lt;code&gt;PBE0+TS; 6-311g**(d,p)&lt;/code&gt;.
-25000 Unit cells were generated with &lt;code&gt;UPACK&lt;/code&gt;, a software package I had not
-heard of, but which seems pretty extensive [3].&lt;/p&gt;
-
-&lt;p&gt;MD (I think just vanilla) on the packed structures lead to trajectories where
-interconversion from one structure to another could be seen. Eventually they
-settled down to 50 (lowest energy?) structures, plotted on an energy vs.
-density plot.&lt;br /&gt;
-Their 4th lowest energy structure agreed with the &amp;lsquo;blind&amp;rsquo; experimental
-structure.
-Mark was more pleased with having found a lot of low lying polymorphs.&lt;/p&gt;
-
-&lt;p&gt;So far so good for an interesting seminar, and a laudable result - but this is
-where it got really interesting.&lt;/p&gt;
-
-&lt;p&gt;Mark linked from structure prediction to protein folding via a 2004 PNAS [4],
-which proposed that both problems are essentially the same.
-You have a rough energy landscape, you need to determine the occupancy of the
-basins.&lt;/p&gt;
-
-&lt;h2 id=&#34;collective-variables&#34;&gt;Collective variables&lt;/h2&gt;
-
-&lt;p&gt;To do this, Mark suggests targeting collective variables - something that
-distinguishes different conformal states.
-These are selected &amp;lsquo;by hand&amp;rsquo; with &amp;lsquo;insight&amp;rsquo; and &amp;lsquo;chemical intuition&amp;rsquo; to fit the
-problem studied.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The most simple example are the Psi and Theta angles of the Ramachandran plot [5] for amino acid residues.&lt;/li&gt;
-&lt;li&gt;For crystals you can take the unit cell vectors and stuff them into what Mark
-referred to as the &lt;code&gt;h&lt;/code&gt; matrix.&lt;/li&gt;
-&lt;li&gt;For packing, you can take angles and distances, or use &lt;code&gt;Q&lt;/code&gt;, &lt;code&gt;W&lt;/code&gt; Steinhardt
-bond-order parameters.
-
-&lt;ul&gt;
-&lt;li&gt;[Incidentally, I recently learned thanks to another seminar that these
-seemingly mystical parameters are really quite simple - they&amp;rsquo;re just
-spherical harmonics!  You consider only even-l versions of these, making
-them invariant under inversion. [6] ]&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;temperature-accelerated-md&#34;&gt;Temperature accelerated MD&lt;/h2&gt;
-
-&lt;p&gt;Temperature accelerated MD was then introduced.
-Mark described it as essentially being an additional (standard) equation of
-motion being simultaneously solved, in the collective variables.
-A very large fictitious mass is used for the collective-variable centre, and
-a separate thermostat (~32000 K was an example).
-This physically means that the collective variables have the energy to hop
-potential barriers between minima, and the momentum to smoothly move between
-them.
-The large difference in mass allows for an adiabatic decoupling of the
-Equations of Motion.&lt;/p&gt;
-
-&lt;p&gt;I did not realise that temperature accelerated MD was this conceptually simple.&lt;/p&gt;
-
-&lt;p&gt;Metadynamics is an alternative way to explore the free energy landscape, but
-relies on the simulation dropping little Gaussians in the potential energy
-where they are currently, so requires a certain amount of time to fill up the
-basins and escape to the next one. To get the free energy, once you&amp;rsquo;ve filled
-all the basins you invert the Gaussians and this gives you the free energy
-surface.&lt;/p&gt;
-
-&lt;h3 id=&#34;protein-folding-alanine-decamers-between-alpha-helix-and-beta-hairpin&#34;&gt;Protein folding: Alanine Decamers between alpha helix and beta hairpin&lt;/h3&gt;
-
-&lt;p&gt;Accelerated MD on this as a model system (I think with the CHARMM forcefield),
-with the Ramachandran variables (20 collective variables).
-Running this produces lots of structures, with the transition paths identified [10].
-Using a Berendsen thermostat with added noise [7], defining a path as the
-collective variable, you can integrate along to get free energy.
-This gives you a smooth energy along the coordinate, and thus a well found
-value for the free energy difference.&lt;/p&gt;
-
-&lt;p&gt;I found a 2014 YouTube video containing the MD, but the extraction of free
-energy seems a bit different:
-&lt;a href=&#34;https://youtu.be/WKpe8fzATr4?t=21m38s&#34;&gt;https://youtu.be/WKpe8fzATr4?t=21m38s&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;polymorphic-benzene&#34;&gt;Polymorphic benzene&lt;/h3&gt;
-
-&lt;p&gt;Separately they studied polymorphs of benzene.
-The &amp;lsquo;h&amp;rsquo; matrix (lattice basis) was explicitly evolved in the EoM, dragging
-atoms instantly with it.
-With benzene at 100K (atomic thermostat) and 32000 K (collective variable
-thermostat), 5 ns of MD was sufficient for all free energies, 0.5 ns of MD
-found all the polymorphs.&lt;/p&gt;
-
-&lt;p&gt;This is explored in [8], and MET references thereafter.&lt;/p&gt;
-
-&lt;h3 id=&#34;melting-copper&#34;&gt;Melting Copper&lt;/h3&gt;
-
-&lt;p&gt;Melting Cu, with collective variables on the diagonal of &lt;code&gt;h&lt;/code&gt;; and
-a Q4, Q6 spherical harmonic &amp;lsquo;bond order&amp;rsquo;.
-The EAM potential was used.&lt;/p&gt;
-
-&lt;p&gt;Here they looked at classical nuclear theory.
-The simulations showed a more complex story - the hot solid had defects which
-were highly mobile. Defects formed clusters to minimise their free energy&lt;/p&gt;
-
-&lt;h3 id=&#34;navigating-on-a-high-dimensional-surface&#34;&gt;Navigating on a high dimensional surface&lt;/h3&gt;
-
-&lt;p&gt;You can&amp;rsquo;t visualise the surface - it is too high in dimension. But you want to
-see the &amp;lsquo;interesting&amp;rsquo; minima and saddle points.
-You can use a Parrinello-group sketchmap [9], which appears to be a clustering
-graph representation.
-Here [11] they used these ideas, and the &lt;code&gt;START&lt;/code&gt; method where the free energy
-gradient and the Hessian were constructed in terms of collective variables, to
-give you the weakest eigenvector to walk along with steepest descents.&lt;/p&gt;
-
-&lt;p&gt;Some very recent and unpublished data investigated Anthracene crystals,
-defining the Euler angles (though a later figure mentioned an &amp;lsquo;absolute
-quaternion&amp;rsquo;) and cell parameters as collective variables. They found the
-experimental structure, and loads of near-energy polymorphs&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;It was an extremely thought provoking talk. The explanation of temperature
-accelerated molecular dynamics was the first time that it made sense to me.
-The power of integrating the EoM for a collective variable &amp;amp; so ride roughshod
-across a rough potential energy landscape with the ability to extrapolate free
-energies is clearly fantastically powerful.&lt;/p&gt;
-
-&lt;p&gt;One bit of black magic that I do not understand, is where the force
-acting on the collective variables comes from.
-Some kind of potential defined in the collective variables? By direct coupling
-between the atomistic positions and the collective variables?&lt;/p&gt;
-
-&lt;p&gt;However, I felt that everything presented seemed a little clunky.
-Certainly the science was fantastic, but every example seemed to have been set
-up slightly differently and individually by the researchers.
-There was no mention of these codes or methods being made available.&lt;/p&gt;
-
-&lt;p&gt;One thing obviously missing from a scientific point of view was a algorithmic
-way to define the collective variables, rather than relying on intuition.&lt;/p&gt;
-
-&lt;p&gt;In a paper I&amp;rsquo;ve been reading recently [12], the authors of VoroTop introduce
-a method to identify local structure independent of radial distribution
-functions and bond orders. Instead they define the 3D Voronoi cell for individual
-atoms, and then compare the isomorphism (or not!) of the 2D Schlegel diagram
-(i.e. a planar graph of connectivity of the Voronoi vertices) to identify
-topologically distinct local bonding.
-I wonder if some ideas from here, could be borrowed and used to construct
-collective variables automatically.&lt;/p&gt;
-
-&lt;p&gt;Once you can identify the collective variables automatically, the exploration
-of rough potential energy surfaces, while retaining the free-energy of
-structures, will be practically pleasant.&lt;/p&gt;
-
-&lt;p&gt;With a bit of Googling I found a Tuckerman slide deck from 2014 which
-overlapped with this talk a fair bit:
-&lt;a href=&#34;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&#34;&gt;http://conference.mipt.ru/img/conference/material-design-2014/talks/Hybertsen-talk.pdf&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Mark has a Google Scholar page, for if you want to dig through more of his
-literature [13].&lt;/p&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;p&gt;[1] Mark E. Tuckerman (2010), Statistical Mechanics: Theory and Molecular
-Simulation. Oxford Graduate Texts.
-(&lt;a href=&#34;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&#34;&gt;https://www.amazon.co.uk/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;[2] &lt;a href=&#34;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&#34;&gt;https://www.ccdc.cam.ac.uk/Community/initiatives/cspblindtests/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[3] &lt;a href=&#34;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&#34;&gt;http://www.crystal.chem.uu.nl/~vaneyck/upack.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[4]
-&amp;ldquo;Exercises in
-prognostication: Crystal structures and protein folding&amp;rdquo;.
-Jack D. Dunitz and Harold A. Scheraga (2004).
-PNAS 40(101),
-14309-14311. &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.0405744101&#34;&gt;http://dx.doi.org/10.1073/pnas.0405744101&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[5] &lt;a href=&#34;https://en.wikipedia.org/wiki/Ramachandran_plot&#34;&gt;https://en.wikipedia.org/wiki/Ramachandran_plot&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[6] &amp;ldquo;Bond-orientational order in liquids and glasses&amp;rdquo;
-Paul J. Steinhardt, David R. Nelson, and Marco Ronchetti (1983).
-Phys. Rev. B 28, 784.
-&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevB.28.784&#34;&gt;http://dx.doi.org/10.1103/PhysRevB.28.784&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[7]
-&amp;ldquo;Canonical sampling through velocity rescaling&amp;rdquo;.
-Giovanni Bussi, Davide Donadio and Michele Parrinello (2007).
-J. Chem. Phys. 126, 014101 (2007); &lt;a href=&#34;http://dx.doi.org/10.1063/1.2408420&#34;&gt;http://dx.doi.org/10.1063/1.2408420&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[8]
-&amp;ldquo;Temperature-Accelerated Method for Exploring Polymorphism in Molecular Crystals Based on Free Energy&amp;rdquo;
-Tang-Qing Yu and Mark E. Tuckerman (2011).
-Phys. Rev. Lett. 107, 015701;
-&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRevLett.107.015701&#34;&gt;http://dx.doi.org/10.1103/PhysRevLett.107.015701&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[9]
-&amp;ldquo;Simplifying the representation of complex free-energy landscapes using
-sketch-map&amp;rdquo;.
-Michele Ceriotti, Gareth A. Tribello, and Michele Parrinello (2011).
-PNAS 32(108), 13023-13028.
-&lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1108486108&#34;&gt;http://dx.doi.org/10.1073/pnas.1108486108&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[10]
-&amp;ldquo;Sampling saddle points on a free energy surface&amp;rdquo;
-Amit Samanta, Ming Chen, Tang-Qing Yu, Mark Tuckerman and Weinan
-J. Chem. Phys. 140, 164109 (2014); &lt;a href=&#34;http://dx.doi.org/10.1063/1.4869980&#34;&gt;http://dx.doi.org/10.1063/1.4869980&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[11]
-&amp;ldquo;Locating landmarks on high-dimensional free energy surfaces&amp;rdquo;
-Ming Chen, Tang-Qing Yu, and Mark E. Tuckerman (2015).
-PNAS vol. 112 no. 11 (2015); &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1418241112&#34;&gt;http://dx.doi.org/10.1073/pnas.1418241112&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[12]
-&amp;ldquo;Topological framework for local structure analysis in condensed matter&amp;rdquo;
-Emanuel A. Lazar, Jian Han, and David J. Srolovitz (2015).
-PNAS vol. 112 no. 43; &lt;a href=&#34;http://dx.doi.org/10.1073/pnas.1505788112&#34;&gt;http://dx.doi.org/10.1073/pnas.1505788112&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[13] Mark E. Tuckerman, Google Scholar.
-&lt;a href=&#34;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;https://scholar.google.co.uk/citations?hl=en&amp;amp;user=w_7furwAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2016-04-19-mark-tuckerman-talk-free-energy-structure-prediction/</guid>
+      <description>Mark Tuckerman (MET) visited London on the 31st March 2016, and gave a highlight seminar to the TYC at UCL. I had been really enjoying his recent (2010) Computational Stat Mech book [1]. I know very little about structure prediction, but it is of general and captivating interest, and an essential step in truly predictive computational materials science. Here are a summary of my notes from his talk, written up mainly for my own reference, and for clickable citations.</description>
     </item>
     
     <item>
       <title>Delta SCF: Calculating work functions of molecular electronic materials</title>
-      <link>http://jarvist.github.io/post/2016-03-17-delta-scf/</link>
+      <link>https://jarvist.github.io/post/2016-03-17-delta-scf/</link>
       <pubDate>Wed, 23 Mar 2016 14:44:34 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-03-17-delta-scf/</guid>
-      <description>
-
-&lt;p&gt;All modern functional electronic devices are made from semiconductors.
-A semiconductor is a material with a moderate band gap.
-But to turn this semiconductor into a device, you need to be able to
-selectively inject and extract electrons from above and below this band gap,
-forming selective contacts.&lt;/p&gt;
-
-&lt;p&gt;The metrics we want to calculate are the Electron Affinity (energy gain by
-adding an electron from infinite distance) and the Ionisation Potential (energy
-required to remove an electron from the bulk to infinite distance).&lt;br /&gt;
-In a metal there is no distinction between these values (the same energy state
-is involved), and both are equivalent to the Work Function.&lt;/p&gt;
-
-&lt;p&gt;When calculating electronic structure, in a periodic system (where the
-electronic states are broadened bands) we talk of the Conduction Band Minimum
-(CBM) and Valence Band Maximum (VBM); in a molecular system (where for
-calculation we usually have an isolated molecule in vacuum) we talk in terms of
-the Lowest Unoccupied Molecular Orbital (LUMO) and Highest Occupied Molecular
-Orbital (HOMO).&lt;/p&gt;
-
-&lt;p&gt;The difference (in energy) between CBM and VBM, or similar LUMO and HOMO, gives
-us the Fundamental Gap.
-In a periodic system, this fundamental gap is a good estimate for the optical
-Band Gap of the material.
-This is because the absorption of a photon generates very loosely (negligibly)
-bound electron and hole states (the exciton).
-In a molecular system, this difference between the Fundamental and Band Gap
-(the exciton binding energy), can easily be 1 eV.
-The excited state (exciton) involves wave functions that are highly localised.
-The electron and hole are energetically bound; as there is large wavefunction
-overlap, the exchange interaction means that Singlet and Triplet states exist,
-and have different energies.
-Methods that explicitly treat the electron-hole interaction (such as
-Time-Dependent Density-Functional-Theory) are a much better estimate for the
-band gap in such systems.&lt;/p&gt;
-
-&lt;p&gt;But what are these orbital energies relative to?
-The naive expectation would be to the vacuum energy.&lt;/p&gt;
-
-&lt;p&gt;For a periodic calculation this can&amp;rsquo;t be, as there is no absolute reference in
-the periodic summations used to get the electrostatic potential.
-Often codes practically pin these values against the core states of the
-composite atoms used in the pseudo potential - so they &amp;lsquo;look&amp;rsquo; about right, but
-woe betide anyone using these as actual work functions!
-However, you can define a &amp;lsquo;vacuum&amp;rsquo; region in your simulation where no electrons
-are present and use the electrostatic potential in this region as the reference
-for your bulk values.
-My colleague Keith Butler has developed this method into a useful (and fun!)
-code named MacroDensity ([1] - &lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;With non-periodic (molecular) calculations, you do have an absolute
-reference - the vacuum is everywhere around you!
-But are the electron eigenvalues (i.e. HOMO / LUMO) actually what you want?&lt;/p&gt;
-
-&lt;p&gt;A key thing to remember is that the Density Functional Approximation is
-guaranteed to give you one thing - total energy.
-The Kohn-Sham eigenvectors [2] are auxiliary functions to enable the solving for
-the total energy of the system, in particular by providing orbitals which can
-be used to evaluate the kinetic energy of the electrons.
-The debate about whether the Kohn-Sham eigenvalues have any greater meaning has
-rumbled on for decades.
-It has become an almost ecumenical matter.
-It is usually referred to as &amp;ldquo;Koopmans&amp;rsquo; Theorem&amp;rdquo; in the literature, which
-refers to the exact agreement in Hartree-Fock theory between the occupied
-orbitals and the ionisation energies (energetic cost to remove an electron).
-Depending on who you ask, this theory is correct for Hybrid Density Functional
-Theory for: all occupied and unoccupied orbitals, just the occupied orbitals,
-just the highest occupied orbital (HOMO).&lt;/p&gt;
-
-&lt;p&gt;Certainly in my testing with organic electron materials and hybrid density
-functionals, the HOMO often seems a good estimate for the ionisation potential.
-The LUMO is often not even correlated with variations in electron affinity
-(i.e. it is qualitatively and quantitatively wrong.)&lt;/p&gt;
-
-&lt;p&gt;So if we don&amp;rsquo;t trust our single-electron eigenvalues, what can we do?&lt;/p&gt;
-
-&lt;p&gt;A conceptually (and practically!) simple method is that of the &amp;lsquo;Delta SCF&amp;rsquo;.
-The name is rather curious, but it seems to have stuck.
-You calculate the total Self-Consistent-Field energy of a &lt;code&gt;N&lt;/code&gt; electron system,
-and deduct the total energy of a &lt;code&gt;N+1&lt;/code&gt; (or &lt;code&gt;N-1&lt;/code&gt;) system.
-This difference is the total energy upon adding (or removing) an electron, and
-is therefore the Electron Affinity (or Ionisation Energy).
-You do this at the geometry of the neutral molecule (apart from anything else,
-this stops the difference in total energy requiring consideration of the
-nuclear-nuclear repulsion which would change between two different geometries).&lt;/p&gt;
-
-&lt;p&gt;As ever in electronic structure theory this method &amp;lsquo;weighs the admiral by weighing
-the battleship with and without him on board&amp;rsquo;.
-It is thus extremely important that errors in the two total energies are
-carefully controlled.&lt;/p&gt;
-
-&lt;p&gt;An alternative, which chemists seem to particularly like, is to estimate the
-Ionisation Potential from the HOMO of a DFT calculation, and then add on the
-Band Gap of the material via a TDDFT calculation to get the Electron Affinity.
-It is somewhat surprising that this often gives a good agreement to the solid
-state energies.
-One possibility is that it represents some kind of &amp;lsquo;Pauling point&amp;rsquo; (correct for
-the wrong reasons), that the exciton binding energy (and assorted systematic
-errors) in the TDDFT is somehow compensating for the delocalisation of the
-wavefunction in a solid, and the effect of the dielectric environment.
-This method I used in a 2009 study of various fullerene adduct isomers [3].
-Later work (alas unpublished) on a much wider range of fullerenes suggested
-that the major variation in the Electron Affinity (~LUMO) was due to there
-being a constant Fundamental Gap between it and the HOMO.&lt;/p&gt;
-
-&lt;p&gt;Mark Casida (yes, that Casida!) has some interesting slides on why there should
-be such an agreement between TDDFT and Delta-SCF [4].&lt;/p&gt;
-
-&lt;h2 id=&#34;doing-it-by-hand-with-gaussian&#34;&gt;Doing it by hand with Gaussian&lt;/h2&gt;
-
-&lt;p&gt;So you want to do a Delta-SCF calculation for a molecule-in-vacuum with Gaussian.
-You start with a carefully converged single point calculation:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#p sp b3lyp/6-31g* SCF(Tight,Conver=8) Integral(Grid=UltraFine)
-
-Neutral calculation - for Delta-SCF.
-
-0 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;A standard, single point, energy calculation, with upped convergence &amp;amp; the
-two-electron integrals calculated on an ultrafine grid. The &lt;code&gt;0 1&lt;/code&gt; is the
-&lt;code&gt;Charge Multiplicity&lt;/code&gt;. This is a Neutral (Charge=0) calculation in a spin Singlet
-(Multiplicity=1) configuration.&lt;/p&gt;
-
-&lt;p&gt;We have made the convergence tighter (i.e. it will do more SCF cycles to get
-a lower noise answer) on an increased fidelity integration grid. See:
-&lt;a href=&#34;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&#34;&gt;http://www.gaussian.com/g_tech/g_ur/k_integral.htm&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And now the same structure (no further nuclear relaxation), as a charged doublet.
-If you want the energy of adding an electron to the &amp;lsquo;LUMO&amp;rsquo; (the electron
-affinity), you compare the neutral energy to the system with an added electron
-(Charge=-1, the Anion). This is comparing &lt;code&gt;N&lt;/code&gt; to &lt;code&gt;N+1&lt;/code&gt; electrons.
-For a Delta-SCF calculation of the Ionisation Potential (IP), you compare to
-the &lt;code&gt;N-1&lt;/code&gt; electron case, the cation.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#p sp b3lyp/6-31g* SCF(Tight,Conver=8) Integral(Grid=UltraFine)
-
-Anion calculation - for Delta-SCF of the LUMO / Electron Affinity.
-
--1 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And that is it. Now run these jobs, calculate the difference of the total SCF
-energy between them, and you have your estimate of the Ionisation Potential or
-the Electron Affinity.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
-neutral=` grep &amp;quot;SCF Done&amp;quot; &amp;quot;${1}&amp;quot; | awk &#39;{print $5}&#39; `
-charged=` grep &amp;quot;SCF Done&amp;quot; &amp;quot;${2}&amp;quot; | awk &#39;{print $5}&#39; `
-
-echo -n &amp;quot;${1}    &amp;quot;
-echo -n &amp;quot;($neutral - $charged ) * 27.211&amp;quot; | bc -l
-echo &amp;quot;  eV&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;scripts-for-gaussian&#34;&gt;Scripts for Gaussian&lt;/h2&gt;
-
-&lt;p&gt;After doing this for the n&amp;rsquo;th time as part of this post, I thought I should sit
-down and write an all-singing script for automating the process.&lt;/p&gt;
-
-&lt;p&gt;The files are available as a Github Gist
-(&lt;a href=&#34;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&#34;&gt;https://gist.github.com/jarvist/616c8c7c3ea576d03d73&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;From Gaussian .log outputs with optimised structures, generate &lt;code&gt;.xyz&lt;/code&gt; files of
-the coordinates with &lt;code&gt;&amp;gt;extract_list_geoms.sh *.log&lt;/code&gt;.
-Then generate your Delta-SCF &lt;code&gt;.com&lt;/code&gt; Gaussian input files,
-&lt;code&gt;&amp;gt;g09_xyz_to_delta_SCF_coms_standalone.sh *.xyz&lt;/code&gt;.
-Run the resulting &lt;code&gt;.com&lt;/code&gt; files through Gaussian.
-Analyse the outputs with &lt;code&gt;&amp;gt; delta_SCF_extract_values.sh&lt;/code&gt;.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/jarvist/616c8c7c3ea576d03d73.js&#34;&gt;&lt;/script&gt;
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-
-&lt;p&gt;[1] Macrodensity - codes to read VASP LOCPOT files and calculate electrostatic
-potential derived quantities (&lt;a href=&#34;https://github.com/WMD-group/MacroDensity&#34;&gt;https://github.com/WMD-group/MacroDensity&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;[2] Kohn, Walter; Sham, Lu Jeu (1965). &amp;ldquo;Self-Consistent Equations Including
-Exchange and Correlation Effects&amp;rdquo;. Physical Review 140 (4A): A1133–A1138 (&lt;a href=&#34;http://dx.doi.org/10.1103/PhysRev.140.A1133&#34;&gt;http://dx.doi.org/10.1103/PhysRev.140.A1133&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;[3] Frost, J. M., Faist, M. A. and Nelson, J. (2010), Energetic Disorder in
-Higher Fullerene Adducts: A Quantum Chemical and Voltammetric Study. Adv.
-Mater., 22: 4881–4884. &lt;a href=&#34;http://dx.doi.org/10.1002/adma.201002189&#34;&gt;http://dx.doi.org/10.1002/adma.201002189&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[4] Mark Casida - Reconciling Delta-SCF and TDDFT, Transparencies from a talk, 1999
-(&lt;a href=&#34;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&#34;&gt;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&lt;/a&gt;)&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2016-03-17-delta-scf/</guid>
+      <description>All modern functional electronic devices are made from semiconductors. A semiconductor is a material with a moderate band gap. But to turn this semiconductor into a device, you need to be able to selectively inject and extract electrons from above and below this band gap, forming selective contacts.
+The metrics we want to calculate are the Electron Affinity (energy gain by adding an electron from infinite distance) and the Ionisation Potential (energy required to remove an electron from the bulk to infinite distance).</description>
     </item>
     
     <item>
       <title>Hello HUGO!</title>
-      <link>http://jarvist.github.io/post/2016-03-11-hello-hugo/</link>
+      <link>https://jarvist.github.io/post/2016-03-11-hello-hugo/</link>
       <pubDate>Fri, 11 Mar 2016 22:44:34 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2016-03-11-hello-hugo/</guid>
-      <description>&lt;p&gt;This blog used to be on wordpress, at
-&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
-( There are a few comments by other people scattered amongst those posts, I&amp;rsquo;m
-not sure how to best transfer / archive these. )&lt;/p&gt;
-
-&lt;p&gt;Files were extracted to a plain text Markdown
-format, and are now published with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the
-&lt;code&gt;nofancy&lt;/code&gt; theme (slightly tweaked). I moved this blog from wordpress as I had
-grown irritated with the editing experience, and I hope that being able to edit
-and push from the command line would get me blogging more regularly.&lt;/p&gt;
-
-&lt;p&gt;Time will see.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2016-03-11-hello-hugo/</guid>
+      <description>This blog used to be on wordpress, at https://jarvistmoorefrost.wordpress.com. ( There are a few comments by other people scattered amongst those posts, I&amp;rsquo;m not sure how to best transfer / archive these. )
+Files were extracted to a plain text Markdown format, and are now published with Hugo with the nofancy theme (slightly tweaked). I moved this blog from wordpress as I had grown irritated with the editing experience, and I hope that being able to edit and push from the command line would get me blogging more regularly.</description>
+    </item>
+    
+    <item>
+      <title>Altmann&#39;s Band Theory of Solids</title>
+      <link>https://jarvist.github.io/post/2016-02-26-altmann-band-theory-of-solids/</link>
+      <pubDate>Fri, 26 Feb 2016 10:29:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2016-02-26-altmann-band-theory-of-solids/</guid>
+      <description>Band Theory of Solids: An Introduction from the Point of View of Symmetry Simon L. Altmann Clarendon Press, 1994
+This is a fairly esoteric publication. The stated intent was to provide an introductory (I guess suitable for an undergraduate course) book on solid state theory, that none the less contained a strong dose of group theory from the get go. This is an interesting idea, but I&amp;rsquo;d say that it&amp;rsquo;s only partially successful.</description>
+    </item>
+    
+    <item>
+      <title>John Ziman</title>
+      <link>https://jarvist.github.io/post/2016-01-16-john-ziman/</link>
+      <pubDate>Sat, 16 Jan 2016 10:29:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2016-01-16-john-ziman/</guid>
+      <description>I&amp;rsquo;ve learnt more from John Ziman&amp;rsquo;s books on electronic structure, phonons, and disorder, than from any other single source. This is a little guide to his academic works.
+1979 - &amp;ldquo;Models of disorder&amp;rdquo;. Though his most recent book, from the printing you would assume it was from the 50s! This is the only real attempt to write a textbook summarising all approaches to disorder in electronic structure modelling. As a pioneer of liquid metals, this was his area of expertise.</description>
     </item>
     
     <item>
       <title>Talks and Seminars at Bath University</title>
-      <link>http://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</link>
+      <link>https://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</link>
       <pubDate>Tue, 08 Dec 2015 14:16:34 +0100</pubDate>
       
-      <guid>http://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</guid>
-      <description>&lt;p&gt;There are a number of groups at Bath University doing work of interest to
-Condensed Matter Theorists. This is just a quick set of &amp;lsquo;hot links&amp;rsquo; to the
-individual seminar sites + pages. It is not intended to be exhaustive or
-complete, but I try and see what&amp;rsquo;s on at all of these events for every week.&lt;/p&gt;
-
-&lt;p&gt;Physics: Theory group seminars: &lt;a href=&#34;http://people.bath.ac.uk/rj248/theory_seminars.html&#34;&gt;http://people.bath.ac.uk/rj248/theory_seminars.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Maths: General colloquium, Landscapes in Mathematical Sciences: &lt;a href=&#34;http://people.bath.ac.uk/masgks/Landscapes/&#34;&gt;http://people.bath.ac.uk/masgks/Landscapes/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Maths: Numerical Analysis group seminars: &lt;a href=&#34;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&#34;&gt;http://people.bath.ac.uk/em459/NASeminar/naseminar.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Physics: Nanoseminars: &lt;a href=&#34;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&#34;&gt;https://wiki.bath.ac.uk/pages/viewpage.action?pageId=75175127&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2015-12-08-talks-and-seminars-at-bath-university/</guid>
+      <description>There are a number of groups at Bath University doing work of interest to Condensed Matter Theorists. This is just a quick set of &amp;lsquo;hot links&amp;rsquo; to the individual seminar sites + pages. It is not intended to be exhaustive or complete, but I try and see what&amp;rsquo;s on at all of these events for every week.
+Physics: Theory group seminars: http://people.bath.ac.uk/rj248/theory_seminars.html
+Maths: General colloquium, Landscapes in Mathematical Sciences: http://people.bath.ac.uk/masgks/Landscapes/</description>
+    </item>
+    
+    <item>
+      <title>Embarrassing embarrassingly parallel</title>
+      <link>https://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</link>
+      <pubDate>Fri, 22 May 2015 21:03:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/embarrassing-embarrassingly-parallelism/</guid>
+      <description>I gave up OPENMP&amp;rsquo;ing my Monte Carlo code about a year ago. I was trying to do it at the level of MC moves, and there are massive issues here in that the different threads are trying to sample and update the same simulation space - leading to segfaults as the variables crash into one another.
+One method I&amp;rsquo;ve seen used in the literature is domain decomposition - where each thread runs MC on a segment of the simulation volume.</description>
+    </item>
+    
+    <item>
+      <title>Organising computational job workflow, as you go: freck</title>
+      <link>https://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</link>
+      <pubDate>Sun, 26 Apr 2015 16:15:52 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</guid>
+      <description>The workflow in computational materials modelling is often highly complex, and bespoke to the particular calculations you are doing. The flow is highly derivative (results of later jobs depend on work on prior jobs), but can also be quite chaotic and multiply branching. Unsurprisingly, your files easily end up very messy, with significant confusion about what steps were required to get to the present working setup.
+Version control is an absolute godsend, being able to flow down the list settings changes is extremely useful, and then being able to simply open the Git archive on GitHub as a way of archiving your research data is fantastic.</description>
+    </item>
+    
+    <item>
+      <title>Writing scientific papers</title>
+      <link>https://jarvist.github.io/post/writing-scientific-papers/</link>
+      <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/writing-scientific-papers/</guid>
+      <description>(Updated 2016-03-12 to re-add the links)
+I am probably the last person you would want to consult on tips to write a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the best, much work lies on the cutting room floor - skeletons of half assembled papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m very interested in improving, and certainly enjoy reading a well written paper.</description>
+    </item>
+    
+    <item>
+      <title>Hex Grids</title>
+      <link>https://jarvist.github.io/post/hex-grids/</link>
+      <pubDate>Sun, 25 Jan 2015 23:06:52 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/hex-grids/</guid>
+      <description>Solid state materials pack together in a myriad of ways. The crystal structures are typically referred to with the name of the archetype compound. This ranges from fairly common English words such as &amp;lsquo;diamond&amp;rsquo; and &amp;lsquo;rock-salt&amp;rsquo; to, &amp;lsquo;zinc-blend&amp;rsquo; &amp;lsquo;wurtzite&amp;rsquo; and, of course, &amp;lsquo;perovskite&amp;rsquo;.
+The atomic packing within these structures is fully described by their space-group, of which there are 230 to choose from. These space groups take the crystallographic (periodic structure) compatible point groups, and combine them with different possible lattice vectors.</description>
+    </item>
+    
+    <item>
+      <title>Snippet: SSH at Bath Uni</title>
+      <link>https://jarvist.github.io/post/snippet-ssh-at-bath-uni/</link>
+      <pubDate>Fri, 09 Jan 2015 14:36:35 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-ssh-at-bath-uni/</guid>
+      <description>I polished some slides I gave at our group meeting last summer, on using &amp;lsquo;ssh&amp;rsquo; proficiently at Bath university. I thought they may be of use to other&amp;rsquo;s, so published them online.
+They mainly cover the setting up of a ssh-config (the examples are probably useful for most people that use HPC facilities), and tunneling via the LCPU facility (fairly Bath specific, though other academic institutes might offer a similar unix machine in a DMZ to bounce through).</description>
+    </item>
+    
+    <item>
+      <title>Snippet: New Julia paper from the developers</title>
+      <link>https://jarvist.github.io/post/snippet-new-julia-paper-from-the-developers/</link>
+      <pubDate>Sat, 08 Nov 2014 13:32:50 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-new-julia-paper-from-the-developers/</guid>
+      <description>Looks to be a great reference, with plenty of code snippets getting bits of numerical methods working, finishing on the random-matrix semicircle theory, with @parallel speedup! Wish this was around when I was figuring out my little toy model&amp;hellip; https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl
+http://arxiv.org/abs/1411.1607
+via the ever useful, if distracting, Hacker News: https://news.ycombinator.com/item?id=8576411</description>
+    </item>
+    
+    <item>
+      <title>How I made a poster; 2014</title>
+      <link>https://jarvist.github.io/post/how-i-made-a-poster-2014/</link>
+      <pubDate>Thu, 16 Oct 2014 04:09:51 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/how-i-made-a-poster-2014/</guid>
+      <description>I made a scientific poster last week, for the first time in five years.
+I drew it in Inkscape, a free opensource vector drawing package. I&amp;rsquo;m have quite a lot of experience using Inkscape in drawing cave surveys, but I believe it&amp;rsquo;s both relatively easy to use, and has some extremely useful tools for constructing posters (most notably the alignment &amp;amp; distribution tool). The one gotcha is that you have to explicitly ask for it to spell check your text fields!</description>
+    </item>
+    
+    <item>
+      <title>Maximum coverage for loops; bit reversing integars</title>
+      <link>https://jarvist.github.io/post/maximum-coverage-for-loops-bit-reversing-integars/</link>
+      <pubDate>Thu, 18 Sep 2014 18:44:51 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/maximum-coverage-for-loops-bit-reversing-integars/</guid>
+      <description>So I was live-plotting some results from a simulation code (written in C), which was producing results for an input parameter (in this case Temperature), over a range generated by a for loop. Pretty standard computational physics. It was clearly suboptimal watching the new dataset arrive in small, fine, increments from zero upwards; the obvious thing was to change the discretisation of the for loop &amp;amp; make it more coarse. Yet, surely there is some way to get better coverage of the dataset, like a &amp;lsquo;streaming&amp;rsquo; JPEG or GIF arriving with increasing discretisations of the blockiness?</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Tiddlywiki for Scholars</title>
+      <link>https://jarvist.github.io/post/snippet-tiddlywiki-for-scholars/</link>
+      <pubDate>Fri, 05 Sep 2014 12:35:32 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-tiddlywiki-for-scholars/</guid>
+      <description>This looks like it might be extremely useful for a personal knowledge base / article discussion. It&amp;rsquo;s setup more for humanities work currently (books, biographies and authors), than science (some way to import a DOI to build a paper-discussion place would be fantastic). A collaborative journal club / papercore / paper summary might also work wonderfully within here.
+http://tw5.scholars.tiddlyspot.com/
+Update 2017-01-01: Unfortunately it doesn&amp;rsquo;t appear to have been updated since August 2014.</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Mendeley Desktop (Mac OS) failed update</title>
+      <link>https://jarvist.github.io/post/snippet-mendeley-desktop-mac-os-failed-update/</link>
+      <pubDate>Wed, 23 Jul 2014 14:51:18 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-mendeley-desktop-mac-os-failed-update/</guid>
+      <description>Mendeley Desktop on my Mac at work had silently stopped working - clicking the button in Launchpad did nothing. Navigating to the directory on the shell, cd &amp;ldquo;/Applications/Mendeley\ Desktop.app/Contents/MacOS/&amp;rdquo; it appeared a prior update had broken halfway through, leaving a null file for &amp;lsquo;Mendeley Desktop&amp;rsquo;. Whoops. However there was a &amp;lsquo;Mendeley Desktop.bak&amp;rsquo;. Running this from the shell, Mendeley Desktop appeared, and then offered to update itself, this time completing successfully.</description>
+    </item>
+    
+    <item>
+      <title>Links from Julia Land</title>
+      <link>https://jarvist.github.io/post/links-from-julia-land/</link>
+      <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/links-from-julia-land/</guid>
+      <description>Julia 0.3 Release Candidate 1 has quietly appeared on the nightly builds page; release notes in the very active GitHub repository - improvements to the REPL (tab conversion of &amp;lsquo;latex maths&amp;rsquo; to unicode), and a lot of interesting linear algebra improvements.
+The inaugural JuliaCon has been held, and the presentation slidedecks are already online: https://github.com/JuliaCon/presentations; videos are coming but the upload date has been pushed back as they are edited and transcribed.</description>
+    </item>
+    
+    <item>
+      <title>Free Physics on the Internet</title>
+      <link>https://jarvist.github.io/post/free-physics-on-the-internet/</link>
+      <pubDate>Tue, 01 Jul 2014 12:36:09 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/free-physics-on-the-internet/</guid>
+      <description>This is a collection of bookmarks I&amp;rsquo;ve collected over the years of useful online physics notes; hopefully this will be of some use to others. My bias is as a computational physicist doing electronic structure theory for materials modelling, so all within the remit of condensed matter theory (no high energy physics, for instance, and nothing that would count as &amp;lsquo;theoretical&amp;rsquo; research for the last forty years at least). Expect little outside pedestrian quantum mechanics and statistical physics, and the one fundamental force you can actually interact with.</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Console diary - vimwiki (now with more git &amp; autohooks)</title>
+      <link>https://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</link>
+      <pubDate>Wed, 25 Jun 2014 23:49:41 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</guid>
+      <description>I&amp;rsquo;ve dallied with keeping a computer / online logbook. I&amp;rsquo;ve tried many products, even wrote my own (retrospectively crazy) set of scripts called &amp;lsquo;freck&amp;rsquo;*. But all of these methods were only ever used for a week or two before falling by the wayside. Just too much extra effort for (me) to follow through with. And therefore they all become walled-gardens with no way of getting the information out.
+I keep paper notebooks for talks; I think it is essential to be able to sketch maths and diagrams, and I honestly think my brain is more engaged when I&amp;rsquo;m making notes by hand versus either typing or just listening (i.</description>
+    </item>
+    
+    <item>
+      <title>Making Talk Slides in 2014</title>
+      <link>https://jarvist.github.io/post/making-talk-slides-in-2014/</link>
+      <pubDate>Fri, 20 Jun 2014 18:43:15 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/making-talk-slides-in-2014/</guid>
+      <description>These days I almost exclusively make my talks in Google Drive / Present. It just works, I can work on my talk from anywhere (my laptop is Linux, my work machine is Mac OS) the modern interface is really quite nice (at least in Chrome). Most importantly for me it has very sensible auto-hints for placing items (a feint alignment lines pop up when you are centre / left / right aligned with other elements on the page).</description>
+    </item>
+    
+    <item>
+      <title>Comp Chem Highlights: Coherence penalty functional: A simple method for adding decoherence in Ehrenfest dynamics</title>
+      <link>https://jarvist.github.io/post/comp-chem-highlights-coherence-penalty-functional-a-simple-method-for-adding-decoherence-in-ehrenfest-dynamics/</link>
+      <pubDate>Wed, 18 Jun 2014 15:14:27 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/comp-chem-highlights-coherence-penalty-functional-a-simple-method-for-adding-decoherence-in-ehrenfest-dynamics/</guid>
+      <description>Comp Chem Highlights: Coherence penalty functional: A simple method for adding decoherence in Ehrenfest dynamics
+Really interesting paper on the CCH.</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Essential Latex Packages, Hacker News discussion</title>
+      <link>https://jarvist.github.io/post/snippet-essential-latex-packages-hacker-news-discussion/</link>
+      <pubDate>Fri, 13 Jun 2014 11:36:59 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-essential-latex-packages-hacker-news-discussion/</guid>
+      <description>Snippet: Essential Latex Packages, Hacker News discussion
+Some interesting tidbits in here.</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Converting Latex figures to EPS</title>
+      <link>https://jarvist.github.io/post/snippet-converting-latex-figures-to-eps/</link>
+      <pubDate>Thu, 08 May 2014 14:09:17 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-converting-latex-figures-to-eps/</guid>
+      <description>Day of the deadline &amp;amp; you realise you need to convert all your figures to EPS format, and put them in the same directory as the source .TeX files for submission? Happened to me today with APLMater. I had 23 individual files (as the figures were full-width composites), so I wrote a script to strip the filename from the TeX, rename to a flat file format, strip any periods (&amp;lsquo;.&amp;rsquo;) in the filename &amp;amp; do the conversion / copying.</description>
+    </item>
+    
+    <item>
+      <title>Snippet: Recompress PDF file - use ghostscript!</title>
+      <link>https://jarvist.github.io/post/snippet-recompress-pdf-file-use-ghostscript/</link>
+      <pubDate>Mon, 21 Apr 2014 15:55:42 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-recompress-pdf-file-use-ghostscript/</guid>
+      <description>Need to wrestle a large PDF (i.e. from TeX) with lots of images? Ghostscript is your friend! -dPDFSETTINGS=/printer seems to give good results with a perfectly legible PDF.
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf big.pdf
+http://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality/41273#41273</description>
+    </item>
+    
+    <item>
+      <title>...a raid on the inarticulate, with shabby equipment always deteriorating</title>
+      <link>https://jarvist.github.io/post/a-raid-on-the-inarticulate-with-shabby-equipment-always-deteriorating/</link>
+      <pubDate>Sat, 19 Apr 2014 19:25:44 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/a-raid-on-the-inarticulate-with-shabby-equipment-always-deteriorating/</guid>
+      <description>In science we are often rediscovering the already known, this happens on a personal level almost every day. You feel dumb and insecure, surrounded by the condensed wisdom of lifetimes in science, textbooks of seemingly impenetrable theories whose every page requires hours of study to have the merest glimpse of the knowledge within.
+Recently I&amp;rsquo;ve been trying to think about how to represent the alignment of a stick within a cube (the Methyl-Ammonium in MAPI perovskite, to interpret some Ab-initio Molecular Dynamics).</description>
+    </item>
+    
+    <item>
+      <title>The worst lies are the lies we tell ourselves</title>
+      <link>https://jarvist.github.io/post/the-worst-lies-are-the-lies-we-tell-ourselves/</link>
+      <pubDate>Fri, 04 Apr 2014 23:44:21 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/the-worst-lies-are-the-lies-we-tell-ourselves/</guid>
+      <description>I came across the following blog post while reading twitter before bed (perhaps a mistake): http://sylvaindeville.net/2014/03/24/the-making-of-a-paper-a-praise-for-slow-science
+It really irked me. The general description of scientific discovery was extremely interesting. Even the self-justifying air of &amp;lsquo;slow cooked&amp;rsquo; science, and not &amp;lsquo;salami slicing&amp;rsquo; his papers (as perhaps he feel&amp;rsquo;s critical colleagues do?) felt a valid point of view.
+What I couldn&amp;rsquo;t stand was the way in which the central figure, Florian the student, was not given a voice (or even a surname - from the paper it&amp;rsquo;s Bouville).</description>
+    </item>
+    
+    <item>
+      <title>Tumblr: Animated gifs from the cutting edge of science</title>
+      <link>https://jarvist.github.io/post/tumblr-animated-gifs-from-the-cutting-edge-of-science/</link>
+      <pubDate>Thu, 03 Apr 2014 23:31:47 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/tumblr-animated-gifs-from-the-cutting-edge-of-science/</guid>
+      <description>I&amp;rsquo;ve made a Tumblr for comedy gifs of failed molecular dynamics (MD). It&amp;rsquo;s been a while since I&amp;rsquo;ve done any MD, but I find there&amp;rsquo;s just as much potential for mishap and hilarity when it&amp;rsquo;s ab initio rather than empirical potentials.
+http://jarvistfrost.tumblr.com/post/81603681059/evil-clown-face-gonna-eat-you-nb-actually</description>
+    </item>
+    
+    <item>
+      <title>Thinkpad X60s to X220 - Debian</title>
+      <link>https://jarvist.github.io/post/thinkpad-x60s-to-x220-debian/</link>
+      <pubDate>Thu, 03 Apr 2014 23:05:19 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/thinkpad-x60s-to-x220-debian/</guid>
+      <description>I&amp;rsquo;ve just bought a new (secondhand) Thinkpad. My previous, a X60s (bought for £150 in Oct 2009) with a cheap generic 8-cell battery, has done me well over the years. Last year I upgraded it to a Samsung SSD, which made playing on the command line super speedy, but websites tended to drag a bit, and PDFs sometimes staggered between frames for tenths of a second when giving talks. The main issue was that the lovely matt 4:3 ratio screen was dying, the CCFL back light getting weaker and weaker.</description>
+    </item>
+    
+    <item>
+      <title>Snippet; pdflatex-makefile</title>
+      <link>https://jarvist.github.io/post/snippet-pdflatex-makefile/</link>
+      <pubDate>Tue, 25 Mar 2014 10:54:28 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/snippet-pdflatex-makefile/</guid>
+      <description>A Makefile based build for pdflatex papers. Actively developed, seems to work OK! Also provides a \Revision command based on the hg/svn/git repository you are working in (I haven&amp;rsquo;t understood how to use this yet&amp;hellip;).
+https://github.com/ransford/pdflatex-makefile</description>
+    </item>
+    
+    <item>
+      <title>King&#39;s Review: How Academia and Publishing are Destroying Scientific Innovation</title>
+      <link>https://jarvist.github.io/post/kings-review-how-academia-and-publishing-are-destroying-scientific-innovation/</link>
+      <pubDate>Mon, 03 Mar 2014 18:56:34 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/kings-review-how-academia-and-publishing-are-destroying-scientific-innovation/</guid>
+      <description>An interesting but depressing read at the Kings Review, an interview with Sydney Brenner. Lots of these points have been made before, but the but it makes quite a persuasive totality. I think things are worse in biology; perhaps we are heading in this direction with ever more focus on research &amp;lsquo;metrics&amp;rsquo;.
+http://kingsreview.co.uk/magazine/blog/2014/02/24/how-academia-and-publishing-are-destroying-scientific-innovation-a-conversation-with-sydney-brenner/</description>
+    </item>
+    
+    <item>
+      <title>Coursera course: organic solar cells</title>
+      <link>https://jarvist.github.io/post/coursera-course-organic-solar-cells/</link>
+      <pubDate>Thu, 27 Feb 2014 00:58:57 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/coursera-course-organic-solar-cells/</guid>
+      <description>Today is the launch of what I believe is the first organic solar cell MOOC (Massive Open Online Course). It&amp;rsquo;s being delivered by Krebs, Bundgaard and Jørgensen from DTU. The syllabus covers life cycle analysis and characterisation techniques so I think it would be useful for anyone starting research in Photo Voltaics in general.
+Organic Solar Cells - Theory and Practice - Coursera
+Most exciting for me is that you can order an OPV module for free; they&amp;rsquo;ll post you a genuine working roll-to-roll processed flexible organic photovoltaic panel.</description>
+    </item>
+    
+    <item>
+      <title>Pushing the boat out (to GitHub)</title>
+      <link>https://jarvist.github.io/post/pushing-the-boat-out-to-github/</link>
+      <pubDate>Mon, 24 Feb 2014 22:15:35 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/pushing-the-boat-out-to-github/</guid>
+      <description>In academia you often want to keep code in a private repository (such as a free BitBucket repo), then push out to GitHub for greater opensource exposure when you&amp;rsquo;ve mostly finished the first paper etc. This is easy to do with Git while retaining full commitment history by adding an extra remote. I just did this today, and leave these simple commands here as a bookmark for when I next need to do it.</description>
+    </item>
+    
+    <item>
+      <title>Sharelatex now opensource</title>
+      <link>https://jarvist.github.io/post/sharelatex-now-opensource/</link>
+      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/sharelatex-now-opensource/</guid>
+      <description>Sharelatex is now opensource: https://www.sharelatex.com/blog/2014/02/21/sharelatex-is-now-open-source.html; discussion on HN: https://news.ycombinator.com/item?id=7276263. They also now offer a &amp;lsquo;personal&amp;rsquo; account which allows for unlimited projects + one collaborator.
+The other big player in this area of collaborative online Latex document editing is https://www.writelatex.com/. I&amp;rsquo;ve generally found their web app to be a little bit heavier on the computer (particularly my poor old Thinkpad X60s), but more polished. You can directly open a Writelatex document from templates at http://www.</description>
+    </item>
+    
+    <item>
+      <title>Hybrid perovskites (MAPI and friends)</title>
+      <link>https://jarvist.github.io/post/hybrid-perovskites-mapi-and-friends/</link>
+      <pubDate>Fri, 21 Feb 2014 12:07:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/hybrid-perovskites-mapi-and-friends/</guid>
+      <description>Our fairly prospective paper is out to review with Nano Letters at the moment, the preprint has just gone live on the arXiv. There&amp;rsquo;s a massive range of calculations presented in quite a short paper - from GSGW (MvS), periodic plane wave DFT (FB) &amp;amp; CCSD quantum chemical calculations (JMF) to classical electrostatic calculations (JMF). We make suggestions as the to the likely effect of these results on device operation, and route for degradation in the presence of water via the Grotthuss mechanism (CH) (and the suggestion that an aprotic cation should alleviate this).</description>
+    </item>
+    
+    <item>
+      <title>Latex package of the day: siunitx</title>
+      <link>https://jarvist.github.io/post/latex-package-of-the-day-siunitx/</link>
+      <pubDate>Wed, 15 Jan 2014 12:58:39 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/latex-package-of-the-day-siunitx/</guid>
+      <description>My Latex package of the day is &amp;lsquo;siunitx&amp;rsquo;. No more worrying about flipping and and out of math mode, thinking how best to write an Angstrom or degrees celsius, or forcing units to be in upright fonts. I wish I had known about this years ago!
+http://ctan.org/pkg/siunitx
+via a very specific google on how to set &amp;lsquo;um&amp;rsquo; http://tex.stackexchange.com/questions/522/best-way-to-typeset-micrometers</description>
+    </item>
+    
+    <item>
+      <title>Gaussian: add &#39;Density=Current&#39; for post-HF</title>
+      <link>https://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</link>
+      <pubDate>Mon, 13 Jan 2014 13:35:46 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</guid>
+      <description>Do your electrostatics / population analysis from some expensive post-HartreeFock calculation look suspiciously similar to the HF result? You probably forgot to add &amp;lsquo;Density=Current&amp;rsquo; to your input stack.
+I don&amp;rsquo;t understand why this isn&amp;rsquo;t the default, as when you are doing (hybrid)DFT calculations, the SCF density is being varied, thus the pop / electrostatics output change with functional.</description>
+    </item>
+    
+    <item>
+      <title>New year&#39;s resolution - DVCS everywhere</title>
+      <link>https://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</link>
+      <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</guid>
+      <description>My one new year&amp;rsquo;s resolution is to use DVCS everywhere.
+With free BitBucket Academic accounts (unlimited private / public repos), http://blog.bitbucket.org/2012/08/20/bitbucket-academic/, there&amp;rsquo;s no reason not to use it for every paper, internal document, code snippet or website. From a Linux / OS X console there is very little friction in automatically using &amp;ldquo;git add + commit, push &amp;amp; pull&amp;rdquo;. It&amp;rsquo;s also a very nice + fluid way to share finalised data &amp;amp; code between HPC facilities, colleagues, collaborators &amp;amp; workstations.</description>
+    </item>
+    
+    <item>
+      <title>How to write a great research paper, Simon Peyton Jones</title>
+      <link>https://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</link>
+      <pubDate>Wed, 01 Jan 2014 20:43:41 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</guid>
+      <description>Food for thought on how to structure research (Comp Sci in this case). Fundamental premise is too turn the process on it&amp;rsquo;s head, write the paper, and then go do the work. Do watch the YouTube; he&amp;rsquo;s a great lecturer!
+&amp;ldquo;Most days you think &amp;lsquo;I am a worm&amp;rsquo;. This is the natural state of the researcher.&amp;rdquo;
+Youtube talk (35 mins) | Slides PDF | HN Discussion
+ </description>
+    </item>
+    
+    <item>
+      <title>Make for Data Processing</title>
+      <link>https://jarvist.github.io/post/make-for-data-processing/</link>
+      <pubDate>Thu, 12 Dec 2013 22:25:23 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/make-for-data-processing/</guid>
+      <description>I must admit that I have a lot of &amp;lsquo;historical&amp;rsquo; (as in, before the last hour&amp;hellip;) directories with processing scripts named usefully &amp;lsquo;process_processed_data.sh&amp;rsquo; and such. If I remember, I often pipe a &amp;lsquo;history&amp;rsquo; into a hist.sh file before I close the terminal + forget what I&amp;rsquo;ve done and how to process the data.
+So I definitely should and could do better, so why not use Make? It handles dependencies &amp;amp; gobbles files effectively, but I just can&amp;rsquo;t help but feel there should be a more elegant solution than writing clunky Make files by hand.</description>
+    </item>
+    
+    <item>
+      <title>Running with ARCHER</title>
+      <link>https://jarvist.github.io/post/running-with-archer/</link>
+      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/running-with-archer/</guid>
+      <description>ARCHER is the new EPSRC/NERC High Performance Computing facility, the successor to HeCToR. We have early access to it during its testing phase (until 16th Dec). The transition has been extremely impressive, the new machine is stunningly powerful (#19 in the world on the Top500 Nov 2013 list, a Cray XC30 on just-fabbed Intel Ivy Bridge processors ) and everything seems to more or less just work. The login nodes are responsive, the file systems as well.</description>
+    </item>
+    
+    <item>
+      <title>Mavericks and Failed ARP causing network drops - solved</title>
+      <link>https://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</link>
+      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</guid>
+      <description>Mavericks and Failed ARP causing network drops - solved
+Since I started at Bath on an OS X Mavericks machine, my SSH sessions were pausing for 4-6s every minute or so (randomly). Playing with Ping, I saw that correct packet routing was simply failing (averaging 7% packet loss for ping).
+Much wailing and gnashing of teeth later, and I found a simple fix. OS X Mavericks Unicast ARP packets were failing - so turn them off with &amp;lsquo;sudo sysctl -w net.</description>
+    </item>
+    
+    <item>
+      <title>Advanced R Programming</title>
+      <link>https://jarvist.github.io/post/advanced-r-programming/</link>
+      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/advanced-r-programming/</guid>
+      <description>Advanced R Programming
+Advanced R Programming is being written in an open manner by Hadley Wickham (ggplot2). It&amp;rsquo;s nearing completion &amp;amp; printing, but the Wiki form of the content will remain online in perpetuity. R is a really difficult language to google answers to (it&amp;rsquo;s all short-hand functions &amp;amp; punctuation &amp;lt;- $ ^ which gets stripped or is not very searchable), and the documentation I&amp;rsquo;ve found so far has been lacklustre.</description>
+    </item>
+    
+    <item>
+      <title>The penguin who came in from the cold</title>
+      <link>https://jarvist.github.io/post/the-penguin-who-came-in-from-the-cold/</link>
+      <pubDate>Tue, 12 Nov 2013 19:04:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/the-penguin-who-came-in-from-the-cold/</guid>
+      <description>Coming to Mac OS X from over a decade on Linux is quite a change! Here are notes of things I&amp;rsquo;ve found useful in making the transition, starting with more general and ending at things rather specific (and esoteric!).
+Homebrew is sort of a Gentoo ports - http://brew.sh/, it&amp;rsquo;s pretty swish and pulls directly down from GitHub based &amp;lsquo;recipes&amp;rsquo;. There&amp;rsquo;s a &amp;lsquo;science&amp;rsquo; &amp;lsquo;tap&amp;rsquo; (PPA) with lots of useful software. But install Latex via MacTex http://tug.</description>
+    </item>
+    
+    <item>
+      <title>Goodbye London; Hello Bath</title>
+      <link>https://jarvist.github.io/post/goodbye-london-hello-bath/</link>
+      <pubDate>Tue, 12 Nov 2013 19:03:03 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/goodbye-london-hello-bath/</guid>
+      <description>From the start of November 2013 I&amp;rsquo;ve moved down from Imperial College London to Bath University, joining as a PostDoc on an EPSRC Programme Grant (Energy Materials: Computational Solutions). Here, I am in the Walsh Materials Design Group - still PhotoVoltaic based, but more concerned with Perovskites and Kesterites than Fullerenes. Crystal structures have the most fantastic names - after the Georgian mineralogists who scurried the Earth&amp;rsquo;s crust looking for new ones and named them either after each other, or crazy portmanteaus of Greek &amp;amp; Latin.</description>
+    </item>
+    
+    <item>
+      <title>Online Quantum Mechanics / Quantum Chemistry resources</title>
+      <link>https://jarvist.github.io/post/online-quantum-mechanics-quantum-chemistry-resources/</link>
+      <pubDate>Sat, 05 Oct 2013 20:20:30 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/online-quantum-mechanics-quantum-chemistry-resources/</guid>
+      <description>The first book that I bought during my PhD was the excellent (and cheap!) Szabo and Ostlund &amp;lsquo;Modern Quantum Chemistry&amp;rsquo;. The development of the SCF method and then treatment of MBPT (which is where the beautiful 4th order Goldstone diagram on the front cover comes from) is absolutely fantastic. However, Szabo is a bit too dry to dig back into for a quick reminder.
+I think, unfortunately, that graduate level QM/QC is a bit too esoteric a subject for there to be a MOOC anytime soon, but there are still some very useful resources out there.</description>
+    </item>
+    
+    <item>
+      <title>The Julia programming language</title>
+      <link>https://jarvist.github.io/post/the-julia-programming-language/</link>
+      <pubDate>Mon, 12 Aug 2013 00:29:44 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/the-julia-programming-language/</guid>
+      <description>Julia is an extremely interesting new programming language - high level and dynamic, but built for speed (2x slower than C code, typically) and easy parallelisation, and with scientific computing its main goal.
+http://julialang.org
+Most recent discussion on HN: https://news.ycombinator.com/item?id=6172545
+Julia &amp;lsquo;type along&amp;rsquo; video tutorials: http://julialang.org/blog/2013/03/julia-tutorial-MIT/
+Julia + iPython interoperation video: http://lanyrd.com/2013/scipy/schhyz/</description>
+    </item>
+    
+    <item>
+      <title>EOM-CC review</title>
+      <link>https://jarvist.github.io/post/eom-cc-review/</link>
+      <pubDate>Sun, 04 Aug 2013 00:15:52 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/eom-cc-review/</guid>
+      <description>All ab-initio papers should feature extensive Douglas Adams references: http://dx.doi.org/10.1146/annurev.physchem.59.032607.093602
+This is a nice gentle introduction to EOM-CoupledCluster: &amp;ldquo;The conceptual simplicity of EOM-CC, the robustness of single-reference implementation, and the bulk of applications demonstrating the capabilities of EOM allow even nonexperts to see the marvels of the open-shell universe on their own, without the close involvement of electronic-structure specialists. Happy hitchhiking!&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Simple oligomer conformer calculation </title>
+      <link>https://jarvist.github.io/post/simple-oligomer-conformer-calculation/</link>
+      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/simple-oligomer-conformer-calculation/</guid>
+      <description>I was moaning to a PhD student in the group about the perennial issue of checking representative torsional conformers of oligomers. In this case it was the question about whether you&amp;rsquo;d see a large variation in oscillator strength (of a TDDFT calculation) if you change the conformation (we don&amp;rsquo;t see a big variation in the energies of excited states, unless you break conjugation). This is a genuine issue as the potential energy barrier for these torsional variations are thermally accessible, and typically presents at least two local minima (head-tail and head-head), if not 4 minima (where the flat alignments are sterically hindered), so real polymers will be sampling at least some of these structures.</description>
+    </item>
+    
+    <item>
+      <title>gnuplotting.org</title>
+      <link>https://jarvist.github.io/post/gnuplotting-org/</link>
+      <pubDate>Wed, 17 Jul 2013 19:15:41 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/gnuplotting-org/</guid>
+      <description>gnuplotting.org
+A beautiful site with a lot of modern gnuplot worked examples.</description>
+    </item>
+    
+    <item>
+      <title>Write your own &#39;make clean&#39;</title>
+      <link>https://jarvist.github.io/post/write-your-own-make-clean/</link>
+      <pubDate>Mon, 08 Jul 2013 10:56:42 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/write-your-own-make-clean/</guid>
+      <description>Compiling Octopus on the HPC, strange core dump on attempting to compile &amp;amp; an odd &amp;lsquo;error #7013: This module file was not generated by any release of this compiler.&amp;rsquo; found buried in ./configure&amp;rsquo;s config.log from Intel&amp;rsquo;s Fortran compiler.
+Turned out to be stale object files from a previous interation of getting it to compile; lesson learned - if there&amp;rsquo;s no &amp;lsquo;make clean&amp;rsquo;, write your own!</description>
+    </item>
+    
+    <item>
+      <title>Slithering Snakes; Amphisbaena and Gorgophone (2005...2008)</title>
+      <link>https://jarvist.github.io/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</link>
+      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</guid>
+      <description>I finally got around to (minimally) cleaning up my code from the 2006 Nanoletters paper and put it up on github (https://github.com/jarvist/Amphisbaena). This simulates coarse-grain on-lattice morphology generation of polymers via a slithering snakes / reptation model [amphisbaena], and then also enables you to carry out mobility simulations via Time of Flight (ToF), drift velocity or diffusion [gorgophone].
+It&amp;rsquo;s coded in C and is rather sneaky in some ways (have a look at the oroboros data structure!</description>
+    </item>
+    
+    <item>
+      <title>YouTube: NeuroTrends: Large-scale automated analysis of the neuroimaging literature; SciPy 2013 Presentation</title>
+      <link>https://jarvist.github.io/post/youtube-neurotrends-large-scale-automated-analysis-of-the-neuroimaging-literature-scipy-2013-presentation/</link>
+      <pubDate>Wed, 03 Jul 2013 13:34:12 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/youtube-neurotrends-large-scale-automated-analysis-of-the-neuroimaging-literature-scipy-2013-presentation/</guid>
+      <description>YouTube: NeuroTrends: Large-scale automated analysis of the neuroimaging literature; SciPy 2013 Presentation
+Interesting presentation on doing meta analysis of results in scientific papers via automated scraping with a python code.
+For me the &amp;lsquo;sciscrape&amp;rsquo; library is probably the most interesting thing (regexp based on the raw text): https://github.com/jmcarp/sciscrape
+Seems to have a typical story arc of developing an automated tool - Carp extracted data by hand from 250 papers before expending the effort to code a scraper, then used on 30&amp;rsquo;000 HTML &amp;amp; PDFs!</description>
+    </item>
+    
+    <item>
+      <title>Google Reader is dead</title>
+      <link>https://jarvist.github.io/post/google-reader-is-dead/</link>
+      <pubDate>Wed, 03 Jul 2013 13:16:28 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/google-reader-is-dead/</guid>
+      <description>Google Reader has finally shut up shop. Eight years, many scientific papers, snippets of technology news, new music and many many blogs; we had some good times.
+All the replacements currently available still seem to be a bit unsatisfying - Reader feeder updates were really quite amazingly fast, and the interface was clean. There will now be a lot of starred articles which I&amp;rsquo;ll never read, and old cached blog posts which have disappeared for ever.</description>
+    </item>
+    
+    <item>
+      <title>Collaborative academic book with GitHub &amp; Latex</title>
+      <link>https://jarvist.github.io/post/collaborative-academic-book-with-github-latex/</link>
+      <pubDate>Mon, 24 Jun 2013 09:02:40 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/collaborative-academic-book-with-github-latex/</guid>
+      <description>On the 20th June, a team of mathematicians released a book on Homotopy Type Theory, written collaboratively over 6 months with GitHub and Latex. The content is of no direct interest to me - but the collaborative method of writing, and using git to work simultaneously on a large Latex project certainly is.
+Discussion of using git + latex on HN, including touching upon methods to be able to merge simultaneous edits (latexdiff etc.</description>
+    </item>
+    
+    <item>
+      <title>PDF annotations in Linux with Xournal</title>
+      <link>https://jarvist.github.io/post/pdf-annotations-in-linux-with-xournal/</link>
+      <pubDate>Thu, 20 Jun 2013 20:32:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/pdf-annotations-in-linux-with-xournal/</guid>
+      <description>Finally (2013!), annotating PDFs has become a native &amp;amp; easy thing to do in Linux. I installed Xournal with &amp;lsquo;apt-get install xournal&amp;rsquo; and got stuck straight in. You can save the file as a (tiny) native .xou file format, and also export back to PDF (views fine in evince). No more finding a Windows machine to use Adobe Pro!
+Stumbled upon via: http://brutusfacticus.wordpress.com/2013/03/04/pdf-highlighting-annotations-in-gnulinux-okular/
+ </description>
+    </item>
+    
+    <item>
+      <title>&#34;Open Access&#34; by Peter Suber</title>
+      <link>https://jarvist.github.io/post/open-access-by-peter-suber/</link>
+      <pubDate>Wed, 19 Jun 2013 10:04:30 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/open-access-by-peter-suber/</guid>
+      <description>Well, a year has rolled around, and so &amp;lsquo;Open Access&amp;rsquo; by Peter Suber is now&amp;hellip; open access.
+ Review, discussion, and updated link to content by Stephen Curry: http://occamstypewriter.org/scurry/2012/07/05/open-access-by-peter-suber/</description>
+    </item>
+    
+    <item>
+      <title>Pymol Ray Tracing without wasting time</title>
+      <link>https://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</link>
+      <pubDate>Tue, 18 Jun 2013 11:51:38 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</guid>
+      <description>I often use the nice built in &amp;lsquo;ray&amp;rsquo; raytracer in Pymol. These ray traces can take minutes to hours, and during that time I of course want to use my computer! Unfortunately, the Pymol window freezes during the ray trace, so when I switch virtual desktops it sometimes looks as if there&amp;rsquo;s a frozen terminal or similar there, which I click on, sometimes inadvertently, sometimes because I am a fool. This click gets queued up to Pymol and promptly delivered as the ray trace finishes - making the window redraw with the built in opengl, wasting all the time ray tracing, arg!</description>
+    </item>
+    
+    <item>
+      <title>CDFT in NWCHEM</title>
+      <link>https://jarvist.github.io/post/cdft-in-nwchem/</link>
+      <pubDate>Fri, 01 Feb 2013 19:45:53 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/cdft-in-nwchem/</guid>
+      <description>I&amp;rsquo;ve been struggling recently to get CDFT jobs to converge in NWCHEM. Rather than continue to play with ~100 heavy-atom structures (of relevance to organic electronic materials) I went to a very simple system of C2H4 / C2F4. This is sometimes studied as a very simple system showing charge transfer.
+I had many issues getting this job to run successfully, before realising that I needed a suitably diffuse basis set for the constraints to be applicable!</description>
+    </item>
+    
+    <item>
+      <title>Gnuplot Ubuntu Backports</title>
+      <link>https://jarvist.github.io/post/gnuplot-ubuntu-backports/</link>
+      <pubDate>Fri, 01 Feb 2013 19:43:06 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/gnuplot-ubuntu-backports/</guid>
+      <description>I&amp;rsquo;ve been struggling to get radar plots working nicely with Gnuplot. I finally realised that loads of options were missing from the creaky version installed in Ubuntu 10.04 (there&amp;rsquo;s some custom software to which we&amp;rsquo;ve lost the source + so I don&amp;rsquo;t dare upgrade currently!). After a bit of Google searching, I found this PPA of backports:
+https://launchpad.net/~gladky-anton/+archive/gnuplot</description>
+    </item>
+    
+    <item>
+      <title>Useful program of the day: pdbcat</title>
+      <link>https://jarvist.github.io/post/useful-program-of-the-day-pdbcat/</link>
+      <pubDate>Fri, 11 Jan 2013 13:34:35 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/useful-program-of-the-day-pdbcat/</guid>
+      <description>http://www.ks.uiuc.edu/Development/MDTools/pdbcat/
+A tool to convert from the nasty column / fixed-width &amp;lsquo;fortran like&amp;rsquo; PDB fileformat to a more reasonable unix-like whitespace delimited fields, and back again.
+I had to add &amp;lsquo;using namespace std; &amp;rsquo; to line 24 of pdbcat.C to get it to compile (otherwise &amp;ldquo;error: &amp;lsquo;cerr&amp;rsquo; was not declared in this scope&amp;rdquo;).</description>
+    </item>
+    
+    <item>
+      <title>Vim Syntax Highlighting for NWCHEM, Gaussian, PDB</title>
+      <link>https://jarvist.github.io/post/vim-syntax-highlighting-for-nwchem-gaussian-pdb/</link>
+      <pubDate>Mon, 28 May 2012 10:03:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/vim-syntax-highlighting-for-nwchem-gaussian-pdb/</guid>
+      <description>I&amp;rsquo;ve recently started to use NWCHEM (for access to some modern tasty tasty functionals). I really like the input deck format - much cleaner and more sensible, IMHO than the &amp;lsquo;concise&amp;rsquo; header that one uses in Gaussian. However - it looks totally sterile as pure text, so I spent a little while learning how to write my own vim syntax file.
+While I was at it, I wrote much cruder versions for Gaussian .</description>
+    </item>
+    
+    <item>
+      <title>Bulk Hetero Jelly (BHJ)</title>
+      <link>https://jarvist.github.io/post/bulk-hetero-jelly-bhj/</link>
+      <pubDate>Thu, 08 Mar 2012 01:20:39 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/bulk-hetero-jelly-bhj/</guid>
+      <description>For my 28th birthday I report on the Bulk Hetero Jelly (BHJ). Unlike conventional Jellies, the BHJ architecture allows for a fully solution processed deposition at lower temperatures and without the vacuum processing necessary for conventional designs. The Molar scale phase separation is achieved implicitly by the kinetically limited dynamics of the slithering snakes and foam strawberries, which are then &amp;lsquo;frozen&amp;rsquo; in place by the increasing viscosity of the support matrix.</description>
+    </item>
+    
+    <item>
+      <title>Donor Acceptor Character</title>
+      <link>https://jarvist.github.io/post/donor-acceptor-character/</link>
+      <pubDate>Mon, 30 Jan 2012 11:29:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/donor-acceptor-character/</guid>
+      <description>A colleague recently asked about assessing the Donor-Acceptor strength of a given polymer by Quantum Chemical calculation. Often the literature just seems to print the pretty electron spin density plots from Gaussian at an arbitrary isovalue, then essentially relying on just making a statement about the 2D area occupation of this plot!
+I was interested in whether one could find a simple method of putting this on a more quantitative basis.</description>
     </item>
     
   </channel>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.35" />
+  <meta name="author" content="Jarvist Moore Frost">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="If we consider the Mexican Hat potential discussed in the previous blog post, as a stand in for a soft phonon mode, a fundamental question in chemical physics is how regularly the mode tunnels between the vibrational states localised on one side, versus the other.
+Classically, the chance of crossing over is zero, unless you have sufficient energy to overtop the barrier. From a Statistical Physics point of view, at finite temperature, some states will be Boltzmann populated with sufficient energy, and from this fraction and an attempt frequency from the rate of oscillation within an individual well, you could approximate the classical rate.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#EF525B">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://jarvist.github.io/index.xml" type="application/rss+xml" title="Jarvist Moore Frost">
+  <link rel="feed" href="https://jarvist.github.io/index.xml" type="application/rss+xml" title="Jarvist Moore Frost">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@JarvistFrost">
+  <meta property="twitter:creator" content="@JarvistFrost">
+  
+  <meta property="og:site_name" content="Jarvist Moore Frost">
+  <meta property="og:url" content="https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/">
+  <meta property="og:title" content="Soft Mode Tunnelling | Jarvist Moore Frost">
+  <meta property="og:description" content="If we consider the Mexican Hat potential discussed in the previous blog post, as a stand in for a soft phonon mode, a fundamental question in chemical physics is how regularly the mode tunnels between the vibrational states localised on one side, versus the other.
+Classically, the chance of crossing over is zero, unless you have sufficient energy to overtop the barrier. From a Statistical Physics point of view, at finite temperature, some states will be Boltzmann populated with sufficient energy, and from this fraction and an attempt frequency from the rate of oscillation within an individual well, you could approximate the classical rate.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2016-07-14T20:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2016-07-14T20:00:00&#43;01:00">
+  
+
+  
+
+  <title>Soft Mode Tunnelling | Jarvist Moore Frost</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Jarvist Moore Frost</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/post">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Soft Mode Tunnelling</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2016-07-14 20:00:00 &#43;0100 BST" itemprop="datePublished dateModified">
+      Thu 14 07 2016
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Jarvist Moore Frost">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Soft%20Mode%20Tunnelling&amp;url=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-14-soft-mode-tunnelling%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-14-soft-mode-tunnelling%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-14-soft-mode-tunnelling%2f&amp;title=Soft%20Mode%20Tunnelling"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-14-soft-mode-tunnelling%2f&amp;title=Soft%20Mode%20Tunnelling"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Soft%20Mode%20Tunnelling&amp;body=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-14-soft-mode-tunnelling%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- MathJax -->
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<p>If we consider the Mexican Hat potential discussed in the previous blog post,
+as a stand in for a soft phonon mode, a fundamental question in
+chemical physics is how regularly the mode tunnels between the vibrational
+states localised on one side, versus the other.</p>
+
+<p>Classically, the chance of crossing over is zero, unless you have sufficient
+energy to overtop the barrier.
+From a Statistical Physics point of view, at finite temperature, some states
+will be Boltzmann populated with sufficient energy, and from this fraction and
+an attempt frequency from the rate of oscillation within an individual well,
+you could approximate the classical rate.
+You could directly extract this rate from a Molecular Dynamics simulation,
+including anharmonic and correlation terms, but even with <em>ab-initio</em> molecular
+dynamics, your nuclear coordinate is classical.</p>
+
+<p>However, there is, of course, also quantum mechanical tunnelling directly
+through the barrier.
+The boss (<a href="https://twitter.com/lonepair" target="_blank">@lonepair</a>) asked me to consider
+whether this rate was easily calculable, to complement the considerable
+soft-phonon work occurring in the group.</p>
+
+<p>To calculate this rate, there are a number of different approaches you could
+take.
+This includes semi-classical WKB theory, and methods used in small polaron hopping.<br />
+Here I start with a very general analytic quantum mechanical analysis, which
+seems to to give you a very nice and general result to then use with your
+numeric method.</p>
+
+
+<figure >
+    
+        <img src="../../images/2016-07-14-SoftWell.png" />
+    
+    
+    <figcaption>
+        <h4>Mexican Hat confined modes</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>If we look at the states (\(\Psi_n\)) localised in the wells, you can see
+that the first state is symmetric, and the then the second state is
+anti-symmetric. The Pauli exclusion principle leads to a slight splitting in
+the degeneracy.</p>
+
+<p>Our Hamiltonian is time independent, which means that we can use our eigenstates as a basis
+$$\Psi_n(Q,t) = \Psi_n(Q).e^{-i \omega_n t}$$</p>
+
+<p>As expected, the time-dependence of this wavefunction just leads to a phase term (entirely imaginary dependence on \(t\)), as the \(\Psi_n\) are eigenstates of a time-independent Hamiltonian. The states will just beat at a characteristic frequency.</p>
+
+<p>So let&rsquo;s construct a wavepacket of \(\Psi_1\) and \(\Psi_2\).</p>
+
+<p>$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q,t) + \Psi_2(Q,t)  \right)$$</p>
+
+<p>Expand to our time-dependent form above,</p>
+
+<p>$$\Phi(Q,t)=\frac{1}{\sqrt{2}} \left( \Psi_1(Q).e^{-i \omega_1 t} + \Psi_2(Q).e^{-i \omega_2 t}  \right)$$</p>
+
+<p>Bring out the base frequency-beating term,</p>
+
+<p>$$\Phi(Q,t)=\frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right)$$</p>
+
+<p>The observable we are interested in is the location of the wavepacket.
+We evaluate the probability density function by calculating the state&rsquo;s
+expectation value with the position operator</p>
+
+<div>
+$$ 
+\begin{align}
+< \Phi(Q,t) | \, \hat{X} \, | \Phi(Q,t > & =  \lvert\Phi(Q,t)\rvert^2 = \Phi(Q,t) \; \Phi^{\ast}(Q,t)
+\\
+& = \frac{1}{\sqrt{2}} e^{-i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{-i (\omega_2-\omega_1) t}  \right) \frac{1}{\sqrt{2}} e^{+i \omega_1 t} \left( \Psi_1(Q) + \Psi_2(Q).e^{+i (\omega_2-\omega_1) t}  \right)
+\\
+& = \frac{1}{2} \left( \Psi_1^2(Q) + \Psi_1(Q)\Psi_2(Q).e^{-i (\omega_2-\omega_1) t} + \Psi_2(Q)\Psi_1(Q).e^{+i (\omega_2-\omega_1)t} + \Psi_2^2(Q) \right) 
+\end{align}
+$$
+</div>
+
+<p>Not 100% sure I got all the algebra correct there :^)
+But the key thing is that the state is phasing between</p>
+
+<p>$$ \lvert\Psi_1\rangle \;\rightarrow\;
+\lvert\Psi_1\Psi_2\rangle \;\rightarrow\;
+\lvert\Psi_2\rangle \;\rightarrow\;
+\lvert\Psi_2\Psi_1\rangle \;\circlearrowright$$</p>
+
+<p>The \(\Psi_1\) and \(\Psi_2\) states are de-localised between the two wells,
+but as these are Even and Odd wavefunctions, the combinations will be localised
+in state 1 and state 2.</p>
+
+<p>And there&rsquo;s only one, obvious, time constant generated by the phase term</p>
+
+<p>$$e^{-i (\omega_2-\omega_1) t}$$</p>
+
+<p>By Euler&rsquo;s identity, \(e^{i\pi}=-1\)</p>
+
+<p>$$\tau=(\omega_2-\omega_1)/\pi$$</p>
+
+<p>By \(E=\hbar\omega , \omega=E/\hbar\), this is</p>
+
+<p>$$\tau = \frac{E_2-E_1}{\pi\hbar}$$</p>
+
+<p>So really quite trivial! The time constant of beating between the states
+(tunnelling through the potential barrier) is directly related to the degeneracy
+splitting of the states.
+This makes sense as in the semi-classical picture, the degeneracy splitting is
+linked to the magnitude of the transfer (wavefunction overlap) integral
+between state 1 and 2.</p>
+
+<p>I was initially concerned that there was no mass term here&mdash;obviously mass
+should come into the time constant of tunnelling! But it is there, hidden in the
+solution of the Time Independent Schr&ouml;dinger Equation.</p>
+
+<p>For the potential + states above, the values are not so ridiculous</p>
+
+
+<figure >
+    
+        <img src="../../images/2016-07-14-TunnellingTimes.png" />
+    
+    
+    <figcaption>
+        <h4>Time to tunnel between states</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Classically, with a harmonic potential, you would have a Simple Harmonic
+Oscillator with</p>
+
+<p>$$\tau=\frac{2\pi}{\omega}$$</p>
+
+<p>where</p>
+
+<p>$$\omega=\sqrt{\frac{k}{m}}$$</p>
+
+<p>For this system at a finite temperature, we should be able to consider a
+Bose-Einstein distribution of weights, and then collect an overall tunnelling
+time constant by summing the weighted rates. I haven&rsquo;t yet tried this.</p>
+
+<p>$$\tau_{total} = \left( \frac{p_1}{\tau_1} + \frac{p_2}{\tau_2} + \frac{p_3}{\tau_3} &hellip; \right)^{-1} $$</p>
+
+<p>It was very enjoyable to find myself doing some basic pen + paper physics!</p>
+
+    </div>
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

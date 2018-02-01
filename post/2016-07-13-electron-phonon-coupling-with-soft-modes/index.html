@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.35" />
+  <meta name="author" content="Jarvist Moore Frost">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="I&rsquo;ve spent a lot of time over the last three years thinking about electron-phonon coupling. Thinking, not doing, being the operative word, as I&rsquo;ve found the theory really quite a large mass to get my head around!
+Recently I saw my way in to something that seemed vaguely useful and interesting. I&rsquo;d put together a 1D Time-Independent-Schr&ouml;dinger-Equation solver, originally for my own amusement, then to show my second year Chemistry tutees, then rebuilt for actual science.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#EF525B">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://jarvist.github.io/index.xml" type="application/rss+xml" title="Jarvist Moore Frost">
+  <link rel="feed" href="https://jarvist.github.io/index.xml" type="application/rss+xml" title="Jarvist Moore Frost">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@JarvistFrost">
+  <meta property="twitter:creator" content="@JarvistFrost">
+  
+  <meta property="og:site_name" content="Jarvist Moore Frost">
+  <meta property="og:url" content="https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/">
+  <meta property="og:title" content="Electron Phonon Coupling with Soft Modes | Jarvist Moore Frost">
+  <meta property="og:description" content="I&rsquo;ve spent a lot of time over the last three years thinking about electron-phonon coupling. Thinking, not doing, being the operative word, as I&rsquo;ve found the theory really quite a large mass to get my head around!
+Recently I saw my way in to something that seemed vaguely useful and interesting. I&rsquo;d put together a 1D Time-Independent-Schr&ouml;dinger-Equation solver, originally for my own amusement, then to show my second year Chemistry tutees, then rebuilt for actual science.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2016-07-13T20:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2016-07-13T20:00:00&#43;01:00">
+  
+
+  
+
+  <title>Electron Phonon Coupling with Soft Modes | Jarvist Moore Frost</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Jarvist Moore Frost</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a href="/post">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Electron Phonon Coupling with Soft Modes</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2016-07-13 20:00:00 &#43;0100 BST" itemprop="datePublished dateModified">
+      Wed 13 07 2016
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Jarvist Moore Frost">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Electron%20Phonon%20Coupling%20with%20Soft%20Modes&amp;url=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-13-electron-phonon-coupling-with-soft-modes%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-13-electron-phonon-coupling-with-soft-modes%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-13-electron-phonon-coupling-with-soft-modes%2f&amp;title=Electron%20Phonon%20Coupling%20with%20Soft%20Modes"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-13-electron-phonon-coupling-with-soft-modes%2f&amp;title=Electron%20Phonon%20Coupling%20with%20Soft%20Modes"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Electron%20Phonon%20Coupling%20with%20Soft%20Modes&amp;body=https%3a%2f%2fjarvist.github.io%2fpost%2f2016-07-13-electron-phonon-coupling-with-soft-modes%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <!-- MathJax -->
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<p>I&rsquo;ve spent a lot of time over the last three years thinking about
+electron-phonon coupling. Thinking, not doing, being the operative word, as
+I&rsquo;ve found the theory really quite a large mass to get my head around!</p>
+
+<p>Recently I saw my way in to something that seemed vaguely useful and
+interesting. I&rsquo;d put together a 1D Time-Independent-Schr&ouml;dinger-Equation
+solver, originally for my own amusement, then to show my second year Chemistry
+tutees, then rebuilt for actual science.
+It&rsquo;s surprisingly easy - discretise space, place your potential energy on the
+diagonal of a matrix, place a finite-difference approximation to the gradient
+on the tridiagonal (the kinetic energy), and via an application of the
+variational method this gives you a full set of eigenstates and eigenenergies
+when you diagonalise the matrix.</p>
+
+<p>Seeing the workbook would be useful to follow the discussion in the rest of
+this post:-
+<a href="https://github.com/jarvist/Julia-SoftModeTISH-DeformationPotential/blob/master/iJulia-Notebooks/2016-06_SoftMAPIModes_TISH_electron_phonon_coupling.ipynb" target="_blank">iJuliaNotebook on Github</a></p>
+
+<p>The same method is just as applicable to an electron in an electrostatic
+potential, or a nuclear degree of freedom in the potential energy of
+a material.
+If you have a harmonic potential, the resulting wavefunctions are Gaussian.
+The most simple anharmonic potential you can imagine, while still being even
+(retaining inversion crystal symmetry) is the biquadratic Mexican Hat
+\(E(Q)=A.Q^2+B.Q^4\).</p>
+
+<p>With the Mexican Hat potential you get some important bits of undergraduate
+quantum mechanics turning up. For instance, the isolated states in the two minima are
+degenerate, but forced to adopt opposite parity forms by the Pauli exclusion
+principle.</p>
+
+<p>So this is just in 1D, but we can consider this to be Q, a generalised reaction
+coordinate within a Normal Mode of the motion of a material.
+These Normal Modes come from the eigen decomposition of the Dynamic Matrix (a
+set of second-order force constants).
+These are what you get when within your favourite electronic structure package
+you do a &lsquo;phonon&rsquo; calculation in a periodic solid, or a &lsquo;frequency&rsquo; calculation
+in a molecule.
+These modes form an orthogonal set; they are implicitly separated (in the
+harmonic limit) and so can be considered independently.</p>
+
+<p>Our Mexican Hat potential is now a good model for a soft phonon mode, as seen
+in a large class of materials, including important technological applications
+in ferroelectrics.
+The potential energy surface can be recovered by walking along the normal
+eigenmode associated with an &lsquo;imaginary&rsquo; mode, the eigenvector pointing in the
+direction of maximum curvature. I don&rsquo;t know how accurate this is for soft
+phonon modes, the motion is large and you are going in a straight line in
+a direction derived from the local curvature.
+The solution to this Schr&ouml;dinger equation is the nuclear wavefunction for
+this normal mode.</p>
+
+<p>But how this does this relate to electron-phonon coupling?
+Most modern approaches to electron-phonon coupling are based on
+density-functional-perturbation-theory.
+As a perturbation theory, this only holds true for small variations around the
+equilibrium geometry, i.e. you assume the range of motion is small, that the
+material is stiff.
+To evaluate coupling terms, you assume that the deformation
+potential (how the electron energy varies as a function of distortion) is
+quadratic, which allows the second order perturbation theory to pull out a well
+defined value.</p>
+
+<p>Typically, the codes that calculate these parameters give up when detecting
+a soft mode, giving a zero contribution.
+In some cases this is likely to be missing the largest contribution, where the
+large range of motion of a soft mode makes up the majority electron phonon
+coupling.</p>
+
+<p>So to try and calculate this parameter, let us start by making the
+Born-Oppenheimer approximation of separating the full wavefunction \(\Phi\)
+into a product of electron \(\Psi\) and nuclear \(\chi\) parts, within the
+(assumed independent) normal mode we are interested in, Q.</p>
+
+<div>
+$$ \Phi(r,\,Q) = \Psi(r;\, Q) \, \chi(Q)$$
+</div>
+
+<p>The nuclear \(\chi\) wavefunction depends only on the normal mode coordinate,
+whereas the electron and full wavefunction depend (naturally!) on the electron
+locations \(r\).</p>
+
+<p>By solving the nuclear wavefunction in the manner above, for a potential energy
+surface derived by mode following, we have a set of vibrational eigenstates
+which we can populate with a Bose-Einstein distribution. The sum of the
+\(\Psi^2\)
+contributions (normalised) gives us a probability density function for the
+nuclear coordinates in this normal mode, as a function of temperature.</p>
+
+<p>The electronic structure we can solve (and offload all the pain of dealing with
+the electrons!) by calculating, with the Born-Oppenheimer approximation (now
+the frozen-phonon approximation), the
+electron structure only along the same normal mode Q.
+You use your favourite code to generate \(E_g(Q)\), a deformation potential
+along a phonon mode Q.
+This includes all the electron-electron interaction (to which we can add by
+including exact electron exchange, and other electron correlation contributions).
+By the assumptions used in perturbation electron-phonon calculations, you
+expect this to be roughly quadratic around Q=0.
+Following symmetry, for most modes in most crystals, it should be an even
+expansion around Q=0.</p>
+
+<p>This assumes that the nuclear wavefunction does not mix into the full
+electron+nuclear wavefunction, which is likely to be correct if you are considering
+low-frequency (i.e. soft) nuclear motions.</p>
+
+<p>We can then get back to the temperature resolved electron-phonon
+coupling for this mode by calculating the following integral:</p>
+
+<div>
+$$ E_g(T) = \left< \chi(Q,T) \,\rvert\, E_g(Q) \,\lvert\, \chi(Q,T) \right> $$
+</div>
+
+<p>This is trivial to evaluate in 1D, it&rsquo;s just a matter of multiplying the
+normalised probability density function for the Bose-Einstein occupied nuclear
+wavefunction, by the deformation potential.</p>
+
+<p>So that&rsquo;s grand.
+A seemingly new and very simple method to calculate electron-phonon couplings
+of soft modes (of which there are many many important technological examples).
+The result is Temperature dependent, including the Zero Point Fluctuation.
+(The quantum mechanical vibrational ground state is very different to the
+classical prediction.)</p>
+
+<p>I am however much concerned by how easy it was, and that no one else seems to
+have tried it yet!</p>
+
+<p>As a theory there are some nice features.
+It has full vibrational wavefunctions, albeit they are treated in a mean-field
+way when the electron-phonon interaction is calculated by only considering the
+nuclear-wavefunction-density.
+I would argue that by using a deformation-potential in Q, we are taking some kind of
+zeroth-order approximation to the electron-phonon coupling.
+As the physical range of motion for a soft mode is large, this might be fairly accurate.
+For standard, harmonic, phonons, the contribution is tiny, and higher orders in
+the electron-phonon interaction will dominate.</p>
+
+<p>A distinct drawback is that we&rsquo;re currently evaluating for just one arbitrary
+location in the vibrational Brillouin-Zone of the material. There&rsquo;s an explicit
+phase term (i.e. location in q-space) which is chosen to then generate
+real-space distortions in Q to enable the calculation of the electronic
+structure (and so both the electron deformation potential, and nuclear vibrational potential).
+It is well known that the electron-phonon interaction should be
+integrated across the full Brillouin-Zone in both vibrational (q) and
+electronic (k) phase space, and that convergence of this summation is nasty as
+the electronic-phonon coupling is very spiky.
+I would argue that this method is still useful when you have a mode with
+a known softness at one particular location in the Brillouin Zone;
+with Bose-Einstein statistics, this soft mode will end up extremely highly
+populated at room temperature (i.e. it makes up the majority of the thermal
+motion of the crystal).</p>
+
+<p>I was slightly reassured  when reading this recent paper - Figure 4 seems to be
+almost identical to what I am suggesting, just for a rather boring harmonic
+example, and only considering the ground state, rather than a Bose-Einstein
+ensemble. <a href="http://dx.doi.org/10.1103/PhysRevB.92.085137" target="_blank">Phys. Rev. B 92, 085137, 2015</a></p>
+
+<p>So I&rsquo;m very interested if anyone out there has any thoughts to the validity or
+otherwise of the above method. Probably it&rsquo;s a terrible idea, guaranteed to
+fail, or been done and discarded many years ago.
+I finish on a cheery quote:</p>
+
+<blockquote>
+<p>&ldquo;The previous methods for calculating the electron-phonon matrix element in
+a metal are neither rigorously formulated nor satisfactory in their results.
+From each method there is something to learn&mdash;usually that the method is
+unreliable in some important aspect.&rdquo; Ziman, 1960 &lsquo;Electrons and Phonons&rsquo;,
+&sect; 5.7, page 197.</p>
+</blockquote>
+
+<p>Useful references:
+<a href="http://dx.doi.org/10.1016/S0081-1947(08)60593-7" target="_blank">Sham and Ziman, Solid State Physics Volume 15, 1963, Pages 221–298</a></p>
+
+    </div>
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
