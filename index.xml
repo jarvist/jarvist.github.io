@@ -113,30 +113,41 @@ wisely!&lt;/p&gt;
       <description>
 
 &lt;p&gt;Starting my PhD in 2007, I spent many many years in seminar and conference
-talks on Photovoltaics being confused by the enormous array of experimental
-probes for photovoltaic materials.
-This is an attempt, stimulated (as always!) by questions from a student, to put
-down a list of standard experimental photovoltaic (or other optoelectronic)
-device characterisations.&lt;/p&gt;
+talks on Photovoltaics being confused by the range of measurements possible.
+Often these are known by cryptic acronyms (EXAFS? MALDI-TOF? PXRD?).&lt;/p&gt;
+
+&lt;p&gt;This is an attempt, stimulated (as always!) by questions from a student, to put
+together a list of fairly standard experimental probes for photovoltaic (and
+perhaps other optoelectronic) materials.&lt;/p&gt;
 
 &lt;p&gt;High energy theorists often ape Gell-Mann in describing solid-state physics as
-the &amp;lsquo;squalid-state&amp;rsquo;. Certainly there is an awful lot going on at once.
-This is reflected in the experimental probes, which are similarly diverse, and
-though they are often supposedly measuring the same observable in the same
-material, come to contradictory conclusions.&lt;/p&gt;
+the &amp;lsquo;squalid-state&amp;rsquo;.
+Certainly there is an awful lot of physics going on at once.
+This complexity is reflected in the experimental probes.&lt;br /&gt;
+These are are highly diverse in what they measure, and even when supposedly
+getting at the same fundamental characterisation in the same material, often
+come to contradictory conclusions.&lt;/p&gt;
+
+&lt;p&gt;This is a particular problem with phenomenological behaviour - such as charge
+carrier mobility.&lt;/p&gt;
 
 &lt;p&gt;In terms of device physics, almost all measures are optical,
 electrical or optical-electrical.
-This forms a rough hierachy of techniques which are applied sequentially to
-a new material, as the purely optical probes can be done with &amp;lsquo;a flect of
-dust&amp;rsquo;, whereas contacts requires another level of complexity.&lt;/p&gt;
+This forms a rough hierarchy of techniques, which are typically applied sequentially to
+a new material.
+The purely optical probes can be done with &amp;lsquo;a fleck of
+dust&amp;rsquo;, whereas adding electrical contacts takes time and much more material.&lt;/p&gt;
 
 &lt;p&gt;It only makes sense to start doing this on
 relatively pure samples (i.e. whereas structural characterisation by X-Ray
 Diffraction [XRD] just needs &lt;em&gt;some&lt;/em&gt;  crystalline material).
 Similarly short-time (picosecond) optical measures may need 99.99% materials,
 whereas electrical measures (where the charges have to live for micro or
-miliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
+milliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
+
+&lt;p&gt;Finally, a warning: A good experimental device physicist will spend their
+career learning such characterisation techniques! This blog-post just tries to
+minimally cover the basics.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-pure-optical-non-contacted&#34;&gt;1 - pure optical / non contacted)&lt;/h2&gt;
 
