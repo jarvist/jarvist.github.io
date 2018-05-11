@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notetoself on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/notetoself/index.xml</link>
-    <description>Recent content in Notetoself on Jarvist Moore Frost: Academic blog</description>
+    <title>Notetoself on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/notetoself/</link>
+    <description>Recent content in Notetoself on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/notetoself/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 13 Jan 2014 13:35:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/notetoself/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Gaussian: add &#39;Density=Current&#39; for post-HF</title>
-      <link>http://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</link>
+      <link>https://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</link>
       <pubDate>Mon, 13 Jan 2014 13:35:46 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</guid>
-      <description>&lt;p&gt;Do your electrostatics / population analysis from some expensive post-HartreeFock calculation look suspiciously similar to the HF result? You probably forgot to add &amp;lsquo;Density=Current&amp;rsquo; to your input stack.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t understand why this isn&amp;rsquo;t the default, as when you are doing (hybrid)DFT calculations, the SCF density is being varied, thus the pop / electrostatics output change with functional.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</guid>
+      <description>Do your electrostatics / population analysis from some expensive post-HartreeFock calculation look suspiciously similar to the HF result? You probably forgot to add &amp;lsquo;Density=Current&amp;rsquo; to your input stack.
+I don&amp;rsquo;t understand why this isn&amp;rsquo;t the default, as when you are doing (hybrid)DFT calculations, the SCF density is being varied, thus the pop / electrostatics output change with functional.</description>
     </item>
     
   </channel>

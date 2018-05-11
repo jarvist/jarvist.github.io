@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Worm on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/worm/index.xml</link>
-    <description>Recent content in Worm on Jarvist Moore Frost: Academic blog</description>
+    <title>Worm on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/worm/</link>
+    <description>Recent content in Worm on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/worm/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 01 Jan 2014 20:43:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/worm/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How to write a great research paper, Simon Peyton Jones</title>
-      <link>http://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</link>
+      <link>https://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</link>
       <pubDate>Wed, 01 Jan 2014 20:43:41 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</guid>
-      <description>&lt;p&gt;Food for thought on how to structure research (Comp Sci in this case). Fundamental premise is too turn the process on it&amp;rsquo;s head, write the paper, and then go do the work. Do watch the YouTube; he&amp;rsquo;s a great lecturer!&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Most days you think &amp;lsquo;I am a worm&amp;rsquo;. This is the natural state of the researcher.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;Youtube talk (35 mins)&lt;/a&gt; | &lt;a href=&#34;https://research.microsoft.com/en-us/um/people/simonpj/papers/giving-a-talk/writing-a-paper-slides.pdf&#34;&gt;Slides PDF&lt;/a&gt; | &lt;a href=&#34;https://news.ycombinator.com/item?id=6989806&#34;&gt;HN Discussion&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/how-to-write-a-great-research-paper-simon-peyton-jones/</guid>
+      <description>Food for thought on how to structure research (Comp Sci in this case). Fundamental premise is too turn the process on it&amp;rsquo;s head, write the paper, and then go do the work. Do watch the YouTube; he&amp;rsquo;s a great lecturer!
+&amp;ldquo;Most days you think &amp;lsquo;I am a worm&amp;rsquo;. This is the natural state of the researcher.&amp;rdquo;
+Youtube talk (35 mins) | Slides PDF | HN Discussion
+ </description>
     </item>
     
   </channel>

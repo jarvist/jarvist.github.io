@@ -1,208 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bitbucket on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/bitbucket/index.xml</link>
-    <description>Recent content in Bitbucket on Jarvist Moore Frost: Academic blog</description>
+    <title>Bitbucket on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/bitbucket/</link>
+    <description>Recent content in Bitbucket on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Mar 2015 22:44:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Writing scientific papers</title>
-      <link>http://jarvist.github.io/post/writing-scientific-papers/</link>
+      <link>https://jarvist.github.io/post/writing-scientific-papers/</link>
       <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/writing-scientific-papers/</guid>
-      <description>
-
-&lt;p&gt;(Updated 2016-03-12 to re-add the links)&lt;/p&gt;
-
-&lt;p&gt;I am probably the last person you would want to consult on tips to write
-a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the
-best, much work lies on the cutting room floor - skeletons of half assembled
-papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m
-very interested in improving, and certainly enjoy reading a well written paper.&lt;/p&gt;
-
-&lt;p&gt;It is an unfortunate fact that the quality of scientific writing is
-decreasing as a function of time.
-Some of this can be explained by the laudable continuing expansion of
-scienitific research across the world resulting in a greater number of authors
-writing English as an additional language.
-I believe the major reason stems from the unrelenting pressure to publish.
-Many more papers are written, yet there are still only the same number of days
-in the year.
-With these publication metrics deciding so much of our future careers (and thus
-lives), there is also enormous pressure to &amp;lsquo;glam up&amp;rsquo; work and oversell, as well
-as to &amp;lsquo;salami slice&amp;rsquo; and represent work that belongs together in one
-paper in many.&lt;/p&gt;
-
-&lt;p&gt;It used to be that scientists would work continuously on a problem, and then
-publish when a &amp;lsquo;breakthrough&amp;rsquo; had been made.
-To be honest I think we would have a better scientific corpus if this was still
-the case - careful work on a hard problem for a few years until we gain some
-traction, then write it up for the benefit of anyone who could take it
-elsewhere.&lt;/p&gt;
-
-&lt;p&gt;(Along these lines, Ross McKenzie has a recent blog post &amp;lsquo;&lt;a href=&#34;http://condensedconcepts.blogspot.co.uk/2015/02/in-praise-of-modest-goals.html&#34;&gt;In praise of modest
-goals&lt;/a&gt;&amp;rsquo;.)&lt;/p&gt;
-
-&lt;p&gt;So the first thing to do when writing is to overcome the cynicism!
-When I get particular disaffected I return to Simon Peyton Jones&amp;rsquo; talk on &lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;how
-to write a great research paper&lt;/a&gt;
-. His enthusiasm and motivation is infectious. I am a worm. A worm with
-a infectious mind virus, and that is good.&lt;/p&gt;
-
-&lt;p&gt;Sabine Hossenfelder wrote a useful blog post on &lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;How to write your first
-scientific
-paper&lt;/a&gt;,
-this covers the construction and sectioning of a physics paper.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve personally found the Penguin Writer&amp;rsquo;s Manual very useful for the nitty
-gritty of &amp;lsquo;that&amp;rsquo; vs &amp;lsquo;which&amp;rsquo;. I&amp;rsquo;ve also read Strunk and White (The elements of
-style), though I&amp;rsquo;m not sure how much I took from it. The &lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;economist style
-guide&lt;/a&gt;
-(available online) is also very useful as a reference.
-(2016 update: Steven Pinker&amp;rsquo;s &amp;lsquo;The Sense of Style&amp;rsquo; is fantastic. Dispels a lot
-of prescriptive myths, but also teaches how to analyse your sentences and
-identify clumsy phrases.)&lt;/p&gt;
-
-&lt;p&gt;I much prefer to write with Latex. Sometimes I first go via Markdown (a
-lightweight markup language that looks a lot like how you would naturally
-format a text email), so I don&amp;rsquo;t need to bother with thinking about the Latex
-commands when forming a text, and then convert to Latex (with pandoc) for
-inclusions of figures &amp;amp; all the revisions that incur thereafter. The whole
-project I put within a &amp;lsquo;git&amp;rsquo; repository and so have version control,
-effectively offsite backup (to Github / Bitbucket). To get the diffs to work
-well with the files, it&amp;rsquo;s easiest to add a newline after the end of every
-sentence (I usually hard-break my lines at 80 chars as I write in Vim).&lt;/p&gt;
-
-&lt;p&gt;I have contributed to papers in Microsoft Word (usually originating with
-collaborators). It works OK, and the track changes / comment tool can be really
-useful, though a distressing number of collaborators seem to send you back
-a &amp;lsquo;clean&amp;rsquo; document with the tracking dropped. Whether that&amp;rsquo;s due to ignorance
-of the tools, compatibility with different versions of Word, or an attempt to
-bury any information about which of your changes they reverted, I do not know.
-Certainly it makes me respect them less both academically and professionally.
-It is most incredibly frustrating to be editing a sentence, not sure
-whether you&amp;rsquo;re applying the same change again, undoing an important correction
-or what.&lt;/p&gt;
-
-&lt;p&gt;I typically plot data in GNUPLOT or XMGRACE, sometimes also in Python&amp;rsquo;s
-Matplotlib (though this is much less deterministic - the output depends on the
-specific version you have installed, and it can be extremely frustrating to
-reproduce a tweaked diagram). I&amp;rsquo;ve found some useful websites on tips + tricks
-for plotting, useful beyond an immediate answer to resolving a problem.&lt;/p&gt;
-
-&lt;h3 id=&#34;useful-general-resources&#34;&gt;Useful general resources&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Simon Peyton Jones talk &lt;a href=&#34;https://www.youtube.com/watch?v=g3dkRsTqdDA&#34;&gt;https://www.youtube.com/watch?v=g3dkRsTqdDA&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hacker News discussion &lt;a href=&#34;https://news.ycombinator.com/item?id=6989806&#34;&gt;https://news.ycombinator.com/item?id=6989806&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Sabine Hossenfelder blogpost
-&lt;a href=&#34;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&#34;&gt;http://backreaction.blogspot.co.uk/2015/01/how-to-write-your-first-scientific-paper.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The Researcher&amp;rsquo;s Bible
-&lt;a href=&#34;http://homepages.inf.ed.ac.uk/bundy/how-tos/resbible.html&#34;&gt;http://homepages.inf.ed.ac.uk/bundy/how-tos/resbible.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Economist - Style Guide &lt;a href=&#34;http://www.economist.com/styleguide/introduction&#34;&gt;http://www.economist.com/styleguide/introduction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;colour&#34;&gt;Colour&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;IBM paper &amp;ldquo;Why should engineers and scientists be worried about color?&amp;rdquo;
-&lt;a href=&#34;http://www.research.ibm.com/people/l/lloydt/color/color.HTM&#34;&gt;http://www.research.ibm.com/people/l/lloydt/color/color.HTM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Adobe&amp;rsquo;s Color CC &lt;a href=&#34;https://color.adobe.com/explore/most-popular/?time=all&#34;&gt;https://color.adobe.com/explore/most-popular/?time=all&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TIGERcolor, Introduction to color theory
-&lt;a href=&#34;http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm&#34;&gt;http://www.tigercolor.com/color-lab/color-theory/color-theory-intro.htm&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Smashing Magazine, Color theory for designers
-&lt;a href=&#34;https://www.smashingmagazine.com/2010/02/color-theory-for-designer-part-3-creating-your-own-color-palettes/&#34;&gt;https://www.smashingmagazine.com/2010/02/color-theory-for-designer-part-3-creating-your-own-color-palettes/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Colorbrewer &lt;a href=&#34;http://colorbrewer2.org/&#34;&gt;http://colorbrewer2.org/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;writing&#34;&gt;Writing&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;20 Obsolete English Words
-&lt;a href=&#34;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&#34;&gt;http://matadornetwork.com/abroad/20-obsolete-english-words-that-should-make-a-comeback/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;University of Manchester academic phrasebank &lt;a href=&#34;http://www.phrasebank.manchester.ac.uk/&#34;&gt;http://www.phrasebank.manchester.ac.uk/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Uni of Illinois, Captilisation and dashes in Physics (PDF)
-&lt;a href=&#34;http://www.nt.ntnu.no/users/haugwarb/Misc/capitalization.pdf&#34;&gt;http://www.nt.ntnu.no/users/haugwarb/Misc/capitalization.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;David Marsh, 10 grammar rules to forget
-&lt;a href=&#34;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&#34;&gt;https://www.theguardian.com/science/2013/sep/30/10-grammar-rules-you-can-forget&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;plotting&#34;&gt;Plotting&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Xmgrace tips &lt;a href=&#34;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&#34;&gt;http://lptms.u-psud.fr/wiki/index.php/Tips_for_Xmgrace&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A Grace/Inkscape workflow
-&lt;a href=&#34;https://sites.google.com/site/patrickbwarren/beautiful-figures&#34;&gt;https://sites.google.com/site/patrickbwarren/beautiful-figures&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Grace Forum &lt;a href=&#34;http://plasma-gate.weizmann.ac.il/Grace/phpbb/&#34;&gt;http://plasma-gate.weizmann.ac.il/Grace/phpbb/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Gnuplot Tricks &lt;a href=&#34;http://gnuplot-tricks.blogspot.co.uk/&#34;&gt;http://gnuplot-tricks.blogspot.co.uk/&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Publication quality example
-&lt;a href=&#34;http://gnuplot-tricks.blogspot.co.uk/2009/05/gnuplot-tricks-many-say-that-it-is.html&#34;&gt;http://gnuplot-tricks.blogspot.co.uk/2009/05/gnuplot-tricks-many-say-that-it-is.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Gnuplotting &lt;a href=&#34;http://www.gnuplotting.org/&#34;&gt;http://www.gnuplotting.org/&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Output terminals &lt;a href=&#34;http://www.gnuplotting.org/output-terminals/&#34;&gt;http://www.gnuplotting.org/output-terminals/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;gnuplot-colorbrewer &lt;a href=&#34;https://github.com/aschn/gnuplot-colorbrewer&#34;&gt;https://github.com/aschn/gnuplot-colorbrewer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;git-latex-markdown&#34;&gt;Git / Latex / Markdown&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Word by word diffs in Git
-&lt;a href=&#34;https://idnotfound.wordpress.com/2009/05/09/word-by-word-diffs-in-git/&#34;&gt;https://idnotfound.wordpress.com/2009/05/09/word-by-word-diffs-in-git/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A call for scholarly markdown
-&lt;a href=&#34;http://blogs.plos.org/mfenner/2012/12/13/a-call-for-scholarly-markdown/&#34;&gt;http://blogs.plos.org/mfenner/2012/12/13/a-call-for-scholarly-markdown/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;CodeCogs LaTeX equation editor (useful for talks not in LaTeX Beamer!)
-&lt;a href=&#34;http://www.codecogs.com/latex/eqneditor.php&#34;&gt;http://www.codecogs.com/latex/eqneditor.php&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Detexify - draw a symbol, find the Latex
-&lt;a href=&#34;http://detexify.kirelabs.org/classify.html&#34;&gt;http://detexify.kirelabs.org/classify.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;LaTeX Templates &lt;a href=&#34;http://www.latextemplates.com/&#34;&gt;http://www.latextemplates.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;TikZ example &lt;a href=&#34;http://www.texample.net/tikz/examples/membrane-surface/&#34;&gt;http://www.texample.net/tikz/examples/membrane-surface/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Top four LaTeX mistakes
-&lt;a href=&#34;http://www.johndcook.com/blog/2010/02/15/top-latex-mistakes/&#34;&gt;http://www.johndcook.com/blog/2010/02/15/top-latex-mistakes/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Precise positioning in LaTeX Beamer
-&lt;a href=&#34;http://blogs.helsinki.fi/smsiltan/2012/10/12/precise-positioning-in-latex-beamer/&#34;&gt;http://blogs.helsinki.fi/smsiltan/2012/10/12/precise-positioning-in-latex-beamer/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Papercore summaries
-&lt;a href=&#34;http://papercore.org/summaries&#34;&gt;http://papercore.org/summaries&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Making a poster with Inkscape
-&lt;a href=&#34;http://blog.felixbreuer.net/2010/10/24/poster.html&#34;&gt;http://blog.felixbreuer.net/2010/10/24/poster.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;ambient-music-for-headphones-in-noisy-offices&#34;&gt;Ambient music for headphones in noisy offices&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Music to let you concentrate &lt;a href=&#34;https://news.ycombinator.com/item?id=5872414&#34;&gt;https://news.ycombinator.com/item?id=5872414&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Headphone Commute - electronic, ambient &lt;a href=&#34;http://reviews.headphonecommute.com/&#34;&gt;http://reviews.headphonecommute.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://jarvist.github.io/post/writing-scientific-papers/</guid>
+      <description>(Updated 2016-03-12 to re-add the links)
+I am probably the last person you would want to consult on tips to write a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the best, much work lies on the cutting room floor - skeletons of half assembled papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m very interested in improving, and certainly enjoy reading a well written paper.</description>
     </item>
     
     <item>
       <title>New year&#39;s resolution - DVCS everywhere</title>
-      <link>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</link>
+      <link>https://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</link>
       <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</guid>
-      <description>&lt;p&gt;My one new year&amp;rsquo;s resolution is to use DVCS everywhere.&lt;/p&gt;
-
-&lt;p&gt;With free BitBucket Academic accounts (&lt;strong&gt;unlimited private&lt;/strong&gt; / public repos), &lt;a href=&#34;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&#34;&gt;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&lt;/a&gt;, there&amp;rsquo;s no reason not to use it for every paper, internal document, code snippet or website. From a Linux / OS X console there is very little friction in automatically using &amp;ldquo;git add + commit, push &amp;amp; pull&amp;rdquo;. It&amp;rsquo;s also a very nice + fluid way to share finalised data &amp;amp; code between HPC facilities, colleagues, collaborators &amp;amp; workstations.&lt;/p&gt;
-
-&lt;p&gt;GitHub seems to get more exposure for opensource repositories, but for publication it is easy both to turn a BitBucket private repo to public, and to push repos from anywhere to anywhere else (i.e. to GitHub).&lt;/p&gt;
-
-&lt;p&gt;The only slight issue is that the default git diff function is highly optimised for code (it has a per-line view of the world) - Latex / text files are best treated by artificially adding a carriage-return after every sentence. Otherwise even minor edits within a paragraph will fail to merge. Anyone have any suggestions for getting git to be a bit more clever (merge based on sentence? based on clause?).&lt;/p&gt;
-
-&lt;p&gt;Very short git getting-started guide: &lt;a href=&#34;http://rogerdudler.github.io/git-guide/&#34;&gt;http://rogerdudler.github.io/git-guide/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</guid>
+      <description>My one new year&amp;rsquo;s resolution is to use DVCS everywhere.
+With free BitBucket Academic accounts (unlimited private / public repos), http://blog.bitbucket.org/2012/08/20/bitbucket-academic/, there&amp;rsquo;s no reason not to use it for every paper, internal document, code snippet or website. From a Linux / OS X console there is very little friction in automatically using &amp;ldquo;git add + commit, push &amp;amp; pull&amp;rdquo;. It&amp;rsquo;s also a very nice + fluid way to share finalised data &amp;amp; code between HPC facilities, colleagues, collaborators &amp;amp; workstations.</description>
     </item>
     
   </channel>

@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/git/index.xml</link>
-    <description>Recent content in Git on Jarvist Moore Frost: Academic blog</description>
+    <title>Git on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/git/</link>
+    <description>Recent content in Git on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 06 Jan 2014 22:08:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>New year&#39;s resolution - DVCS everywhere</title>
-      <link>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</link>
+      <link>https://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</link>
       <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</guid>
-      <description>&lt;p&gt;My one new year&amp;rsquo;s resolution is to use DVCS everywhere.&lt;/p&gt;
-
-&lt;p&gt;With free BitBucket Academic accounts (&lt;strong&gt;unlimited private&lt;/strong&gt; / public repos), &lt;a href=&#34;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&#34;&gt;http://blog.bitbucket.org/2012/08/20/bitbucket-academic/&lt;/a&gt;, there&amp;rsquo;s no reason not to use it for every paper, internal document, code snippet or website. From a Linux / OS X console there is very little friction in automatically using &amp;ldquo;git add + commit, push &amp;amp; pull&amp;rdquo;. It&amp;rsquo;s also a very nice + fluid way to share finalised data &amp;amp; code between HPC facilities, colleagues, collaborators &amp;amp; workstations.&lt;/p&gt;
-
-&lt;p&gt;GitHub seems to get more exposure for opensource repositories, but for publication it is easy both to turn a BitBucket private repo to public, and to push repos from anywhere to anywhere else (i.e. to GitHub).&lt;/p&gt;
-
-&lt;p&gt;The only slight issue is that the default git diff function is highly optimised for code (it has a per-line view of the world) - Latex / text files are best treated by artificially adding a carriage-return after every sentence. Otherwise even minor edits within a paragraph will fail to merge. Anyone have any suggestions for getting git to be a bit more clever (merge based on sentence? based on clause?).&lt;/p&gt;
-
-&lt;p&gt;Very short git getting-started guide: &lt;a href=&#34;http://rogerdudler.github.io/git-guide/&#34;&gt;http://rogerdudler.github.io/git-guide/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/new-years-resolution-dvcs-everywhere/</guid>
+      <description>My one new year&amp;rsquo;s resolution is to use DVCS everywhere.
+With free BitBucket Academic accounts (unlimited private / public repos), http://blog.bitbucket.org/2012/08/20/bitbucket-academic/, there&amp;rsquo;s no reason not to use it for every paper, internal document, code snippet or website. From a Linux / OS X console there is very little friction in automatically using &amp;ldquo;git add + commit, push &amp;amp; pull&amp;rdquo;. It&amp;rsquo;s also a very nice + fluid way to share finalised data &amp;amp; code between HPC facilities, colleagues, collaborators &amp;amp; workstations.</description>
     </item>
     
   </channel>

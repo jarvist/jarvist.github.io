@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plot on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/plot/index.xml</link>
-    <description>Recent content in Plot on Jarvist Moore Frost: Academic blog</description>
+    <title>Plot on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/plot/</link>
+    <description>Recent content in Plot on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 17 Jul 2013 19:15:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>gnuplotting.org</title>
-      <link>http://jarvist.github.io/post/gnuplotting-org/</link>
+      <link>https://jarvist.github.io/post/gnuplotting-org/</link>
       <pubDate>Wed, 17 Jul 2013 19:15:41 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/gnuplotting-org/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.gnuplotting.org/&#34;&gt;gnuplotting.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A beautiful site with a lot of modern gnuplot worked examples.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/gnuplotting-org/</guid>
+      <description>gnuplotting.org
+A beautiful site with a lot of modern gnuplot worked examples.</description>
     </item>
     
   </channel>

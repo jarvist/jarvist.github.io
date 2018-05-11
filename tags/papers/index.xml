@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Papers on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/papers/index.xml</link>
-    <description>Recent content in Papers on Jarvist Moore Frost: Academic blog</description>
+    <title>Papers on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/papers/</link>
+    <description>Recent content in Papers on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/papers/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 03 Jul 2013 13:16:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/papers/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Google Reader is dead</title>
-      <link>http://jarvist.github.io/post/google-reader-is-dead/</link>
+      <link>https://jarvist.github.io/post/google-reader-is-dead/</link>
       <pubDate>Wed, 03 Jul 2013 13:16:28 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/google-reader-is-dead/</guid>
-      <description>&lt;p&gt;Google Reader has finally shut up shop. Eight years, many scientific papers, snippets of technology news, new music and many many blogs; we had some good times.&lt;/p&gt;
-
-&lt;p&gt;All the replacements currently available still seem to be a bit unsatisfying - Reader feeder updates were really quite amazingly fast, and the interface was clean. There will now be a lot of starred articles which I&amp;rsquo;ll never read, and old cached blog posts which have disappeared for ever.&lt;/p&gt;
-
-&lt;p&gt;A lot of the &amp;lsquo;modern&amp;rsquo; readers seem to be aiming for a modern &amp;lsquo;waterfall of news&amp;rsquo; presentation whereas I like the simple reverse-date rows! I&amp;rsquo;m undecided between the following three alternatives - probably The Old Reader is the most complete &amp;amp; stable, and is aiming to be like Google Reader before they removed the sharing / social features, but it&amp;rsquo;s arguably the ugliest.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://theoldreader.com/&#34;&gt;http://theoldreader.com/&lt;/a&gt; , &lt;a href=&#34;http://www.goread.io/&#34;&gt;http://www.goread.io/&lt;/a&gt; and &lt;a href=&#34;http://yoleoreader.com/&#34;&gt;http://yoleoreader.com&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/google-reader-is-dead/</guid>
+      <description>Google Reader has finally shut up shop. Eight years, many scientific papers, snippets of technology news, new music and many many blogs; we had some good times.
+All the replacements currently available still seem to be a bit unsatisfying - Reader feeder updates were really quite amazingly fast, and the interface was clean. There will now be a lot of starred articles which I&amp;rsquo;ll never read, and old cached blog posts which have disappeared for ever.</description>
     </item>
     
   </channel>

@@ -1,140 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bookclub on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/categories/bookclub/index.xml</link>
-    <description>Recent content in Bookclub on Jarvist Moore Frost: Academic blog</description>
+    <title>Bookclub on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/categories/bookclub/</link>
+    <description>Recent content in Bookclub on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/categories/bookclub/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 24 Jan 2017 09:29:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/categories/bookclub/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>ICL Bookclub - Ziman Chapter 3</title>
-      <link>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</link>
+      <link>https://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</link>
       <pubDate>Tue, 24 Jan 2017 09:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</guid>
-      <description>&lt;p&gt;A little update to the book club. It&amp;rsquo;s going well! We&amp;rsquo;ve decided to work our
-way through John M. Ziman&amp;rsquo;s Principles of the Theory of Solids (2nd Edition).
-I really like this text, as I find the style very agreeable. It&amp;rsquo;s very
-conversational, in it&amp;rsquo;s best bits it feels like standing at a black-board
-having something explained just to you, the reader.&lt;/p&gt;
-
-&lt;p&gt;&amp;sect; 1 introduces periodicity as the central theme of solid state physics,
-showing how the translational symmetry leads to multiply periodic functions,
-which then leads to Bloch&amp;rsquo;s theorem (that the energy eigenstates in a crystal
-can be written as a phase-factor / plane wave). It then builds the Brillouin
-zone, and introduces periodic boundary conditions.&lt;/p&gt;
-
-&lt;p&gt;&amp;sect; 2 applies this mathematical machinery to lattice vibrations (phonons).
-The construction of the dynamic matrix is described, and then a simple 1D
-diatomic chain is used to show how the bands split off &amp;amp; form an optical mode.
-The Ewald summation is introduced as needed when reversing from the enthalpy of
-formation of an ionic crystal back to the force coefficients. The van Hove
-singularities in the lattice spectrum are described, as arising from inevitable
-saddle-points in the potential energy surfaces. &amp;sect; 2.11 describes
-phonon-phonon interactions, but at a level that may be useful to get some more
-science out of calculations with phono3py and similar software, &amp;sect; 2.12
-treats imperfect lattices, and show how to embed defect-force pairs as
-a perturbation to the periodic dynamic matrix. These last two sections are
-actually really useful for work we&amp;rsquo;re doing currently.&lt;/p&gt;
-
-&lt;p&gt;&amp;sect; 3 describes electron states in the material, introducing them via nearly
-free electrons. Its really quite dense, and dives into the state of the art for
-solving the electronic structure problem in the late 60s. It&amp;rsquo;s really nice to
-see where the theory underlying most of today&amp;rsquo;s periodic electronic structure
-codes comes from, but it&amp;rsquo;s also quite heavy going! For this reason we are
-re-reading this chapter separately for this week.&lt;/p&gt;
-
-&lt;p&gt;Some other more verbose Ziman publications in this area are given below.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Dear Solid-State Book Clubbers,&lt;/p&gt;
-
-&lt;p&gt;This week we are reading (again) Chapter 3 of Ziman&amp;rsquo;s &amp;ldquo;Principles of the theory
-of solids&amp;rdquo; (2nd edition). Muffin tins, pseudo potentials, Green&amp;rsquo;s functions and
-the orthogonalised plane waves.&lt;/p&gt;
-
-&lt;p&gt;&amp;ndash;&amp;gt; 5PM level 2 in the RSM, as usual, Thurs 26th January 2017.&lt;/p&gt;
-
-&lt;p&gt;Additional Ziman Review papers (really book chapters) that may be useful are:-&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1971 - The Calculation of Bloch Functions
-&lt;a href=&#34;https://doi.org/10.1016/S0081-1947(08)60491-9&#34;&gt;https://doi.org/10.1016/S0081-1947(08)60491-9&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This goes into much more detail, and is less terse than chapter 3.
-It also has some of the most surreal (and beautiful!) diagrams I&amp;rsquo;ve seen in a
-scientific publication:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;../../images/2017-01-24-icl-bookclub-ziman-chapter-3.png&#34; alt=&#34;The calculation of Bloch Functions, muffin tins.&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1962 - Electrons in metals: A short guide to the Fermi surface
-&lt;a href=&#34;https://doi.org/10.1080/00107516208205311&#34;&gt;https://doi.org/10.1080/00107516208205311&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This older paper can also be useful; it&amp;rsquo;s sort of a condensed form of what became the book we are reading, but presents the material from a slightly different point of view.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-01-24-icl-bookclub-ziman-chapter-3/</guid>
+      <description>A little update to the book club. It&amp;rsquo;s going well! We&amp;rsquo;ve decided to work our way through John M. Ziman&amp;rsquo;s Principles of the Theory of Solids (2nd Edition). I really like this text, as I find the style very agreeable. It&amp;rsquo;s very conversational, in it&amp;rsquo;s best bits it feels like standing at a black-board having something explained just to you, the reader.
+&amp;sect; 1 introduces periodicity as the central theme of solid state physics, showing how the translational symmetry leads to multiply periodic functions, which then leads to Bloch&amp;rsquo;s theorem (that the energy eigenstates in a crystal can be written as a phase-factor / plane wave).</description>
     </item>
     
     <item>
       <title>ICL Bookclub</title>
-      <link>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
+      <link>https://jarvist.github.io/post/2017-01-04-icl-bookclub/</link>
       <pubDate>Wed, 04 Jan 2017 12:29:00 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
-      <description>&lt;p&gt;Now that the Walsh group has a critical mass at Imperial College London, I am
-planning to restart the Bookclub.&lt;/p&gt;
-
-&lt;p&gt;Keith Butler kicked these off in Bath with the guiding words of everyone&amp;rsquo;s
-favourite German pessimist, Arthur Schopenhauer:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Buying books would be a good thing if one could also buy the time to read
- them in: but as a rule the purchase of books is mistaken for the
- appropriation of their contents.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The plan is to do some reading &amp;amp; self-directed study of a relevant book, and
-then get together at &lt;strong&gt;5PM on Thursdays&lt;/strong&gt; (in weeks when there is not an
-interesting TYC seminar) to discuss and explain things to each other.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;re going to start with the first one and a half chapters of Ziman&amp;rsquo;s
-solid-state book &amp;ldquo;Principles of the theory of solids&amp;rdquo;, ideally the second
-edition (1971).
-( There is currently 1 copy of the 2nd edition, and 3 copies of the 1st
-edition, available for loan at the Central Library, Level 4 (530.41 ZIM).)&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s Chapter 1: Periodic structures, reciprocal lattice, Bloch&amp;rsquo;s theorem,
-Brillouin zone; and Chapter 2: Lattice Waves: Lattice dynamics, lattice sums
-(Ewald), lattice specific heat and lattice spectrum (DoS). So stopping before
-the diffraction + Debye waller + phonon scattering, in the second half of the
-second chapter.&lt;/p&gt;
-
-&lt;p&gt;We&amp;rsquo;ll get together to discuss this at 5PM on Thursday 12th January, &lt;strong&gt;floor two
-of the RSM (Dept Materials), Imperial College London.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Other books which we are planning to visit in the near future are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Martin&amp;rsquo;s DFT book&lt;/li&gt;
-&lt;li&gt;Krauth&amp;rsquo;s Stat. Mech. - Algo and Computation&lt;/li&gt;
-&lt;li&gt;Tinkham&amp;rsquo;s Group Theory and Quantum Mechanics&lt;/li&gt;
-&lt;li&gt;Feynman&amp;rsquo;s Statistical Mechanics&lt;/li&gt;
-&lt;li&gt;Nye&amp;rsquo;s Physical Properties of Materials by Tensors&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Everybody welcome! You certainly don&amp;rsquo;t need to do DFT to be able to, or to
-benefit from, knowing the theory. (Arguably doing calculations actually gets in
-the way&amp;hellip;)&lt;/p&gt;
-
-&lt;p&gt;We have a discussion channel on our &amp;ldquo;Materials Discovery Network&amp;rdquo; Slack group.
-&lt;a href=&#34;https://mdn-uk.slack.com/messages/icl-bookclub/&#34;&gt;https://mdn-uk.slack.com/messages/icl-bookclub/&lt;/a&gt;
-It&amp;rsquo;s on the &amp;lsquo;free&amp;rsquo; plan, so messages are ephemeral, but all friendly electronic structure people very welcome!&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/2017-01-04-icl-bookclub/</guid>
+      <description>Now that the Walsh group has a critical mass at Imperial College London, I am planning to restart the Bookclub.
+Keith Butler kicked these off in Bath with the guiding words of everyone&amp;rsquo;s favourite German pessimist, Arthur Schopenhauer:
+ &amp;ldquo;Buying books would be a good thing if one could also buy the time to read them in: but as a rule the purchase of books is mistaken for the appropriation of their contents.</description>
     </item>
     
   </channel>

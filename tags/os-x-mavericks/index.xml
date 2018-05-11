@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Os X Mavericks on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/os-x-mavericks/index.xml</link>
-    <description>Recent content in Os X Mavericks on Jarvist Moore Frost: Academic blog</description>
+    <title>OS X Mavericks on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/os-x-mavericks/</link>
+    <description>Recent content in OS X Mavericks on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/os-x-mavericks/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 18 Nov 2013 11:28:20 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/os-x-mavericks/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Mavericks and Failed ARP causing network drops - solved</title>
-      <link>http://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</link>
+      <link>https://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</link>
       <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://discussions.apple.com/thread/5483424?tstart=0&#34;&gt;Mavericks and Failed ARP causing network drops - solved&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Since I started at Bath on an OS X Mavericks machine, my SSH sessions were pausing for 4-6s every minute or so (randomly). Playing with Ping, I saw that correct packet routing was simply failing (averaging 7% packet loss for ping).&lt;/p&gt;
-
-&lt;p&gt;Much wailing and gnashing of teeth later, and I found a simple fix. OS X Mavericks Unicast ARP packets were failing - so turn them off with &amp;lsquo;sudo sysctl -w net.link.ether.inet.arp_unicast_lim=0&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;2014 update:&lt;/p&gt;
-
-&lt;p&gt;Some nice person has now written a little shell script which will automatically apply this patch + create an /etc/sysctl.conf file to rerun the fix at every boot (setting permissions correctly etc.).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://raw.github.com/MacMiniVault/Mac-Scripts/master/unicastarp/unicastarp.sh&#34;&gt;https://raw.github.com/MacMiniVault/Mac-Scripts/master/unicastarp/unicastarp.sh&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</guid>
+      <description>Mavericks and Failed ARP causing network drops - solved
+Since I started at Bath on an OS X Mavericks machine, my SSH sessions were pausing for 4-6s every minute or so (randomly). Playing with Ping, I saw that correct packet routing was simply failing (averaging 7% packet loss for ping).
+Much wailing and gnashing of teeth later, and I found a simple fix. OS X Mavericks Unicast ARP packets were failing - so turn them off with &amp;lsquo;sudo sysctl -w net.</description>
     </item>
     
   </channel>

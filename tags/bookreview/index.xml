@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bookreview on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/bookreview/</link>
+    <description>Recent content in Bookreview on Jarvist Moore Frost</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Fri, 26 Feb 2016 10:29:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/bookreview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Altmann&#39;s Band Theory of Solids</title>
+      <link>https://jarvist.github.io/post/2016-02-26-altmann-band-theory-of-solids/</link>
+      <pubDate>Fri, 26 Feb 2016 10:29:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2016-02-26-altmann-band-theory-of-solids/</guid>
+      <description>Band Theory of Solids: An Introduction from the Point of View of Symmetry Simon L. Altmann Clarendon Press, 1994
+This is a fairly esoteric publication. The stated intent was to provide an introductory (I guess suitable for an undergraduate course) book on solid state theory, that none the less contained a strong dose of group theory from the get go. This is an interesting idea, but I&amp;rsquo;d say that it&amp;rsquo;s only partially successful.</description>
+    </item>
+    
+    <item>
+      <title>John Ziman</title>
+      <link>https://jarvist.github.io/post/2016-01-16-john-ziman/</link>
+      <pubDate>Sat, 16 Jan 2016 10:29:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2016-01-16-john-ziman/</guid>
+      <description>I&amp;rsquo;ve learnt more from John Ziman&amp;rsquo;s books on electronic structure, phonons, and disorder, than from any other single source. This is a little guide to his academic works.
+1979 - &amp;ldquo;Models of disorder&amp;rdquo;. Though his most recent book, from the printing you would assume it was from the 50s! This is the only real attempt to write a textbook summarising all approaches to disorder in electronic structure modelling. As a pioneer of liquid metals, this was his area of expertise.</description>
+    </item>
+    
+  </channel>
+</rss>

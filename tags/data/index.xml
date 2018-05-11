@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/data/index.xml</link>
-    <description>Recent content in Data on Jarvist Moore Frost: Academic blog</description>
+    <title>Data on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/data/</link>
+    <description>Recent content in Data on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 12 Dec 2013 22:25:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Make for Data Processing</title>
-      <link>http://jarvist.github.io/post/make-for-data-processing/</link>
+      <link>https://jarvist.github.io/post/make-for-data-processing/</link>
       <pubDate>Thu, 12 Dec 2013 22:25:23 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/make-for-data-processing/</guid>
-      <description>&lt;p&gt;I must admit that I have a lot of &amp;lsquo;historical&amp;rsquo; (as in, before the last hour&amp;hellip;) directories with processing scripts named usefully &amp;lsquo;process_processed_data.sh&amp;rsquo; and such. If I remember, I often pipe a &amp;lsquo;history&amp;rsquo; into a hist.sh file before I close the terminal + forget what I&amp;rsquo;ve done and how to process the data.&lt;/p&gt;
-
-&lt;p&gt;So I definitely should and could do better, so why not use Make? It handles dependencies &amp;amp; gobbles files effectively, but I just can&amp;rsquo;t help but feel there should be a more elegant solution than writing clunky Make files by hand.&lt;/p&gt;
-
-&lt;p&gt;Why use Make? - &lt;a href=&#34;http://www.datatau.com/item?id=35&#34;&gt;http://bost.ocks.org/mike/make/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Discovered via DataTau, a new data-processing news aggregator (in the style of hackernews):-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.datatau.com/item?id=35&#34;&gt;http://www.datatau.com/item?id=35&lt;/a&gt; - see here for a link to &amp;lsquo;drake&amp;rsquo; a make for data science.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/make-for-data-processing/</guid>
+      <description>I must admit that I have a lot of &amp;lsquo;historical&amp;rsquo; (as in, before the last hour&amp;hellip;) directories with processing scripts named usefully &amp;lsquo;process_processed_data.sh&amp;rsquo; and such. If I remember, I often pipe a &amp;lsquo;history&amp;rsquo; into a hist.sh file before I close the terminal + forget what I&amp;rsquo;ve done and how to process the data.
+So I definitely should and could do better, so why not use Make? It handles dependencies &amp;amp; gobbles files effectively, but I just can&amp;rsquo;t help but feel there should be a more elegant solution than writing clunky Make files by hand.</description>
     </item>
     
     <item>
       <title>gnuplotting.org</title>
-      <link>http://jarvist.github.io/post/gnuplotting-org/</link>
+      <link>https://jarvist.github.io/post/gnuplotting-org/</link>
       <pubDate>Wed, 17 Jul 2013 19:15:41 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/gnuplotting-org/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.gnuplotting.org/&#34;&gt;gnuplotting.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A beautiful site with a lot of modern gnuplot worked examples.&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/gnuplotting-org/</guid>
+      <description>gnuplotting.org
+A beautiful site with a lot of modern gnuplot worked examples.</description>
     </item>
     
   </channel>

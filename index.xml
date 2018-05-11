@@ -5,7 +5,7 @@
     <link>https://jarvist.github.io/</link>
     <description>Recent content in Jarvist Moore Frost on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-gb</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
@@ -418,19 +418,18 @@ It&amp;rsquo;s on the &amp;lsquo;free&amp;rsquo; plan, so messages are ephemeral
       <guid>https://jarvist.github.io/about/</guid>
       <description>
 
+&lt;figure&gt;
 
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://jarvist.github.io/images/JarvistMooreFrost_Feb2017_SonyA1_RedJumper_Square_250px.jpg&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Dr Jarvist Moore Frost&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
+&lt;img src=&#34;https://jarvist.github.io/images/JarvistMooreFrost_Feb2017_SonyA1_RedJumper_Square_250px.jpg&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;Dr Jarvist Moore Frost&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
 &lt;/figure&gt;
-
 
 &lt;p&gt;&lt;strong&gt;Electronic Mail:&lt;/strong&gt; Jarvist.Frost@imperial.ac.uk&lt;/p&gt;
 
@@ -700,19 +699,18 @@ Here I start with a very general analytic quantum mechanical analysis, which
 seems to to give you a very nice and general result to then use with your
 numeric method.&lt;/p&gt;
 
+&lt;figure&gt;
 
-&lt;figure &gt;
-    
-        &lt;img src=&#34;../../images/2016-07-14-SoftWell.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Mexican Hat confined modes&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
+&lt;img src=&#34;https://jarvist.github.io/images/2016-07-14-SoftWell.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;Mexican Hat confined modes&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
 &lt;/figure&gt;
-
 
 &lt;p&gt;If we look at the states (\(\Psi_n\)) localised in the wells, you can see
 that the first state is symmetric, and the then the second state is
@@ -789,19 +787,18 @@ solution of the Time Independent Schr&amp;ouml;dinger Equation.&lt;/p&gt;
 
 &lt;p&gt;For the potential + states above, the values are not so ridiculous&lt;/p&gt;
 
+&lt;figure&gt;
 
-&lt;figure &gt;
-    
-        &lt;img src=&#34;../../images/2016-07-14-TunnellingTimes.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Time to tunnel between states&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
+&lt;img src=&#34;https://jarvist.github.io/images/2016-07-14-TunnellingTimes.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;Time to tunnel between states&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
 &lt;/figure&gt;
-
 
 &lt;p&gt;Classically, with a harmonic potential, you would have a Simple Harmonic
 Oscillator with&lt;/p&gt;

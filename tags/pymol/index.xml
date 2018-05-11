@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pymol on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/pymol/index.xml</link>
-    <description>Recent content in Pymol on Jarvist Moore Frost: Academic blog</description>
+    <title>Pymol on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/pymol/</link>
+    <description>Recent content in Pymol on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/pymol/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 18 Jun 2013 11:51:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/pymol/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Pymol Ray Tracing without wasting time</title>
-      <link>http://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</link>
+      <link>https://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</link>
       <pubDate>Tue, 18 Jun 2013 11:51:38 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</guid>
-      <description>&lt;p&gt;I often use the nice built in &amp;lsquo;ray&amp;rsquo; raytracer in Pymol. These ray traces can take minutes to hours, and during that time I of course want to use my computer! Unfortunately, the Pymol window freezes during the ray trace, so when I switch virtual desktops it sometimes looks as if there&amp;rsquo;s a frozen terminal or similar there, which I click on, sometimes inadvertently, sometimes because I am a fool. This click gets queued up to Pymol and promptly delivered as the ray trace finishes - making the window redraw with the built in opengl, wasting all the time ray tracing, arg!&lt;/p&gt;
-
-&lt;p&gt;After doing this today during a 30 minute ray trace, I sat and thought for a few seconds and did the sensible thing:&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;p&gt;PyMOL&amp;gt; ray; save ray.png&lt;/p&gt;
-
-&lt;p&gt;Chain the commands together so that it immediately saves the ray trace image, no matter what you do to the GUI in the meantime! I wish I&amp;rsquo;d taken the few moments to think this through back in 2009 or so.&lt;a href=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/06/ray.png&#34;&gt;&lt;img src=&#34;http://jarvistmoorefrost.files.wordpress.com/2013/06/ray.png?w=650&#34; alt=&#34;Image&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</guid>
+      <description>I often use the nice built in &amp;lsquo;ray&amp;rsquo; raytracer in Pymol. These ray traces can take minutes to hours, and during that time I of course want to use my computer! Unfortunately, the Pymol window freezes during the ray trace, so when I switch virtual desktops it sometimes looks as if there&amp;rsquo;s a frozen terminal or similar there, which I click on, sometimes inadvertently, sometimes because I am a fool. This click gets queued up to Pymol and promptly delivered as the ray trace finishes - making the window redraw with the built in opengl, wasting all the time ray tracing, arg!</description>
     </item>
     
   </channel>

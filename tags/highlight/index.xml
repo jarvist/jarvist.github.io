@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Highlight on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/highlight/</link>
+    <description>Recent content in Highlight on Jarvist Moore Frost</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 20 Feb 2017 12:29:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/highlight/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Experimental measures of photovoltaic materials</title>
+      <link>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</link>
+      <pubDate>Mon, 20 Feb 2017 12:29:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</guid>
+      <description>Starting my PhD in 2007, I spent many many years in seminar and conference talks on Photovoltaics being confused by the enormous array of experimental probes for photovoltaic materials. This is an attempt, stimulated (as always!) by questions from a student, to put down a list of standard experimental photovoltaic (or other optoelectronic) device characterisations.
+High energy theorists often ape Gell-Mann in describing solid-state physics as the &amp;lsquo;squalid-state&amp;rsquo;. Certainly there is an awful lot going on at once.</description>
+    </item>
+    
+    <item>
+      <title>Soft Mode Tunnelling</title>
+      <link>https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/</link>
+      <pubDate>Thu, 14 Jul 2016 20:00:00 +0100</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2016-07-14-soft-mode-tunnelling/</guid>
+      <description>If we consider the Mexican Hat potential discussed in the previous blog post, as a stand in for a soft phonon mode, a fundamental question in chemical physics is how regularly the mode tunnels between the vibrational states localised on one side, versus the other.
+Classically, the chance of crossing over is zero, unless you have sufficient energy to overtop the barrier. From a Statistical Physics point of view, at finite temperature, some states will be Boltzmann populated with sufficient energy, and from this fraction and an attempt frequency from the rate of oscillation within an individual well, you could approximate the classical rate.</description>
+    </item>
+    
+    <item>
+      <title>Electron Phonon Coupling with Soft Modes</title>
+      <link>https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/</link>
+      <pubDate>Wed, 13 Jul 2016 20:00:00 +0100</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2016-07-13-electron-phonon-coupling-with-soft-modes/</guid>
+      <description>I&amp;rsquo;ve spent a lot of time over the last three years thinking about electron-phonon coupling. Thinking, not doing, being the operative word, as I&amp;rsquo;ve found the theory really quite a large mass to get my head around!
+Recently I saw my way in to something that seemed vaguely useful and interesting. I&amp;rsquo;d put together a 1D Time-Independent-Schr&amp;ouml;dinger-Equation solver, originally for my own amusement, then to show my second year Chemistry tutees, then rebuilt for actual science.</description>
+    </item>
+    
+    <item>
+      <title>Writing scientific papers</title>
+      <link>https://jarvist.github.io/post/writing-scientific-papers/</link>
+      <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/post/writing-scientific-papers/</guid>
+      <description>(Updated 2016-03-12 to re-add the links)
+I am probably the last person you would want to consult on tips to write a scientific publication. I&amp;rsquo;m slow, I procrastinate, my English is not the best, much work lies on the cutting room floor - skeletons of half assembled papers. Still, &amp;lsquo;that which we are, we are&amp;rsquo;, though my skills are lacking I&amp;rsquo;m very interested in improving, and certainly enjoy reading a well written paper.</description>
+    </item>
+    
+  </channel>
+</rss>

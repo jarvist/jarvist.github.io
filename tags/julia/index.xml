@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Julia on Jarvist Moore Frost: Academic blog</title>
-    <link>http://jarvist.github.io/tags/julia/index.xml</link>
-    <description>Recent content in Julia on Jarvist Moore Frost: Academic blog</description>
+    <title>Julia on Jarvist Moore Frost</title>
+    <link>https://jarvist.github.io/tags/julia/</link>
+    <description>Recent content in Julia on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-GB</language>
-    <atom:link href="http://jarvist.github.io/tags/julia/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-gb</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 14 Jul 2014 12:36:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://jarvist.github.io/tags/julia/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Links from Julia Land</title>
-      <link>http://jarvist.github.io/post/links-from-julia-land/</link>
+      <link>https://jarvist.github.io/post/links-from-julia-land/</link>
       <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
       
-      <guid>http://jarvist.github.io/post/links-from-julia-land/</guid>
-      <description>&lt;p&gt;Julia 0.3 Release Candidate 1 has quietly appeared on the &lt;a href=&#34;http://julialang.org/downloads/&#34;&gt;nightly builds page&lt;/a&gt;; release notes in the &lt;a href=&#34;https://github.com/JuliaLang/julia/blob/master/NEWS.md&#34;&gt;very active GitHub repository&lt;/a&gt; - improvements to the REPL (tab conversion of &amp;lsquo;latex maths&amp;rsquo; to unicode), and a lot of interesting linear algebra improvements.&lt;/p&gt;
-
-&lt;p&gt;The inaugural JuliaCon has been held, and the presentation slidedecks are already online: &lt;a href=&#34;https://github.com/JuliaCon/presentations&#34;&gt;https://github.com/JuliaCon/presentations&lt;/a&gt;; videos are coming but the upload date has been pushed back as they are edited and transcribed.&lt;/p&gt;
-
-&lt;p&gt;On the Julia users email list, there was a link published to a very interesting essay on the history of programming languages: &lt;a href=&#34;https://groups.google.com/forum/?fromgroups=#!topic/julia-users/T6f9hCkDW6g&#34;&gt;https://groups.google.com/forum/?fromgroups=#!topic/julia-users/T6f9hCkDW6g&lt;/a&gt;. It ends on a very pro-Julia note!&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve personally just been using Julia &amp;lsquo;for real&amp;rsquo; in preparing some data for a publication (rather than just using iJulia as a glorified unicode-capable calculator for physical identities). Here I used Julia to calculate the partition function on the fly (by Monte Carlo integration) for an arbitrary torsional potential in a polymer, then form a tight binding Hamiltonian &amp;amp; evaluate the density of states extremely quickly with the Sturm sequence method. If I hadn&amp;rsquo;t discovered Julia, I would have been trying to do this with Python, and though totally feasible I&amp;rsquo;m not sure I would have got here. You are perpetually operating at the absolute limit of your cognitive capacity in scientific theory (and for me, I&amp;rsquo;m pretty limited); the more powerful the tools you have the more you can achieve, and Julia does indeed seem a very well geared &amp;lsquo;bicycle for the mind&amp;rsquo; in scientific computing.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&#34;&gt;https://github.com/jarvist/LongSnakeMoan/blob/master/Sturm-DoS/Sturm_Drang.jl&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://jarvist.github.io/post/links-from-julia-land/</guid>
+      <description>Julia 0.3 Release Candidate 1 has quietly appeared on the nightly builds page; release notes in the very active GitHub repository - improvements to the REPL (tab conversion of &amp;lsquo;latex maths&amp;rsquo; to unicode), and a lot of interesting linear algebra improvements.
+The inaugural JuliaCon has been held, and the presentation slidedecks are already online: https://github.com/JuliaCon/presentations; videos are coming but the upload date has been pushed back as they are edited and transcribed.</description>
     </item>
     
   </channel>
