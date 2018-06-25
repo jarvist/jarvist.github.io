@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>A note on notes</title>
+      <link>https://jarvist.github.io/post/2018-06-25-a-note-on-notes/</link>
+      <pubDate>Mon, 25 Jun 2018 13:19:10 +0100</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2018-06-25-a-note-on-notes/</guid>
+      <description>I believe writing notes is essential for scientific research. Both for future reference, and also to provide space to think.
+I develop a lot of my understanding on paper. Once I&amp;rsquo;ve read and thought a bit about a topic, I really like starting with a fresh A4 page (or double spread) and writing down pointers to everything I know about the subject, little diagrams and snippets of mathematics. This would be wholly useless for anyone else to consult, but I find makes a good jumping off place for my thoughts, and something I can return to and rework.</description>
+    </item>
+    
+    <item>
       <title>A note on Schultz</title>
       <link>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
       <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
@@ -49,9 +59,8 @@ However I would love for others to use my codes. It&amp;rsquo;s why I wrote them
       <pubDate>Mon, 20 Feb 2017 12:29:00 +0000</pubDate>
       
       <guid>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</guid>
-      <description>Starting my PhD in 2007, I spent many many years in seminar and conference talks on Photovoltaics being confused by the range of measurements possible. Often these are known by cryptic acronyms (EXAFS? MALDI-TOF? PXRD?).
-This is an attempt, stimulated (as always!) by questions from a student, to put together a list of fairly standard experimental probes for photovoltaic (and perhaps other optoelectronic) materials.
-High energy theorists often ape Gell-Mann in describing solid-state physics as the &amp;lsquo;squalid-state&amp;rsquo;.</description>
+      <description>Starting my PhD in 2007, I spent many many years in seminar and conference talks on Photovoltaics being confused by the enormous array of experimental probes for photovoltaic materials. This is an attempt, stimulated (as always!) by questions from a student, to put down a list of standard experimental photovoltaic (or other optoelectronic) device characterisations.
+High energy theorists often ape Gell-Mann in describing solid-state physics as the &amp;lsquo;squalid-state&amp;rsquo;. Certainly there is an awful lot going on at once.</description>
     </item>
     
     <item>

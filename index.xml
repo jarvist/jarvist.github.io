@@ -11,6 +11,72 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A note on notes</title>
+      <link>https://jarvist.github.io/post/2018-06-25-a-note-on-notes/</link>
+      <pubDate>Mon, 25 Jun 2018 13:19:10 +0100</pubDate>
+      
+      <guid>https://jarvist.github.io/post/2018-06-25-a-note-on-notes/</guid>
+      <description>&lt;p&gt;I believe writing notes is essential for scientific research.
+Both for future reference, and also to provide space to think.&lt;/p&gt;
+
+&lt;p&gt;I develop a lot of my understanding on paper. Once I&amp;rsquo;ve read and thought a bit
+about a topic, I really like starting with a fresh A4 page (or double spread)
+and writing down pointers to everything I know about the subject, little
+diagrams and snippets of mathematics. This would be wholly useless for anyone
+else to consult, but I find makes a good jumping off place for my thoughts, and
+something I can return to and rework.&lt;/p&gt;
+
+&lt;p&gt;For meetings and conferences I have come to the conclusion that a laptop or
+tablet is a mere distraction, and all I need is a physical notebook.
+I believe that physically writing helps me remember. If I do nothing during
+a seminar, I find myself day-dreaming or outright snoozing.&lt;/p&gt;
+
+&lt;p&gt;Organising physical notes is a pain, always. I think the least-worst option is to keep
+everything in one book, with every meeting dated. Subject-specific notebooks
+always seem to end up in the wrong place at the wrong time (i.e. at home
+/ work, on my desk rather than with me in a meeting). That said, specific notebooks
+for lecture courses or conferences seems to work well.
+Leaving blank pages, to e.g. finish up mathematics, never seems to end well.
+I also find explicitly writing who else was present at the meeting, and
+physically where it was, helps me remember what was going on when I refer back.
+I find flicking through my notebooks even if not reading them properly help
+refresh my memory.&lt;/p&gt;
+
+&lt;p&gt;Of course, a lot of my work is on the computer. Typing is the natural place
+to start developing conference abstracts / papers / applications.
+For this I&amp;rsquo;ve been using [&lt;a href=&#34;https://simplenote.com&#34; target=&#34;_blank&#34;&gt;https://simplenote.com&lt;/a&gt;] since the start of 2018.
+It&amp;rsquo;s a very lightweight text-only note taking website / online app.
+The phone sync means I can always refer to everything I&amp;rsquo;ve written.
+I started it off by copy+pasting in similar things I&amp;rsquo;d had stashed in my Gmail
+inbox + [&lt;a href=&#34;https://draftin.com&#34; target=&#34;_blank&#34;&gt;https://draftin.com&lt;/a&gt;] + ~/NOTES folder.&lt;/p&gt;
+
+&lt;p&gt;The interface to Simplenote is very bare - with a (reverse modified date
+sorted) list of notes in the left column, with the first line of the note as
+title, and second line as small-text subtitle.
+I now prepend all my notes with REVIEW/LEARN/PAPER/JOB/ABSTRACT etc. to
+identify what is going on.&lt;/p&gt;
+
+&lt;p&gt;The boundary between the computer and the physical is a challenge. I think
+people who start obsessively indexing / scanning their notes are wasting effort
+on something which isn&amp;rsquo;t actually a problem.
+For a bare minimum of cross-referencing, I label my notebooks (20XX.Z, where
+Z is alphabetic for an A4 work-notebook, and numeric for an A5
+meeting-notebook), and number the pages. When I have spare time I fill in the
+&amp;lsquo;contents&amp;rsquo; first page, and write some info on the cover.
+So I sometimes end up with &amp;lsquo;see yellow
+notebook 2017.3 p.24&amp;rsquo; in code/latex comments.&lt;br /&gt;
+I regularly find myself writing long-hand references to data / files, usually
+in a similar manner to my command prompt:
+&amp;lsquo;machine:~/WORK/2018-project/blah/fixed-blah/reallyfixed/&amp;rsquo; etc.&lt;/p&gt;
+
+&lt;p&gt;Physically I use Clairefontaine Europa Notemakers, which have a really nice
+smooth paper. I generally write with a Pilot G-Tec-C4 (0.4 mm fine rollerball),
+though the 0.3 mm version (often sold in a slightly more bulky Maica plastic
+body) is better for mathematics + marking up papers.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A note on Schultz</title>
       <link>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</link>
       <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
@@ -113,41 +179,30 @@ wisely!&lt;/p&gt;
       <description>
 
 &lt;p&gt;Starting my PhD in 2007, I spent many many years in seminar and conference
-talks on Photovoltaics being confused by the range of measurements possible.
-Often these are known by cryptic acronyms (EXAFS? MALDI-TOF? PXRD?).&lt;/p&gt;
-
-&lt;p&gt;This is an attempt, stimulated (as always!) by questions from a student, to put
-together a list of fairly standard experimental probes for photovoltaic (and
-perhaps other optoelectronic) materials.&lt;/p&gt;
+talks on Photovoltaics being confused by the enormous array of experimental
+probes for photovoltaic materials.
+This is an attempt, stimulated (as always!) by questions from a student, to put
+down a list of standard experimental photovoltaic (or other optoelectronic)
+device characterisations.&lt;/p&gt;
 
 &lt;p&gt;High energy theorists often ape Gell-Mann in describing solid-state physics as
-the &amp;lsquo;squalid-state&amp;rsquo;.
-Certainly there is an awful lot of physics going on at once.
-This complexity is reflected in the experimental probes.&lt;br /&gt;
-These are are highly diverse in what they measure, and even when supposedly
-getting at the same fundamental characterisation in the same material, often
-come to contradictory conclusions.&lt;/p&gt;
-
-&lt;p&gt;This is a particular problem with phenomenological behaviour - such as charge
-carrier mobility.&lt;/p&gt;
+the &amp;lsquo;squalid-state&amp;rsquo;. Certainly there is an awful lot going on at once.
+This is reflected in the experimental probes, which are similarly diverse, and
+though they are often supposedly measuring the same observable in the same
+material, come to contradictory conclusions.&lt;/p&gt;
 
 &lt;p&gt;In terms of device physics, almost all measures are optical,
 electrical or optical-electrical.
-This forms a rough hierarchy of techniques, which are typically applied sequentially to
-a new material.
-The purely optical probes can be done with &amp;lsquo;a fleck of
-dust&amp;rsquo;, whereas adding electrical contacts takes time and much more material.&lt;/p&gt;
+This forms a rough hierachy of techniques which are applied sequentially to
+a new material, as the purely optical probes can be done with &amp;lsquo;a flect of
+dust&amp;rsquo;, whereas contacts requires another level of complexity.&lt;/p&gt;
 
 &lt;p&gt;It only makes sense to start doing this on
 relatively pure samples (i.e. whereas structural characterisation by X-Ray
 Diffraction [XRD] just needs &lt;em&gt;some&lt;/em&gt;  crystalline material).
 Similarly short-time (picosecond) optical measures may need 99.99% materials,
 whereas electrical measures (where the charges have to live for micro or
-milliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
-
-&lt;p&gt;Finally, a warning: A good experimental device physicist will spend their
-career learning such characterisation techniques! This blog-post just tries to
-minimally cover the basics.&lt;/p&gt;
+miliseconds) needs 99.999%+ pure materials.&lt;/p&gt;
 
 &lt;h2 id=&#34;1-pure-optical-non-contacted&#34;&gt;1 - pure optical / non contacted)&lt;/h2&gt;
 
@@ -429,18 +484,19 @@ It&amp;rsquo;s on the &amp;lsquo;free&amp;rsquo; plan, so messages are ephemeral
       <guid>https://jarvist.github.io/about/</guid>
       <description>
 
+
 &lt;figure&gt;
-
-&lt;img src=&#34;https://jarvist.github.io/images/JarvistMooreFrost_Feb2017_SonyA1_RedJumper_Square_250px.jpg&#34; /&gt;
-
-
-
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
-  &lt;h4&gt;Dr Jarvist Moore Frost&lt;/h4&gt;
-  
-&lt;/figcaption&gt;
-
+    
+        &lt;img src=&#34;https://jarvist.github.io/images/JarvistMooreFrost_Feb2017_SonyA1_RedJumper_Square_250px.jpg&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Dr Jarvist Moore Frost&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
 &lt;/figure&gt;
+
 
 &lt;p&gt;&lt;strong&gt;Electronic Mail:&lt;/strong&gt; Jarvist.Frost@imperial.ac.uk&lt;/p&gt;
 
@@ -710,18 +766,19 @@ Here I start with a very general analytic quantum mechanical analysis, which
 seems to to give you a very nice and general result to then use with your
 numeric method.&lt;/p&gt;
 
+
 &lt;figure&gt;
-
-&lt;img src=&#34;https://jarvist.github.io/images/2016-07-14-SoftWell.png&#34; /&gt;
-
-
-
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
-  &lt;h4&gt;Mexican Hat confined modes&lt;/h4&gt;
-  
-&lt;/figcaption&gt;
-
+    
+        &lt;img src=&#34;../../images/2016-07-14-SoftWell.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Mexican Hat confined modes&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
 &lt;/figure&gt;
+
 
 &lt;p&gt;If we look at the states (\(\Psi_n\)) localised in the wells, you can see
 that the first state is symmetric, and the then the second state is
@@ -798,18 +855,19 @@ solution of the Time Independent Schr&amp;ouml;dinger Equation.&lt;/p&gt;
 
 &lt;p&gt;For the potential + states above, the values are not so ridiculous&lt;/p&gt;
 
+
 &lt;figure&gt;
-
-&lt;img src=&#34;https://jarvist.github.io/images/2016-07-14-TunnellingTimes.png&#34; /&gt;
-
-
-
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
-  &lt;h4&gt;Time to tunnel between states&lt;/h4&gt;
-  
-&lt;/figcaption&gt;
-
+    
+        &lt;img src=&#34;../../images/2016-07-14-TunnellingTimes.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Time to tunnel between states&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
 &lt;/figure&gt;
+
 
 &lt;p&gt;Classically, with a harmonic potential, you would have a Simple Harmonic
 Oscillator with&lt;/p&gt;
@@ -1546,27 +1604,6 @@ Mater., 22: 4881–4884. &lt;a href=&#34;http://dx.doi.org/10.1002/adma.20100218
 
 &lt;p&gt;[4] Mark Casida - Reconciling Delta-SCF and TDDFT, Transparencies from a talk, 1999
 (&lt;a href=&#34;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&#34; target=&#34;_blank&#34;&gt;http://online.kitp.ucsb.edu/online/tddft-c99/casida/oh/01.html&lt;/a&gt;)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello HUGO!</title>
-      <link>https://jarvist.github.io/post/2016-03-11-hello-hugo/</link>
-      <pubDate>Fri, 11 Mar 2016 22:44:34 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/post/2016-03-11-hello-hugo/</guid>
-      <description>&lt;p&gt;This blog used to be on wordpress, at
-&lt;a href=&#34;https://jarvistmoorefrost.wordpress.com&#34; target=&#34;_blank&#34;&gt;https://jarvistmoorefrost.wordpress.com&lt;/a&gt;.
-( There are a few comments by other people scattered amongst those posts, I&amp;rsquo;m
-not sure how to best transfer / archive these. )&lt;/p&gt;
-
-&lt;p&gt;Files were extracted to a plain text Markdown
-format, and are now published with &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; with the
-&lt;code&gt;nofancy&lt;/code&gt; theme (slightly tweaked). I moved this blog from wordpress as I had
-grown irritated with the editing experience, and I hope that being able to edit
-and push from the command line would get me blogging more regularly.&lt;/p&gt;
-
-&lt;p&gt;Time will see.&lt;/p&gt;
 </description>
     </item>
     
