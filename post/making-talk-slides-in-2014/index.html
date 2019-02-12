@@ -345,11 +345,11 @@
 
 <p>I often find myself dragging and dropping .pngs directly from a directory of post-processing codes to make up a talk. All my Python codes which plot to Matplotlib now automatically save figures they generate as PDFs and PNGs, with a name that ensures they don&rsquo;t overwrite each other &amp; you can cross reference to commit versions in the future. This I have found so incredibly useful, barely remembered runs of old codes and datasets are sitting there with &lsquo;talk ready&rsquo; images.</p>
 
-<p><code>import datetime
+<pre><code>import datetime
 now=datetime.datetime.now().strftime(&quot;%Y-%m-%d-%H%M&quot;) #String of standardised year-leading time
 fig.savefig(&quot;%s-LongSnakeMoan.pdf&quot;%now) #Save figures as both PDF and easy viewing PNG (perfect for talks)
 fig.savefig(&quot;%s-LongSnakeMoan.png&quot;%now)
-</code></p>
+</code></pre>
 
 <p>Previously I made talks with OpenOffice / LibreOffice (Horrible, buggy experience) and Latex/Beamer (too slow to include figures, horrific / absent control about where to place elements. Leave it for the mathematicians!)</p>
 
