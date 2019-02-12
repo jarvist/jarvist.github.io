@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nwchem on Jarvist Moore Frost</title>
+    <title>nwchem on Jarvist Moore Frost</title>
     <link>https://jarvist.github.io/tags/nwchem/</link>
-    <description>Recent content in Nwchem on Jarvist Moore Frost</description>
+    <description>Recent content in nwchem on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2012--2018</copyright>
     <lastBuildDate>Fri, 01 Feb 2013 19:45:53 +0000</lastBuildDate>
     
 	<atom:link href="https://jarvist.github.io/tags/nwchem/index.xml" rel="self" type="application/rss+xml" />

@@ -6,7 +6,7 @@
     <description>Recent content in Homes on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2012--2018</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jarvist.github.io/home/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,16 @@
       
       <guid>https://jarvist.github.io/home/about/</guid>
       <description>I&amp;rsquo;m an electronic structure theorist. I specialise in writing bespoke bits of code to build computer models which represent messy, disordered materials. These materials are more difficult to simulate than perfect crystals because within them the symmetries that gives physics such predictive power are broken.
-I have applied my skills to modelling new materials for energy conversion and storage. Here the disorder is due to engineering the material with minimal environmental impact, which usually means making it quickly and with little energy.</description>
+In academics, I applied my skills to modelling new materials for energy conversion and storage. Here the disorder is due to engineering the material with minimal environmental impact, which usually means making it quickly and with little energy.</description>
+    </item>
+    
+    <item>
+      <title>Experience</title>
+      <link>https://jarvist.github.io/home/experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/home/experience/</guid>
+      <description></description>
     </item>
     
     <item>

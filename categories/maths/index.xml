@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Maths on Jarvist Moore Frost</title>
+    <title>maths on Jarvist Moore Frost</title>
     <link>https://jarvist.github.io/categories/maths/</link>
-    <description>Recent content in Maths on Jarvist Moore Frost</description>
+    <description>Recent content in maths on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2012--2018</copyright>
     <lastBuildDate>Fri, 08 Sep 2017 14:29:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jarvist.github.io/categories/maths/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,7 @@
       
       <guid>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
       <description>A note on Schultz In Schultz1959 (https://doi.org/10.1103%2Fphysrev.116.526), a Feynman polaron radius is defined from the Gaussian form of the Simple Harmonic Oscillator specified by the Feynman solution to the polaron problem.
-I rederived some of these results (and the key thing - figured out that a 0.44 &amp;lsquo;magic number&amp;rsquo; was actually 2&amp;frasl;9, i.e. 0.4 recurring), and decided to put the info out there somewhere. The core I&amp;rsquo;ve written up as LaTeX here: https://github.</description>
+I rederived some of these results (and the key thing - figured out that a 0.44 &amp;lsquo;magic number&amp;rsquo; was actually 2/9, i.e. 0.4 recurring), and decided to put the info out there somewhere. The core I&amp;rsquo;ve written up as LaTeX here: https://github.</description>
     </item>
     
   </channel>

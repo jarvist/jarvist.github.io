@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2012--2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jarvist.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -29,7 +29,7 @@ I develop a lot of my understanding on paper. Once I&amp;rsquo;ve read and thoug
       
       <guid>https://jarvist.github.io/post/2017-09-08-a-note-on-schultz/</guid>
       <description>A note on Schultz In Schultz1959 (https://doi.org/10.1103%2Fphysrev.116.526), a Feynman polaron radius is defined from the Gaussian form of the Simple Harmonic Oscillator specified by the Feynman solution to the polaron problem.
-I rederived some of these results (and the key thing - figured out that a 0.44 &amp;lsquo;magic number&amp;rsquo; was actually 2&amp;frasl;9, i.e. 0.4 recurring), and decided to put the info out there somewhere. The core I&amp;rsquo;ve written up as LaTeX here: https://github.</description>
+I rederived some of these results (and the key thing - figured out that a 0.44 &amp;lsquo;magic number&amp;rsquo; was actually 2/9, i.e. 0.4 recurring), and decided to put the info out there somewhere. The core I&amp;rsquo;ve written up as LaTeX here: https://github.</description>
     </item>
     
     <item>
@@ -321,7 +321,8 @@ The inaugural JuliaCon has been held, and the presentation slidedecks are alread
       <pubDate>Wed, 25 Jun 2014 23:49:41 +0000</pubDate>
       
       <guid>https://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/</guid>
-      <description>I&amp;rsquo;ve dallied with keeping a computer / online logbook. I&amp;rsquo;ve tried many products, even wrote my own (retrospectively crazy) set of scripts called &amp;lsquo;freck&amp;rsquo;*. But all of these methods were only ever used for a week or two before falling by the wayside. Just too much extra effort for (me) to follow through with. And therefore they all become walled-gardens with no way of getting the information out.
+      <description>I&amp;rsquo;ve regularly dallied with keeping a computer / online logbook. I&amp;rsquo;ve tried many products, even wrote my own (retrospectively crazy) set of scripts called &amp;lsquo;freck&amp;rsquo; (https://github.com/jarvist/freck).
+All these platforms were only ever used for a week or two before falling by the wayside. I also don&amp;rsquo;t like the idea of walled-gardens (such as evernote) becoming a trap for my information.
 I keep paper notebooks for talks; I think it is essential to be able to sketch maths and diagrams, and I honestly think my brain is more engaged when I&amp;rsquo;m making notes by hand versus either typing or just listening (i.</description>
     </item>
     
