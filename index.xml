@@ -129,22 +129,27 @@ these values.&lt;/p&gt;
       <pubDate>Sun, 18 Jun 2017 10:59:00 +0000</pubDate>
       
       <guid>https://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</guid>
-      <description>&lt;p&gt;ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24 cores). That&amp;rsquo;s just under 250 W power per node, 6kWhr of energy in 24hrs. A 24 hour computer job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used for accounting.&lt;/p&gt;
+      <description>&lt;p&gt;ARCHER pulls 1.2 MW [1] to run it&amp;rsquo;s 4920[1] compute nodes (each of which is 24
+cores). That&amp;rsquo;s just under 250 W power per node: 6 kWhr of energy in 24 hrs.
+A 24-hour single-node job consumes 8.6 &amp;lsquo;kAU&amp;rsquo; in the internal compute units used
+for accounting.&lt;/p&gt;
 
-&lt;p&gt;So that&amp;rsquo;s roughly 0.7 kwhr / kAU, or 700 kwhr / MAU.&lt;/p&gt;
+&lt;p&gt;So that&amp;rsquo;s roughly 0.7 kWhr / kAU, or 700 kWhr / MAU.&lt;/p&gt;
 
-&lt;p&gt;The UK electricity grid carbon intensity is roughly 400 g / kwhr averaged over the year. So that&amp;rsquo;s 280 kg / MAU of calculation.&lt;/p&gt;
+&lt;p&gt;The UK electricity grid carbon intensity is roughly 400 g / kWhr averaged over the year: making 280 kg CO2 per MAU of Archer calculation.&lt;/p&gt;
 
-&lt;p&gt;A relatively small research project doing hybrid calculations can easily consume 10s of MAU!&lt;/p&gt;
+&lt;p&gt;A relatively small research project doing hybrid calculations can easily consume 10s of MAU: generating a lot of atmospheric carbon dioxide!&lt;/p&gt;
 
-&lt;p&gt;By comparison, an economy return flight from London to Boston (for Fall MRS) is 0.8 tons of CO2[2].&lt;/p&gt;
+&lt;p&gt;By comparison, an economy return flight from London to Boston (for Fall MRS) generates 800 kg of CO2[2].&lt;/p&gt;
 
 &lt;p&gt;So flying London to Boston and back for Fall MRS, adds as much carbon to the atmosphere as 3 MAU of calculations on Archer.&lt;/p&gt;
 
-&lt;p&gt;Interestingly, if you were to have a 24-node server continuously running calculations, this adds to roughly 8.6 (kAU) * 365 = 3.1 MAU for the whole year.&lt;/p&gt;
+&lt;p&gt;Interestingly, if you were to own a 24-node server in your lab continuously
+running calculations, this equals roughly 8.6 (kAU) * 365 = 3.1 MAU for the
+whole year.&lt;/p&gt;
 
-&lt;p&gt;So my take home message was to be less concerned about the travel to
-conferences to present my science, and more careful with spending HPC time
+&lt;p&gt;My take home message was to be less concerned about the travel to conferences
+to present my energy-materials science, and more careful with spending HPC time
 wisely!&lt;/p&gt;
 
 &lt;p&gt;[1] &lt;a href=&#34;http://www.archer.ac.uk/about-archer/hardware/&#34; target=&#34;_blank&#34;&gt;http://www.archer.ac.uk/about-archer/hardware/&lt;/a&gt;
