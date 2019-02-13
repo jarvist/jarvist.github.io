@@ -17,32 +17,33 @@
       
       <guid>https://jarvist.github.io/post/2018-06-25-a-note-on-notes/</guid>
       <description>&lt;p&gt;I believe writing notes is essential for scientific research.
-Both for future reference, and also to provide space to think.&lt;/p&gt;
+This is both for future reference, but also to provide space to think.&lt;/p&gt;
 
 &lt;p&gt;I develop a lot of my understanding on paper. Once I&amp;rsquo;ve read and thought a bit
-about a topic, I really like starting with a fresh A4 page (or double spread)
-and writing down pointers to everything I know about the subject, little
+about a topic, I like to start with a fresh A4 page (or double spread)
+and write down pointers to everything I know: little
 diagrams and snippets of mathematics. This would be wholly useless for anyone
-else to consult, but I find makes a good jumping off place for my thoughts, and
-something I can return to and rework.&lt;/p&gt;
+else to consult, but I find it makes a good jumping off place for my thoughts, and
+is something I can return to and rework, even months later.&lt;/p&gt;
 
 &lt;p&gt;For meetings and conferences I have come to the conclusion that a laptop or
-tablet is a mere distraction, and all I need is a physical notebook.
-I believe that physically writing helps me remember. If I do nothing during
+tablet is a distraction.
+All I usefully need is a physical notebook.
+I believe that writing longhand helps me remember. If I take no notes during
 a seminar, I find myself day-dreaming or outright snoozing.&lt;/p&gt;
 
 &lt;p&gt;Organising physical notes is a pain, always. I think the least-worst option is to keep
-everything in one book, with every meeting dated. Subject-specific notebooks
+everything in one notebook, sequentially filled with every meeting dated. Subject-specific notebooks
 always seem to end up in the wrong place at the wrong time (i.e. at home
-/ work, on my desk rather than with me in a meeting). That said, specific notebooks
+/ work, on my desk rather than with me in a meeting). Given this, special notebooks
 for lecture courses or conferences seems to work well.
 Leaving blank pages, to e.g. finish up mathematics, never seems to end well.
-I also find explicitly writing who else was present at the meeting, and
-physically where it was, helps me remember what was going on when I refer back.
-I find flicking through my notebooks even if not reading them properly help
+I also find writing who was present at the meeting, and
+physically where it was, helps me remember the event when I refer back.
+I find even skimming through my notebooks lightly helps
 refresh my memory.&lt;/p&gt;
 
-&lt;p&gt;Of course, a lot of my work is on the computer. Typing is the natural place
+&lt;p&gt;A lot of my work is on the computer. Typing is the natural place
 to start developing conference abstracts / papers / applications.
 For this I&amp;rsquo;ve been using [&lt;a href=&#34;https://simplenote.com&#34; target=&#34;_blank&#34;&gt;https://simplenote.com&lt;/a&gt;] since the start of 2018.
 It&amp;rsquo;s a very lightweight text-only note taking website / online app.
@@ -56,6 +57,13 @@ title, and second line as small-text subtitle.
 I now prepend all my notes with REVIEW/LEARN/PAPER/JOB/ABSTRACT etc. to
 identify what is going on.&lt;/p&gt;
 
+&lt;p&gt;For little snippets when programming or working at the command line, I use
+&lt;code&gt;vimwiki&lt;/code&gt;. This is built into &lt;code&gt;vim&lt;/code&gt;, so is just two key-presses away.&lt;/p&gt;
+
+&lt;p&gt;[Some vim hooks to get this to automagically sync to a git repository are
+described here:
+&lt;a href=&#34;http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/&#34; target=&#34;_blank&#34;&gt;http://jarvist.github.io/post/snippet-console-diary-vimwiki-now-with-more-git-autohooks/&lt;/a&gt; ]&lt;/p&gt;
+
 &lt;p&gt;The boundary between the computer and the physical is a challenge. I think
 people who start obsessively indexing / scanning their notes are wasting effort
 on something which isn&amp;rsquo;t actually a problem.
@@ -63,16 +71,16 @@ For a bare minimum of cross-referencing, I label my notebooks (20XX.Z, where
 Z is alphabetic for an A4 work-notebook, and numeric for an A5
 meeting-notebook), and number the pages. When I have spare time I fill in the
 &amp;lsquo;contents&amp;rsquo; first page, and write some info on the cover.
-So I sometimes end up with &amp;lsquo;see yellow
-notebook 2017.3 p.24&amp;rsquo; in code/latex comments.&lt;br /&gt;
-I regularly find myself writing long-hand references to data / files, usually
-in a similar manner to my command prompt:
-&amp;lsquo;machine:~/WORK/2018-project/blah/fixed-blah/reallyfixed/&amp;rsquo; etc.&lt;/p&gt;
+So I sometimes end up with &amp;lsquo;see yellow notebook 2017.3 p.24&amp;rsquo; in code/latex
+comments.&lt;br /&gt;
+Going the other way, I regularly find myself writing long-hand references to
+data / files, usually in a similar manner to my command prompt:
+&lt;code&gt;machine:~/WORK/2018-project/blah/fixed-blah/reallyfixed/&lt;/code&gt; etc.&lt;/p&gt;
 
-&lt;p&gt;Physically I use Clairefontaine Europa Notemakers, which have a really nice
+&lt;p&gt;I use Clairefontaine Europa Notemakers, which are cheap, but have a really nice
 smooth paper. I generally write with a Pilot G-Tec-C4 (0.4 mm fine rollerball),
 though the 0.3 mm version (often sold in a slightly more bulky Maica plastic
-body) is better for mathematics + marking up papers.&lt;/p&gt;
+body, which looks childish but better fits my large hands) is better for mathematics &amp;amp; marking up papers.&lt;/p&gt;
 </description>
     </item>
     
