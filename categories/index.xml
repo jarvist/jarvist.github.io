@@ -6,18 +6,18 @@
     <description>Recent content in Categories on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <copyright>&amp;copy; 2012--2018</copyright>
-    <lastBuildDate>Tue, 24 Jan 2017 09:29:00 +0000</lastBuildDate>
+    <copyright>&amp;copy; 2012--2019</copyright>
+    <lastBuildDate>Fri, 08 Sep 2017 14:29:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jarvist.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bookclub</title>
-      <link>https://jarvist.github.io/categories/bookclub/</link>
-      <pubDate>Tue, 24 Jan 2017 09:29:00 +0000</pubDate>
+      <title>maths</title>
+      <link>https://jarvist.github.io/categories/maths/</link>
+      <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/categories/bookclub/</guid>
+      <guid>https://jarvist.github.io/categories/maths/</guid>
       <description></description>
     </item>
     
@@ -40,11 +40,11 @@
     </item>
     
     <item>
-      <title>maths</title>
-      <link>https://jarvist.github.io/categories/maths/</link>
-      <pubDate>Fri, 08 Sep 2017 14:29:00 +0000</pubDate>
+      <title>Bookclub</title>
+      <link>https://jarvist.github.io/categories/bookclub/</link>
+      <pubDate>Tue, 24 Jan 2017 09:29:00 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/categories/maths/</guid>
+      <guid>https://jarvist.github.io/categories/bookclub/</guid>
       <description></description>
     </item>
     

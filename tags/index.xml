@@ -6,126 +6,27 @@
     <description>Recent content in Tags on Jarvist Moore Frost</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <copyright>&amp;copy; 2012--2018</copyright>
-    <lastBuildDate>Tue, 12 Nov 2013 19:03:03 +0000</lastBuildDate>
+    <copyright>&amp;copy; 2012--2019</copyright>
+    <lastBuildDate>Mon, 25 Jun 2018 13:19:10 +0100</lastBuildDate>
     
 	<atom:link href="https://jarvist.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bath University</title>
-      <link>https://jarvist.github.io/tags/bath-university/</link>
-      <pubDate>Tue, 12 Nov 2013 19:03:03 +0000</pubDate>
+      <title>highlight</title>
+      <link>https://jarvist.github.io/tags/highlight/</link>
+      <pubDate>Mon, 25 Jun 2018 13:19:10 +0100</pubDate>
       
-      <guid>https://jarvist.github.io/tags/bath-university/</guid>
+      <guid>https://jarvist.github.io/tags/highlight/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Imperial College London</title>
-      <link>https://jarvist.github.io/tags/imperial-college-london/</link>
-      <pubDate>Tue, 12 Nov 2013 19:03:03 +0000</pubDate>
+      <title>writing</title>
+      <link>https://jarvist.github.io/tags/writing/</link>
+      <pubDate>Mon, 25 Jun 2018 13:19:10 +0100</pubDate>
       
-      <guid>https://jarvist.github.io/tags/imperial-college-london/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Julia</title>
-      <link>https://jarvist.github.io/tags/julia/</link>
-      <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/julia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mavericks</title>
-      <link>https://jarvist.github.io/tags/mavericks/</link>
-      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/mavericks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OA</title>
-      <link>https://jarvist.github.io/tags/oa/</link>
-      <pubDate>Wed, 19 Jun 2013 10:04:30 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/oa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OS X Mavericks</title>
-      <link>https://jarvist.github.io/tags/os-x-mavericks/</link>
-      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/os-x-mavericks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://jarvist.github.io/tags/r/</link>
-      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>archer</title>
-      <link>https://jarvist.github.io/tags/archer/</link>
-      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/archer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>arxiv</title>
-      <link>https://jarvist.github.io/tags/arxiv/</link>
-      <pubDate>Fri, 21 Feb 2014 12:07:54 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/arxiv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bash</title>
-      <link>https://jarvist.github.io/tags/bash/</link>
-      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bath</title>
-      <link>https://jarvist.github.io/tags/bath/</link>
-      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/bath/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bath.ac.uk</title>
-      <link>https://jarvist.github.io/tags/bath.ac.uk/</link>
-      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/bath.ac.uk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bitbucket</title>
-      <link>https://jarvist.github.io/tags/bitbucket/</link>
-      <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/bitbucket/</guid>
+      <guid>https://jarvist.github.io/tags/writing/</guid>
       <description></description>
     </item>
     
@@ -139,92 +40,11 @@
     </item>
     
     <item>
-      <title>c</title>
-      <link>https://jarvist.github.io/tags/c/</link>
-      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
+      <title>bitbucket</title>
+      <link>https://jarvist.github.io/tags/bitbucket/</link>
+      <pubDate>Sun, 01 Mar 2015 22:44:00 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cdft</title>
-      <link>https://jarvist.github.io/tags/cdft/</link>
-      <pubDate>Fri, 01 Feb 2013 19:45:53 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/cdft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>collaboration</title>
-      <link>https://jarvist.github.io/tags/collaboration/</link>
-      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/collaboration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>compiling</title>
-      <link>https://jarvist.github.io/tags/compiling/</link>
-      <pubDate>Mon, 08 Jul 2013 10:56:42 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/compiling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>confab</title>
-      <link>https://jarvist.github.io/tags/confab/</link>
-      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/confab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data</title>
-      <link>https://jarvist.github.io/tags/data/</link>
-      <pubDate>Thu, 12 Dec 2013 22:25:23 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dvcs</title>
-      <link>https://jarvist.github.io/tags/dvcs/</link>
-      <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/dvcs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ehrenfest</title>
-      <link>https://jarvist.github.io/tags/ehrenfest/</link>
-      <pubDate>Wed, 18 Jun 2014 15:14:27 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/ehrenfest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gaussian</title>
-      <link>https://jarvist.github.io/tags/gaussian/</link>
-      <pubDate>Mon, 13 Jan 2014 13:35:46 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/gaussian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://jarvist.github.io/tags/git/</link>
-      <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/git/</guid>
+      <guid>https://jarvist.github.io/tags/bitbucket/</guid>
       <description></description>
     </item>
     
@@ -238,20 +58,38 @@
     </item>
     
     <item>
-      <title>highlight</title>
-      <link>https://jarvist.github.io/tags/highlight/</link>
-      <pubDate>Mon, 25 Jun 2018 13:19:10 +0100</pubDate>
+      <title>Julia</title>
+      <link>https://jarvist.github.io/tags/julia/</link>
+      <pubDate>Mon, 14 Jul 2014 12:36:09 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/highlight/</guid>
+      <guid>https://jarvist.github.io/tags/julia/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>hpc</title>
-      <link>https://jarvist.github.io/tags/hpc/</link>
-      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
+      <title>physics</title>
+      <link>https://jarvist.github.io/tags/physics/</link>
+      <pubDate>Tue, 01 Jul 2014 12:36:09 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/hpc/</guid>
+      <guid>https://jarvist.github.io/tags/physics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ehrenfest</title>
+      <link>https://jarvist.github.io/tags/ehrenfest/</link>
+      <pubDate>Wed, 18 Jun 2014 15:14:27 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/ehrenfest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>collaboration</title>
+      <link>https://jarvist.github.io/tags/collaboration/</link>
+      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/collaboration/</guid>
       <description></description>
     </item>
     
@@ -265,20 +103,38 @@
     </item>
     
     <item>
+      <title>sharelatex</title>
+      <link>https://jarvist.github.io/tags/sharelatex/</link>
+      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/sharelatex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writelatex</title>
+      <link>https://jarvist.github.io/tags/writelatex/</link>
+      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/writelatex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arxiv</title>
+      <link>https://jarvist.github.io/tags/arxiv/</link>
+      <pubDate>Fri, 21 Feb 2014 12:07:54 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/arxiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>literature</title>
       <link>https://jarvist.github.io/tags/literature/</link>
       <pubDate>Fri, 21 Feb 2014 12:07:54 +0000</pubDate>
       
       <guid>https://jarvist.github.io/tags/literature/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>make</title>
-      <link>https://jarvist.github.io/tags/make/</link>
-      <pubDate>Thu, 12 Dec 2013 22:25:23 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/make/</guid>
       <description></description>
     </item>
     
@@ -301,155 +157,11 @@
     </item>
     
     <item>
-      <title>notetoself</title>
-      <link>https://jarvist.github.io/tags/notetoself/</link>
-      <pubDate>Mon, 13 Jan 2014 13:35:46 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/notetoself/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nwchem</title>
-      <link>https://jarvist.github.io/tags/nwchem/</link>
-      <pubDate>Fri, 01 Feb 2013 19:45:53 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/nwchem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>openaccess</title>
-      <link>https://jarvist.github.io/tags/openaccess/</link>
-      <pubDate>Wed, 19 Jun 2013 10:04:30 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/openaccess/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>openbabel</title>
-      <link>https://jarvist.github.io/tags/openbabel/</link>
-      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/openbabel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>papers</title>
-      <link>https://jarvist.github.io/tags/papers/</link>
-      <pubDate>Wed, 03 Jul 2013 13:16:28 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/papers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pdf</title>
-      <link>https://jarvist.github.io/tags/pdf/</link>
-      <pubDate>Thu, 20 Jun 2013 20:32:00 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/pdf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>perovskite</title>
       <link>https://jarvist.github.io/tags/perovskite/</link>
       <pubDate>Fri, 21 Feb 2014 12:07:54 +0000</pubDate>
       
       <guid>https://jarvist.github.io/tags/perovskite/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>physics</title>
-      <link>https://jarvist.github.io/tags/physics/</link>
-      <pubDate>Tue, 01 Jul 2014 12:36:09 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/physics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>plot</title>
-      <link>https://jarvist.github.io/tags/plot/</link>
-      <pubDate>Wed, 17 Jul 2013 19:15:41 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>plotting</title>
-      <link>https://jarvist.github.io/tags/plotting/</link>
-      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/plotting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ppa</title>
-      <link>https://jarvist.github.io/tags/ppa/</link>
-      <pubDate>Fri, 01 Feb 2013 19:43:06 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/ppa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://jarvist.github.io/tags/programming/</link>
-      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pymol</title>
-      <link>https://jarvist.github.io/tags/pymol/</link>
-      <pubDate>Tue, 18 Jun 2013 11:51:38 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/pymol/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>quantumchemistry</title>
-      <link>https://jarvist.github.io/tags/quantumchemistry/</link>
-      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/quantumchemistry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reptate</title>
-      <link>https://jarvist.github.io/tags/reptate/</link>
-      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/reptate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rss</title>
-      <link>https://jarvist.github.io/tags/rss/</link>
-      <pubDate>Wed, 03 Jul 2013 13:16:28 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/rss/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sharelatex</title>
-      <link>https://jarvist.github.io/tags/sharelatex/</link>
-      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/sharelatex/</guid>
       <description></description>
     </item>
     
@@ -463,11 +175,20 @@
     </item>
     
     <item>
-      <title>snakes</title>
-      <link>https://jarvist.github.io/tags/snakes/</link>
-      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
+      <title>gaussian</title>
+      <link>https://jarvist.github.io/tags/gaussian/</link>
+      <pubDate>Mon, 13 Jan 2014 13:35:46 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/snakes/</guid>
+      <guid>https://jarvist.github.io/tags/gaussian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notetoself</title>
+      <link>https://jarvist.github.io/tags/notetoself/</link>
+      <pubDate>Mon, 13 Jan 2014 13:35:46 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/notetoself/</guid>
       <description></description>
     </item>
     
@@ -481,38 +202,20 @@
     </item>
     
     <item>
-      <title>statistics</title>
-      <link>https://jarvist.github.io/tags/statistics/</link>
-      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
+      <title>dvcs</title>
+      <link>https://jarvist.github.io/tags/dvcs/</link>
+      <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/statistics/</guid>
+      <guid>https://jarvist.github.io/tags/dvcs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>torsion</title>
-      <link>https://jarvist.github.io/tags/torsion/</link>
-      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
+      <title>git</title>
+      <link>https://jarvist.github.io/tags/git/</link>
+      <pubDate>Mon, 06 Jan 2014 22:08:37 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/torsion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>https://jarvist.github.io/tags/ubuntu/</link>
-      <pubDate>Fri, 01 Feb 2013 19:43:06 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>waitingforjobstocomplete</title>
-      <link>https://jarvist.github.io/tags/waitingforjobstocomplete/</link>
-      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
-      
-      <guid>https://jarvist.github.io/tags/waitingforjobstocomplete/</guid>
+      <guid>https://jarvist.github.io/tags/git/</guid>
       <description></description>
     </item>
     
@@ -526,20 +229,254 @@
     </item>
     
     <item>
-      <title>writelatex</title>
-      <link>https://jarvist.github.io/tags/writelatex/</link>
-      <pubDate>Fri, 21 Feb 2014 12:57:54 +0000</pubDate>
+      <title>data</title>
+      <link>https://jarvist.github.io/tags/data/</link>
+      <pubDate>Thu, 12 Dec 2013 22:25:23 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/writelatex/</guid>
+      <guid>https://jarvist.github.io/tags/data/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>writing</title>
-      <link>https://jarvist.github.io/tags/writing/</link>
-      <pubDate>Mon, 25 Jun 2018 13:19:10 +0100</pubDate>
+      <title>make</title>
+      <link>https://jarvist.github.io/tags/make/</link>
+      <pubDate>Thu, 12 Dec 2013 22:25:23 +0000</pubDate>
       
-      <guid>https://jarvist.github.io/tags/writing/</guid>
+      <guid>https://jarvist.github.io/tags/make/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>archer</title>
+      <link>https://jarvist.github.io/tags/archer/</link>
+      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/archer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://jarvist.github.io/tags/bash/</link>
+      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hpc</title>
+      <link>https://jarvist.github.io/tags/hpc/</link>
+      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/hpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>waitingforjobstocomplete</title>
+      <link>https://jarvist.github.io/tags/waitingforjobstocomplete/</link>
+      <pubDate>Wed, 20 Nov 2013 13:41:32 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/waitingforjobstocomplete/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bath</title>
+      <link>https://jarvist.github.io/tags/bath/</link>
+      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/bath/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bath.ac.uk</title>
+      <link>https://jarvist.github.io/tags/bath.ac.uk/</link>
+      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/bath.ac.uk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mavericks</title>
+      <link>https://jarvist.github.io/tags/mavericks/</link>
+      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/mavericks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OS X Mavericks</title>
+      <link>https://jarvist.github.io/tags/os-x-mavericks/</link>
+      <pubDate>Mon, 18 Nov 2013 11:28:20 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/os-x-mavericks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plotting</title>
+      <link>https://jarvist.github.io/tags/plotting/</link>
+      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/plotting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://jarvist.github.io/tags/programming/</link>
+      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://jarvist.github.io/tags/r/</link>
+      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>https://jarvist.github.io/tags/statistics/</link>
+      <pubDate>Sun, 17 Nov 2013 13:00:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bath University</title>
+      <link>https://jarvist.github.io/tags/bath-university/</link>
+      <pubDate>Tue, 12 Nov 2013 19:03:03 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/bath-university/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Imperial College London</title>
+      <link>https://jarvist.github.io/tags/imperial-college-london/</link>
+      <pubDate>Tue, 12 Nov 2013 19:03:03 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/imperial-college-london/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>confab</title>
+      <link>https://jarvist.github.io/tags/confab/</link>
+      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/confab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openbabel</title>
+      <link>https://jarvist.github.io/tags/openbabel/</link>
+      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/openbabel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quantumchemistry</title>
+      <link>https://jarvist.github.io/tags/quantumchemistry/</link>
+      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/quantumchemistry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>torsion</title>
+      <link>https://jarvist.github.io/tags/torsion/</link>
+      <pubDate>Tue, 23 Jul 2013 14:48:13 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/torsion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plot</title>
+      <link>https://jarvist.github.io/tags/plot/</link>
+      <pubDate>Wed, 17 Jul 2013 19:15:41 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compiling</title>
+      <link>https://jarvist.github.io/tags/compiling/</link>
+      <pubDate>Mon, 08 Jul 2013 10:56:42 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/compiling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c</title>
+      <link>https://jarvist.github.io/tags/c/</link>
+      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reptate</title>
+      <link>https://jarvist.github.io/tags/reptate/</link>
+      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/reptate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snakes</title>
+      <link>https://jarvist.github.io/tags/snakes/</link>
+      <pubDate>Wed, 03 Jul 2013 14:31:37 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/snakes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>papers</title>
+      <link>https://jarvist.github.io/tags/papers/</link>
+      <pubDate>Wed, 03 Jul 2013 13:16:28 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/papers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rss</title>
+      <link>https://jarvist.github.io/tags/rss/</link>
+      <pubDate>Wed, 03 Jul 2013 13:16:28 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/rss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pdf</title>
+      <link>https://jarvist.github.io/tags/pdf/</link>
+      <pubDate>Thu, 20 Jun 2013 20:32:00 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/pdf/</guid>
       <description></description>
     </item>
     
@@ -549,6 +486,69 @@
       <pubDate>Thu, 20 Jun 2013 20:32:00 +0000</pubDate>
       
       <guid>https://jarvist.github.io/tags/xournal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OA</title>
+      <link>https://jarvist.github.io/tags/oa/</link>
+      <pubDate>Wed, 19 Jun 2013 10:04:30 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/oa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openaccess</title>
+      <link>https://jarvist.github.io/tags/openaccess/</link>
+      <pubDate>Wed, 19 Jun 2013 10:04:30 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/openaccess/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pymol</title>
+      <link>https://jarvist.github.io/tags/pymol/</link>
+      <pubDate>Tue, 18 Jun 2013 11:51:38 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/pymol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cdft</title>
+      <link>https://jarvist.github.io/tags/cdft/</link>
+      <pubDate>Fri, 01 Feb 2013 19:45:53 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/cdft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nwchem</title>
+      <link>https://jarvist.github.io/tags/nwchem/</link>
+      <pubDate>Fri, 01 Feb 2013 19:45:53 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/nwchem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ppa</title>
+      <link>https://jarvist.github.io/tags/ppa/</link>
+      <pubDate>Fri, 01 Feb 2013 19:43:06 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/ppa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://jarvist.github.io/tags/ubuntu/</link>
+      <pubDate>Fri, 01 Feb 2013 19:43:06 +0000</pubDate>
+      
+      <guid>https://jarvist.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     

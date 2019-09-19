@@ -1,10 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
     <url>
     
       <loc>https://jarvist.github.io/post/2018-06-25-a-note-on-notes/</loc>
+      <lastmod>2018-06-25T13:19:10+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/highlight/</loc>
+      <lastmod>2018-06-25T13:19:10+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/</loc>
+      <lastmod>2018-06-25T13:19:10+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/</loc>
+      <lastmod>2018-06-25T13:19:10+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/writing/</loc>
       <lastmod>2018-06-25T13:19:10+01:00</lastmod>
     </url>
     
@@ -20,8 +51,40 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/categories/</loc>
+      <lastmod>2017-09-08T14:29:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/categories/maths/</loc>
+      <lastmod>2017-09-08T14:29:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/2017-06-18-carbon-cost-of-high-performance-computing/</loc>
       <lastmod>2017-06-18T10:59:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/categories/computing/</loc>
+      <lastmod>2017-06-18T10:59:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/categories/licensing/</loc>
+      <lastmod>2017-06-18T10:29:00+00:00</lastmod>
     </url>
     
   
@@ -38,6 +101,14 @@
     
       <loc>https://jarvist.github.io/post/2017-02-20-experimental-measures-of-photovoltaic-materials/</loc>
       <lastmod>2017-02-20T12:29:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/categories/bookclub/</loc>
+      <lastmod>2017-01-24T09:29:00+00:00</lastmod>
     </url>
     
   
@@ -156,6 +227,14 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/bookreview/</loc>
+      <lastmod>2016-02-26T10:29:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/2016-01-16-john-ziman/</loc>
       <lastmod>2016-01-16T10:29:00+00:00</lastmod>
     </url>
@@ -182,6 +261,22 @@
     
       <loc>https://jarvist.github.io/post/organising-computational-job-workflow-as-you-go-freck/</loc>
       <lastmod>2015-04-26T16:15:52+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/bitbucket/</loc>
+      <lastmod>2015-03-01T22:44:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/gnuplot/</loc>
+      <lastmod>2015-03-01T22:44:00+00:00</lastmod>
     </url>
     
   
@@ -252,6 +347,14 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/julia/</loc>
+      <lastmod>2014-07-14T12:36:09+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/links-from-julia-land/</loc>
       <lastmod>2014-07-14T12:36:09+00:00</lastmod>
     </url>
@@ -261,6 +364,14 @@
     <url>
     
       <loc>https://jarvist.github.io/post/free-physics-on-the-internet/</loc>
+      <lastmod>2014-07-01T12:36:09+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/physics/</loc>
       <lastmod>2014-07-01T12:36:09+00:00</lastmod>
     </url>
     
@@ -285,6 +396,14 @@
     <url>
     
       <loc>https://jarvist.github.io/post/comp-chem-highlights-coherence-penalty-functional-a-simple-method-for-adding-decoherence-in-ehrenfest-dynamics/</loc>
+      <lastmod>2014-06-18T15:14:27+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/ehrenfest/</loc>
       <lastmod>2014-06-18T15:14:27+00:00</lastmod>
     </url>
     
@@ -380,6 +499,30 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/collaboration/</loc>
+      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/latex/</loc>
+      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/sharelatex/</loc>
+      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/sharelatex-now-opensource/</loc>
       <lastmod>2014-02-21T12:57:54+00:00</lastmod>
     </url>
@@ -388,7 +531,55 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/writelatex/</loc>
+      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/arxiv/</loc>
+      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/hybrid-perovskites-mapi-and-friends/</loc>
+      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/literature/</loc>
+      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/mapi/</loc>
+      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/monte-carlo/</loc>
+      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/perovskite/</loc>
       <lastmod>2014-02-21T12:07:54+00:00</lastmod>
     </url>
     
@@ -404,8 +595,56 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/siunitx/</loc>
+      <lastmod>2014-01-15T12:58:39+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/gaussian/</loc>
+      <lastmod>2014-01-13T13:35:46+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/gaussian-add-densitycurrent-for-post-hf/</loc>
       <lastmod>2014-01-13T13:35:46+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/notetoself/</loc>
+      <lastmod>2014-01-13T13:35:46+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/snippet/</loc>
+      <lastmod>2014-01-13T13:35:46+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/dvcs/</loc>
+      <lastmod>2014-01-06T22:08:37+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/git/</loc>
+      <lastmod>2014-01-06T22:08:37+00:00</lastmod>
     </url>
     
   
@@ -428,8 +667,56 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/worm/</loc>
+      <lastmod>2014-01-01T20:43:41+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/data/</loc>
+      <lastmod>2013-12-12T22:25:23+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/make/</loc>
+      <lastmod>2013-12-12T22:25:23+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/make-for-data-processing/</loc>
       <lastmod>2013-12-12T22:25:23+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/archer/</loc>
+      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/bash/</loc>
+      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/hpc/</loc>
+      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
     </url>
     
   
@@ -444,7 +731,47 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/waitingforjobstocomplete/</loc>
+      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/bath/</loc>
+      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/bath.ac.uk/</loc>
+      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/mavericks/</loc>
+      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/mavericks-and-failed-arp-causing-network-drops-solved/</loc>
+      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/os-x-mavericks/</loc>
       <lastmod>2013-11-18T11:28:20+00:00</lastmod>
     </url>
     
@@ -460,6 +787,38 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/plotting/</loc>
+      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/programming/</loc>
+      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/r/</loc>
+      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/statistics/</loc>
+      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/the-penguin-who-came-in-from-the-cold/</loc>
       <lastmod>2013-11-12T19:04:54+00:00</lastmod>
     </url>
@@ -468,7 +827,23 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/bath-university/</loc>
+      <lastmod>2013-11-12T19:03:03+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/goodbye-london-hello-bath/</loc>
+      <lastmod>2013-11-12T19:03:03+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/imperial-college-london/</loc>
       <lastmod>2013-11-12T19:03:03+00:00</lastmod>
     </url>
     
@@ -500,7 +875,39 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/confab/</loc>
+      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/openbabel/</loc>
+      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/quantumchemistry/</loc>
+      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/simple-oligomer-conformer-calculation/</loc>
+      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/torsion/</loc>
       <lastmod>2013-07-23T14:48:13+00:00</lastmod>
     </url>
     
@@ -516,6 +923,22 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/plot/</loc>
+      <lastmod>2013-07-17T19:15:41+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/compiling/</loc>
+      <lastmod>2013-07-08T10:56:42+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/write-your-own-make-clean/</loc>
       <lastmod>2013-07-08T10:56:42+00:00</lastmod>
     </url>
@@ -524,7 +947,31 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/c/</loc>
+      <lastmod>2013-07-03T14:31:37+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/reptate/</loc>
+      <lastmod>2013-07-03T14:31:37+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/slithering-snakes-amphisbaena-and-gorgophone-2005-2008/</loc>
+      <lastmod>2013-07-03T14:31:37+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/snakes/</loc>
       <lastmod>2013-07-03T14:31:37+00:00</lastmod>
     </url>
     
@@ -548,6 +995,22 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/papers/</loc>
+      <lastmod>2013-07-03T13:16:28+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/rss/</loc>
+      <lastmod>2013-07-03T13:16:28+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/collaborative-academic-book-with-github-latex/</loc>
       <lastmod>2013-06-24T09:02:40+00:00</lastmod>
     </url>
@@ -556,7 +1019,23 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/pdf/</loc>
+      <lastmod>2013-06-20T20:32:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/pdf-annotations-in-linux-with-xournal/</loc>
+      <lastmod>2013-06-20T20:32:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/xournal/</loc>
       <lastmod>2013-06-20T20:32:00+00:00</lastmod>
     </url>
     
@@ -572,8 +1051,40 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/oa/</loc>
+      <lastmod>2013-06-19T10:04:30+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/openaccess/</loc>
+      <lastmod>2013-06-19T10:04:30+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/pymol/</loc>
+      <lastmod>2013-06-18T11:51:38+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/pymol-ray-tracing-without-wasting-time/</loc>
       <lastmod>2013-06-18T11:51:38+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/cdft/</loc>
+      <lastmod>2013-02-01T19:45:53+00:00</lastmod>
     </url>
     
   
@@ -588,7 +1099,31 @@
     
     <url>
     
+      <loc>https://jarvist.github.io/tags/nwchem/</loc>
+      <lastmod>2013-02-01T19:45:53+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://jarvist.github.io/post/gnuplot-ubuntu-backports/</loc>
+      <lastmod>2013-02-01T19:43:06+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/ppa/</loc>
+      <lastmod>2013-02-01T19:43:06+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://jarvist.github.io/tags/ubuntu/</loc>
       <lastmod>2013-02-01T19:43:06+00:00</lastmod>
     </url>
     
@@ -628,611 +1163,7 @@
     
     <url>
     
-      <loc>https://jarvist.github.io/tags/bath-university/</loc>
-      <lastmod>2013-11-12T19:03:03+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/categories/bookclub/</loc>
-      <lastmod>2017-01-24T09:29:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/categories/</loc>
-      <lastmod>2017-01-24T09:29:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/imperial-college-london/</loc>
-      <lastmod>2013-11-12T19:03:03+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/julia/</loc>
-      <lastmod>2014-07-14T12:36:09+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/mavericks/</loc>
-      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/oa/</loc>
-      <lastmod>2013-06-19T10:04:30+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/os-x-mavericks/</loc>
-      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://jarvist.github.io/publication_types/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/r/</loc>
-      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/</loc>
-      <lastmod>2013-11-12T19:03:03+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/archer/</loc>
-      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/arxiv/</loc>
-      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/bash/</loc>
-      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/bath/</loc>
-      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/bath.ac.uk/</loc>
-      <lastmod>2013-11-18T11:28:20+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/bitbucket/</loc>
-      <lastmod>2015-03-01T22:44:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/bookreview/</loc>
-      <lastmod>2016-02-26T10:29:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/c/</loc>
-      <lastmod>2013-07-03T14:31:37+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/cdft/</loc>
-      <lastmod>2013-02-01T19:45:53+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/collaboration/</loc>
-      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/compiling/</loc>
-      <lastmod>2013-07-08T10:56:42+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/categories/computing/</loc>
-      <lastmod>2017-06-18T10:59:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/confab/</loc>
-      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/data/</loc>
-      <lastmod>2013-12-12T22:25:23+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/dvcs/</loc>
-      <lastmod>2014-01-06T22:08:37+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/ehrenfest/</loc>
-      <lastmod>2014-06-18T15:14:27+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/gaussian/</loc>
-      <lastmod>2014-01-13T13:35:46+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/git/</loc>
-      <lastmod>2014-01-06T22:08:37+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/gnuplot/</loc>
-      <lastmod>2015-03-01T22:44:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/highlight/</loc>
-      <lastmod>2018-06-25T13:19:10+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/hpc/</loc>
-      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/latex/</loc>
-      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/categories/licensing/</loc>
-      <lastmod>2017-06-18T10:29:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/literature/</loc>
-      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/make/</loc>
-      <lastmod>2013-12-12T22:25:23+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/mapi/</loc>
-      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/categories/maths/</loc>
-      <lastmod>2017-09-08T14:29:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/monte-carlo/</loc>
-      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/notetoself/</loc>
-      <lastmod>2014-01-13T13:35:46+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/nwchem/</loc>
-      <lastmod>2013-02-01T19:45:53+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/openaccess/</loc>
-      <lastmod>2013-06-19T10:04:30+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/openbabel/</loc>
-      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/papers/</loc>
-      <lastmod>2013-07-03T13:16:28+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/pdf/</loc>
-      <lastmod>2013-06-20T20:32:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/perovskite/</loc>
-      <lastmod>2014-02-21T12:07:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/physics/</loc>
-      <lastmod>2014-07-01T12:36:09+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/plot/</loc>
-      <lastmod>2013-07-17T19:15:41+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/plotting/</loc>
-      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/ppa/</loc>
-      <lastmod>2013-02-01T19:43:06+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/programming/</loc>
-      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/pymol/</loc>
-      <lastmod>2013-06-18T11:51:38+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/quantumchemistry/</loc>
-      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/reptate/</loc>
-      <lastmod>2013-07-03T14:31:37+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/rss/</loc>
-      <lastmod>2013-07-03T13:16:28+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/sharelatex/</loc>
-      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/siunitx/</loc>
-      <lastmod>2014-01-15T12:58:39+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/snakes/</loc>
-      <lastmod>2013-07-03T14:31:37+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/snippet/</loc>
-      <lastmod>2014-01-13T13:35:46+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/statistics/</loc>
-      <lastmod>2013-11-17T13:00:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/torsion/</loc>
-      <lastmod>2013-07-23T14:48:13+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/ubuntu/</loc>
-      <lastmod>2013-02-01T19:43:06+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/waitingforjobstocomplete/</loc>
-      <lastmod>2013-11-20T13:41:32+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/worm/</loc>
-      <lastmod>2014-01-01T20:43:41+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/writelatex/</loc>
-      <lastmod>2014-02-21T12:57:54+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/writing/</loc>
-      <lastmod>2018-06-25T13:19:10+01:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://jarvist.github.io/tags/xournal/</loc>
-      <lastmod>2013-06-20T20:32:00+00:00</lastmod>
-      <priority>0</priority>
     </url>
     
   
